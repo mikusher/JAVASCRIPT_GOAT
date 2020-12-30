@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="GW" helpid="208" >
+	<SECTION name="GW_GeneralTab" label="TConfigForm_GeneralGroupWareSheet" helpid="3979" >
+		<GROUP name="GW_GeneralTab_General" label="TConfigForm_GeneralGroupWareSheet" datfile="calendar.dat" dattype="calendar">
+			<!--<OPTION type="checkbox" name="C_GW_General_Disable" variable="C_GW_General_Disable" inline="1" label="TConfigForm_CalendaringActive" inverse="1" source="API"/>-->
+			<OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_GW"  blabel="TSpamEngineForm_ModeButton" label="TConfigForm_GWAML"/>
+			
+			<OPTION type="label" label="TConfigForm_CalDBSettingsL" inline="1" /><OPTION type="button" inline="1" btype="xmledit" fileid="odbc_gw" blabel="TConfigForm_DBODBCSettings" />
+			
+			<OPTION type="edit" name="C_GW_SharedAccountPrefix" variable="C_GW_SharedAccountPrefix" label="TConfigForm_GWSharedAccountPrefixL" source="API" />
+			
+      <!-- <OPTION type="button" btype="textfile" fileid="calendar/calendar.dat" blabel="TConfigForm_CalBrowse" /> -->
+		</GROUP>
+<!--
+    <GROUP name="GW_GeneralTab_Maintenance" label="TConfigForm_GWMaintenanceBox" datfile="calendar.dat" dattype="calendar">
+			<OPTION type="edit" name="backupaccount" label="TAccountSelectForm"/>
+			<OPTION type="account_select" target="backupaccount" nobrackets="true" />
+			<OPTION type="button" btype="fbutton" fileid="BackupGWConfig" cfileid="backupaccount" label="TConfigForm_GWBackupL" blabel="TConfigForm_GWBackupButton" />
+			<OPTION type="upload" name="restorefile" btype="restore" variable="restorefile" fileid="RestoreGWConfig" label="TConfigForm_GWRestoreL" blabel="TConfigForm_GWRestoreButton" />   
+    	<OPTION type="button" btype="fbutton" fileid="DeleteGWConfig" cfileid="deletedata" label="TConfigForm_GWDeleteDataL" blabel="TConfigForm_GWDeleteData" />
+		</GROUP>
+-->
+		<GROUP name="GW_GeneralTab_Notify" label="TConfigForm_GWNotifications" datfile="calendar.dat" dattype="calendar">
+			<OPTION type="edit" name="CalendarSender" variable="CalendarSender" label="TConfigForm_CalendarNotifySenderL" />
+			<OPTION type="edit" name="CalendarFrom" variable="CalendarFrom" label="TConfigForm_CalendarNotifyEmailL" />
+		</GROUP>
+	</SECTION>
+	<!--
+<SECTION name="GLOBSETS_Sharedimap" label="TGlobalGWForm" helpid="2010303" >
+		<GROUP name="GLOBSETS_Sharedimap_Group" label="TGlobalGWForm">
+			<OPTION type="datagrid" name="publicfolder" gtype="publicfolder" labels="TGlobalGWForm_GWAccountList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="OWN_EMAIL"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="GRPTITLE" SIZE="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="GRPSHAREMODE" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="publicfolder" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TBWForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="publicfolder" LENGTH="2">
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+-->
+	<SECTION name="GW_PushTab" label="TConfigForm_GWPushSheet" helpid="3973">
+	<!--
+		<GROUP name="GW_SyncMLTab_General" label="TConfigForm_SyncMLPushBox">
+			<OPTION type="checkbox" name="C_PushServer_Active" variable="C_PushServer_Active" label="TConfigForm_SyncMLActive" />
+			<OPTION type="edit" name="C_PushServer_Port" variable="C_PushServer_Port" label="TConfigForm_SyncMLPushPortL" />
+		-->	<!--<OPTION type="edit" name="C_SyncML_URL" variable="C_SyncML_URL" label="TSyncMLPushForm_SyncMLURLL" />-->
+			<!--
+		</GROUP>
+		-->
+		<!--<GROUP name="GW_SyncMLTab_Accounts" label="TSyncMLPushForm_SyncMLPushAccounts">
+    	<OPTION type="datagrid" name="syncml_push" gtype="push_accounts" labels="TSyncMLPushForm_SyncMLItems">
+			<HEAD>
+          <SELECTOR />
+          <OPTION VINDEX="id" size="-200" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="enabled" SHOW="bool2string" size="-150" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+				<SOURCE>
+					<FILE DIALOG="push_account" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>-->
+	</SECTION>
+<!--
+	<SECTION name="GW_CalDAVTab" label="TConfigForm_CalDAVSheet" helpid="20801">
+		<GROUP name="GW_CalDAVTab_Notify" label="TConfigForm_CalDAVBox" datfile="caldav/config/settings.xml" dattype="caldav">
+			<OPTION type="checkbox" name="CalendarCalDAVActive" variable="Disabled" label="TConfigForm_CalDAVActive" inverse="1" />
+			<OPTION type="listbox" name="CalendarCalDAVLogging" variable="LogLevel" label="TConfigForm_CalDAVLogL" labels="TConfigForm_CalDAVLogging" />
+		</GROUP>
+	</SECTION>
+
+	<SECTION name="GW_LDAPTab" label="TConfigForm_LDAPSheet" helpid="20801" >
+
+		<GROUP name="GW_LDAPTab_Notify" label="TConfigForm_LDAPGroupBox" datfile="calendar.dat" dattype="calendar">
+			<OPTION type="checkbox" name="C_GW_LDAP_Disable" variable="CalendarLDAPActive" label="TConfigForm_LDAPUserSyncBox" />
+			<OPTION type="edit" name="CalendarLDAPHost" variable="CalendarLDAPHost" label="TConfigForm_LDAPUserHostL" />
+			<OPTION type="edit" name="CalendarLDAPBase" variable="CalendarLDAPBase" label="TConfigForm_LDAPUserBaseL" />
+			<OPTION type="edit" name="CalendarLDAPUser" variable="CalendarLDAPUser" label="TConfigForm_LDAPUserUserL" />
+			<OPTION type="password" name="CalendarLDAPPass" variable="CalendarLDAPPass" label="TConfigForm_LDAPUserPassL" />
+		</GROUP>
+	</SECTION>
+	
+	<SECTION name="GW_Connector" label="TConfigForm_GWConnectorSheet" helpid="20801" >
+	 <GROUP name="GW_Connector_group" label="TConfigForm_ConnectorBox" datfile="calendar.dat" dattype="calendar">
+	   <OPTION type="checkbox" name="GW_Connector_update" variable="CalendarConnectorEnabled" label="TConfigForm_ConnectorEnable" />
+     <OPTION type="edit" name="GW_Connector_URL" variable="CalendarConnectorURL" label="TConfigForm_ConnectorURLL" />
+   </GROUP>
+	</SECTION>
+	-->
+</FORM>

@@ -1,0 +1,7 @@
+﻿<ROOT>
+	<WIZARDS NAME="Domains &amp; Accounts" >
+		<WIZARD ID="accountwizard" PATH="data/account/" SCRIPT="wizard.account.php" ICON="wizard_user.png" />
+		<WIZARD ID="domainwizard" PATH="data/domain/" SCRIPT="wizard.domain.php" ICON="wizard_domain.png" disable="DOMAINADMIN" />
+		<!--<WIZARD NAME="Add contacts to IM Roster" DISABLE="DOMAINADMIN" ID="imcontactswizard" PATH="data/imcontacts/" SCRIPT="wizard.imcontacts.php" ICON="wizard_im.gif" />-->
+	</WIZARDS>
+</ROOT>

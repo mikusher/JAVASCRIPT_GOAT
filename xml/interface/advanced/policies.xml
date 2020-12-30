@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Policies" helpid="480">
+	<SECTION name="Policies_Login" label="TConfigForm_LoginPolicySheet" helpid="481" >
+		<GROUP name="Policies_Login_Policy" label="TConfigForm_LoginPolicySheet">
+			<OPTION type="checkbox" name="C_Accounts_Policies_Login_Enable" variable="C_Accounts_Policies_Login_Enable" label="TConfigForm_LoginPolicy" default="0" >
+				<OPTION type="edit" name="C_Accounts_Policies_Login_Attempts" variable="C_Accounts_Policies_Login_Attempts" label="" />
+			</OPTION>
+			<OPTION type="edit" name="C_Accounts_Policies_Login_BlockPeriod" variable="C_Accounts_Policies_Login_BlockPeriod" label="TConfigForm_DisableMinLoginL" />
+		<OPTION type="listbox" name="C_Accounts_Policies_Login_Block" variable="C_Accounts_Policies_Login_Block" label="TConfigForm_LoginPolicyModeL" labels="TConfigForm_LoginPolicyMode" value="0|1" />
+    <OPTION type="checkbox" name="C_GUI_RequireAuth" variable="C_GUI_RequireAuth" label="TConfigForm_RequireAuthenticationToAccessTheSettings" />
+    
+    </GROUP>
+
+		<GROUP name="Policies_Login_Settings" label="TConfigForm_LoginBox"  >
+			<OPTION type="hidden" name="logs" variable="logs" dattype="webmail" datfile="config/_webmail/server.xml"></OPTION>
+			<OPTION type="radio" name="C_Accounts_Policies_Login_LoginSettings" function="C_Accounts_Policies_Login_LoginSettings" value="0" label="TConfigForm_SimpleLogin" source="API" />
+			<OPTION type="radio" name="C_Accounts_Policies_Login_LoginSettings" function="C_Accounts_Policies_Login_LoginSettings" value="1" label="TConfigForm_EmailLogin" source="API"/>
+			<OPTION type="checkbox" name="C_Accounts_Policies_Login_ConvertChars" variable="C_Accounts_Policies_Login_ConvertChars" label="TConfigForm_ConvertAuth" default="0" source="API" />
+		</GROUP>
+
+		<GROUP name="Policies_Login_Restriction" label="TConfigForm_LoginIPBox">
+			<OPTION type="checkbox" name="C_Accounts_Policies_Login_IPRestriction" variable="C_Accounts_Policies_Login_IPRestriction" label="TConfigForm_IPLoginRestrict" />
+			<OPTION type="button" btype="textfile" fileid="config/iplogin.dat" blabel="TConfigForm_IPRestrictionButton" cfileid="examples/iplogin.dat" />
+		</GROUP>
+	</SECTION>
+	
+
+	<SECTION name="Policies_Pass" label="TConfigForm_PasswordPolicySheet" helpid="485" >
+		<GROUP name="Policies_Pass_Policy" label="TConfigForm_PasswordPolicySheet">
+			<OPTION type="checkbox" name="C_Accounts_Policies_Pass_Enable" variable="C_Accounts_Policies_Pass_Enable" label="TSpamEngineForm_SpamEngineActive" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Policies_Pass_UserAlias" variable="C_Accounts_Policies_Pass_UserAlias" label="TConfigForm_PassUserAlias" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Policies_Pass_Encrypt" variable="C_Accounts_Policies_Pass_Encrypt" label="TConfigForm_PasswordEncryption" default="0" />
+		</GROUP>
+
+    <GROUP name="Policies_Pass_Policy" label="TConfigForm_PassFormatGroup">
+			<OPTION type="edit" name="C_Accounts_Policies_Pass_MinLength" variable="C_Accounts_Policies_Pass_MinLength" label="TConfigForm_LengthLabel" />
+			<OPTION type="edit" name="C_Accounts_Policies_Pass_Digits" variable="C_Accounts_Policies_Pass_Digits" label="TConfigForm_SpecLab" />
+			<OPTION type="edit" name="C_Accounts_Policies_Pass_NonAlphaNum" variable="C_Accounts_Policies_Pass_NonAlphaNum" label="TConfigForm_NonAlpha" />
+			<OPTION type="edit" name="C_Accounts_Policies_Pass_Alpha" variable="C_Accounts_Policies_Pass_Alpha" label="TConfigForm_AlphaCharsL" />
+		</GROUP>
+
+		<GROUP name="Policies_Pass_Expiration" label="TConfigForm_PassExpireBox">
+			<OPTION type="checkbox" name="C_Accounts_Policies_Pass_Expiration" variable="C_Accounts_Policies_Pass_Expiration" label="TSpamEngineForm_SpamEngineActive" default="0" />
+			<OPTION type="edit" name="C_Accounts_Policies_Pass_ExpireAfter" variable="C_Accounts_Policies_Pass_ExpireAfter" label="TConfigForm_PassExpL" />
+			<OPTION type="checkbox" name="C_Accounts_Policies_Pass_Notification" variable="C_Accounts_Policies_Pass_Notification" label="TConfigForm_PassNotifyBefore">
+				<OPTION type="edit" name="C_Accounts_Policies_Pass_NotifyBefore" variable="C_Accounts_Policies_Pass_NotifyBefore" />
+			</OPTION>
+			<OPTION type="button" btype="textfile" fileid="config/passexpirationmessage.dat" blabel="TConfigForm_PassNotifyFileView" cfileid="examples/iplogin.dat" />
+		</GROUP>
+
+		<GROUP name="Policies_Pass_Retrieval" label="TConfigForm_PassWordRetrievalBox">
+			<OPTION type="checkbox" name="C_Accounts_Policies_Pass_DenyExport" variable="C_Accounts_Policies_Pass_DenyExport" label="TConfigForm_BanPassRetrieval" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Policies_Pass_AllowAdminPass" variable="C_Accounts_Policies_Pass_AllowAdminPass" label="TConfigForm_PassAdminBan" inverse="1" default="0" />
+		</GROUP>
+	</SECTION>
+</FORM>

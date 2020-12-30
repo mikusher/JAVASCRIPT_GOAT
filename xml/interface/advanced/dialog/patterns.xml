@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<FORM name="PatternsDialog" helpid="534">
+	<SECTION name="PatternsDialog_tab" label="TPatternItemForm_GroupGroup" helpid="534">
+		<GROUP name="PatternsDialog_group" label="TPatternItemForm_GroupGroup">
+			<OPTION type="edit" name="Name" variable="Name" label="TPatternItemForm_NameL" />
+			<OPTION type="textarea" name="Users" variable="Users" label="TPatternItemForm_ItemsLabel" />
+		</GROUP>
+	</SECTION>
+</FORM>

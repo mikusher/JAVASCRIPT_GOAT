@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TCPIPTunnel" helpid="2020308">
+	<SECTION name="TCPIPTunnel_section" label="TConfigForm_TCPIPTunnelSheet" helpid="596" >
+		<GROUP name="TCPIPTunnel_tab" label="TConfigForm_TCPIPGroupBox">
+			<OPTION type="checkbox" name="C_System_Tools_Tunnel_Enable" variable="C_System_Tools_Tunnel_Enable" label="TSpamEngineForm_SpamEngineActive" />
+			<OPTION type="datagrid" name="tcptunnel" gtype="tunnel" labels="TSSLTunnelForm_TunnelList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="1" size="+20" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="2" size="+20" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="3" size="+20" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="9" size="+20" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="5" show="bool2stringnot" size="+20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />	
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/tunnel.dat" COMMENT="examples/tunnel.dat" DIALOG="tcptunnel" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="tcptunnel" LENGTH="8" >
+						<SEPS>;SEP,SEP;SEP,SEP:SEP;SEP,</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+</FORM>

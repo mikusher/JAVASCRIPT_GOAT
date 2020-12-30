@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="CFSomeWords" label="TContentHeader_ConditionBox" helpid="1125" >
+		<GROUP name="CFSomeWords_Group" label="TContentHeader_ConditionBox">
+			<OPTION type="listbox" name="containtype" function="cf_containtype" label="TContentHeader_FuncLabel" labels="TContentHeader_ContainListBox" />
+  	  <OPTION type="checkbox" function="cf_containtype" name="not" label="TContentHeader_NotBox" />
+      <OPTION type="edit" name="contain" variable="contain" label="TContentHeader_TextEdit" />
+      		<OPTION type="checkbox" function="cf_case" name="case_sensitive" label="TContentHeader_CaseSensitive" />
+      		<OPTION type="checkbox" function="cf_case" name="match_whole_words" label="TContentHeader_WholeWord" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="StaticFilters" helpid="2010303">
+	<SECTION name="StaticFilters_tab" label="TConfigForm_StaticFilterSheet" helpid="2030303" >
+		<GROUP name="StaticFilters_group" label="TConfigForm_StaticFilterSheet">
+			<OPTION type="edit" name="title" variable="title" label="TExternalFilterItemForm_TitleL" />
+			<OPTION type="edit" name="filter" variable="filter" label="TExternalFilterItemForm_ModuleL" />
+			<OPTION type="edit" name="message" variable="message" label="TExternalFilterItemForm_MessageL" />
+			<OPTION type="edit" name="smtpmessage" variable="smtpmessage" label="TExternalFilterItemForm_Label1" />
+			<OPTION type="checkbox" name="enabled" variable="enabled" label="TExternalFilterItemForm_Enabled" />
+		</GROUP>
+	</SECTION>
+</FORM>

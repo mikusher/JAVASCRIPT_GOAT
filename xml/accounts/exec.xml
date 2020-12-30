@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="exec" helpid="415" >
+
+<SECTION name="executable_executabletab" label="TDomainAdminForm_Exec" helpid="416" >
+<GROUP name="executable_executablegroup" label="TDomainAdminForm_Exec">
+<OPTION type="listbox" name="account_domain" function="account_domain" label="TFrameAccounts_DomainSheet" labels="function:domain_list" disable="edit"/>
+<OPTION type="edit" name="account_name" variable="u_alias" label="TFrameAccounts_AliasLabel" />
+<OPTION type="edit" name="exec_desc" variable="u_name" label="TFrameAccounts_CatalogDesc"/>
+<OPTION type="edit" name="e_application" variable="e_application" label="TFrameAccounts_ApplicationLabel" disable="domainadmin"/>
+<OPTION type="listbox" name="exec_type" variable="e_exectype" label="TFrameAccounts_ExecTypeL" labels="TFrameAccounts_ExecType"/>
+<OPTION type="edit" name="exec_params" variable="e_parameters" label="TFrameAccounts_ParameterLabel"/>
+<OPTION type="password" name="exec_pass" variable="e_execpass" label="TFrameAccounts_PassLabel"/>
+<OPTION type="edit" name="exec_forwardto" variable="e_execforwardcopy" label="TFrameAccounts_FrwardToLabel"/>
+</GROUP>
+</SECTION>
+
+<SECTION name="mailinglist_servicestab" label="TConfigForm_ServicesSheet" helpid="4274" >
+ <GROUP name="mailinglist_servicesgroup" label="TFrameAccounts_SAGroupBox">
+ 	<OPTION type="checkbox" name="list_av" variable="e_avscan" access="av_general" label="TTntMenuItems_AntiVirusPanel"/>
+	<OPTION type="checkbox" name="list_as" variable="e_as" access="as_general" label="TTntMenuItems_AntiSpam"/>
+	<OPTION type="checkbox" name="list_q" variable="e_qa" access="as_challenge" label="TStatisticsForm_CRSheet"/>
+</GROUP>
+</SECTION>
+<SECTION name="executable_BWtab" label="TFrameAccounts_BWUserSheet" helpid="1147" >
+        <GROUP name="user_bwgroup" label="TFrameAccounts_BWUserSheet"> 
+          <OPTION type="checkbox" name="user_bwactive" variable="U_BlackWhiteFilter" label="TFrameAccounts_ListBW" />
+          <!--<OPTION type="bwfile" name="user_bw" value="account_bw" label="TFrameAccounts_BWUserSheet"/>  
+          !--><OPTION type="datagrid" gtype="rules" name="u_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+              <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>>
+</SECTION>
+
+</FORM>

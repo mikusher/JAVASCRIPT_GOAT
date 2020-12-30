@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="AV" helpid="206">
+	<SECTION name="AV_GeneralTab" label="TSpamEngineForm_General" helpid="20601" >
+		<GROUP name="AV_GeneralTab_Integrated" label="prop" type="propertybox" datfile="config/default.ini">
+			<OPTION type="edit" name="janevimco" variable="ForwardTo" label="neco2" />
+			<OPTION type="edit" name="janevimco2" variable="lalala2" label="neco2" />
+			<OPTION type="listbox" name="janevimco3" variable="lalala3" label="neco2" labels="LOL" value="0|1|2|3" />
+		</GROUP>
+		<GROUP name="AV_GeneralTab_Integrated2" label="prop" type="propertybox" datfile="config/default2.ini">
+			<OPTION type="edit" name="janevimco4" variable="AdministratorAlias" label="neco2" />
+			<OPTION type="edit" name="janevimco5" variable="lalala4" label="neco2" />
+			<OPTION type="listbox" name="janevimco6" variable="lalala5" label="neco2" labels="LOL" value="3|2|1|0" />
+		</GROUP>
+	</SECTION>
+</FORM>

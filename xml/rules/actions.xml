@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ACTIONS>
+  <ACTION LINK="TStrings_messageaction" NAME="ard" TEXT="TStrings_actionconst0" DIALOG="cf_ard" />
+  <!--<ACTION LINK="CF_AMark" NAME="markgs" TEXT="CF_AMarkLText" DIALOG="cf_markgs" />-->
+  <ACTION TEXT="TStrings_actionconst1" NAME="stop" />
+  <!--<ACTION LINK="CF_AExecute" TEXT="CF_AExecuteLText" NAME="execute" DIALOG="cf_execute" />-->
+  <ACTION LINK="TStrings_forwardtoemailaddress" NAME="forward" DIALOG="cf_forward" TEXT="TStrings_actionconst2" />
+  <ACTION NAME="copytofolder" TEXT="TStrings_actionconst3" LINK="TStrings_foldertext" DIALOG="c_folder" />
+  <ACTION NAME="movetofolder" TEXT="TStrings_actionconst4" LINK="TStrings_foldertext" DIALOG="m_folder" />
+  <ACTION LINK="TStrings_emailsend" NAME="encrypt" TEXT="TStrings_actionconst6" />
+  <ACTION LINK="TStrings_emailsend" NAME="sendmessage" DIALOG="cf_respond" TEXT="TStrings_actionconst8" />
+  <ACTION LINK="TInputFieldsForm_ValueLabel" NAME="priority" TEXT="TStrings_actionconst10" DIALOG="cf_priority2" />
+  <ACTION LINK="TContentMessageFlags_PriorityBox" NAME="flags" TEXT="TStrings_actionconst11" dialog="cf_flags" />
+    <ACTION LINK="TContentEditHeader_HeadersBox" NAME="header" TEXT="TStrings_actionconst9" DIALOG="cf_header" />
+  <!--<ACTION LINK="CF_AHeader" NAME="header" LTEXT="CF_AHeaderLText" dialog="cf_header" />
+
+  <ACTION LINK="CF_ACopyMessage" NAME="copymessage" DIALOG="cf_copymessage" LTEXT="CF_ACopyMessageLText" />
+  <ACTION LINK="CF_AAppend" NAME="append" LTEXT="CF_AAppendLText" RTEXT="CF_AAppendRText" DIALOG="cf_addtext" />
+  <ACTION LINK="CF_AExtract" NAME="extract" LTEXT="CF_AExtractLText" DIALOG="cf_extract" />-->
+</ACTIONS>
+

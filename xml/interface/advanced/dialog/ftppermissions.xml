@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPPermission" helpid="2100202">
+	<SECTION name="PathPermission" label="TFTPUserForm_PathList" helpid="2100202" >
+		<GROUP name="Path" label="TFTPPermissionsForm_PermissionBox">
+			<OPTION type="edit" name="path" variable="path" label="TFTPPermissionsForm_PathL" />
+			<OPTION type="edit" name="fullpath" variable="fullpath" label="TFTPPermissionsForm_OptionalFullPathL" />
+			<OPTION type="checkbox" inverse="1" name="notinherit" variable="notinherit" label="TFTPPermissionsForm_Inherit" default="1" />
+		</GROUP>
+
+		<GROUP name="Read" label="TFTPPermissionsForm_ReadBox">
+			<OPTION type="checkbox" name="read" variable="read" label="TFTPPermissionsForm_Read" default="1" />
+			<OPTION type="checkbox" name="access" variable="access" label="TFTPPermissionsForm_Access" default="1" />
+			<OPTION type="checkbox" name="list" variable="list" label="TFTPPermissionsForm_List" default="1" />
+		</GROUP>
+
+		<GROUP name="Write" label="TFTPPermissionsForm_WriteBox">
+			<OPTION type="checkbox" name="write" variable="write" label="TFTPPermissionsForm_Write" default="1" />
+			<OPTION type="checkbox" name="rename" variable="rename" label="TFTPPermissionsForm_Rename" default="1" />
+			<OPTION type="checkbox" name="append" variable="append" label="TFTPPermissionsForm_Append" default="1" />
+			<OPTION type="checkbox" name="makedir" variable="makedir" label="TFTPPermissionsForm_MakeDir" default="1" />
+		</GROUP>
+
+		<GROUP name="Delete" label="TFTPPermissionsForm_DeleteBox">
+			<OPTION type="checkbox" default="1" name="delete" variable="delete" label="TFTPPermissionsForm_Delete" />
+			<OPTION type="checkbox" default="1" name="removedir" variable="removedir" label="TFTPPermissionsForm_RemoveDir" />
+		</GROUP>
+
+		<GROUP name="Size" label="TFTPPermissionsForm_SizeBox">
+			<OPTION type="edit" name="size" variable="size" label="TFTPPermissionsForm_MaxSizeL" />
+		</GROUP>
+	</SECTION>
+</FORM>

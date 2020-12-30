@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="IMService" helpid="20702">
+	<SECTION name="IMService_tab" label="TTntMenuItems_InstantMessagingPanel" helpid="959" >
+		<GROUP name="IMService_Service" label="TIMServiceItemForm_ServiceBox">
+			<OPTION type="edit" name="service" variable="service" label="TIMServiceItemForm_ServiceLabel" />
+			<OPTION type="edit" name="name" variable="name" label="TIMServiceItemForm_DescL" />
+			<OPTION type="listbox" name="category" variable="category" label="TIMServiceItemForm_CateL" labels="TIMServiceItemForm_CategoryEdit" value="conference|gateway|proxy"/>
+			<OPTION type="edit" name="type" variable="type" label="TIMServiceItemForm_TypeL" labels="TIMServiceItemForm_TypeEdit" value="private|public|icq|aim|yahoo|msn|service" />
+		</GROUP>
+
+		<GROUP name="IMService_Other" label="TAntivirusSettingForm_OtherBox">
+			<OPTION type="edit" name="ns" variable="ns" label="TIMServiceItemForm_NSL" labels="TIMServiceItemForm_NSEdit" />
+			<OPTION type="edit" name="module" variable="module" label="TIMServiceItemForm_ModuleL" />
+			<OPTION type="edit" name="params" variable="params" label="TIMServiceItemForm_ParamsL" />
+			<OPTION type="listbox" name="browse" variable="browse" label="TIMServiceItemForm_BrowseL" labels="TIMServiceItemForm_BrowseEdit" value="private|public" />
+			<OPTION type="edit" name="access" variable="access" label="TIMServiceItemForm_Label1" />
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Subdomain" helpid="2010303">
+	<SECTION name="Subdomain_tab" label="TConfigForm_SubdomainsSheet" helpid="471" >
+		<GROUP name="Subdomain_group" label="TConfigForm_SubdomainsSheet">
+			<OPTION type="edit" name="1" variable="1" label="TStrings_webdestinationurl" />
+		</GROUP>
+	</SECTION>
+</FORM>

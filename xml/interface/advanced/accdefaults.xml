@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<FORM name="AV" helpid="206">
+	<SECTION name="Account_Defaults_Domains" label="TAccountDefaultsForm_DomainsSheet" helpid="20601" >
+		<GROUP name="Account_Defaults_Domains_tab" label="TAccountDefaultsForm_DomainsSheet" type="propertybox" datfile="config/default.ini" dattype="accdefaults">
+			<OPTION type="edit" name="AdministratorAlias" variable="AdministratorAlias" label="TStrings_ad_d_adminalias" />
+			<OPTION type="edit" name="AdministratorEmail" variable="AdministratorEmail" label="TStrings_ad_d_adminemail" />
+			<OPTION type="listbox" name="ForwardUnknown" variable="ForwardUnknown" label="TStrings_ad_d_unknownusersaction" labels="TStrings_ad_dv_unknownusersaction" />
+			<OPTION type="edit" name="ForwardUnknownTo" variable="ForwardUnknownTo" label="TStrings_ad_d_forwardunknownto" />
+			<OPTION type="listbox" name="InfoToAdmin" variable="InfoToAdmin" label="TStrings_ad_d_infotoadmin" labels="TStrings_ad_gv_bool" />
+			<OPTION type="edit" name="DomainAdminLimit" variable="DomainAdminLimit" label="TStrings_ad_d_domainadminlimit" />
+			<OPTION type="edit" name="DomainDiskQuota" variable="DomainDiskQuota" label="TStrings_ad_d_diskquota" />
+			<OPTION type="edit" name="DomainMailboxSize" variable="DomainMailboxSize" label="TStrings_ad_d_mailboxsize" />
+			<OPTION type="edit" name="DomainMBLimit" variable="DomainMBLimit" label="TStrings_ad_d_mbsendlimit" />
+			<OPTION type="edit" name="DomainNumberLimit" variable="DomainNumberLimit" label="TStrings_ad_d_numbersendlimit" />
+			<OPTION type="edit" name="DomainMaxMessageSize" variable="DomainMaxMessageSize" label="TStrings_ad_d_maxmessagesize" />
+			<OPTION type="listbox" name="DomainAV" variable="DomainAV" label="TStrings_ad_g_saav" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="DomainMIAS" variable="DomainMIAS" label="TStrings_ad_g_sacr" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="DomainChallengeResponse" variable="DomainChallengeResponse" label="TStrings_ad_g_saias" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="DomainIM" variable="DomainIM" label="TStrings_ad_g_saim" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="DomainGW" variable="DomainGW" label="TStrings_ad_g_sagw" labels="TStrings_ad_gv_bool" />
+			<OPTION type="edit" name="DomainExpiresInDays" variable="DomainExpiresInDays" label="TStrings_ad_d_expiresindays" />
+			<OPTION type="listbox" name="DomainNotifyBeforeExpiration" variable="DomainNotifyBeforeExpiration" label="TStrings_ad_d_notifybeforeexp" labels="TStrings_ad_gv_bool" />
+			<OPTION type="edit" name="DomainNotifyBeforeExpirationValue" variable="DomainNotifyBeforeExpirationValue" label="TStrings_ad_d_notifybeforeexpvalue" />
+			<OPTION type="listbox" name="DeleteDomainWhenExpired" variable="DeleteDomainWhenExpired" label="TStrings_ad_d_deletewhenexpired" labels="TStrings_ad_gv_bool" />
+		</GROUP> 
+	</SECTION>
+	<SECTION name="Account_Defaults_Users" label="TFrameAccounts_UserDomainGroupBox" >
+		<GROUP name="Account_Defaults_Users_tab" label="TFrameAccounts_UserDomainGroupBox" type="propertybox" datfile="config/default.ini" dattype="accdefaults">
+			<OPTION type="listbox" name="MailboxType" variable="MailboxType" label="TStrings_ad_u_mailboxtype" labels="TStrings_ad_uv_mailboxtype" />
+			<OPTION type="edit" name="ForwardTo" variable="ForwardTo" label="TStrings_ad_u_forwardto" />
+			<OPTION type="listbox" name="LimitMailboxSize" variable="LimitMailboxSize" label="TStrings_ad_u_mailboxsize" labels="TStrings_ad_gv_bool" />
+			<OPTION type="edit" name="LimitMailboxSizeValue" variable="LimitMailboxSizeValue" label="TStrings_ad_u_mailboxsizevalue" />
+			<OPTION type="edit" name="MegabyteSendLimit" variable="MegabyteSendLimit" label="TStrings_ad_u_mbsendlimit" />
+			<OPTION type="edit" name="NumberSendLimit" variable="NumberSendLimit" label="TStrings_ad_u_numbersendlimit" />
+			<OPTION type="edit" name="MaxMessageSize" variable="MaxMessageSize" label="TStrings_ad_u_maxmessagesize" />
+			<OPTION type="listbox" name="LocalMailOnly" variable="LocalMailOnly" label="TStrings_ad_u_localmailonly" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="DeleteMailOlder" variable="DeleteMailOlder" label="TStrings_ad_u_deletemailolder" labels="TStrings_ad_gv_bool" />
+			<OPTION type="edit" name="DeleteMailOlderValue" variable="DeleteMailOlderValue" label="TStrings_ad_u_deletemailoldervalue" />
+			<OPTION type="edit" name="IncomingCopy" variable="IncomingCopy" label="TStrings_ad_u_incomingcopy" />
+			<OPTION type="edit" name="OutgoingCopy" variable="OutgoingCopy" label="TStrings_ad_u_outgoingcopy" />
+			<OPTION type="listbox" name="Responder" variable="Responder" label="TStrings_ad_u_responder" labels="TStrings_ad_uv_responder" />
+			<OPTION type="edit" name="RespondWithFile" variable="RespondWithFile" label="TStrings_ad_u_respondwithfile" />
+			<OPTION type="listbox" name="XEnvelopeTo" variable="XEnvelopeTo" label="TStrings_ad_u_xenvelopeto" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="NoMailingList" variable="NoMailingList" label="TStrings_ad_u_nomailinglist" labels="TStrings_ad_gv_bool" />
+			<OPTION type="edit" name="ExpiresInDays" variable="ExpiresInDays" label="TStrings_ad_u_expiresindays" />
+			<OPTION type="edit" name="ExpiresIfInactive" variable="ExpiresIfInactive" label="TStrings_ad_u_expiresifinactive" />
+			<OPTION type="listbox" name="NotifyBeforeExpiration" variable="NotifyBeforeExpiration" label="TStrings_ad_u_notifybeforeexp" labels="TStrings_ad_gv_bool" />
+			<OPTION type="edit" name="NotifyBeforeExpirationValue" variable="NotifyBeforeExpirationValue" label="TStrings_ad_u_notifybeforeexpvalue" />
+			<OPTION type="listbox" name="DeleteAccountWhenExpired" variable="DeleteAccountWhenExpired" label="TStrings_ad_u_deleteaccountwhenexpired" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="AuthMode" variable="AuthMode" label="TStrings_ad_u_authmode" labels="TStrings_ad_uv_authmode" />
+			<OPTION type="edit" name="AuthModeValue" variable="AuthModeValue" label="TStrings_ad_u_authmodevalue" />
+			<OPTION type="listbox" name="SpamFolderMode" variable="SpamFolderMode" label="TStrings_ad_u_spamfolder" labels="TStrings_ad_uv_spammode" />
+			<OPTION type="listbox" name="ServicesAccessSMTP" variable="ServicesAccessSMTP" label="TStrings_ad_g_sasmtp" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="ServicesAccessPOP3IMAP" variable="ServicesAccessPOP3IMAP" label="TStrings_ad_g_sapop3imap" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="ServicesAccessWebMail" variable="ServicesAccessWebMail" label="TStrings_ad_g_sawebmail" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="ServicesAccessAV" variable="ServicesAccessAV" label="TStrings_ad_g_saav" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="ServicesAccessChallengeResponse" variable="ServicesAccessChallengeResponse" label="TStrings_ad_g_sacr" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="ServicesAccessInstantAntiSpam" variable="ServicesAccessInstantAntiSpam" label="TStrings_ad_g_saias" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="ServicesAccessIM" variable="ServicesAccessIM" label="TStrings_ad_g_saim" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="ServicesAccessCalendar" variable="ServicesAccessCalendar" label="TStrings_ad_g_sagw" labels="TStrings_ad_gv_bool" />
+			<OPTION type="listbox" name="SpamFilter" variable="SpamFilter" label="TStrings_ad_u_bwlist" labels="TStrings_ad_gv_bool" />
+		</GROUP>
+	</SECTION>
+</FORM>

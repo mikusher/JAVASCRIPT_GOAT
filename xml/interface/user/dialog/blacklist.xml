@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<FORM name="blacklist">
+	<SECTION name="blacklist_section" label="TSpamEngineForm_BlackSheet">
+		<GROUP name="blacklist_group" label="TSpamEngineForm_BlackSheet">
+			<OPTION type="edit" variable="1" name="1" label="TAntivirusSettingForm_InfoToSenderBox" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

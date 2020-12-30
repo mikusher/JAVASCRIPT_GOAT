@@ -1,0 +1,149 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="list" helpid="383" >
+
+<SECTION name="mailinglist_mailinglisttab" label="TDomainAdminForm_List" helpid="384" >
+<GROUP name="mailinglist_mailinglistgroup" label="TDomainAdminForm_List">
+<OPTION type="listbox" name="account_domain" function="account_domain" label="TFrameAccounts_DomainSheet" labels="function:domain_list" disable="edit"/>
+<OPTION type="edit" name="account_name" variable="u_alias" label="TFrameAccounts_AliasLabel" />
+<OPTION type="edit" name="list_desc" variable="u_name" label="TFrameAccounts_CatalogDesc" />
+<OPTION type="edit" name="list_owner" variable="m_owneraddress" label="TFrameAccounts_ListOwner" />
+<!-- <OPTION type="listbox" name="list_source" variable="m_sendalllists" label="TFrameAccounts_SendToLab" labels="TFrameAccounts_SendAllMail" value="0|5|1|2|3|4|6" disable="domainadmin"/> -->
+<OPTION type="listbox" name="list_source" variable="m_sendalllists" label="TFrameAccounts_SendToLab" labels="TFrameAccounts_SendAllMail" value="0|5|1|2|4|3" disable="domainadmin"/>
+<OPTION type="listbox" name="list_source" variable="m_sendalllists" label="TFrameAccounts_SendToLab" labels="TStrings_wa_mailingsourcedomain" value="0|1" disable="admin"/>
+<OPTION type="edit" name="list_listfileedit" function="m_listfile" label="TFrameAccounts_SRVl" disable="domainadmin"/>
+<OPTION type="textfile" name="list_listfile" value="list_file" label="TFrameAccounts_ListMembersSheet" />
+</GROUP>
+<GROUP name="mailinglist_odbcgroup" label="TConfigForm_DBODBCSettings" disable="domainadmin" >
+  <OPTION type="button" btype="xmledit" fileid="odbc_mlist" name="odbc_mlist" blabel="TConfigForm_DBODBCSettings" />
+	<!--<OPTION type="edit" name="m_odbc_primary" function="m_odbc" label="TODBCForm_PrimaryConnBox" />
+	<OPTION type="edit" name="m_odbc_secondary" function="m_odbc" label="TODBCForm_BackupConnBox" />
+	<OPTION type="listbox" name="C_System_DBType" function="m_odbc" label="TODBCForm_ODBCBox" labels="TODBCForm_DBType" />-->
+  <OPTION type="textarea" name="sql_statement" function="m_sql" label="TFrameAccounts_SQLQueryLabel" />
+	<OPTION type="button" btype="fbutton" fileid="testsql" blabel="TFrameAccounts_TestSQL" />
+ </GROUP>
+</SECTION>
+<SECTION name="mailinglist_memberstab" label="TFrameAccounts_ListMembersSheet" helpid="387" disable="add">
+  <GROUP name="mailinglist_membersgroup" label="TFrameAccounts_MembersButton" >
+    <OPTION type="datagrid" gtype="members2" name="members" labels="TListMembersForm_MemberList">
+      <HEAD>
+        <SELECTOR />
+          <OPTION VINDEX="member" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="rights" SHOW="list_rights" value="0|3|7|1|5|2" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="addmlistmember" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SOURCE>
+				  <FILE DIALOG="mail_member" />
+				</SOURCE>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+    </OPTION>
+  </GROUP>
+</SECTION>
+
+
+<SECTION name="mailinglist_messagetab" label="TFrameAccounts_MessageGroupBoxNotify" helpid="394" >
+<GROUP name="mailinglist_fromgroup" label="TFrameAccounts_SMSFrom">
+<OPTION type="listbox" name="list_fromaction" function="list_fromaction" label="TFrameAccounts_ReplyToMailActionL" labels="TFrameAccounts_ReplyToMailType" />
+<OPTION type="edit" name="list_fromvalue" function="list_fromvalue" label="TFrameAccounts_SRVl"/>
+</GROUP>
+
+<GROUP name="mailinglist_togroup" label="TFrameAccounts_ReplyToHeaderBox">
+<OPTION type="listbox" name="list_toaction" function="list_toaction" label="TFrameAccounts_ReplyToMailActionL" labels="TFrameAccounts_ReplyToMailType" />
+<OPTION type="edit" name="list_tovalue" function="list_tovalue" label="TFrameAccounts_SRVl"/>
+</GROUP>
+
+<GROUP name="mailinglist_messagegroup" label="TFrameAccounts_MessageGroupBoxNotify">
+<OPTION type="checkbox" name="list_recipientto" variable="m_separateto" label="TFrameAccounts_SeparateTo"/>
+<OPTION type="edit" name="list_addsubject" variable="m_addtosubject" label="TFrameAccounts_AddToSubjLabel"/>
+<OPTION type="textarea" name="list_addheader" variable="m_addtoheader" label="TFrameAccounts_AddHeadersL"/>
+<OPTION type="button" btype="xmledit" name="list_headerfiles" fileid="headerfiles" blabel="TFrameAccounts_GroupHeaderFooter" />
+
+<OPTION type="listbox" name="list_originator" variable="m_listsender" label="TFrameAccounts_CatalogOrigL" labels="TFrameAccounts_CatalogOriginator"/>
+</GROUP>
+</SECTION>
+
+
+<SECTION name="mailinglist_securitytab" label="TFrameAccounts_MailSecuritySheet" helpid="391" >
+<GROUP name="mailinglist_securitygroup" label="TFrameAccounts_MailSecuritySheet">
+<OPTION type="checkbox" name="list_membersonly" variable="m_membersonly" label="TFrameAccounts_MembersOnly"/>
+<OPTION type="listbox" name="list_passwordprot" variable="m_moderated" label="TFrameAccounts_MailListTypeL" labels="TFrameAccounts_MailType" value="0|2|1"/>
+<OPTION type="password" name="list_password" variable="m_moderatedpassword" label="TFrameAccounts_PassLabel" />
+<OPTION type="edit" name="m_allowsubscribers" variable="m_allowsubscribers" label="TFrameAccounts_AllowLabel" disable="domainadmin" />
+<OPTION type="textfile" name="list_subscribers" value="list_subscribers" label="TFrameAccounts_AllowLabel"/>
+<OPTION type="listbox" variable="M_DefaultRights" name="default_right" value="0|7|1|5|2" label="TFrameAccounts_MDefaultRightsL" labels="TFrameAccounts_DefaultRights"/>
+<OPTION type="checkbox" name="m_maxlist" variable="m_maxlist" label="TFrameAccounts_MaxMailListSize">
+<OPTION type="edit" name="m_maxlistsize" units="u_bytes" saveunit="1" variable="m_maxlistsize" />
+</OPTION>
+<OPTION type="edit" name="m_maxmembers" variable="m_maxmembers" label="TFrameAccounts_MaxMembersL" />
+<OPTION type="checkbox" name="list_denyexpn" variable="m_denyexpnlist" label="TFrameAccounts_DenyEXPNList"/>
+</GROUP>
+
+</SECTION>
+
+
+<SECTION name="mailinglist_servicestab" label="TConfigForm_ServicesSheet" helpid="4271" >
+ <GROUP name="mailinglist_servicesgroup" label="TFrameAccounts_SAGroupBox">
+<OPTION type="checkbox" name="list_av" variable="m_avscan" access="av_general" label="TTntMenuItems_AntiVirusPanel"/>
+<OPTION type="checkbox" name="list_as" variable="m_as" access="as_general" label="TTntMenuItems_AntiSpam"/>
+<OPTION type="checkbox" name="list_q" variable="m_qa" access="as_challenge" label="TStatisticsForm_CRSheet"/>
+</GROUP>
+</SECTION>
+
+<SECTION name="mailinglist_othertab" label="TFrameAccounts_OtherCatalogGroupBox" helpid="398" >
+<GROUP name="mailinglist_othergroup" label="TFrameAccounts_OtherCatalogGroupBox">
+<OPTION type="checkbox" name="list_sendtosender" variable="m_sendtosender" default="1" label="TFrameAccounts_SendToSender"/>
+<OPTION type="checkbox" name="list_forwardcopy" variable="m_copytoowner" label="TFrameAccounts_CopyToOwner"/>
+<OPTION type="checkbox" name="list_digest" variable="M_DigestConfirmed" label="TFrameAccounts_SetListOwner"/>
+<OPTION type="checkbox" name="list_relay" variable="M_ListsR" label="TFrameAccounts_ListRelay"/>
+<OPTION type="checkbox" name="list_variables" variable="m_listsubject" label="TFrameAccounts_ProcessVariables"/>
+<OPTION type="checkbox" name="list_personalized" variable="m_personalized" label="TFrameAccounts_FieldsODBC"/>
+<OPTION type="checkbox" name="list_removedead" variable="m_removedead" label="TFrameAccounts_RemoveDead"/>
+<OPTION type="checkbox" name="list_updatedate" variable="M_EditSentDate" label="TFrameAccounts_UpdateDateBox"/>
+<OPTION type="edit" name="list_maxminutesend" variable="m_listbatch" label="TFrameAccounts_MaxNumberMailListL"/>
+<OPTION type="label" label="TFrameAccounts_NotifyOwnerL" inline="1"/>
+<OPTION type="checkbox" name="list_notifyjoin" variable="m_notifyjoin" label="TFrameAccounts_NotifyJoin" inline="1"/>
+<OPTION type="checkbox" name="list_notifyleave" variable="m_notifyleave" label="TFrameAccounts_NotifyLeave" inline="1"/>
+<OPTION type="edit" name="list_allowedit" variable="m_sublistfile" label="TFrameAccounts_SubListFileLabel" disable="domainadmin"/>
+<OPTION type="textfile" name="list_join" value="list_join" label="TFrameAccounts_SubListFileLabel" />
+<OPTION type="edit" name="list_listleave" variable="m_leavefile" label="TFrameAccounts_LeaveFL" disable="domainadmin"/>
+<OPTION type="textfile" name="list_leave" value="list_leave" label="TFrameAccounts_LeaveFL" />
+</GROUP>
+</SECTION>
+
+<SECTION name="mailinglist_BWtab" label="TFrameAccounts_BWUserSheet" helpid="1131" >
+        <GROUP name="user_bwgroup" label="TFrameAccounts_BWUserSheet"> 
+          <OPTION type="checkbox" name="user_bwactive" variable="U_BlackWhiteFilter" label="TFrameAccounts_ListBW" />
+          <!--<OPTION type="bwfile" name="user_bw" value="account_bw" label="TFrameAccounts_BWUserSheet"/>  
+          !--><OPTION type="datagrid" gtype="rules" name="u_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+              <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>
+</SECTION>
+
+</FORM>

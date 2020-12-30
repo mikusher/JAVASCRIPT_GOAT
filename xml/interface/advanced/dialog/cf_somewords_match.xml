@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="CFSomeWords" label="TContentHeader_ConditionBox" helpid="1125" >
+		<GROUP>
+			<OPTION type="radio" function="cf_case_match" name="match" label="TContentHeader_EvalAsStringRadio" value="0" inline="1" />
+      		<OPTION type="radio" value="1" function="cf_case_match" name="match" label="TContentHeader_MatchAllRadio" inline="1" />
+      		<OPTION type="radio" function="cf_case_match" name="match" label="TContentHeader_MatchOneRadio" value="2" inline="1" />
+		</GROUP>
+		<GROUP name="CFSomeWords_Group" label="TContentHeader_ConditionBox">
+			<OPTION type="listbox" name="containtype" function="cf_containtype" label="TContentHeader_FuncLabel" labels="TContentHeader_ContainListBox" />
+  	  <OPTION type="checkbox" function="cf_containtype" name="not" label="TContentHeader_NotBox" />
+      <OPTION type="edit" name="contain" variable="contain" label="TContentHeader_TextEdit" />
+      		<OPTION type="checkbox" function="cf_case_match" name="case_sensitive" label="TContentHeader_CaseSensitive" />
+      		<OPTION type="checkbox" function="cf_case_match" name="match_whole_words" label="TContentHeader_WholeWord" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

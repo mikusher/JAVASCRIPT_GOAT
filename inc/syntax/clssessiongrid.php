@@ -1,0 +1,1 @@
+﻿<?php  require_once"inc/syntax/clsstdgrid.php";class cSessionGrid extends cStdGrid{function cSessionGrid($option,$name){$this->Name=$name;}function Load($gObj,$array){$this->Data=$gObj->Base[strtolower($this->Name)];}function Save(){$gObj->Base[$this->Name]=$this->Data;}}?>

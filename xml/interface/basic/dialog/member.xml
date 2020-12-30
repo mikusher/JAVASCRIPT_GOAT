@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Members" helpid="2030201">
+	<SECTION name="Members_tab" label="TMemberItemForm_MemberBox" helpid="2030201" >
+		<GROUP name="Members_group" label="TMemberItemForm_MemberBox">
+		  <OPTION type="edit" name="member" variable="member" label="TMemberItemForm_MemberBox" />
+    </GROUP>
+ 		<GROUP name="Members_select" label="SELECT">
+		  <OPTION type="account_select" target="member" />
+    </GROUP>
+ 		<GROUP name="Members_other" label="TAntivirusSettingForm_OtherBox">
+		  <OPTION type="listbox" name="rights" variable="rights" label="TMemberItemForm_RightsL" value="0|3|7|1|5|2" labels="TFrameAccounts_DefaultRights"/>
+    </GROUP>
+	</SECTION>
+</FORM>

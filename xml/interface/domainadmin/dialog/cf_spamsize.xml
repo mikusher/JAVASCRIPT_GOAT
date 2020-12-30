@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="SpamScore" label="TStrings_hitscaption" helpid="1125" >
+		<GROUP name="SpamScore_Group" label="TStrings_hitscaption">
+			<OPTION type="listbox" variable="messagesizesmaller" name="messagesizesmaller" label="TStrings_hitslabel" labels="TContentSize_MessageSizeSmallerBox" />
+      <OPTION type="edit" variable="messagesize" name="messagesize" label="TContentSize_ThanLabel" >
+ 		  </OPTION>
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="205" >
+
+    <!-- INDEXING QUEUES {{{-->
+
+    <SECTION name="MIAS_IndexQueue" label="TSpamEngineForm_IndexSheet" helpid="798">
+  	  <GROUP name="MIAS_IndexQueue_General" label="TSpamEngineForm_General" datfile="spam.dat" dattype="spam2" >
+          <OPTION type="datagrid" name="indexqueue" gheight="300" labels="TSpamEngineForm_Queues" >
+    				<HEAD>
+    					<SELECTOR />
+    					<OPTION VINDEX="1"  SIZE="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+    					<OPTION VINDEX="0"  SIZE="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+    					<OPTION VINDEX="2" SHOW="learning_rule_process_as" value="5|4|1|0|2|3"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+    				</HEAD>
+    				<SOURCE>
+    					<FILE DIALOG="learningrule" name="spam/spamqueue.dat" />
+    				</SOURCE>
+    				<BUTTONS>
+    					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+    					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+    					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+    					<BUTTON LABEL="TSpamEngineForm_IndexNowButton" />
+    					<BUTTON LABEL="TSpamEngineForm_SpamFileButton" TYPE="editfile" />
+    				</BUTTONS>
+    				<SYNTAX>
+    					<OBJECT NAME="indexqueue" LENGTH="3">
+    						<SEPS>|SEP;SEP</SEPS>
+    					</OBJECT>
+    				</SYNTAX>
+    			</OPTION>
+        </GROUP>
+    </SECTION>
+
+    <!-- }}} INDEXING QUEUES VALUE="3|2|4|5|1|0" -->
+</FORM>

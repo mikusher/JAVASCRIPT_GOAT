@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FORM name="headerfiles">
+<SECTION name="headerfiles_section" label="TStrings_weboption">
+  <GROUP name="headerfiles_group" label="TFrameAccounts_GroupMessageSheet">
+    <OPTION type="edit" name="m_headerfile_txt" function="m_headerfile" label="THeaderFooterForm_HeaderL" />
+    <OPTION type="textfile" name="list_headerfile" value="list_header" label="TPatternsForm_ChangeButton" />
+    <OPTION type="edit" name="m_headerfile_html" function="m_headerfile" label="THeaderFooterForm_HHTMLL" />
+    <OPTION type="textfile" name="list_headerfile" value="list_header_html" label="TPatternsForm_ChangeButton" />
+    <OPTION type="edit" name="m_footerfile_txt" function="m_footerfile" label="THeaderFooterForm_FooterL" />
+    <OPTION type="textfile" name="list_footerfile" value="list_footer" label="TPatternsForm_ChangeButton" />
+    <OPTION type="edit" name="m_footerfile_html" function="m_footerfile" label="THeaderFooterForm_FHTMLL" />
+    <OPTION type="textfile" name="list_footerfile" value="list_footer_html" label="TPatternsForm_ChangeButton" />
+  </GROUP>
+</SECTION>
+</FORM>

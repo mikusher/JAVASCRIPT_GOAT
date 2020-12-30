@@ -1,0 +1,271 @@
+﻿<?xml version="1.0"?>
+<FORM name="user" helpid="351" >
+    <SECTION name="user_usertab" label="TFTPUserForm_UserSheet" helpid="282">
+        <GROUP name="user_usergroup" label="TFrameAccounts_UserBox">
+            <OPTION type="listbox" name="account_domain" function="account_domain" label="TFrameAccounts_DomainSheet" labels="function:domain_list" disable="edit"/>
+            <OPTION type="edit" name="account_name" tooltip="TStrings_wa_comment_account" tooltipheight="30" variable="u_emailalias" label="TFrameAccounts_AliasLabel" />
+            <OPTION type="edit" name="user_phoneNo" variable="u_phonealias" label="TFrameAccounts_SIPL" />
+            <OPTION type="edit" name="user_username" tooltip="TStrings_wa_comment_fullname" tooltipheight="90" variable="u_mailbox" label="TFrameAccounts_MailBoxLabel" />
+            <OPTION type="edit" name="user_fullname" variable="u_name" label="TFrameAccounts_NameLabel" />
+            <OPTION type="edit" name="user_comment" variable="u_comment" label="TFrameAccounts_UserDescL" />
+            <OPTION type="password" name="user_password" tooltipheight="30" tooltip="TStrings_wa_comment_pwd" function="user_password" label="TFrameAccounts_PassLabel"/>
+            <OPTION type="password" name="user_confirmpassword" tooltipheight="30" tooltip="TStrings_wa_comment_confirmpwd" function="user_password" label="TFrameAccounts_ConfirmLabel"/>
+            
+
+        </GROUP>
+
+
+    </SECTION>
+
+<!-- Groups {{{
+    + chemix 20.10.2006
+    TODO : add correct variable name
+labels :
+    user_group_tab = 'Groups';
+    user_group_groups = 'Groups';
+    user_group_friends = 'Friends';
+    user_group_members_labels = 'Item|Rights'
+-->
+<!--<SECTION name="user_group_tab" label="user_group_tab" helpid="201010208" >
+
+    <GROUP name="user_group_type" >
+        <OPTION type="radio" name="user_group_t" variable="" label="user_group_groups" value="1" >
+        </OPTION>
+        <OPTION type="radio" name="user_group_t" variable="" label="user_group_friends" value="2" >
+        </OPTION>
+        <OPTION type="radio" name="user_group_t" variable="" label="user_group_lists" value="3">
+        </OPTION>
+    </GROUP>
+
+    <GROUP name="user_group_members" label="Groups">
+        <OPTION type="datagrid" gtype="members2" name="members_group" labels="user_group_members_labels">
+            <HEAD>
+                <SELECTOR />
+                    <OPTION VINDEX="item" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+                    <OPTION VINDEX="rights" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+            <BUTTONS>
+                <BUTTON LABEL="TConfigForm_AddItemNext" TYPE="addgroup" />
+                <BUTTON LABEL="TScheduleForm_EditButton" TYPE="edit" />
+                <BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+            </BUTTONS>
+            <SOURCE>
+                <FILE DIALOG="mail_member" />
+            </SOURCE>
+            <SYNTAX SINGLELINE="1" MULTIPLE="1">
+                <OBJECT ENDTAG="" NAME="members" LENGTH="2">
+                    <SEPS>;</SEPS>
+                </OBJECT>
+            </SYNTAX>
+        </OPTION>
+    </GROUP>
+    <GROUP name="user_list_members" label="Groups">
+        <OPTION type="datagrid" gtype="members2" name="members_list" labels="user_group_members_labels">
+            <HEAD>
+                <SELECTOR />
+                    <OPTION VINDEX="item" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+                    <OPTION VINDEX="rights" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+            <BUTTONS>
+                <BUTTON LABEL="TConfigForm_AddItemNext" TYPE="addgroup" />
+                <BUTTON LABEL="TScheduleForm_EditButton" TYPE="edit" />
+                <BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+            </BUTTONS>
+            <SOURCE>
+                <FILE DIALOG="mail_member" />
+            </SOURCE>
+            <SYNTAX SINGLELINE="1" MULTIPLE="1">
+                <OBJECT ENDTAG="" NAME="members" LENGTH="2">
+                    <SEPS>;</SEPS>
+                </OBJECT>
+            </SYNTAX>
+        </OPTION>
+    </GROUP>
+    <GROUP name="user_friend_members" label="Friends">
+        <OPTION type="datagrid" gtype="members2" name="members_friend" labels="user_group_members_labels">
+            <HEAD>
+                <SELECTOR />
+                    <OPTION VINDEX="item" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+                    <OPTION VINDEX="rights" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+            <BUTTONS>
+                <BUTTON LABEL="TConfigForm_AddItemNext" TYPE="addgroup" />
+                <BUTTON LABEL="TScheduleForm_EditButton" TYPE="edit" />
+                <BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+            </BUTTONS>
+            <SOURCE>
+                <FILE DIALOG="mail_member" />
+            </SOURCE>
+            <SYNTAX SINGLELINE="1" MULTIPLE="1">
+                <OBJECT ENDTAG="" NAME="members" LENGTH="2">
+                    <SEPS>;</SEPS>
+                </OBJECT>
+            </SYNTAX>
+        </OPTION>
+    </GROUP>
+</SECTION>-->
+<!-- }}} -->
+
+
+   <SECTION name="user_limitstab" label="TFrameAccounts_UserMiscSheet" helpid="354" >
+        <GROUP name="user_limitsgroup" label="TFrameAccounts_LimitsUserGroupBox">
+            <OPTION type="checkbox" name="user_limitmailbox" variable="u_maxbox" label="TFrameAccounts_LimitMailBox" >
+                <OPTION type="edit" name="u_maxboxsize" variable="u_maxboxsize" units="u_bytes" defaultunit="1" saveunit="1" />
+
+            </OPTION>
+            <OPTION type="edit" name="u_maxmessagesize" variable="u_maxmessagesize" units="u_bytes" defaultunit="1" saveunit="1" label="TFrameAccounts_MaxMsgLabel" />
+            <OPTION type="edit" name="u_megabytesendlimit" variable="u_megabytesendlimit" units="u_bytes" defaultunit="1" saveunit="2" label="TFrameAccounts_MegLab" />
+            <OPTION type="edit" name="user_numbersendlimit" variable="u_numbersendlimit" label="TFrameAccounts_NumLab" />
+        </GROUP>
+
+        <GROUP name="user_expirationgroup" label="TFrameAccounts_Expiration">
+            <OPTION type="listbox" name="user_state" variable="U_AccountDisabled" label="TFrameAccounts_UserStateL" labels="TFrameAccounts_AccountDisabled" value="0|1|2|3" />
+            <OPTION type="edit" name="user_expireinactive" variable="u_inactivefor" label="TFrameAccounts_ExpireAfterLabel" />
+            <OPTION type="checkbox" name="user_expires" variable="u_accountvalid" label="TFrameAccounts_AccountValid" >
+                <OPTION type="edit" name="user_expireson" function="user_expireson"/>
+            </OPTION>
+            <OPTION type="checkbox" name="user_notifybefore" variable="u_validityreport" label="TFrameAccounts_ValidityWarning" >
+                <OPTION type="edit" name="user_notifybeforedays" variable="u_validityreportdays"/>
+            </OPTION>
+            <OPTION type="checkbox" name="user_deletewhenexpired" variable="u_deleteexpire" label="TFrameAccounts_DeleteExpire" />
+            <OPTION type="edit" name="user_notificationedit" variable="u_validreport" label="TFrameAccounts_ValidityButtonView" disable="domainadmin" />
+            <OPTION type="textfile" name="user_notification" value="user_notification" label="TFrameAccounts_ValidityButtonView" />
+        </GROUP>
+    </SECTION>
+
+
+	<SECTION name="user_servicestab" label="TFrameAccounts_OtherServicesTabSheet" helpid="4161" >
+		<GROUP name="user_servicesaccessgroup"  label="TFrameAccounts_UserServicesAccessGroupBox"  >
+			<OPTION type="checkbox" name="user_smtp" variable="u_smtp" access="smtp"  label="TConfigForm_WatchdogSMTP" />
+			<OPTION type="checkbox" name="user_pop3imap" variable="u_pop3imap" access="pop3" label="TConfigForm_WatchdogPOP3" />
+			<OPTION type="checkbox" name="user_webmail" variable="u_webmail" access="webmail" label="TConfigForm_WebMailTabSheet" />
+			<OPTION type="checkbox" name="user_im" variable="u_im" access="im_general" label="TTntMenuItems_InstantMessagingPanel" />
+			<OPTION type="checkbox" name="user_sip" variable="u_sip" access="sip" label="TTntMenuItems_SIPPanel" />
+			<OPTION type="checkbox" name="user_ftp" access="ftp" variable="u_ftp" label="TStrings_cl_ftp" />
+			<OPTION type="checkbox" name="user_sms" access="sms" variable="u_sms" label="TStrings_cl_sms" />
+			<OPTION type="label" label="&lt;div class=grouptitle &gt;&lt;/div&gt;"/>
+			<OPTION type="checkbox" name="user_avscan" variable="u_avscan" access="av_general" label="TTntMenuItems_AntiVirusPanel" />
+			<OPTION type="checkbox" name="user_as" variable="u_as" access="as_general" label="TTntMenuItems_AntiSpam" />
+			<OPTION type="checkbox" name="user_cr" variable="u_cr" access="as_challenge" label="TTntMenuItems_ASQuarantinePanel" />
+			<OPTION type="label" label="&lt;div class=grouptitle &gt;&lt;/div&gt;"/>
+			<OPTION type="checkbox" name="user_gw" variable="u_gw" access="gw_general" label="TConfigForm_GroupWareSheet" />
+			<OPTION type="checkbox" name="user_webdav" access="webdav" variable="u_webdav" label="TStrings_cl_caldav" />
+			<OPTION type="label" label="&lt;div class=grouptitle &gt;&lt;/div&gt;"/>
+			<OPTION type="checkbox" name="user_activesync" access="activesync" variable="u_activesync" label="TStrings_cl_activesync" />
+			<OPTION type="checkbox" name="user_syncML" variable="U_SyncML" access="syncml" label="TTntMenuItems_SyncMLPanel" />
+<OPTION type="checkbox" name="user_activation_outlook" access="connector" variable="U_Client_Connector" label="TFrameAccounts_DomClient[2]" />
+			<OPTION type="checkbox" name="user_activation_desktop" access="desktop" variable="U_Client_Desktop" label="TFrameAccounts_DomClient[3]" />
+		</GROUP>
+</SECTION>
+
+
+
+<SECTION name="user_miscellaneoustab" label="TFrameAccounts_Special" helpid="232" >
+        <GROUP name="user_options_main" label="TFrameAccounts_AccountTypeBox">
+            	<OPTION type="edit" name="user_alternateemail" variable="u_alternateemail" label="TFrameAccounts_AltEmailL" />
+            	            <OPTION type="listbox" name="user_permissions" function="user_permissions" label="TFrameAccounts_UserTypeLabel" labels="TFrameAccounts_UserType" value="0|1|2" disable="domainadmin" inline="1"/>
+            <OPTION type="textfile" name="user_domainrights" value="user_domainrights" label="TFrameAccounts_DomainIndexButton" disable="domainadmin"/>
+                    <OPTION type="listbox" name="user_mode" variable="u_authmode" label="TFrameAccounts_AuthModeL" labels="TFrameAccounts_AuthMode" disable="domainadmin=readonly" values="0|1|2|3" inline="1"/>
+            <OPTION type="edit" name="user_modevalue" variable="u_authmodevalue"/>
+            <OPTION type="mailboxview" name="mailbox_view" value="mailbox_view" label="TFrameAccounts_MailManagementSheet" />
+        </GROUP>
+        
+        <GROUP name="user_accounttab" label="TFrameAccounts_MailboxGroupbox">
+            <OPTION type="listbox" name="user_accounttype" function="u_accounttype" label="TFrameAccounts_AccountTypeL" labels="TFrameAccounts_AccountType" value="0|2|1" />
+            <OPTION type="radio" name="user_useremoteaddress" function="u_remote_address" label="TStrings_wa_localaccount" value="0" >
+                <OPTION type="edit" name="user_mailbox" variable="u_mailboxpath" disable="domainadmin" />
+            </OPTION>
+            <OPTION type="radio" name="user_useremoteaddress" function="u_remote_address" label="TFrameAccounts_RemoteAddressRadio" value="1">
+                <OPTION type="edit" tooltip="TStrings_wa_comment_remote" tooltipheight="120" name="user_remoteaddress" variable="u_remoteaddress" />
+            </OPTION>
+            <OPTION type="radio" name="user_useremoteaddress" function="u_remote_address" label="TFrameAccounts_NULLBox" value="2" ></OPTION>
+        </GROUP>
+        
+        <GROUP name="user_options_spam" label="TFrameAccounts_UserSpamBox">
+            <OPTION type="listbox" name="user_quarantinereports" variable="u_quarantinereports" label="TFrameAccounts_Label1" labels="TFrameAccounts_SpamReport" values="0|1|2|3" />
+            <OPTION type="listbox" name="user_spamfolder" variable="u_spamfolder" label="TFrameAccounts_SpamFolderModeL" labels="TFrameAccounts_SpamFolderMode"  />
+            <OPTION type="checkbox" name="user_spamadmin" variable="u_spamadmin" label="TFrameAccounts_SpamAdmin"  />
+            <OPTION type="textfile" name="user_spammailbox" value="user_spammailbox" label="TFrameAccounts_SpamAdminUsers" />
+        </GROUP>
+
+        <GROUP name="user_miscellaneousgroup" label="TFrameAccounts_SpecialBox">
+            <OPTION type="checkbox" name="user_etrn" variable="u_etrn" label="TFrameAccounts_ETRNBox" disable="domainadmin" />
+            <OPTION type="checkbox" name="user_xenvelopeto" variable="u_xenvelopeto" label="TFrameAccounts_XEnvelopeToBox" />
+            <OPTION type="checkbox" name="user_localdomainsonly" variable="u_localdomain" label="TFrameAccounts_SendLocalOnly" />
+        </GROUP>
+    </SECTION>
+    
+    
+    
+    <SECTION name="user_mailboxtab" label="TFrameAccounts_MailManagementSheet" helpid="286" >
+        <GROUP name="user_mailboxgroup" label="TConfigForm_StorageGroupBox">
+        <OPTION type="edit" name="user_forwardto" variable="u_forwardto" label="TFrameAccounts_FrwardToLabel" />
+		<OPTION type="checkbox" name="user_deleteolder" variable="u_deleteolder" label="TFrameAccounts_DeleteMailOlderBox" >
+			<OPTION type="edit" name="user_deleteolderthan" variable="u_deleteolderdays" />
+		</OPTION>
+		<OPTION type="checkbox" name="user_forwardolder" variable="u_forwardolder" label="TFrameAccounts_ForwardMailBox" >
+			<OPTION type="edit" name="user_forwardolderthan" variable="u_forwardolderdays" />
+		</OPTION>
+		<OPTION type="edit" name="user_forwardolderto" variable="u_forwardolderto" label="TFrameAccounts_ForwardToLabel"/>
+		<OPTION type="edit" name="user_mailin" tooltip="TStrings_wa_comment_copyin" tooltipheight="90" variable="u_mailin" label="TFrameAccounts_IncomeMailLabel" />
+		<OPTION type="edit" name="user_mailout" tooltip="TStrings_wa_comment_copyout" tooltipheight="90" variable="u_mailout" label="TFrameAccounts_OutgoMailLabel" />
+        </GROUP>
+
+
+        <GROUP name="user_respondergroup" label="TFrameAccounts_RespGroupBox">
+            <OPTION type="listbox" name="user_respondstatus" variable="u_respond" label="TFrameAccounts_TRespStatLab" labels="TFrameAccounts_RespondBox"/>
+            <OPTION type="edit" name="user_respondperiod" variable="u_respondperiod" label="TFrameAccounts_ResponderPeriodL" />
+            
+
+            
+            <OPTION type="label" name="TFrameAccounts_RespondL" label="TFrameAccounts_RespondL" />
+            <OPTION type="edit" name="user_replybetweenfrom" variable="u_respondbetweenfrom" label="TStatisticsForm_TCFromL" />
+            <OPTION type="edit" name="user_replybetweento" variable="u_respondbetweento" label="TStatisticsForm_TCToL" />
+            <OPTION type="checkbox" name="user_replyonlyme" variable="U_RespondOnlyIfToMe" label="TFrameAccounts_ReplyOnlyBox" />
+            <OPTION type="checkbox" name="user_nomaillist" variable="u_nomaillist" label="TFrameAccounts_NoMailList" disable="admin|domainadmin|gateway"/>
+            <OPTION type="textfile" name="user_message_file" value="user_message_file" label="TFrameAccounts_RespondButView" />
+            <OPTION type="textfile" name="user_noresponder" value="user_noresponder" label="TFrameAccounts_NoRespondFor" />
+        </GROUP>
+    </SECTION>
+
+	<SECTION name="user_voip" label="TFrameAccounts_VoIPSheet" helpid="">
+		<GROUP name="user_voip_group" label="TFrameAccounts_VoIPBox">
+			<OPTION type="radio" value="0" name="user_voip_fwd_type" function="user_voip" label="TFrameAccounts_VoIPNoCall"/>
+			<OPTION type="radio" value="1" name="user_voip_fwd_type" function="user_voip" label="TFrameAccounts_VoIPCall">
+				<OPTION type="edit" name="user_voip_fwd_to" function="user_voip" />
+			</OPTION>
+			<OPTION type="edit" name="user_voip_fwd_after" function="user_voip" label="TFrameAccounts_VoIPTransferL"/>
+			
+		</GROUP>
+	</SECTION>
+
+    <SECTION name="user_bwtab" label="TFrameAccounts_BWUserSheet" helpid="1128" disable="add">
+        <GROUP name="user_bwgroup" label="TFrameAccounts_UserBWGroupBox"> 
+          <OPTION type="checkbox" name="user_bwactive" variable="U_BlackWhiteFilter" label="TFrameAccounts_ListBW" />
+<OPTION type="datagrid" gtype="rules" name="u_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+              <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					      <BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+					      <BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" name="filter.dat" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>
+    </SECTION>
+</FORM>

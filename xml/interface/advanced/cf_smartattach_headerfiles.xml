@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FORM name="headerfiles">
+<SECTION name="headerfiles_section" label="TStrings_weboption">
+  <GROUP name="headerfiles_group" label="TFrameAccounts_GroupMessageSheet">
+
+  </GROUP>
+</SECTION>
+</FORM>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Filter" helpid="2040104" >
+	<SECTION name="WebSite_Filter_Tab" label="TWebHostForm_FilterSheet" helpid="2040104" >
+		<GROUP name="WebSite_Filter_Group" label="TWebHostForm_AppGroup">
+			<OPTION type="edit" name="ext" variable="ext" label="TStrings_aextension" />
+			<OPTION type="edit" name="module" variable="module" label="TStrings_webapplication" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

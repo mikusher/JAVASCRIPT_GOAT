@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FORM name="SpamQueue" helpid="">
+	<SECTION name="SpamQueue_Quarantime" label="TStatisticsForm_CRSheet" helpid="1000" >
+		<GROUP name="Policies_Login_Policy" label="TStatisticsForm_ChallengeBox">
+		  <OPTION type="edit" label="TAntivirusSettingForm_InfoToSenderBox" request="1" name="q_sender" inline="1"/>
+		  <OPTION type="edit" label="TFrameAccounts_ListOwner" request="1" name="q_owner" inline="1"/>
+		  <OPTION type="edit" label="TStatisticsForm_DomainQL" request="1" name="q_domain" inline="1"/>
+		  <OPTION type="edit" label="TStatisticsForm_MaxQueueItemsL" request="1" name="q_top"  default="100" inline="1" />
+      <OPTION type="datagrid" name="quarantine" request="1" gtype="challenge" param="quarantine" width="300" labels="TStatisticsForm_ChallengeList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" size="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="7" size="+30" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="5" size="+30" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="4" size="+25" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="6" size="+15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="quarantine" />
+				</SOURCE>
+				<BUTTONS>
+				  <BUTTON LABEL="TTarpitForm_RefreshButton" TYPE="ch_refresh" />
+					<BUTTON LABEL="TStatisticsForm_WhitelistSheet" TYPE="ch_whitelist" />
+					<BUTTON LABEL="TStatisticsForm_BlackButton" TYPE="ch_blacklist" />
+					<BUTTON LABEL="TStatisticsForm_DeliverButton" TYPE="ch_deliver" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="ch_delete" />
+				</BUTTONS>
+			</OPTION>	
+	  </GROUP>
+  </SECTION>
+	<SECTION name="SpamQueue_WhiteList" label="TStatisticsForm_WhitelistSheet" helpid="1002" >
+		<GROUP name="Policies_Login_Policy" label="TStatisticsForm_ChallengeBox">
+		  <OPTION type="edit" label="TAntivirusSettingForm_InfoToSenderBox" request="1" name="w_sender" inline="1"/>
+		  <OPTION type="edit" label="TFrameAccounts_ListOwner" request="1" name="w_owner" inline="1"/>
+		  <OPTION type="edit" label="TStatisticsForm_DomainQL" request="1" name="w_domain" inline="1"/>
+		  <OPTION type="edit" label="TStatisticsForm_MaxQueueItemsL" request="1" default="100" name="w_top" inline="1" />
+      <OPTION type="datagrid" name="whitelist" gtype="challenge" param="whitelist" width="600" height="250" labels="TStatisticsForm_ChallengeList2" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" size="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="5" size="+40" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="4" size="+35" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="6" size="+25" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="whitelist" />
+				</SOURCE>
+				<BUTTONS>
+				  <BUTTON LABEL="TTarpitForm_RefreshButton" TYPE="ch_refresh" />
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TStatisticsForm_BlackButton" TYPE="bw_blacklist" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="ch_delete" />
+				</BUTTONS>
+			</OPTION>
+	  </GROUP>
+  </SECTION>
+	<SECTION name="SpamQueue_BlackListing" label="TStatisticsForm_BlacklistSheet" helpid="1005" >
+		<GROUP name="Policies_Login_Policy" label="TStatisticsForm_ChallengeBox">
+		  <OPTION type="edit" label="TAntivirusSettingForm_InfoToSenderBox" request="1" name="b_sender" inline="1"/>
+		  <OPTION type="edit" label="TFrameAccounts_ListOwner" request="1" name="b_owner" inline="1"/>
+		  <OPTION type="edit" label="TStatisticsForm_DomainQL" request="1" name="b_domain" inline="1"/>
+		  <OPTION type="edit" label="TStatisticsForm_MaxQueueItemsL" request="1"  default="100" name="b_top" inline="1" />
+		  <OPTION type="datagrid" name="blacklist" gtype="challenge" param="blacklist" width="792" labels="TStatisticsForm_ChallengeList2" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" size="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="5" size="+40" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="4" size="+35" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="6" size="+25" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="blacklist" />
+				</SOURCE>
+				<BUTTONS>
+				  <BUTTON LABEL="TTarpitForm_RefreshButton" TYPE="ch_refresh" />
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TStatisticsForm_WhitelistSheet" TYPE="bw_whitelist" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="ch_delete" />
+				</BUTTONS>
+			</OPTION>
+	  </GROUP>
+  </SECTION>
+  
+	<SECTION name="SpamQueue_GreyListing" label="TStatisticsForm_GLSheet" helpid="996" >
+		<GROUP name="Policies_Login_Policy" label="TStatisticsForm_ChallengeBox">
+		  <OPTION type="listbox" label="TTntMenuItems_Status" labels="TStatisticsForm_GLStatus" request="1" name="g_status" inline="1"/>
+		  <OPTION type="edit" label="TFrameAccounts_ListOwner" request="1" name="g_owner" inline="1"/>
+		  <OPTION type="edit" label="TFrameAccounts_SendToLabel" request="1" name="g_value" inline="1"/>
+		  <OPTION type="edit" label="TStatisticsForm_MaxQueueItemsL" request="1" default="100" name="g_top" inline="1" />
+		  <OPTION type="datagrid" name="greylist" gtype="greylist" width="792" labels="TStatisticsForm_GLList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="1" size="+40" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="2" show="listbox" labels="TStatisticsForm_GLStatus" size="+30" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="3" size="+30" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="greylist" />
+				</SOURCE>
+				<BUTTONS>
+				  <BUTTON LABEL="TTarpitForm_RefreshButton" TYPE="g_refresh" />
+					<BUTTON LABEL="TStatisticsForm_GLAuthorize" TYPE="g_authorize" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="g_delete" />
+				</BUTTONS>
+			</OPTION>
+	  </GROUP>
+  </SECTION>
+	<!--<SECTION name="SpamQueue_IntrusionPrevention" label="TStatisticsForm_TarpitSheet" helpid="998" >
+  	<GROUP name="Policies_Login_Policy" label="TStatisticsForm_ChallengeBox">
+      <OPTION type="datagrid" name="tarpit" gtype="tarpit" labels="TTarpitForm_TarpitList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="ip" SIZE="100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />-->
+					<!--<OPTION VINDEX="1" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="1" />--><!--
+				</HEAD>
+				<SOURCE>
+					<FILE />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TTarpitForm_RemoveAllButton" TYPE="removeall" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+  </SECTION>-->
+</FORM>

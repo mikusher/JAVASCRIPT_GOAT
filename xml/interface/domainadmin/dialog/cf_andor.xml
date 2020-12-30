@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CF_AndOr_Dialog" helpid="1126" >
+	<SECTION name="CF_AndOr" label="TContentBool" helpid="1126" >
+		<GROUP name="CF_AndOr_Group" label="TContentBool">
+			<OPTION type="radio" variable="and" name="and" value="1" label="TContentBool_AndRadio" />
+			<OPTION type="radio" variable="and" name="and" value="0" label="TContentBool_OrRadio" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

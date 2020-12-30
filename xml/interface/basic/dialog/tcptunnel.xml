@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TCPIPTunnel" helpid="2010303">
+	<SECTION name="TCPIPTunnel_tab" label="TTntMenuItems_TCPIPSSLPanel" helpid="596" >
+		<GROUP name="TCPIPTunnel_group" label="TTntMenuItems_TCPIPSSLPanel">
+			<OPTION type="checkbox" name="6" variable="6" inverse="1" label="TSSLTunnelDialog_Active" />
+			<OPTION type="edit" name="1" variable="1" label="TSSLTunnelDialog_SourceL" />
+			<OPTION type="edit" name="2" variable="2" label="TSSLTunnelDialog_SourceCL" />
+			<OPTION type="edit" name="3" variable="3" label="TSSLTunnelDialog_DestL" />
+			<OPTION type="edit" name="4" variable="4" label="TSSLTunnelDialog_DestCL" />
+			<OPTION type="edit" name="10" variable="10" label="TSSLTunnelDialog_DescL" />
+			<OPTION type="edit" name="7" variable="7" label="TSSLTunnelDialog_RightsL" />
+			<OPTION type="checkbox" name="8" variable="8" label="TSSLTunnelDialog_RequirePeer" />
+			<OPTION type="edit" name="9" variable="9" label="TSSLTunnelDialog_CAL" />
+		</GROUP>
+	</SECTION>
+</FORM>

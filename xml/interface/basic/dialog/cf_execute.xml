@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="1125" >
+	<SECTION name="Executable" label="TFrameAccounts_ExecutableSheet" helpid="1125" >
+		<GROUP name="ExecutableGroup" label="TFrameAccounts_ExecutableSheet">
+			<OPTION type="edit" variable="executefilter" name="executefilter" label="TContentExecutableForm_ExecLabel" />
+			<OPTION type="listbox" variable="externalfiltertype" name="externalfiltertype" label="TContentExecutableForm_ExecTypeL" value="2|0|1|3" labels="TContentExecutableForm_ExecType" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

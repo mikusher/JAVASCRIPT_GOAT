@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MENU>
+<PARAM ID="MMS" ICON="mms.png" LABEL="TTntMenuItems_Root" HELPID="2315" >
+	<PARAM ID="DOMAINS" ICON="management.png" HELPID="2325" label="TTntMenuItems_AccountsPanel" />
+	  <PARAM ID="SPAMQUEUE" ICON="status_spam_queues.png" OBJECT="spamqueue" HELPID="20908" label="TTntMenuItems_SpamQueuePanel"  />     
+	<PARAM ID="WIZARDS" ICON="wizards.png" FILE="wizards.html" HELPID="3" label="TTntMenuItems_WizardPanel" />
+	<PARAM ID="ABOUT" ICON="help.png" FILE="about.html" HELPID="3" label="TStrings_wa_aboutl"  />
+</PARAM>
+</MENU>

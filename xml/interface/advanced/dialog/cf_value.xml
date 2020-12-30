@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" >
+	<SECTION name="LocalTime" label="TStrings_valuestring" >
+		<GROUP name="LocalTime_Group" label="TStrings_valuestring">
+      <OPTION type="edit" variable="contain" name="contain" label="TStrings_valuestring" />
+ 		 </GROUP>
+	</SECTION>
+</FORM>
+
+

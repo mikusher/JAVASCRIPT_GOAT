@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="IConnection" helpid="508">
+	<SECTION name="Network_section" label="TStrings_wa_networkbox" helpid="508" >
+
+		<GROUP name="Network_group" label="TStrings_wa_networkgroup">
+			<OPTION type="datagrid" name="network" gtype="network" gheight="400" labels="TStrings_wa_networkgrid" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="label"  SIZE="-250" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="name"  SIZE="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="network" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SYNTAX>
+					<OBJECT NAME="indexqueue" LENGTH="3">
+						<SEPS>|SEP;SEP</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+</FORM>

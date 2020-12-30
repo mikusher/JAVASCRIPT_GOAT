@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TrustedHost" helpid="20703">
+	<SECTION name="TrustedHost_tab" label="TConfigForm_IMHostsSheet" helpid="959" >
+		<GROUP name="TrustedHost_group" label="TConfigForm_IMHostsSheet">
+			<OPTION type="edit" name="1" variable="1" label="TFrameAccounts_DomainSheet" />
+			<OPTION type="edit" name="2" variable="2" label="TConnectForm_ProxyL" />
+		</GROUP>
+	</SECTION>
+</FORM>

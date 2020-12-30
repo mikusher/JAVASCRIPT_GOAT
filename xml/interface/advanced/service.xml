@@ -1,0 +1,80 @@
+﻿<?xml version="1.0"?>
+<FORM name="service" helpid="2020101" >
+	<SECTION name="properties_tab" label="TServiceItemForm_PropertiesSheet" helpid="500" >
+	<GROUP name="info_group">
+		<OPTION type="info" name="module_name" variable="name_#SID#" function="service_name" label="TServiceItemForm_NameLabel"/>
+		<OPTION type="listbox" name="C_System_Services_#SID#_Startup" variable="C_System_Services_#SID#_Startup"   label="TServiceItemForm_StartupLabel" labels="TServiceItemForm_StartupMode"/>
+	</GROUP>
+		<GROUP name="ports_group" label="TServiceItemForm_PortsGroupBox">
+			<OPTION type="edit" name="C_System_Services_#SID#_Port" variable="C_System_Services_#SID#_Port" label="TServiceItemForm_BasicPortL" />
+			<OPTION type="edit" name="C_System_Services_#SID#_SSLPort" variable="C_System_Services_#SID#_SSLPort" label="TServiceItemForm_SSLPortL" />
+			<OPTION type="edit" name="C_System_Services_#SID#_AltPort" variable="C_System_Services_#SID#_AltPort" label="TServiceItemForm_SecondBasicPortL" />
+		</GROUP>
+
+		<GROUP name="allservices_group" label="TServiceItemForm_SharedGroupBox">
+			<OPTION type="edit" name="C_System_Services_BindIPAddress" variable="C_System_Services_BindIPAddress" label="TLoadBalanceForm_IPL" />
+			
+			<!--<OPTION type="button" btype="textfile" fileid="config/bind.dat" blabel="TConfigForm_FileItem" cfileid="examples/bind.dat" />-->
+		</GROUP>
+
+		<GROUP name="addresses_group" label="TServiceItemForm_PortIPGroupBox">
+		  <OPTION type="datagrid" name="servicebind" gtype="servicebind" labels="TServiceItemForm_IPList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="1" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="2" SIZE="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="3" SIZE="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="4" SHOW="bool2string" SIZE="-100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/servicebind.dat" COMMENT="examples/servicebind.dat" DIALOG="servicebind" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="logging_tab" label="TServiceItemForm_LoggingSheet" helpid="522" >
+		<!--<GROUP name="logging_group" label="TServiceItemForm_DebugGroupBox">
+			<OPTION type="listbox" name="C_System_Log_Services_#SID#" variable="C_System_Log_Services_#SID#" label="TServiceItemForm_LoggingSheet" labels="TStrings_wa_str0" value="0|1|2|3" />
+		</GROUP>-->
+
+		<GROUP name="trafficlog_group" label="TServiceItemForm_StatusGroupBox">
+			<OPTION type="checkbox" name="C_System_Services_#SID#_Traffic" variable="C_System_Services_#SID#_Traffic" label="TSpamEngineForm_SpamEngineActive" default="1" inverse="1" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="access_tab" label="TServiceItemForm_AccessSheet" helpid="531" >
+		<GROUP name="access_allservices_group" label="TServiceItemForm_AllServicesBox">
+			<OPTION type="checkbox" name="C_System_Services_Firewall" variable="C_System_Services_Firewall" label="TServiceItemForm_FirewallActive" default="0" />
+		</GROUP>
+
+		<GROUP name="access_access_group" label="TServiceItemForm_AccessGroupBox">
+			<OPTION type="edit" name="C_System_Services_#SID#_IPList" variable="C_System_Services_#SID#_IPList" label="TServiceItemForm_FirewallList" />
+			<OPTION type="listbox" name="C_System_Services_#SID#_AccessMode" variable="C_System_Services_#SID#_AccessMode" label="TServiceItemForm_AccessTypeL" labels="TServiceItemForm_AccessCombo" value="0|1" default="0" />
+				<OPTION type="listbox" name="C_System_Services_#SID#_IPGrant" variable="C_System_Services_#SID#_IPGrant" label="TServiceItemForm_AccessTypeL" labels="TServiceItemForm_AccessCombo" value="0|1" default="0" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="other_tab" label="TServiceItemForm_OtherSheet" helpid="537" >
+		<GROUP name="monitor_group" label="TServiceItemForm_ServiceMonitorBox">
+			<OPTION type="edit" name="C_System_Services_#SID#_MonitorConn" variable="C_System_Services_#SID#_MonitorConn" label="TServiceItemForm_ConnML" />
+			<OPTION type="edit" name="C_System_Services_#SID#_MonitorData" variable="C_System_Services_#SID#_MonitorData" label="TServiceItemForm_DataML" />
+		</GROUP>
+
+		<GROUP name="other_group" label="TServiceItemForm_OtherGroupBox">
+			<OPTION type="edit" name="C_System_Services_#SID#_ThreadCache" variable="C_System_Services_#SID#_ThreadCache" label="TServiceItemForm_ServerTL" />
+			<OPTION type="edit" name="C_System_Services_#SID#_MaxInConn" variable="C_System_Services_#SID#_MaxInConn" label="TServiceItemForm_MaxServerL" />
+			<OPTION type="edit" name="C_System_Services_#SID#_MaxOutConn" variable="C_System_Services_#SID#_MaxOutConn" label="TServiceItemForm_CCL" />
+			<OPTION type="edit" name="C_System_Services_#SID#_Bandwidth" variable="C_System_Services_#SID#_Bandwidth" label="TServiceItemForm_MaxBandWidthL" />
+		</GROUP>
+	</SECTION>
+</FORM>

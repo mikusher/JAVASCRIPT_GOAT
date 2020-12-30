@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SMS_Auth" helpid="2030201">
+	<SECTION name="SMS_Auth_tab" label="TSMSAccountForm" helpid="4048" >
+		<GROUP name="SMS_Account" label="TSMSAccountForm_AccountBox">
+		<OPTION type="checkbox" name="10" variable="10" label="TSMSAccountForm_Active" inverse="1" />
+			<OPTION type="edit" name="0" function="urlencoded" label="TSMSAccountForm_UserL" />
+			<OPTION type="password" name="2" variable="2" label="TSMSAccountForm_PINL" />
+			<OPTION type="edit" name="4" variable="4"  label="TSMSAccountForm_DescL" />
+		</GROUP>
+		
+		<GROUP name="SMS_Options" label="TSMSAccountForm_OptionsBox">
+			<OPTION type="edit" name="3" variable="3" label="TSMSAccountForm_GatewayL" />
+			<OPTION type="edit" name="8" function="grid_delphitime" label="TSMSAccountForm_TntLabel4" />
+			<OPTION type="edit" name="5" variable="5"  label="TSMSAccountForm_SendMaxL" />
+			<OPTION type="edit" name="6" variable="6"  label="TSMSAccountForm_SentL" />
+			<OPTION type="edit" name="11" variable="11"  label="TSMSAccountForm_SentPL" />
+			<OPTION type="info" name="7" function="unix2string"  label="TSMSAccountForm_LastSentL" />
+		</GROUP>
+	</SECTION>
+</FORM>

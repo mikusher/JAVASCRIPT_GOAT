@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+
+<form name="CFActionDialog" helpid="1125" >
+	<SECTION name="EditHeaders" label="TContentEditHeader" helpid="1125" >
+		<GROUP name="EditHeaders_Group" label="TContentEditHeader">
+			<OPTION type="datagrid" name="header" gtype="cf_header" labels="TContentEditHeader_HeaderList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="action" size="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="header" SHOW="listbox" labels="TContentEditHeader_ActionEdit" size="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="cf_hd" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TScheduleForm_EditButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>	
+ 		</GROUP>
+	</SECTION>
+</form>

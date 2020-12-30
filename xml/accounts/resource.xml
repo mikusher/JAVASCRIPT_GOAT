@@ -1,0 +1,78 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="resource" helpid="415" >
+
+<SECTION name="resource_generaltab" label="TFrameAccounts_ResourceSheet" helpid="416" >
+<GROUP name="resource_generalgroup" label="TFrameAccounts_ResourceDescL">
+<OPTION type="listbox" name="account_domain" function="account_domain" label="TFrameAccounts_DomainSheet" labels="function:domain_list" disable="edit"/>
+<OPTION type="edit" name="account_name" variable="u_alias" label="TFrameAccounts_ResourceAliasL" />
+<OPTION type="edit" name="account_desc" variable="u_name" label="TFrameAccounts_TntLabel2"/>
+<OPTION type="listbox" name="resource_type" variable="S_Type" label="TFrameAccounts_ResourceTypeL" labels="TFrameAccounts_ResourceType"/>
+<OPTION type="checkbox" name="resource_unavailable" variable="S_Unavailable" label="TFrameAccounts_ResourceUnavailable" />
+<OPTION type="checkbox" name="resource_confilct" variable="S_AllowConflicts" label="TFrameAccounts_ResourceAllowConflicts"/>
+<OPTION type="checkbox" name="resource_sendtomanager" variable="S_NotificationToManager" label="TFrameAccounts_ResourceManagerNotification"/>
+<OPTION type="edit" name="resouce_manager" variable="S_Manager" label="TFrameAccounts_ResourceManagerL"/>
+</GROUP>
+</SECTION>
+
+<SECTION name="group_memberstab" label="TFrameAccounts_ResourceOrganizerSheet" helpid="369" disable="add" >
+	<GROUP name="group_membersgroup" label="TFrameAccounts_MembersButton">
+	<OPTION type="datagrid" gtype="members" name="members" list_file="S_OrganizersFile" labels="TListMembersForm_MemberList">
+	  <HEAD>
+	    <SELECTOR />
+	      <OPTION VINDEX="member" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+	      <OPTION VINDEX="rights" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+	  </HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="addresourcemember" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SOURCE>
+				  <FILE DIALOG="group_member" />
+				</SOURCE>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+	</OPTION>
+</GROUP>
+</SECTION>
+
+<SECTION name="mailinglist_servicestab" label="TConfigForm_ServicesSheet" helpid="4271" >
+ <GROUP name="mailinglist_servicesgroup" label="TFrameAccounts_SAGroupBox">
+ 	<OPTION type="checkbox" name="resource_av" variable="s_avscan" access="av_general" label="TTntMenuItems_AntiVirusPanel"/>
+	<OPTION type="checkbox" name="resource_as" variable="s_as" access="as_general" label="TTntMenuItems_AntiSpam"/>
+	<OPTION type="checkbox" name="resource_q" variable="s_qa" access="as_challenge" label="TStatisticsForm_CRSheet"/>
+</GROUP>
+</SECTION>
+<SECTION name="executable_BWtab" label="TFrameAccounts_BWUserSheet" helpid="1147" >
+        <GROUP name="user_bwgroup" label="TFrameAccounts_BWUserSheet"> 
+          <OPTION type="checkbox" name="user_bwactive" variable="U_BlackWhiteFilter" label="TFrameAccounts_ListBW" />
+          <!--<OPTION type="bwfile" name="user_bw" value="account_bw" label="TFrameAccounts_BWUserSheet"/>  
+          !--><OPTION type="datagrid" gtype="rules" name="u_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+              <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>>
+</SECTION>
+
+</FORM>

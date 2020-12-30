@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPSynchronization" helpid="21005">
+	<SECTION name="sync" label="TFTPServicesForm_SyncSheet" helpid="21005" >
+		<GROUP name="General" label="TFTPSyncForm_GeneralBox">
+			<OPTION type="edit" name="description" variable="description" label="TFTPSyncForm_DescL" />
+			<OPTION type="edit" name="log" variable="log" label="TFTPSyncForm_LogFileL" />
+		</GROUP>
+
+		<GROUP name="From" label="TFTPSyncForm_SourceBox">
+			<OPTION type="listbox" name="source_type" variable="source_type" label="TFTPSyncForm_SourceL" labels="TFTPSyncForm_SourceEdit" />
+			<OPTION type="edit" name="source_server" variable="source_server" label="TFTPSyncForm_ServerL" />
+			<OPTION type="edit" name="source_user" variable="source_user" label="TFTPSyncForm_UserL" />
+			<OPTION type="password" name="source_pass" variable="source_pass" label="TFTPSyncForm_PassL" />
+			<OPTION type="edit" name="source_directory" variable="source_directory" label="TFTPSyncForm_DirSL" />
+			<OPTION type="edit" name="source_ignorelist" variable="source_ignorelist" label="TFTPSyncForm_SILL" />
+			<OPTION type="checkbox" name="source_recursive" variable="source_recursive" label="TFTPSyncForm_RecursiveBox" />
+			<OPTION type="checkbox" name="source_clone" variable="source_clone" label="TFTPSyncForm_CloneBox" />
+		</GROUP>
+
+		<GROUP name="To" label="TFTPSyncForm_DestinationBox">
+			<OPTION type="edit" name="destination_directory" variable="destination_directory" label="TFTPSyncForm_DirL" />
+			<OPTION type="edit" name="destination_ignorelist" variable="destination_ignorelist" label="TFTPSyncForm_DILL" />
+		</GROUP>
+
+		<GROUP name="Schedule" label="TFTPSyncForm_UpdateBox">
+			<OPTION type="checkbox" name="schedule_su" variable="schedule_su" label="TFTPSyncForm_Su" />
+			<OPTION type="checkbox" name="schedule_mo" variable="schedule_mo" label="TFTPSyncForm_Mo" />
+			<OPTION type="checkbox" name="schedule_tu" variable="schedule_tu" label="TFTPSyncForm_Tu" />
+			<OPTION type="checkbox" name="schedule_we" variable="schedule_we" label="TFTPSyncForm_We" />
+			<OPTION type="checkbox" name="schedule_th" variable="schedule_th" label="TFTPSyncForm_Th" />
+			<OPTION type="checkbox" name="schedule_fr" variable="schedule_fr" label="TFTPSyncForm_Fri" />
+			<OPTION type="checkbox" name="schedule_sa" variable="schedule_sa" label="TFTPSyncForm_Sa" />
+			<OPTION type="radio" name="schedule_type" variable="schedule_type" label="TFTPSyncForm_OnceAt" value="1">
+				<OPTION type="edit" name="schedule_at" variable="schedule_at" value="1" />
+			</OPTION>
+			<OPTION type="radio" name="schedule_type" variable="schedule_type" label="TFTPSyncForm_EveryHour" value="0" >
+				<OPTION type="edit" name="schedule_every" variable="schedule_every" value="0" />
+			</OPTION>
+			<OPTION type="radio" name="schedule_type" variable="schedule_type" label="TFTPSyncForm_DisabledUpdate" value="2" />
+		</GROUP>
+
+	</SECTION>
+</FORM>

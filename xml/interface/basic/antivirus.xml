@@ -1,0 +1,116 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="AV" helpid="206" >
+	<SECTION name="AV_GeneralTab" label="TAntivirusSettingForm_VirusScanSheet" helpid="813" >
+		<GROUP name="AV_GeneralTab_Integrated" label="TAntivirusSettingForm_GlobalBox">
+			<OPTION type="checkbox" name="C_AV_General_IntegratedAV" variable="C_AV_General_IntegratedAV" label="TAntivirusSettingForm_UseAVPluginBox" default="1" />
+		  <OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_AV_General" blabel="TSpamEngineForm_ModeButton" />
+    </GROUP>
+
+		<GROUP name="AV_GeneralTab_Updates" label="TAntivirusSettingForm_UpdateBox">
+			<OPTION TYPE="daysofweek" name="AV_UpdateDays" variable="C_AV_General_UpdateNotWeekdays"  />
+			<OPTION type="radio" name="C_AV_General_UpdateType" variable="C_AV_General_UpdateType" label="TAntivirusSettingForm_OnceAt" value="1" >
+				<OPTION type="edit" name="C_AV_General_UpdateTime" function="av_time" />
+			</OPTION>
+			<OPTION type="radio" name="C_AV_General_UpdateType" variable="C_AV_General_UpdateType" label="TAntivirusSettingForm_EveryHour" value="2" >
+				<OPTION type="edit" name="C_AV_General_EveryHour" variable="C_AV_General_EveryHour" />
+			</OPTION>
+			<OPTION type="radio" name="C_AV_General_UpdateType" variable="C_AV_General_UpdateType" label="TAntivirusSettingForm_DisabledUpdate" value="0" />
+			<OPTION type="button" btype="fbutton" fileid="AntiVirusUpdate" blabel="TAntivirusSettingForm_UpdateButton" />
+		</GROUP>
+
+		<!--<GROUP name="AV_GeneralTab_ActiveUpdate" label="TAntivirusSettingForm_ForcedBox">
+			<OPTION type="checkbox" name="C_AV_General_ActiveUpdate" variable="C_AV_General_ActiveUpdate" label="TAntivirusSettingForm_ActiveEnable" default="0">
+				<OPTION type="edit" name="C_AV_General_ActiveAddress" variable="C_AV_General_ActiveAddress" />
+			</OPTION>
+		</GROUP>-->
+
+		<GROUP name="AV_GeneralTab_Information" label="TAntivirusSettingForm_InfoBox">
+			<OPTION type="edit" readonly="1" name="C_AV_Info_UpdateDate" variable="C_AV_Info_UpdateDate" label="TAntivirusSettingForm_LUL" />
+			<OPTION type="edit" readonly="1" name="C_AV_Info_UpdateSize" function="AV_updatesize" variable="C_AV_Info_UpdateSize" label="TAntivirusSettingForm_LUS" />
+			<OPTION type="edit" readonly="1" name="C_AV_Info_UpdateVersion" variable="C_AV_Info_UpdateVersion" label="TAntivirusSettingForm_LUV" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="AV_ActionTab" label="TAntivirusSettingForm_ActionSheet" helpid="818" >
+		<GROUP name="AV_ActionTab_Action" label="TAntivirusSettingForm_ActionSheet">
+	<!--<OPTION type="checkbox" name="C_AV_Action_ScanAllParts" variable="C_AV_Action_ScanAllParts" label="TAntivirusSettingForm_AllPartsBox" /> -->
+			<OPTION type="radio" name="C_AV_Action_Mode" variable="C_AV_Action_Mode" label="TAntivirusSettingForm_RejectButton" value="1" default="1" />
+			<OPTION type="radio" name="C_AV_Action_Mode" variable="C_AV_Action_Mode" label="TAntivirusSettingForm_DeleteButton" value="3" default="0" />
+			<OPTION type="radio" name="C_AV_Action_Mode" variable="C_AV_Action_Mode" label="TAntivirusSettingForm_RemoveButton" value="2" default="0" />
+			<OPTION type="listbox" name="C_AV_Action_ScanAllParts" variable="C_AV_Action_ScanAllParts" label="TAntivirusSettingForm_ScanModeL" labels="TAntivirusSettingForm_ScanMode" value="0|1|2" />
+	<!--<OPTION type="checkbox" name="C_AV_Action_CleanInfected" variable="C_AV_Action_CleanInfected" label="TAntivirusSettingForm_CleanPossible" default="0" /> -->
+		</GROUP>
+
+		<GROUP name="AV_ActionTab_Notification" label="TAntivirusSettingForm_NotificationBox">
+			<OPTION type="checkbox" name="C_AV_Action_InfoToAdmin" variable="C_AV_Action_InfoToAdmin" label="TAntivirusSettingForm_VirusInfoAdmin" default="0" inline="1" />
+			<OPTION type="button" btype="textfile" fileid="config/virusmsgadmin.txt" blabel="TAntivirusSettingForm_NotifyButton1" bfileid="config/virusmsgadminbypass.txt" cfileid="examples/variables.dat" inline="1" />
+			<OPTION TYPE="label"/>
+			<OPTION type="checkbox" name="C_AV_Action_InfoToRecipient" variable="C_AV_Action_InfoToRecipient" label="TAntivirusSettingForm_InfoToRecipient" default="0" inline="1"/>
+			<OPTION type="button" btype="textfile" fileid="config/virusmsgrecipient.txt" blabel="TAntivirusSettingForm_NotifyButton1" bfileid="config/virusmsgrecipientbypass.txt" cfileid="examples/variables.dat" inline="1" />
+			<OPTION TYPE="label"/>
+			<OPTION type="checkbox" name="C_AV_Action_InfoToSender" variable="C_AV_Action_InfoToSender" label="TAntivirusSettingForm_InfoToSenderBox" default="0" inline="1" />
+			<OPTION type="button" btype="textfile" fileid="config/virusmsgsender.txt" blabel="TAntivirusSettingForm_NotifyButton1" bfileid="config/virusmsgsenderbypass.txt" cfileid="examples/variables.dat" inline="1" />
+		</GROUP>
+
+		<GROUP name="AV_ActionTab_Quarantine" label="TAntivirusSettingForm_QuarantineGroupBox">
+			<OPTION type="checkbox" name="C_AV_Action_UseQuarantine" variable="C_AV_Action_UseQuarantine" label="TAntivirusSettingForm_QuarantineBox" default="0" >
+				<OPTION type="edit" name="C_AV_Action_QuarantineAddress" variable="C_AV_Action_QuarantineAddress" />
+			</OPTION>
+			<OPTION type="radio" name="C_AV_Action_QuarantineMode" variable="C_AV_Action_QuarantineMode" label="TAntivirusSettingForm_QuarantineMessages" value="0" />
+			<OPTION type="radio" name="C_AV_Action_QuarantineMode" variable="C_AV_Action_QuarantineMode" label="TAntivirusSettingForm_QuarantineAttachments" value="1" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="AV_FiltersTab" label="TAntivirusSettingForm_ExtensionFiltersSheet" helpid="822" >
+		<GROUP name="AV_FiltersTab_Filters" label="TAntivirusSettingForm_ExtensionFiltersSheet">
+			<OPTION type="checkbox" name="C_AV_Filters_BlockFiles" variable="C_AV_Filters_BlockFiles" label="TAntivirusSettingForm_BlockFiles" default="0" />
+			<OPTION type="datagrid" name="avfilters" labels="TAntivirusSettingForm_FileList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/avfilters.dat" COMMENT="examples/avfilters.dat" DIALOG="avfilters" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX>
+					<OBJECT NAME="avfilters" LENGTH="1">
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+  <SECTION name="AV_ExternalTab" label="TAntivirusSettingForm_ExternalBox" helpid="825" >
+		<GROUP name="AV_ExternalTab_ExternalAV" label="TAntivirusSettingForm_ExternalBox">
+			<OPTION type="checkbox" name="C_AV_Misc_DisableExternalAV" variable="C_AV_Misc_DisableExternalAV" label="TAntivirusSettingForm_ExternalAV" default="1" inverse="1" />
+			<OPTION type="datagrid" gtype="externalav" width="792" labels="TAntivirusSettingForm_FilterList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="filename" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="parameters" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/scan.dat" DIALOG="externalav" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>	
+    <!--	<OPTION type="button" btype="fbutton" fileid="" name="VirusFiltersButton" variable="VirusFiltersButton" blabel="TAntivirusSettingForm_VirusFiltersButton" />-->
+		</GROUP>
+	</SECTION>
+	
+	
+</FORM>

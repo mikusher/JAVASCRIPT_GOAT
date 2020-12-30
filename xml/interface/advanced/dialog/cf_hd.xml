@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionSubDialog" helpid="1125" >
+	<SECTION name="EditHeader" label="TContentEditHeader" helpid="1125" >
+		<GROUP name="EditHeader_Group" label="TContentEditHeader">
+			<OPTION type="edit" name="header" variable="header" label="TContentEditHeader_HeaLabel" />
+			<OPTION type="checkbox" name="regex" variable="regex" label="TContentEditHeader_Regex">
+			<OPTION type="edit" name="regex_value" variable="regex_value" />
+			</OPTION>
+			<OPTION type="edit" name="header_value" variable="header_value" label="TContentEditHeader_ValueL" />
+			<OPTION type="radio" name="a" variable="action" value="0" label="TContentEditHeader_ActionEdit0" />
+			<OPTION type="radio" name="a" variable="action" value="1"  label="TContentEditHeader_ActionEdit1" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

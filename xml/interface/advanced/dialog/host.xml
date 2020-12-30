@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="DNSBLHost" >
+	<SECTION name="DNSBLHost_Tab" label="TStatisticsForm_MRBLL" >
+		<GROUP name="DNSBLHost_Group" label="TStatisticsForm_MRBLL">
+			<OPTION type="edit" name="1" variable="1" label="TDNSBLHostForm_DNSList" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

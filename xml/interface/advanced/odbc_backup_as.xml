@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="ODBC" helpid="20801" >
+	<SECTION name="ODBC_Section" label="TConfigForm_DBODBCSettings" helpid="20801" >
+		<GROUP name="ODBC_Primary_Tab" label="TODBCForm_PrimaryConnBox">
+		  <OPTION type="edit" name="0" function="odbc_backup_as" label="TODBCForm_NameL" />
+			<OPTION type="edit" name="3" function="odbc_backup_as" label="TODBCForm_ServerL" />
+			<OPTION type="edit" name="1" function="odbc_backup_as" label="TODBCForm_UserL" />
+			<OPTION type="password" name="2" function="odbc_backup_as" label="TODBCForm_PassL" />
+		</GROUP>
+		<GROUP name="ODBC_Database_Tab" label="TConfigForm_DBODBCSettings">
+			<OPTION type="listbox" name="4" function="odbc_backup_as" label="TODBCForm_DBTypeL" labels="TODBCForm_DBType"  />
+			<OPTION type="listbox" name="5" function="odbc_backup_as" label="TODBCForm_DriverL" labels="TODBCForm_DBDriver"  />
+			
+      <OPTION type="hidden" name="service" function="odbc_backup_as" />
+			<OPTION type="button" btype="fbutton" inline="1" fileid="checkbackupconnection" cfileid="0|3|1|2|4|5" blabel="TODBCForm_TestButton" />
+		</GROUP>
+    </SECTION>
+</FORM>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SIPService_Rules" helpid="2040105" >
+	<SECTION name="SIPService_Rules_Client_Tab" label="TConfigForm_SIPRulesSheet" helpid="995" >
+		<GROUP name="SIPService_Rules_Client_Group" label="TSIPRuleForm_ClientGroupBox">
+	<OPTION type="edit" variable="title" name="title" label="TSIPRuleForm_TitleLabel" />
+  <OPTION type="label" label="&lt;br/&gt;" />    	<!--
+ 		<GROUP name="SIPService_Rules_Conditions_Tab" label="TSIPRuleForm_ConditionBox">
+			<OPTION type="datagrid" name="conditions" gtype="sipsub" labels="TSIPGatewaysForm_SIPGatewayList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX=""  SIZE="-1" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="comment" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="sip_conditions" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>-->
+		
+			<!--<OPTION type="listbox" name="action" variable="action" label="TSIPRuleForm_TypeL" labels="TSIPRuleForm_TypeList" />
+ 			<OPTION type="checkbox" name="next" variable="next" label="TSIPRuleForm_Next" />
+ 			<OPTION type="checkbox" name="usegw" variable="usegw" label="TSIPRuleForm_Gateway">
+          <OPTION type="listbox" name="gateway" variable="gateway" labels="function:get_gateways_list" />
+      </OPTION>
+      <OPTION type="checkbox" name="usetarget" variable="usetarget" label="TSIPRuleForm_Target" />
+      -->
+      <OPTION type="edit" variable="number" name="number" label="TSIPRuleForm_Label1" />
+      <OPTION type="account_select" target="number" btype="xmledit" cfileid="number" fileid="group_members" blabel="TAccountSelectForm_SelectAccountButton" />
+      <OPTION type="label" label="&lt;br/&gt;" />
+       
+      <OPTION type="edit" variable="target" name="target" label="TSIPRuleForm_Label2" />
+      <OPTION type="account_select" target="target" btype="xmledit" cfileid="target" fileid="group_members" blabel="TAccountSelectForm_SelectAccountButton" />
+      <OPTION type="label" label="&lt;br/&gt;" />
+     
+ 		</GROUP>		
+	</SECTION>
+</FORM>

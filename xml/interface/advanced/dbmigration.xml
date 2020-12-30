@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="dbmigrations" helpid="607" >
+	
+  <SECTION name="GW_DataMigrationTab" label="TConfigForm_DataMigrationGroupBox" helpid="607" >
+		<GROUP name="GW_DataMigrationTab_DataMigration" label="TConfigForm_DataMigrationGroupBox" datfile="calendar.dat" dattype="calendar">
+			<OPTION type="listbox" name="CalendarDBType" variable="CalendarDBType" label="TConfigForm_MigrateDatabaseL" labels="TConfigForm_MigrationDatabase" />
+			<OPTION type="checkbox" name="C_System_Tools_DBMigration_FixUTF8" variable="C_System_Tools_DBMigration_FixUTF8" label="TConfigForm_DBFixUTF8" />
+      <OPTION type="button" btype="xmledit" fileid="odbc_migrate_source" blabel="TConfigForm_MSourceDB" />
+			<OPTION type="button" btype="xmledit" fileid="odbc_migrate_dest" blabel="TConfigForm_MDestDB" />
+			
+      <!--<OPTION type="edit" name="CalendarSourceDSN" variable="CalendarSourceDSN" label="TConfigForm_SourceDSNL" />
+			<OPTION type="edit" name="CalendarDestDSN" variable="CalendarDestDSN" label="TConfigForm_DestinationDSNL" />
+			<OPTION type="button" btype="fbutton" fileid="" blabel="TConfigForm_MigrateGWButton" />-->
+		<OPTION type="button" btype="fbutton" fileid="MigrateDatabase" cfileid="CalendarDBType" blabel="TConfigForm_MigrateButton" />
+    </GROUP>
+	</SECTION>
+
+</FORM>

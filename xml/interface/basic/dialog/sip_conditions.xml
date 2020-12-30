@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SIPService_Condition" helpid="2040105" >
+	<SECTION name="SIPService_Condition" label="TSIPConditionForm" helpid="2040105" >
+		<GROUP name="SIPService_Condition_General" label="TSIPConditionForm_AllBox">
+			<OPTION type="edit" name="comment" variable="comment" label="TSIPConditionForm_CommentL" />
+ 		</GROUP>
+
+		<GROUP name="SIPService_Condition_AndOr" label="TSIPConditionForm_AndOrBox">
+			<OPTION type="label" name="comment" label="TSIPConditionForm_BoolLabel" />
+			<OPTION type="radio" name="or" variable="or" label="TSIPConditionForm_AndRadio" value="0" />
+			<OPTION type="radio" name="or" variable="or" label="TSIPConditionForm_OrRadio" value="1" />
+ 		</GROUP>
+
+		<GROUP name="SIPService_Condition_Location" label="TSIPConditionForm_LocationBox">
+			<OPTION type="checkbox" name="location" variable="location" label="TSIPConditionForm_Location" />
+			<OPTION type="listbox" name="source" variable="source" labels="TSIPConditionForm_Source" />
+			<OPTION type="checkbox" name="domain" variable="domain" label="TSIPConditionForm_Address" />
+			<OPTION type="listbox" name="domainlocal" variable="domainlocal" labels="TSIPConditionForm_LocalRadio" value="1|0" />
+			<OPTION type="checkbox" name="ip" variable="ip" label="TSIPConditionForm_IP" />
+			<OPTION type="listbox" name="iplocal" variable="iplocal" labels="TSIPConditionForm_IPLocal" value="1|0" />
+			<OPTION type="checkbox" name="reg" variable="reg" label="TSIPConditionForm_Reg" />
+			<OPTION type="listbox" name="registered" variable="registered" labels="TSIPConditionForm_RegisterRadio" value="1|0" />
+			<OPTION type="checkbox" name="equal" variable="equal" label="TSIPConditionForm_Equal" >
+				<OPTION type="edit" name="equals" variable="equals" />
+			</OPTION>
+ 		</GROUP>
+
+		<GROUP name="SIPService_Condition_URI" label="TSIPConditionForm_URIBox">
+			<OPTION type="checkbox" name="uri" variable="uri" label="TSIPConditionForm_URI" />
+			<OPTION type="edit" name="filter" variable="filter" label="TSIPConditionForm_FilterL" />
+			<OPTION type="edit" name="replace" variable="replace" label="TSIPConditionForm_ReplaceL" />
+			<OPTION type="checkbox" name="redirect" variable="redirect" label="TSIPConditionForm_Redirect" />
+ 		</GROUP>
+ 	</SECTION>
+</FORM>

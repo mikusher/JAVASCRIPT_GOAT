@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TSMSGatewaysForm">
+	<SECTION name="SMSGateway_tab" label="TSMSGatewayForm" helpid="" >
+		<GROUP name="SMSGateway_group" label="TSMSGatewayForm_DeviceBox">
+			<OPTION type="checkbox" name="disabled" variable="disabled" inverse="1" default="1" label="TSMSGatewaysForm_SMSActive" />
+			<OPTION type="edit" name="id" variable="id" label="TSMSGatewayForm_IDL" default="COM1" />
+			<OPTION type="listbox" name="type" variable="type" label="TSMSGatewayForm_TypeL" labels="TSMSGatewayForm_TypeBox" />
+			<OPTION type="edit" name="device" variable="comurl" label="TSMSGatewayForm_DeviceL" default="COM1" />
+			<OPTION type="edit" name="description" variable="desc" label="TSMSGatewayForm_DescL" />
+			<OPTION type="password" name="pin" variable="pin" label="TSMSGatewayForm_PINL" />
+			<OPTION type="edit" name="smscenter" variable="smscenter" label="TSMSGatewayForm_SMSCL" />
+			<OPTION type="edit" name="fromrewrite" variable="fromrewrite" label="TSMSGatewayForm_FromPrefL" />
+		</GROUP>
+	</SECTION>
+</FORM>

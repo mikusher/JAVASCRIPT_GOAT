@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Alias" helpid="2040109" >
+	<SECTION name="WebSite_Alias_Tab" label="TStrings_webalias" helpid="2040109" >
+		<GROUP name="WebSite_Alias_Group" label="TStrings_webalias">
+			<OPTION type="edit" name="alias" variable="alias" label="TFrameAccounts_ListservAlias" />
+			<OPTION type="edit" name="path" variable="path" label="TFTPUserForm_UserPathL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

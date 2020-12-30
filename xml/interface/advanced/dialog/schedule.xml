@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FORM name="Schedulef" helpid="206" >
+	<SECTION name="schedule" label="TFTPSyncForm_UpdateBox" helpid="20601" >
+		<GROUP name="schedule_tab" label="TFTPSyncForm_UpdateBox">
+			<OPTION type="radio" name="s_schedulewhen" variable="s_schedulewhen" value="0" label="TScheduleTaskForm_WeekdaysRadio">
+				<OPTION TYPE="daysofweek" name="s_weekdays" variable="s_weekdays" LABEL="TContentTimeForm_Weekdays" />
+			</OPTION>
+			<OPTION type="radio" name="s_schedulewhen" variable="s_schedulewhen" value="1" label="TScheduleTaskForm_DaysInMonthRadio">
+				<OPTION type="edit" name="s_daysinmonth" variable="s_daysinmonth" />
+			</OPTION>
+			<OPTION type="radio" name="s_schedulewhen" variable="s_schedulewhen" value="2" label="TAntivirusSettingForm_DisabledUpdate" />
+    </GROUP>
+		<GROUP name="schedule_tab" label="TFTPSyncForm_UpdateBox">
+			<OPTION type="radio" name="s_scheduletype" variable="s_scheduletype" value="1" label="TScheduleTaskForm_Once">
+				<OPTION type="edit" name="s_onceat" variable="s_onceat" />
+			</OPTION>
+			<OPTION type="radio" name="s_scheduletype" variable="s_scheduletype" value="0" label="TFTPSyncForm_EveryHour" >
+				<OPTION type="edit" name="s_every" variable="s_every" />
+      </OPTION>
+				<OPTION type="between" inverse="1" name="s_wholeday" variable="s_wholeday" label="TScheduleTaskForm_Between" >
+				<OPTION type="edit" name="s_betweenfrom" variable="s_betweenfrom" />
+					<OPTION type="edit" name="s_betweento" variable="s_betweento" />
+				</OPTION>
+    </GROUP>
+	</SECTION>
+</FORM>
+

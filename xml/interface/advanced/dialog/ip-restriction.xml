@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_IP" helpid="2040103" >
+	<SECTION name="WebSite_IP_Tab" label="TStrings_webip" helpid="2040103" >
+		<GROUP name="WebSite_IP_Group" label="TStrings_webip">
+			<OPTION type="edit" name="uri" variable="uri" label="TWebAccessForm_URIL" />
+			<OPTION type="edit" name="ip" variable="ip" label="TStatisticsForm_SessionFilterIPL" />
+			<OPTION type="checkbox" name="ipnot" variable="ipnot" label="TWebAccessForm_IPNot" />
+      <OPTION type="edit" name="name" variable="name" label="TWebAccessForm_UserNameL" />
+			<OPTION type="password" name="pass" variable="pass" label="TWebAccessForm_PassL" />
+			<OPTION type="label" value="&lt;br/&gt;" />
+      <OPTION type="checkbox" name="authadmin" variable="authadmin" label="TWebAccessForm_Admin" />
+      <OPTION type="checkbox" name="authdomainadmin" variable="authdomainadmin" label="TWebAccessForm_DomainAdmin" />
+      <OPTION type="checkbox" name="authusers" variable="authusers" label="TWebAccessForm_User" />
+      
+			<OPTION type="listbox" name="mode" variable="mode" label="TServiceItemForm_AccessSheet" labels="TServiceItemForm_AccessCombo" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

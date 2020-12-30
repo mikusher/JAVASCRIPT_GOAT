@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="SenderLocal" label="TSenderRecipientForm" helpid="1125" >
+		<GROUP name="SenderLocal_Group" label="TSenderRecipientForm">
+			<OPTION type="radio" name="senderrecipient" function="cf_remotelocal" value="0" label="TSenderRecipientForm_Sender" />
+			<OPTION type="radio" name="senderrecipient" function="cf_remotelocal" value="1" label="TSenderRecipientForm_Recipient" />
+			<OPTION type="label" label="CRLF" />
+   		<OPTION type="radio" name="remotelocal" function="cf_remotelocal" value="0" label="TSenderRecipientForm_Local" />
+   		<OPTION type="radio" name="remotelocal" function="cf_remotelocal" value="1" label="TSenderRecipientForm_Remote" />
+   		<OPTION type="label" label="CRLF" />
+   		<OPTION type="radio" name="account" function="cf_remotelocal"  value="0" label="TSenderRecipientForm_None" />
+   		<OPTION type="radio" name="account" function="cf_remotelocal" value="1" label="TSenderRecipientForm_Exists" />
+   		<OPTION type="radio" name="account" function="cf_remotelocal" value="2" label="TSenderRecipientForm_NotExists" />
+   	</GROUP>
+	</SECTION>
+</FORM>
+

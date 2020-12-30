@@ -1,0 +1,153 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SIPService" helpid="" >
+	<SECTION name="SIPService_GeneralTab" label="TConfigForm_SIPGeneral" helpid="986">
+		<GROUP name="SIPService_GeneralTab_General" label="TConfigForm_SIPBox">
+			<OPTION type="checkbox" name="C_System_Services_SIP_Enable" variable="C_System_Services_SIP_Enable" label="TConfigForm_SIPActive" />
+			<OPTION type="checkbox" name="C_System_Services_SIP_DisableAnonymousAccess" variable="C_System_Services_SIP_DisableAnonymousAccess" label="TConfigForm_SIPDisableAnonymous" >
+				<OPTION type="button" btype="textfile" fileid="config/sipsecbypass.dat" blabel="TConfigForm_SynchroBypass" cfileid="examples/bypass.dat" />
+			</OPTION>
+          <OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_System_Services_SIP_Mode" blabel="TSpamEngineForm_ModeButton" />
+		</GROUP>
+
+		<GROUP name="SIPService_GeneralTab_General" label="TConfigForm_SIPRouting">
+			<!--<OPTION type="checkbox" name="C_System_Services_SIP_NoRecordRoute" variable="C_System_Services_SIP_NoRecordRoute" label="TConfigForm_SIPRecordRoute" inverse="1" />
+			--><OPTION type="edit" name="C_System_Services_SIP_LocalNet" variable="C_System_Services_SIP_LocalNet" label="TConfigForm_SIPLocalNetL" />
+			<OPTION type="edit" name="C_System_Services_SIP_LocalAccessHost" variable="C_System_Services_SIP_LocalAccessHost" label="TConfigForm_SIPLocalHostL" />
+			<OPTION type="edit" name="C_System_Services_SIP_RemoteAccessHost" variable="C_System_Services_SIP_RemoteAccessHost" label="TConfigForm_SIPExtHostL" />
+		</GROUP>
+
+		<GROUP name="SIPService_OtherTab_Calls" label="TConfigForm_SIPCallsBox">
+			<OPTION type="edit" name="C_System_Services_SIP_MaxCalls" variable="C_System_Services_SIP_MaxCalls" label="TConfigForm_MaxCallsL" />
+			<OPTION type="checkbox" name="C_System_Services_SIP_Calls" variable="C_System_Services_SIP_UserCalls" label="TConfigForm_SIPUserCalls" />
+			<OPTION type="checkbox" name="C_System_Services_SIP_CallsFileEnable" variable="C_System_Services_SIP_Calls" label="TConfigForm_SIPCalls" >
+			<OPTION type="edit" name="C_System_Services_SIP_CallsFile" variable="C_System_Services_SIP_CallsFile" />
+		  </OPTION>
+    </GROUP>
+	</SECTION>
+
+	<SECTION name="SIPService_RulesTab" label="TConfigForm_SIPRulesSheet" helpid="995" >
+
+
+    <GROUP name="SIPService_RulesGroup" label="TSIPRulesForm_GeneralCallBox">
+			<!--<OPTION type="edit" name="C_System_Services_SIP_AwayPrefix" variable="C_System_Services_SIP_AwayPrefix" label="TSIPRulesForm_AwayDialL" />
+			<OPTION type="edit" name="C_System_Services_SIP_ResetPrefix" variable="C_System_Services_SIP_ResetPrefix" label="TSIPRulesForm_ResetDialL" />
+			<OPTION type="edit" name="C_System_Services_SIP_RedialPrefix" variable="C_System_Services_SIP_RedialPrefix" label="TSIPRulesForm_RedialL" />-->
+      <OPTION type="datagrid" name="siprules" gtype="siprules" labels="TSIPRulesForm_SIPForwardingList" >
+				<HEAD>
+					<SELECTOR />
+						<OPTION VINDEX="title"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				<OPTION VINDEX="number"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="target"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="sip_rules" name="config/siprules.dat" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+	
+	
+	<SECTION name="SIPService_DevicesTab" label="TConfigForm_SIPDevicesSheet" helpid="493">
+		<GROUP name="SIPService_DevicesGroup" label="TSIPRulesForm_GeneralCallBox">
+      <OPTION type="datagrid" name="sipdevices" gtype="sipdevices" labels="TSIPRulesForm_SIPForwardingList" >
+				<HEAD>
+					<SELECTOR />
+						<OPTION VINDEX="title"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				<OPTION VINDEX="number"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="target"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="sip_device" name="config/siprules.dat" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+	
+
+	<SECTION name="SIPService_UsersTab" label="TConfigForm_SIPExtensionsSheet" helpid="493">
+		<GROUP name="SIPService_UsersGroup" label="TSIPRulesForm_GeneralCallBox">
+      <OPTION type="datagrid" name="sipusers" gtype="sipusers" labels="TSIPRulesForm_SIPForwardingList" >
+				<HEAD>
+					<SELECTOR />
+						<OPTION VINDEX="title"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				<OPTION VINDEX="number"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="target"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="sip_user" name="config/siprules.dat" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+	
+
+
+	<SECTION name="SIPService_GatewaysTab" label="TConfigForm_SIPGatewaySheet" helpid="990">
+		<GROUP name="SIPService_GatewaysGroup" label="TConfigForm_SIPGatewaySheet">
+			<OPTION type="datagrid" name="sipgateways" gtype="sipgateways" labels="TSIPGatewaysForm_SIPGatewayList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="title"  SIZE="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				  	<OPTION VINDEX="server" SIZE="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="user" SIZE="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+		    		<OPTION VINDEX="active" show="bool2string" SIZE="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+		    		<OPTION VINDEX="_registered" show="bool2string" SIZE="+50" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+		    	</HEAD>
+				<SOURCE>
+					<FILE dialog="sip_gateways" name="config/sipgateways.dat" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+	<SECTION name="SIPService_OtherTab" label="TConfigForm_OtherSIP" helpid="493">
+		<GROUP name="SIPService_GeneralTab_Advanced" label="TSIPGatewayForm_GeneralBox">
+			<OPTION type="checkbox" name="C_System_Services_SIP_ENUM" variable="C_System_Services_SIP_ENUM" label="TConfigForm_SIPEnum" />
+  		<OPTION type="checkbox" name="C_System_Services_SIP_RTPProxy" variable="C_System_Services_SIP_DNSEnabled" label="TConfigForm_SIPDNS" />
+  	</GROUP>
+
+    <GROUP name="SIPService_GeneralTab_General" label="TConfigForm_SIPSDP">
+			<OPTION type="checkbox" name="C_System_Services_SIP_RTPProxy" variable="C_System_Services_SIP_SDPProxy" label="TConfigForm_SIPSDPProxy" />
+			<OPTION type="listbox" name="C_System_Services_SIP_SDPRemoteAccessHost" variable="C_System_Services_SIP_RTPProxy" label="TConfigForm_RTPNATL" value="1|0|2" labels="TConfigForm_RTPNAT" />
+			<OPTION type="edit" name="C_System_Services_SIP_RTPStart" variable="C_System_Services_SIP_RTPStart" label="TConfigForm_PassPortFL" />
+			<OPTION type="edit" name="C_System_Services_SIP_RTPMax" function="C_System_Services_SIP_RTPMax" label="TConfigForm_PassvPortTL" />
+		</GROUP>
+	<GROUP name="SIPService_CallTransferGroup" label="TConfigForm_CallTransferBox">
+		<OPTION type="edit" name="C_System_Services_SIP_CallerAlias" variable="C_System_Services_SIP_CallerAlias" label="TConfigForm_CTAL" />
+		<OPTION type="edit" name="C_System_Services_SIP_CallerName" variable="C_System_Services_SIP_CallerName" label="TConfigForm_CTNL" />
+	</GROUP>
+		<GROUP name="SIPService_OtherTab_Other" label="TConfigForm_SIPOtherBox">
+			<!--<OPTION type="checkbox" name="C_System_Services_SIP_Debug" variable="C_System_Services_SIP_Debug" label="TConfigForm_SIPDebug" />
+			<OPTION type="edit" name="C_System_Services_SIP_DebugFile" variable="C_System_Services_SIP_DebugFile" label="TConfigForm_SIPDebugFileL" />-->
+			<OPTION type="checkbox" name="C_System_Services_SIP_UseOtherProxy" variable="C_System_Services_SIP_UseOtherProxy" label="TConfigForm_SIPUseOtherProxy" />
+			<OPTION type="edit" name="C_System_Services_SIP_OtherProxy" variable="C_System_Services_SIP_OtherProxy" label="TConfigForm_SIPOtherProxyL" />
+			<OPTION type="edit" name="C_System_Services_SIP_ContactExpires" variable="C_System_Services_SIP_ContactExpires" label="TConfigForm_SIPContactExpiresL" />
+		</GROUP>
+	</SECTION>
+</FORM>

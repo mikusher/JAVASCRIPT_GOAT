@@ -1,0 +1,144 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPSite" helpid="210">
+	<SECTION name="FTPSite" label="TFTPServiceItemForm_GeneralSheet" helpid="21001" >
+		<GROUP name="FTPSite_FTPSite" label="TFTPServiceItemForm_GeneralBox">
+			<OPTION type="edit" name="name" variable="name" label="TFTPServiceItemForm_NameLabel" />
+			<OPTION type="edit" name="description" variable="description" label="TFTPServiceItemForm_DescL" />
+			<OPTION type="edit" name="path" variable="path" label="TFTPServiceItemForm_SourceL" />
+			<OPTION type="edit" name="ip" variable="ip" label="TFTPServiceItemForm_IPL" />
+		</GROUP>
+
+		<GROUP name="FTPSite_W3CLogging" label="TFTPServiceItemForm_LoggingBox">
+			<OPTION type="checkbox" name="logging" variable="logging" label="TFTPServiceItemForm_Logging" />
+			<OPTION type="edit" name="loggingpath" variable="loggingpath" label="TFTPServiceItemForm_LoggingL" />
+			<OPTION type="edit" name="DELETELOGS" variable="DELETELOGS" label="TWebHostForm_DeleteOlderLabel" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Users" label="TFTPServiceItemForm_UsersSheet" helpid="21002" >
+		<GROUP name="Users_Users" label="TFTPServiceItemForm_UsersBox">
+		  <OPTION type="datagrid" name="access" gtype="ftpsub" labels="TFTPServiceItemForm_UsersList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="user" SIZE="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="name" SIZE="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="group" SIZE="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ftpuser" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Groups" label="TFTPServiceItemForm_GroupSheet" helpid="21003" >
+		<GROUP name="Groups_Groups" label="TFTPServiceItemForm_GroupsBox">
+		  <OPTION type="datagrid" name="groups" gtype="webservicesub" labels="TFTPServiceItemForm_GroupsList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="name" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="description" SIZE="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ftpgroup" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Options" label="TFTPServiceItemForm_SecuritySheet" helpid="21004" >
+		<GROUP name="Options_Options" label="TFTPServiceItemForm_OptionsBox">
+			<OPTION type="edit" name="maxusers" variable="maxusers" label="TFTPServiceItemForm_MaxConnUsers" />
+			<OPTION type="edit" name="maxconnsfromsingleip" variable="maxconnsfromsingleip" label="TFTPServiceItemForm_MaxSingleIPL" />
+			<OPTION type="edit" name="passiverangefrom" variable="passiverangefrom" label="TFTPServiceItemForm_PassPortFL" />
+			<OPTION type="edit" name="passiverangeto" variable="passiverangeto" label="TFTPServiceItemForm_PassvPortTL" />
+			<OPTION type="edit" name="passiveip" variable="passiveip" label="TFTPServiceItemForm_PasvIPL" />
+			<OPTION type="checkbox" name="requireotp" variable="requireotp" label="TFTPServiceItemForm_RequireOTP" />
+		</GROUP>
+
+		<GROUP name="Options_WelcomeMsg" label="TFTPServiceItemForm_WelcomeBox">
+			<OPTION type="textarea" name="welcome" variable="welcome" label="TFTPServiceItemForm_WelcomeBox" />
+		</GROUP>
+	</SECTION>
+
+<!--
+	<SECTION name="ServerSync" label="TFTPServiceItemForm_SyncSheet" helpid="21005" >
+		<GROUP name="ServerSync_ServerSync" label="TFTPServiceItemForm_ServerSyncBox">
+		  <OPTION type="datagrid" name="sync" gtype="webservicesub" labels="TFTPServiceItemForm_SyncList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="description" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="source_type" SIZE="+30" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="destination" SIZE="+70" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ftpsync" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+-->
+
+	<SECTION name="Access" label="TFTPServiceItemForm_AccessSheet" helpid="21006" >
+		<GROUP name="Access_IPAccess" label="TFTPServiceItemForm_IPBox">
+		  <OPTION type="datagrid" name="ipaccess" gtype="webservicesub" labels="TFTPServiceItemForm_IPList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="ip" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="ipmode" show="webdeny" SIZE="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ftpipaccess" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Aliases" label="TFTPServiceItemForm_DirectorySheet" helpid="21007" >
+		<GROUP name="Aliases_DirAliases" label="TFTPServiceItemForm_AliasesBox">
+		  <OPTION type="datagrid" name="alias" gtype="webservicesub" labels="TFTPServiceItemForm_AliasList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="source" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="dest" SIZE="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ftpalias" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="RelayIPs" helpid="2030201">
+	<SECTION name="RelayIPs_tab" label="TIPRelayForm_IPList" helpid="666" >
+		<GROUP name="RelayIPs_group" label="TIPRelayForm_IPList">
+			<OPTION type="edit" name="1" variable="1" label="TIPRelayForm_IPList" />
+		</GROUP>
+	</SECTION>
+</FORM>

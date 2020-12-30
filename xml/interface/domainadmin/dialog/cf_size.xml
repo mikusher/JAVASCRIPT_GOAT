@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="MsgSize" label="TContentSize" helpid="1125" >
+		<GROUP name="MsgSize_Group" label="TContentSize">
+			<OPTION type="listbox" variable="messagesizesmaller" name="messagesizesmaller" label="TContentSize_SizeLabel" value="1|0" labels="TContentSize_MessageSizeSmallerBox" />
+      	<OPTION type="edit" function="cf_messagesize" name="messagesize" units="u_bytes" saveunit="0"  label="TContentSize_ThanLabel" >
+ 		  </OPTION>
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

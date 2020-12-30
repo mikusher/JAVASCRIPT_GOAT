@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPAlias" helpid="21007" >
+	<SECTION name="FTPAlias_Tab" label="TStrings_webalias" helpid="21007" >
+		<GROUP name="FTPAlias_Group" label="TStrings_webalias">
+			<OPTION type="edit" name="source" variable="source" label="TFrameAccounts_ListservAlias" />
+			<OPTION type="edit" name="dest" variable="dest" label="TFTPUserForm_UserPathL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

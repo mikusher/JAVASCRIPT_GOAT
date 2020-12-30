@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="LocalTime" label="AntiVirusPanel" helpid="1125" >
+		<GROUP name="LocalTime_Group" label="AntiVirusPanel">
+      <OPTION type="checkbox" function="cf_timecriteria" name="weekdays_enable" label="CF_AntivirusVirus" />
+ 		  <OPTION type="daysofweek" function="cf_timecriteria" name="weekdays" label="CF_AntivirusVirus" />
+      <OPTION type="checkbox" function="cf_timecriteria" name="between_times_enable" label="CF_AntivirusVirus" />
+ 		  <OPTION type="between" function="cf_timecriteria" name="between_times" label="CF_AntivirusVirus" />
+      <OPTION type="checkbox" function="cf_timecriteria" name="between_date_enable" label="CF_AntivirusVirus" />
+ 		  <OPTION type="between" function="cf_timecriteria" name="between_date" label="CF_AntivirusVirus" />   
+     </GROUP>
+	</SECTION>
+</FORM>
+

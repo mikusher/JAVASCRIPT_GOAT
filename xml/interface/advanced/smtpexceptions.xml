@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FORM name="exceptions" helpid="206" >
+	<SECTION name="exceptions" label="TConfigForm_MaxSMTPCRL" helpid="508" >
+		<GROUP name="exceptions_tab" label="TConfigForm_MaxSMTPCRL">
+		  <OPTION type="datagrid" name="exceptions" gtype="standart" labels="TSmtpLimitsForm_List">
+		  <HEAD>
+		    <SELECTOR />
+		    <OPTION VINDEX="0" SIZE="+50" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+		    <OPTION VINDEX="1" SIZE="+50" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+		  </HEAD>
+				<SOURCE>
+					<FILE DIALOG="smtpexception" NAME="config/smtplimitsexceptions.dat" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="exceptions" LENGTH="2">
+						<SEPS>:</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+    </GROUP>
+	</SECTION>
+</FORM>
+

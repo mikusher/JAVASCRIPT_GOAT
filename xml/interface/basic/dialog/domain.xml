@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Archive_Domain" helpid="2040109" >
+	<SECTION name="WArchive_Domain_Tab" label="TFrameAccounts_DomainSheet" helpid="2040109" >
+		<GROUP name="Archive_Domain_Group" label="TFrameAccounts_DomainSheet">
+			<OPTION type="edit" name="0" variable="0" label="TFrameAccounts_DomainSheet" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

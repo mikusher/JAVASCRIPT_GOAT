@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Message" helpid="2020302">
+	<SECTION name="Message_Section" label="TTaskScheduleItemForm" helpid="738" >
+		<GROUP name="Message_Action" label="TTaskScheduleItemForm_ActionBox">
+			<OPTION type="edit" name="from" function="message_quarantine" label="TContentMessageForm_FromLab" />
+			<OPTION type="edit" disabled="true" name="to" function="message_quarantine" label="TContentMessageForm_ToLab" />
+			<OPTION type="edit" name="subject" function="message_quarantine" label="TContentMessageForm_SubjectL" />
+			<OPTION type="textarea" name="body" rows="15" cols="75" function="message_quarantine" label="TContentMessageForm_TextButton" />
+		</GROUP>
+	</SECTION>
+</FORM>

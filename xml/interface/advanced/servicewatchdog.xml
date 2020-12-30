@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Watchdog" helpid="2020303">
+	<SECTION name="Watchdog_Section" label="TTntMenuItems_ServiceWatchdogPanel" helpid="587" >
+		<GROUP name="Watchdog_Group" label="TTntMenuItems_ServiceWatchdogPanel">
+			<OPTION type="checkbox" name="C_System_Tools_WatchDog_SMTP" variable="C_System_Tools_WatchDog_SMTP" label="TConfigForm_WatchdogSMTP" default="0" />
+			<OPTION type="checkbox" name="C_System_Tools_WatchDog_POP3" variable="C_System_Tools_WatchDog_POP3" label="TConfigForm_WatchdogPOP3" default="0" />
+			<OPTION type="checkbox" name="C_System_Tools_WatchDog_IM" variable="C_System_Tools_WatchDog_IM" label="TConfigForm_WatchDogIM" default="0" />
+			<OPTION type="checkbox" name="C_System_Tools_Watchdog_GW" variable="C_System_Tools_Watchdog_GW" label="TConfigForm_WatchDogCalendar" default="0" />
+			<OPTION type="checkbox" name="C_System_Tools_Watchdog_Control" variable="C_System_Tools_Watchdog_Control" label="TConfigForm_WatchdogControl" default="0" />
+      <!--<OPTION type="edit" name="C_System_Tools_Watchdog_Int" variable="C_System_Tools_Watchdog_Int" label="TConfigForm_IntervalLabel" />-->
+		 <!-- <OPTION type="edit" name="C_System_Tools_Watchdog_Int" variable="C_System_Tools_Watchdog_Int" units="u_time" saveunit="sec" label="TConfigForm_IntervalLabel"  value="2|3" /> -->
+   <!-- <OPTION type="listbox" name="unit" function="watchdog_interval" labels="TConfigForm_WatchDogFormatL" />  -->
+   <OPTION type="edit" name="C_System_Tools_Watchdog_Int" variable="C_System_Tools_Watchdog_Int" units="u_time" labels="TConfigForm_WatchDogInterval" saveunit="sec" label="TConfigForm_IntervalLabel" inline="1" />
+    </GROUP>
+	</SECTION>
+</FORM>

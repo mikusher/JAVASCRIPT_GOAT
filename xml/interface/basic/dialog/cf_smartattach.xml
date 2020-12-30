@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<FORM name="CFAddScoreDialog" helpid="1125" >
+	<SECTION name="AddScore" label="TContentSmartAttachForm" helpid="1125" >
+		<GROUP name="AddScore_Group" label="TContentSmartAttachForm_SABox">
+			<OPTION type="label" label="TContentSmartAttachForm_SALabel"/>
+			<OPTION type="edit" variable="account" name="account" label="TContentSmartAttachForm_GWAccL" />
+			<OPTION type="edit" variable="folder" name="folder" label="TContentSmartAttachForm_GWAccFL" />
+			<OPTION type="edit" variable="expiration" name="expiration" label="TContentSmartAttachForm_ExpirationL" />
+			<OPTION type="checkbox" variable="anonymous" name="anonymous" label="TContentSmartAttachForm_Anonymous" />
+ 		</GROUP>
+		<GROUP name="AddScore_Group2" label="TContentSmartAttachForm_HeaderFooterButton">
+    <OPTION type="edit" name="headerfile_txt" function="headerfile" label="THeaderFooterForm_HeaderL" />
+    <OPTION type="edit" name="headerfile_html" function="headerfile" label="THeaderFooterForm_HHTMLL" />
+    <OPTION type="edit" name="footerfile_txt" function="footerfile" label="THeaderFooterForm_FooterL" />
+    <OPTION type="edit" name="footerfile_html" function="footerfile" label="THeaderFooterForm_FHTMLL" />
+
+ 		</GROUP>
+	</SECTION>
+</FORM>

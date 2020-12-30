@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="service" helpid="491" onSubmit="return submitServices();" >
+	<SECTION name="services_tab" label="TConfigForm_GeneralServicesSheet" helpid="516" >
+		<GROUP name="services_group" label="">
+		  <OPTION type="iframe" name="services" fileid="services" />
+		  <!--<OPTION type="edit" name="services2" label="TServiceItemForm_PortIPGroupBox" />-->
+    	</GROUP>
+  	</SECTION>
+  
+    <SECTION name="autodiscover_tab" label="TConfigForm_AutoDiscoverSheet" helpid="4160">
+		<GROUP name="autodiscover_server_group" label="TConfigForm_AutoDiscoverServerBox" datfile="autodiscover.dat" dattype="autodiscover">
+			<OPTION type="edit" name="SMTP" variable="C_Mail_SMTP_General_HostName" label="TConfigForm_ADSMTPL" inline="1"/>
+			<OPTION type="listbox" name="SMTPType" variable="C_System_AutoDiscover_SMTPType" labels="TConfigForm_ADSMTPType"  inline="1"/>
+			<OPTION type="label"/>
+			<OPTION type="edit" name="POP3" variable="C_System_AutoDiscover_POP3" label="TConfigForm_ADPOP3L" inline="1" />
+			<OPTION type="listbox" name="POP3Type" variable="C_System_AutoDiscover_POP3Type" labels="TConfigForm_ADPOP3Type"  inline="1"/>		
+			<OPTION type="label"/>
+			<OPTION type="edit" name="IMAP" variable="C_System_AutoDiscover_IMAP" label="TConfigForm_ADIMAPL" inline="1" />
+			<OPTION type="listbox" name="IMAPType" variable="C_System_AutoDiscover_IMAPType" labels="TConfigForm_ADIMAPType"  inline="1"/>
+			<OPTION type="label"/>
+			<OPTION type="edit" name="XMPP" variable="C_System_AutoDiscover_XMPP" label="TConfigForm_ADXMPPL"  inline="1"/>
+			<OPTION type="listbox" name="XMPPType" variable="C_System_AutoDiscover_XMPPType" labels="TConfigForm_ADXMPPType" inline="1"/>
+			<OPTION type="label"/>
+			<OPTION type="edit" name="SIP" variable="C_System_AutoDiscover_SIP" label="TConfigForm_ADSIPL" inline="1" />
+			<OPTION type="listbox" name="SIPType" variable="C_System_AutoDiscover_SIPType" labels="TConfigForm_ADSIPType"  inline="1"/>
+		</GROUP>
+		
+		<GROUP name="autodiscover_url_group" label="TConfigForm_AutoDiscoverURLBox">
+    		<OPTION type="edit" name="C_ActiveSync_URL" variable="C_ActiveSync_URL" label="TConfigForm_ADEASL" />
+    		<OPTION type="edit" name="C_SyncML_URL" variable="C_SyncML_URL" label="TConfigForm_ADSyncMLL" />
+    		<OPTION type="edit" name="CalendarWebDAVURL" variable="CalendarWebDAVURL" label="TConfigForm_ADWebDAVL" datfile="calendar.dat" dattype="calendar" />
+    		<OPTION type="edit" name="C_Webmail_URL" variable="C_Webmail_URL" label="TConfigForm_ADWebMailL" />
+    		<OPTION type="edit" name="C_Webadmin_URL" variable="C_Webadmin_URL" label="TConfigForm_ADWAL" />
+    		<OPTION type="edit" name="C_FreeBusy_URL" variable="C_FreeBusy_URL" label="TConfigForm_ADFBL" />
+    		<OPTION type="edit" name="C_InternetCalendar_URL" variable="C_InternetCalendar_URL" label="TConfigForm_ADICL" />
+    		<OPTION type="edit" name="C_SMSService_URL" variable="C_SMSService_URL" label="TConfigForm_ADSMSL" />
+    		<OPTION type="edit" name="SpamChallengeURL" variable="SpamChallengeURL" label="TConfigForm_ASRL" datfile="spam.dat" dattype="spam2" />
+    		<OPTION type="edit" name="C_Install_URL" variable="C_Install_URL" label="TConfigForm_ADDownloadL" />
+		</GROUP>
+
+    </SECTION>
+  
+<!--	<SECTION name="other_tab" label="TConfigForm_OtherServicesSheet" helpid="4717" disable="linux">
+		<GROUP name="other_group" label="TConfigForm_LDAPGroupBox">
+			<OPTION type="checkbox" name="C_System_Services_LDAP_Enable" variable="C_System_Services_LDAP_Enable" label="TSpamEngineForm_SpamEngineActive" />
+			<OPTION type="label" label="TConfigForm_LDAPConfL" />
+      <OPTION type="button" btype="textfile" blabel="TConfigForm_slapdconfbutton" fileid="ldap/slapd.conf" />
+		</GROUP>
+		<GROUP name="minger_group" label="TConfigForm_MingerGroupBox">
+			<OPTION type="checkbox" name="C_System_Services_Minger_Enabled" variable="C_System_Services_Minger_Enabled" label="TConfigForm_MingerCheckBox" />
+			<OPTION type="password" name="C_System_Services_Minger_Password" variable="C_System_Services_Minger_Password" label="TConfigForm_MingerPasswordL" />
+			
+		</GROUP>
+		      <GROUP name="socks_group" label="TConfigForm_SOCKSBox">
+        <OPTION type="checkbox" name="socks_disabled" variable="C_System_Services_Socks_Enabled" label="TConfigForm_SocksActive" />
+
+        <OPTION type="edit" name="C_IM_SocksServerIP" variable="C_IM_SocksServerIP" label="TConfigForm_SocksServerIPL" />
+      </GROUP>
+	</SECTION>-->
+</FORM>

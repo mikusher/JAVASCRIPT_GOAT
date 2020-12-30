@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MENU>
+<PARAM ID="MMS" ICON="mms.png" LABEL="TTntMenuItems_Root" HELPID="2315" >
+	<PARAM ID="SPAMQUEUE" ICON="status_spam_queues.png" OBJECT="spamqueue" HELPID="20908" label="TTntMenuItems_SpamQueuePanel"  />     
+</PARAM>
+</MENU>

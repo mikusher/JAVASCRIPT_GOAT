@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite" helpid="20401" >
+	<SECTION name="Push_Folder" label="TCatalogItemForm_PathBox" helpid="2040101" >
+		<GROUP name="Push_FolderGroup" label="TCatalogItemForm_PathBox">
+			<OPTION type="checkbox" name="active" variable="active" label="TSyncMLFormAccount_Active" />
+			<OPTION type="edit" name="id" variable="id" label="TFrameAccounts_DomainFolderL" />
+			<OPTION type="listbox" name="type" variable="type" label="TAVExternalForm_ExecTypeL" value="C|E|F|J|M|N|T" labels="TPushFormFolder_FolderTypes" />
+			<OPTION type="listbox" name="fdr_value" variable="fdr_value" label="TSyncMLPushDeviceForm_ClientL" value="2|1" labels="TStrings_syncmlsynctype" />
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="catalog" helpid="446" >
+
+<SECTION name="catalog_catalogtab" label="TDomainAdminForm_Catalog" helpid="446" >
+<GROUP name="catalog_cataloggroup" label="TDomainAdminForm_Catalog" >
+<OPTION type="listbox" name="account_domain" function="account_domain" label="TFrameAccounts_DomainSheet" labels="function:domain_list" disable="edit"/>
+<OPTION type="edit" name="account_name" variable="u_alias" label="TFrameAccounts_AliasLabel" />
+<OPTION type="edit" name="catalog_desc" variable="u_name" label="TFrameAccounts_CatalogDesc" />
+<OPTION type="password" name="catalog_pass" variable="t_catalogpass" label="TFrameAccounts_PassLabel" />
+<OPTION type="checkbox" name="catalog_subject" variable="t_catalogsubject" label="TFrameAccounts_CatalogCommand" />
+<OPTION type="textfile" name="catalog_file" value="catalog_file" label="TFrameAccounts_CatalogsButton"/>
+</GROUP>
+</SECTION>
+
+
+<SECTION name="mailinglist_servicestab" label="TConfigForm_ServicesSheet" helpid="4296" >
+ <GROUP name="mailinglist_servicesgroup" label="TFrameAccounts_SAGroupBox">
+	<OPTION type="checkbox" name="list_av" variable="t_avscan" access="av_general" label="TTntMenuItems_AntiVirusPanel"/>
+	<OPTION type="checkbox" name="list_as" variable="t_as" access="as_general" label="TTntMenuItems_AntiSpam"/>
+	<OPTION type="checkbox" name="list_q" variable="t_qa" access="as_challenge" label="TStatisticsForm_CRSheet"/>
+</GROUP>
+</SECTION>
+
+<SECTION name="catalog_othertab" label="TFrameAccounts_OtherCatalogGroupBox" helpid="3570" >
+<GROUP name="catalog_allowedcommandsgroup" label="TFrameAccounts_ListServCommandsGroupBox">
+<OPTION type="checkbox" name="catalog_get" variable="t_catalogget" label="TFrameAccounts_CatalogGet"/>
+<OPTION type="checkbox" name="catalog_dir" variable="t_catalogdir" label="TFrameAccounts_CatalogDir"/>
+<OPTION type="checkbox" name="catalog_sendto" variable="t_catalogsendto" label="TFrameAccounts_CatalogSendTo"/>
+</GROUP>
+
+<GROUP name="catalog_othergroup" label="TFrameAccounts_OtherCatalogGroupBox">
+<OPTION type="listbox" name="catalog_originator" variable="t_catalogsender" label="TFrameAccounts_CatalogOrigL" labels="TFrameAccounts_CatalogOriginator"/>
+</GROUP>
+
+</SECTION>
+
+<SECTION name="catalog_BWtab" label="TFrameAccounts_BWUserSheet" helpid="4295" >
+        <GROUP name="user_bwgroup" label="TFrameAccounts_BWUserSheet"> 
+          <OPTION type="checkbox" name="user_bwactive" variable="U_BlackWhiteFilter" label="TFrameAccounts_ListBW" />
+          <!--<OPTION type="bwfile" name="user_bw" value="account_bw" label="TFrameAccounts_BWUserSheet"/>  
+          !--><OPTION type="datagrid" gtype="rules" name="u_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+              <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>
+</SECTION>
+
+</FORM>

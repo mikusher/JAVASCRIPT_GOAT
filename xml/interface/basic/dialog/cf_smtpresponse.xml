@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="1125" >
+	<SECTION name="RespondSMTPMsg" label="TContentMessageForm_MessageBox" helpid="1125" >
+		<GROUP name="RespondSMTPMsg_Group" label="TContentMessageForm_MessageBox">
+			<OPTION type="edit" variable="smtpmessage" name="smtpmessage" label="TExternalFilterItemForm_MessageL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="PublicFolder" helpid="">
+	<SECTION name="PublicFolder" label="TFrameAccounts_GroupPublicFolder" helpid="" >
+    <GROUP name="PublicFolder" label="TFrameAccounts_GroupPublicFolder">
+			<!--<OPTION type="edit" name="FolderName" variable="3" label="TSharedFolderItemForm_NameL" />-->
+			<OPTION type="edit" name="OWN_EMAIL" variable="OWN_EMAIL" label="TGWAccountForm_ItemLabel" />
+			<OPTION type="account_select" target="OWN_EMAIL" DOMAINSELECT="false" />
+			<OPTION type="edit" name="GRPTITLE" variable="GRPTITLE" label="TGWAccountForm_ValueLabel" />
+			<OPTION type="listbox" name="GRPSHAREMODE" variable="GRPSHAREMODE" value="P|F|A" label="TGWAccountForm_SharedModel" labels="TGWAccountForm_ShareMode" />
+      <OPTION type="edit" name="IMAPfolder" variable="2" label="TGWAccountForm_IMAPFL" />
+		</GROUP>
+	</SECTION>
+</FORM>

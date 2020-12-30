@@ -1,0 +1,79 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="205" >   
+    
+    <!-- BLACK LISTING {{{-->
+    
+    <SECTION name="MIAS_Blacklist" label="TSpamEngineForm_BlackSheet" helpid="791">
+      <GROUP name=" MIAS_Blacklist_General" label="TSpamEngineForm_General" datfile="spam.dat" dattype="spam2">
+        <OPTION type="checkbox" name="SpamBList" variable="SpamBList" label="TSpamEngineForm_BList"/>
+        <OPTION type="checkbox" name="SpamBDelete" variable="SpamBDelete" label="TSpamEngineForm_BlacklistDelete"/>
+        
+       <OPTION type="button" btype="linkbutton" fileid="spamqueue|section_section_SpamQueue_BlackListing|MMS/STATUS/SPAMQUEUE" cfileid="object" blabel="TSpamEngineForm_BlacklistButton" inline="1" />
+      </GROUP>
+      <GROUP name="MIAS_Blacklist_Keywords" label="TSpamEngineForm_BlackKeywords" datfile="spam.dat" dattype="spam2" >
+          <!-- TODO KEY WORD -->
+          <OPTION type="edit" name="BlockKeywordScore" variable="BlockKeywordScore" label="TSpamEngineForm_ScoreBLKeywordsLabel" />
+        <OPTION type="datagrid" name="blacklist_words" gtype="wordsgrid" gheight="150" labels="TSpamEngineForm_KeywordList" >
+  				<HEAD>
+  					<SELECTOR />
+  					<OPTION VINDEX="word"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+  				</HEAD>
+  				<SOURCE>
+  					<FILE DIALOG="word" />
+  				</SOURCE>
+  				<BUTTONS>
+  					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+  					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+  					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+  				</BUTTONS>
+  			</OPTION>
+      </GROUP>
+    </SECTION>
+    
+    <!-- }}} -->
+    
+    
+    <!-- WHITE LISTING {{{
+    TODO: help id
+    TODO: variables
+    -->
+    <SECTION name="MIAS_Whitelist" label="TSpamEngineForm_WhiteSheet" helpid="786">
+
+        <GROUP name="MIAS_Whitelist_AutoWhitelist" label="TSpamEngineForm_General" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamWList" variable="SpamWList" label="TSpamEngineForm_EnableWL"/>
+            <!--<OPTION type="listbox" variable="SpamChallengeSeparateUsers" name="SpamChallengeSeparateUsers" label="TSpamEngineForm_MLevelL" value="1|2|0" labels="TSpamEngineForm_WLevel"  />
+            --><OPTION type="button" btype="linkbutton" fileid="spamqueue|section_section_SpamQueue_WhiteList|MMS/STATUS/SPAMQUEUE" cfileid="object" blabel="TSpamEngineForm_WhiteListButton" inline="1" />
+        </GROUP>
+
+        <GROUP name="MIAS_Whitelist_General" label="TSpamEngineForm_Advanced" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" variable="BypassLocalIPs" name="BypassLocalIPs" label="TSpamEngineForm_BypassLocalIPs" />
+            <OPTION type="checkbox" variable="BypassLocalDomains" name="BypassLocalDomains" label="TSpamEngineForm_BypassLocalDomains" />
+            <OPTION type="checkbox" variable="SpamBypassGroupware" name="SpamBypassGroupware" label="TSpamEngineForm_WhitelistGW" />
+            <OPTION type="checkbox" variable="SpamBypassIMRoster" name="SpamBypassIMRoster" label="TSpamEngineForm_BypassIMRoster" />
+            <OPTION type="checkbox" variable="SpamAddOutgoing" name="SpamAddOutgoing" label="TSpamEngineForm_SpamAddOutbound" />
+            
+        </GROUP>
+       
+
+        <GROUP name="MIAS_Black_and_White_Keywords" label="TSpamEngineForm_WhitelistKeyBox" >
+            <!-- TODO KEY WORD -->
+          <OPTION type="datagrid" name="whitelist_words" gtype="wordsgrid" gheight="150" labels="TSpamEngineForm_KeywordList" >
+    				<HEAD>
+    					<SELECTOR />
+    					<OPTION VINDEX="word"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+    				</HEAD>
+    				<SOURCE>
+    					<FILE DIALOG="word" />
+    				</SOURCE>
+    				<BUTTONS>
+    					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+    					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+    					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+            </BUTTONS> 
+    			</OPTION>
+        </GROUP>
+    </SECTION>
+    
+    <!-- }}} -->
+  
+</FORM>

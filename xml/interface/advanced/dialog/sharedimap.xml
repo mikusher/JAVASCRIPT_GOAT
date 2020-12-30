@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPSynchronization" helpid="">
+	<SECTION name="PublicFolder" label="TFrameAccounts_GroupPublicFolder" helpid="" >
+    <GROUP name="PublicFolder" label="TFrameAccounts_GroupPublicFolder">
+			<OPTION type="edit" name="FolderName" variable="3" label="TSharedFolderItemForm_NameL" />
+			<OPTION type="edit" name="imapaccount" variable="1" label="TGWAccountForm_ItemLabel" />
+			<OPTION type="account_select" target="imapaccount" />
+			<!--<OPTION type="edit" name="restrictto" variable="2" label="TGWAccountForm_ValueLabel" />
+			<OPTION type="account_select" target="restrictto" accountselect="false" />-->
+      		<OPTION type="edit" name="imapfolder" variable="2" label="TSharedFolderItemForm_IMAPFL" />
+		</GROUP>
+	</SECTION>
+</FORM>

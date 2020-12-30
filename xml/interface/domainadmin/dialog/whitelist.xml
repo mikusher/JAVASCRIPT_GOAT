@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<FORM name="whitelist" helpid="1126" >
+	<SECTION name="whitelist_section" label="TSpamEngineForm_WhiteSheet">
+		<GROUP name="whitelist_group" label="TSpamEngineForm_WhiteSheet">
+			<OPTION type="edit" variable="1" name="1" label="TAntivirusSettingForm_InfoToSenderBox" />
+			<OPTION type="edit" variable="5" name="5" label="TFrameAccounts_ListOwner" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

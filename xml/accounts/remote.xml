@@ -1,0 +1,88 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="remote" helpid="2419" >
+
+<SECTION name="remoteaccount_remoteaccountab" label="TDomainAdminForm_Remote" helpid="420" >
+<GROUP name="remoteaccount_remoteaccountgroup" label="TDomainAdminForm_Remote">
+<OPTION type="listbox" name="remote_domain" function="account_domain" label="TFrameAccounts_DomainSheet" labels="function:domain_list" disable="edit"/>
+<OPTION type="checkbox" name="remote_active" variable="RA_Enabled" label="TFrameAccounts_RemoteEnabledBox" />
+<OPTION type="edit" name="remote_name" variable="ra_name" label="TFrameAccounts_RemoteName" />
+<OPTION type="edit" name="remote_server" variable="ra_server" label="TFrameAccounts_POP3La" />
+<OPTION type="label" name="remote_server" label="TFrameAccounts_ServerTL" />
+<OPTION type="radio" name="remote_protocol" variable="ra_imap" label="TFrameAccounts_RAPOP3" value="0"/>
+<OPTION type="radio" name="remote_protocol" variable="ra_imap" label="TFrameAccounts_RAIMAP" value="1"/>
+<OPTION type="edit" name="remote_username" variable="ra_username" label="TFrameAccounts_MailBoxLabel" />
+<OPTION type="password" name="remote_pass" variable="ra_password" label="TFrameAccounts_PassLabel" />
+<OPTION type="checkbox" name="remote_apop" variable="ra_apop" label="TFrameAccounts_APOPBox" />
+<OPTION type="listbox" name="remote_tlsssl" variable="ra_tlsssl" label="TFrameAccounts_RemoteTLSSSLL" labels="TFrameAccounts_RemoteSSL"/>
+<OPTION type="edit" name="remote_forwardto" variable="ra_forwardto" label="TFrameAccounts_FrwardToLabel" />
+<OPTION type="button" btype="xmledit" fileid="schedule" name="ra_schedule" disable="add" blabel="TETRNForm_ScheduleButton" />
+<OPTION type="button" btype="fbutton" fileid="RemoteAccountNow" disable="add" blabel="TFrameAccounts_RemoteCheckNowButton" />
+</GROUP>
+</SECTION>
+
+
+<SECTION name="remoteaccount_optionstab" label="TFrameAccounts_SpecialRemoteSheet" helpid="426" >
+<GROUP name="remoteaccounts_optionsgroup" label="TFrameAccounts_RSBox">
+<OPTION type="checkbox" name="remote_report" variable="RA_NotifyAdmin" label="TFrameAccounts_RAReportAdmin" />
+<OPTION type="checkbox" name="remote_dedupe" variable="ra_dedupe" label="TFrameAccounts_DedupeBox" />
+<OPTION type="checkbox" name="remote_leaveonserver" variable="ra_leavemessagesonserver" label="TFrameAccounts_LeaveBox" />
+<OPTION type="edit" name="remote_deleteolder" variable="ra_deleteolder" label="TFrameAccounts_DeleteRemoteOlderL" />
+<OPTION type="edit" name="remote_deletemore" variable="ra_deletecount" label="TFrameAccounts_DeleteNumberRL" />
+</GROUP>
+
+<GROUP name="remoteaccount_othergroup" label="TFrameAccounts_OtherCatalogGroupBox">
+<OPTION type="edit" name="remote_extracopy" variable="ra_extraforward" label="TFrameAccounts_ForwardExtraCopyL" />
+<OPTION type="checkbox" name="remote_convertdomains" variable="ra_convertdomains" label="TFrameAccounts_ConvertDomainNameBox" />
+<OPTION type="textfile" name="remote_domainsfile" value="remote_domains" label="TFrameAccounts_ConvertDomainName" />
+<OPTION type="checkbox" name="remote_routing" variable="ra_routing" label="TFrameAccounts_EmailAddressRouting" />
+<OPTION type="textfile" name="remote_routingfile" value="remote_routing" label="TFrameAccounts_EmaiLAddrRouteButton" />
+</GROUP>
+
+</SECTION>
+
+
+<SECTION name="remoteaccount_domainpoptab" label="TFrameAccounts_DomainPOPSheet" helpid="429" >
+<GROUP name="remoteaccount_domainpopgroup" label="TFrameAccounts_DomainPOPSheet">
+<OPTION type="checkbox" name="remote_domainpop" variable="ra_domainpop" label="TFrameAccounts_DomainPOPSheet" />
+<OPTION type="checkbox" name="remote_noreceived" variable="ra_noreceived" label="TFrameAccounts_NoReceived" />
+<OPTION type="checkbox" name="remote_stopparsing" variable="ra_receiveall" label="TFrameAccounts_StopParsingReceived" />
+<OPTION type="checkbox" name="remote_parseheaders" variable="ra_xenvelopeto" label="TFrameAccounts_XEnvelopeTo" />
+
+<OPTION type="textfile" name="remote_headersfile" value="remote_headers" label="TFrameAccounts_OtherRAHeader" />
+
+<OPTION type="checkbox" name="remote_realname" function="remote_realname" label="TFrameAccounts_DoNames" />
+<OPTION type="edit" name="remote_realnameemail" variable="ra_matchemail" label="TFrameAccounts_IfEmailL" />
+</GROUP>
+</SECTION>
+
+
+<SECTION name="remoteaccount_rulestab" label="TFrameAccounts_BWGroupSheet" helpid="4278" >
+	<GROUP name="user_bwgroup" label="TFrameAccounts_UserBWGroupBox">
+		<OPTION type="datagrid" gtype="rules" name="r_rules" labels="TRulesItemForm_Labels">
+			<HEAD>
+				<SELECTOR />
+				<OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				<OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				<OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+			</HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SOURCE>
+					<FILE DIALOG="rules" name="filter.dat" />
+				</SOURCE>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+		</OPTION>
+	</GROUP>
+</SECTION>
+</FORM>

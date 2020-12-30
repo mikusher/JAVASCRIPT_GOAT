@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_User" helpid="2040103" >
+	<SECTION name="WebSite_User_Tab" label="TFTPUserForm_UserSheet" helpid="2040103" >
+		<GROUP name="WebSite_User_Group" label="TFTPUserForm_UserSheet">
+			<OPTION type="edit" name="name" variable="name" label="TFTPUserForm_UserL" />
+			<OPTION type="password" name="pass" variable="pass" label="TFTPUserForm_PassL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

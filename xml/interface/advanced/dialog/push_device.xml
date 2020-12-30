@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite" helpid="20401" >
+	<SECTION name="WebSite" label="TSyncMLPushDeviceForm_DeviceBox" helpid="2040101" >
+		<GROUP name="WebSite_WebSite" label="TSyncMLPushDeviceForm_DeviceBox">
+			<OPTION type="checkbox" name="enabled" variable="enabled" label="TSyncMLPushDeviceForm_Active" />
+			<OPTION type="edit" name="notification_address" variable="notification_address" label="TSyncMLPushDeviceForm_AddressL" labels="TSyncMLPushDeviceForm_TransportEdit" />
+			<OPTION type="listbox" name="notification_transport" variable="notification_transport" label="TSyncMLPushDeviceForm_ClientL" value="sms" inline="true" labels="TSyncMLPushDeviceForm_TransportEdit" />
+			<OPTION type="checkbox" name="notification_ssl" variable="notification_ssl" label="TSyncMLPushDeviceForm_Secure" inline="true" labels="TSyncMLPushDeviceForm_TransportEdit" />
+			<OPTION type="listbox" name="notification_client" variable="notification_client" label="TSyncMLPushDeviceForm_TransportL" value="funambol|nokia|sonyericsson|synthesis" labels="TSyncMLPushDeviceForm_ClientEdit" />
+		</GROUP>
+
+		<GROUP name="WebSite_W3CLogging" label="TSyncMLFormAccount_DevicesGroup">
+    	<OPTION type="datagrid" id="folders" name="folders" gtype="session" labels="TSyncMLPushDeviceForm_FolderList">
+			<HEAD>
+          <SELECTOR />
+          <OPTION VINDEX="id" size="-200" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="type" size="-150" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="fdr_value" SHOW="listbox" labels="TStrings_syncmlsynctype" value="2|1" size="-150" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+      	<SOURCE>
+					<FILE DIALOG="push_folder" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TSyncMLFormAccount_AddDevice" TYPE="add" />
+					<BUTTON LABEL="TSyncMLPushDeviceForm_EditFolder" TYPE="edit" />
+					<BUTTON LABEL="TSyncMLFormAccount_DeleteDevice" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+			<OPTION name="send_config_sms" type="button" once="true" btype="fbutton" fileid="push_sms" cfileid="notification_address|notification_transport|notification_client|folders|notification_ssl" blabel="TSyncMLPushDeviceForm_ConfigSMS"/>
+		</GROUP>
+	</SECTION>
+</FORM>

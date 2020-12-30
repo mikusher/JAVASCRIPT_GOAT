@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FORM name="AV" helpid="206" >
+	<SECTION name="schedule" label="SCHEDULE" helpid="20601" >
+		<GROUP name="schedule_tab" label="SCHEDULE">
+		  <OPTION type="datagrid" name="schedule" gtype="schedule" labels="SCHEDULE">
+		  <HEAD>
+		    <SELECTOR />
+		    <OPTION SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+		  </HEAD>
+		  <SOURCE>
+					<FILE DIALOG="schedule" />
+				</SOURCE>
+		  	<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+    </GROUP>
+	</SECTION>
+</FORM>
+

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="domain" helpid="318" >
+
+<SECTION name="domain_domaintab" label="TFrameAccounts_DomainSheet" helpid="320" >
+    <GROUP name="domain_domaingroup" label="TFrameAccounts_DomainBox">
+        <OPTION type="edit" name="domain_name" function="domain_name" label="TFrameAccounts_RemoteName" />
+        <OPTION type="edit" name="domain_desc" variable="d_description" label="TWebHostForm_DescL" />
+        <OPTION type="hidden" name="domain_type" function="domain_type" default="3" disable="domainadmin|admin"  />
+        <OPTION type="edit" name="domain_domaintypevalue" disable="domainadmin|admin" variable="d_domainvalue" label="TFrameAccounts_SendToLabel"/>
+    </GROUP>
+
+    <GROUP name="admin_admingroup" label="TFrameAccounts_AdminBox">
+        <OPTION type="edit" name="domain_postmaster" variable="d_postmaster" label="TFrameAccounts_DefaultAliasLabel" />
+        <OPTION type="edit" name="domain_adminemail" variable="d_adminemail" label="TFrameAccounts_EmailUnknownL" />
+    </GROUP>
+
+
+</SECTION>
+
+<SECTION name="domain_limitstab" label="TFrameAccounts_DomainOptionSheet" helpid="325" >
+    <GROUP name="domain_optionsgroup" label="TFrameAccounts_DomainSheet" >
+        <OPTION type="edit" name="domain_accountlimit" variable="d_accountnumber" label="TFrameAccounts_AccountNumbLabel" disable="domainadmin"/>
+        <OPTION type="edit" name="d_diskquota" variable="d_diskquota" units="u_bytes" saveunit="1" label="TFrameAccounts_DomainDiskQutoaL" disable="domainadmin"/>
+        <OPTION type="edit" name="d_volumelimit" variable="d_volumelimit" units="u_bytes" saveunit="1" label="TFrameAccounts_DomainSendDataL" disable="domainadmin"/>
+        <OPTION type="edit" name="d_numberlimit" variable="D_NumberLimit" label="TFrameAccounts_DomainSendCountL" disable="domainadmin"/>
+        <OPTION type="checkbox" name="domain_disablelogin" variable="d_disablelogin" label="TFrameAccounts_DisableAllUsers"/>
+    </GROUP>
+
+    <GROUP name="domain_userslimitsgroup" label="TFrameAccounts_UserDomainGroupBox"  >
+        <OPTION type="edit" name="d_usermailbox" variable="d_usermailbox" units="u_bytes" saveunit="1" label="TFrameAccounts_UserMailboxSL" />
+        <OPTION type="edit" name="d_usermsg" variable="d_usermsg" units="u_bytes" saveunit="1" label="TFrameAccounts_UserMaxMsgSizeL" />
+        <OPTION type="edit" name="d_usermb" variable="d_usermb" units="u_bytes" saveunit="2" label="TFrameAccounts_UserSendLimitL" />
+        <OPTION type="edit" name="d_usernumber" variable="d_usernumber" label="TFrameAccounts_UserNumberLimitL" />
+
+    </GROUP>
+
+    <GROUP name="domain_expirationgroup" label="TFrameAccounts_ValidityBox">
+        <OPTION type="checkbox" name="domain_expires" variable="d_expires" label="TFrameAccounts_AccountValid" disable="domainadmin">
+        <OPTION type="edit" name="domain_expireson" function="domain_expireson" disable="domainadmin"/>
+        </OPTION>
+        <OPTION type="checkbox" name="domain_notifyexpire" variable="d_notifyexpire" label="TFrameAccounts_ValidityWarning" >
+        <OPTION type="edit" name="domain_notifybeforeexpires" variable="d_notifybeforeexpires" />
+        </OPTION>
+        <OPTION type="checkbox" name="domain_deleteexpired" variable="d_deleteexpired" label="TFrameAccounts_DeleteExpire" disable="domainadmin"/>
+    </GROUP>
+</SECTION>
+
+
+<SECTION  name="domain_servicestab" label="TFrameAccounts_DomainServicesTabSheet" helpid="4163" >
+    <GROUP name="domain_serviceaccessgroup"  label="TFrameAccounts_SAGroupBox"  >
+		<OPTION type="checkbox" name="domain_im" access="im_general" variable="d_im" label="TStrings_cl_instantmessaging" />
+		<OPTION type="checkbox" name="domain_sip" access="sip" variable="d_sip" label="TStrings_cl_sip" />
+		<OPTION type="checkbox" name="domain_ftp" access="ftp" variable="d_ftp" label="TStrings_cl_ftp" />
+		<OPTION type="checkbox" name="domain_sms" access="sms" variable="d_sms" label="TStrings_cl_sms" />
+		<OPTION type="label" label="&lt;div class=grouptitle &gt;&lt;/div&gt;"/>
+		<OPTION type="checkbox" name="domain_av" access="av_general" variable="d_avscan" label="TStrings_cl_antivirus" />
+		<OPTION type="checkbox" name="domain_as" access="as_general" variable="d_antispam" label="TStrings_cl_spamengine" />
+		<OPTION type="checkbox" name="domain_cr" access="as_challenge" variable="d_challengeresponse" label="TConfigForm_ASQueuesSheet" />
+		<OPTION type="label" label="&lt;div class=grouptitle &gt;&lt;/div&gt;"/>
+		<OPTION type="checkbox" name="domain_gw" access="gw_general" variable="d_calendar" label="TConfigForm_GroupWareSheet" />
+		<OPTION type="checkbox" name="domain_webdav" access="webdav" variable="d_webdav" label="TStrings_cl_caldav" />
+		<OPTION type="label" label="&lt;div class=grouptitle &gt;&lt;/div&gt;"/>
+		<OPTION type="checkbox" name="domain_activesync" access="activesync" variable="d_activesync" label="TStrings_cl_activesync" />
+		<OPTION type="checkbox" name="domain_sml" access="syncml" variable="d_syncml" label="TStrings_cl_syncml" />
+		<OPTION type="checkbox" name="domain_activation_outlook" access="connector" variable="D_Client_Connector" label="TFrameAccounts_DomClient[2]" />
+		<OPTION type="checkbox" name="domain_activation_desktop" access="desktop" variable="D_Client_Desktop" label="TFrameAccounts_DomClient[3]" />
+	</GROUP>
+	<GROUP>
+		<OPTION type="checkbox" name="domain_domain_roster" access="desktop" variable="D_SharedRoster" label="TFrameAccounts_IMDomainRoster"/>
+    </GROUP>
+</SECTION>
+
+<SECTION name="domain_miscellaneoustab" label="TFrameAccounts_DomainOtherSheet" helpid="240">
+    <GROUP name="domain_typet" label="TFrameAccounts_DomainTypeBox" disable="domainadmin">
+            <OPTION type="listbox" name="domain_type" function="domain_type" value="0|2|3|4|1" label="TFrameAccounts_DomainTypeL" disable="domainadmin|gateway" labels="TFrameAccounts_DomainType" />
+        <OPTION type="edit" name="domain_domatypevalue" variable="d_domainvalue" label="TFrameAccounts_SendToLabel" disable="gateway"/>
+        <OPTION type="listbox" name="domain_value" label="TFrameAccounts_IssueL" variable="d_verifytype" labels="TFrameAccounts_DomainVRFYList" value="0|3|2|1|"/>
+    	<OPTION type="password" name="domain_mingerpass" variable="d_mingerpassword"/>
+	</GROUP>
+    <GROUP name="domain_miscellaneousgroup" label="TFrameAccounts_DomainOtherSheet">
+        <OPTION type="edit" name="domain_ipbinding" function="domain_ipbinding" label="TFrameAccounts_DomainVirtL" disable="domainadmin" />
+        <OPTION type="edit" name="domain_hostname" variable="d_hostname" label="TFrameAccounts_DomainHostL" disable="domainadmin" />
+        <OPTION type="edit" name="domain_folder" variable="d_folderpath" label="TFrameAccounts_DomainFolderL" disable="domainadmin" default="" />
+<!--       <OPTION type="textfile" name="domain_accountdefaults" value="domain_accountdefaults" label="TFrameAccounts_AccountDefButton"/> -->
+        <OPTION type="button" btype="xmledit" fileid="headerfiles_domain" name="d_headerfiles" blabel="TFrameAccounts_DomainHeadFootButton"/>
+    </GROUP>
+    <GROUP name="domain_unknownusersgroup" label="TFrameAccounts_UnknowUsersBox">
+        <OPTION type="listbox" name="domain_unknownaction" variable="D_UnknownUsersType" label="TFrameAccounts_ActionUnknownUsers" labels="TFrameAccounts_DomainUnknownUsersType"/>
+        <OPTION type="edit" name="domain_unknownemail" variable="d_unknownforwardto" label="TFrameAccounts_EmailUnknownL" />
+        <OPTION type="checkbox" name="domain_infotoadmin" variable="d_infotoadmin" label="TFrameAccounts_InfoToAdminBox" />
+    </GROUP>
+</SECTION>
+ 
+	<SECTION name="domain_aliases" label="TFrameAccounts_DomainAliasesSheet" helpid="471" disable="add" >
+		<GROUP name="domain_aliases_group" >
+			<OPTION type="datagrid" name="subdomains" gtype="subdomains" labels="TSubDomainsForm" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="+100" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/subdomains.dat" COMMENT="examples/subdomains.dat" DIALOG="subdomains" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TBWForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="subdomains" LENGTH="2" >
+						<SEPS>=</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+<!--Domain Keys-->
+<SECTION name="domain_DomainKeystab" label="TFrameAccounts_DomainKeySheet" helpid="329" >
+    <GROUP name="domain_BWgroup" label="TFrameAccounts_DomainKeyGroup" datfile="domainkey.dat" dattype="domainkey" >
+        <OPTION type="checkbox" name="DK1" variable="1" label="TSpamEngineForm_SpamEngineActive" />
+        <OPTION type="edit" name="DK2" variable="2" label="TFrameAccounts_SelectorL" />
+        <OPTION type="edit" name="DK3" variable="3" label="TFrameAccounts_DomainKL" />
+        <!--
+        <OPTION type="label" label="TFrameAccounts_CanonL" />
+        <OPTION type="radio" name="DK4" variable="4" label="TFrameAccounts_SimpleCan" value="1" />
+        <OPTION type="radio" name="DK4" variable="4" label="TFrameAccounts_NoFwsCan" value="0" />
+        -->
+        <OPTION type="textarea" name="DK5" variable="5" label="TFrameAccounts_PrivateKL" />
+        <OPTION type="edit" name="DK6" variable="6" label="TFrameAccounts_PublicKL" />
+    </GROUP>
+</SECTION>
+
+
+<SECTION name="domain_DirectoryServicetab" label="TFrameAccounts_ADDomainSheet" helpid="342" datfile="config/syncad.dat" dattype="domainad" disable="domainadmin">
+    <GROUP name="domain_DirectoryServicetab_General" label="TFrameAccounts_ADGeneralBox" datfile="config/syncad.dat" dattype="domainad">
+        <OPTION type="checkbox" name="domain_DS_Synchronize" variable="ACTIVE" label="TFrameAccounts_ADActive"  disable="domainadmin" />
+    </GROUP>
+    <GROUP name="domain_DirectoryServicetab_Server" label="TFrameAccounts_ADServerBox" datfile="config/syncad.dat" dattype="domainad">
+        <OPTION type="edit" name="ds_host" variable="HOST" label="TFrameAccounts_ADHostL" disable="domainadmin" />
+        <OPTION type="edit" name="ds_user" variable="USER" label="TFrameAccounts_ADUserL" disable="domainadmin" />
+        <OPTION type="password" name="ds_pass" variable="PASS" label="TFrameAccounts_ADPassL" disable="domainadmin" />
+        <OPTION type="edit" name="ds_bhost" variable="SECHOST" label="TFrameAccounts_ADSecHostL" disable="domainadmin" />
+        <OPTION type="button" btype="fbutton" fileid="SynchronizeNow" cfileid="ds_host|ds_user|ds_pass|ds_bhost" blabel="TFrameAccounts_SyncNow" inline="1"/>
+        <OPTION type="button" btype="fbutton" fileid="CheckDBConnection" cfileid="ds_host|ds_user|ds_pass|ds_bhost" blabel="TFrameAccounts_ADTest"  inline="1"/>
+    </GROUP>
+    <GROUP name="domain_DirectoryServicetab_DomainName" label="TFrameAccounts_ADDomainBox" datfile="config/syncad.dat" dattype="domainad">
+        <OPTION type="edit" name="domain_DS_objects" variable="OBJECTS" label="TFrameAccounts_ADObjectsL" disable="domainadmin" />
+        <OPTION type="edit" name="domain_DS_domainname" variable="DN" label="TFrameAccounts_ADDNL" disable="domainadmin" />
+        <OPTION type="checkbox" name="domain_DS_domain_different" variable="HOSTDOMAINACTIVE" label="TFrameAccounts_ADDomainActive" disable="domainadmin" />
+        <OPTION type="edit" name="domain_DS_domain" variable="HOSTDOMAIN" label="TFrameAccounts_ADDomainL" disable="domainadmin" />
+        <OPTION type="listbox" name="domain_DS_source" variable="USERNAMEFROMADUSERNAME" label="TFrameAccounts_ADUsernameSourceL" labels="TFrameAccounts_ADUsernameSourceBox" disable="domainadmin" />
+        
+    </GROUP>
+</SECTION>
+
+    <SECTION name="domain_BW_tab" label="TFrameAccounts_BWUserSheet" helpid="1126" disable="add">
+        <GROUP name="domain_BW_group" label="TFrameAccounts_BWUserSheet">
+	<OPTION type="datagrid" gtype="rules" name="d_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+              <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					      <BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+					      <BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" name="filter.dat" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>
+    </SECTION>
+
+
+<SECTION name="domain_infotab" label="TFrameAccounts_InfoTabSheet" helpid="349" >
+    <GROUP name="domain_infogroup" label="TFrameAccounts_InfoBoxNext">
+        <OPTION type="info" name="domain_infoname" function="domain_name" label="TFrameAccounts_DomainSheet"/>
+        <OPTION type="info" name="domain_infodesc" variable="d_description" label="TWebHostForm_DescL" />
+        <OPTION type="info" name="domain_infoaccounts" function="domain_accounts" label="TFrameAccounts_NumberOfUsLabel" disable="add"/>
+        <OPTION type="info" name="domain_accountlimit" variable="d_accountnumber" label="TFrameAccounts_AccountNumbLabel" disable="add"/>
+        <OPTION type="info" name="domain_type" function="domain_type" value="0|2|3|4|1" label="TFrameAccounts_DomainTypeL" labels="TFrameAccounts_DomainType" disable="add" />
+        <OPTION type="info" name="domain_expire" function="domain_expireson" label="TFrameAccounts_DomainExpires" disable="add" />
+        <OPTION type="info" name="domain_IPaddress" variable="D_IPAddress" label="TFrameAccounts_DomainIPL" disable="add" />
+        <OPTION type="info" name="domain_hostname" variable="d_hostname" label="TFrameAccounts_DomainHostL" disable="add" />
+    <!--<OPTION type="label" name="domain_infoaccountlimit" variable="d_accountnumber" label="TFrameAccounts_AccountNumbLabel"/> -->
+        <OPTION type="info" name="domain_infoadminemail" variable="d_adminemail" label="TFrameAccounts_EmailUnknownL" />
+        <OPTION type="info" name="domain_infopostmaster" variable="d_postmaster" label="TFrameAccounts_DefaultAliasLabel" />
+   </GROUP>
+</SECTION>
+
+</FORM>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="203030103" >
+	<SECTION name="RespondMessage" label="TContentMessageForm_MessageBox" helpid="203030103" >
+		<GROUP name="RespondMessage_Group" label="TContentMessageForm_MessageBox">
+  		<OPTION type="edit" name="from" variable="from" label="TContentMessageForm_FromLab" />
+			<OPTION type="edit" name="to" variable="to" label="TContentMessageForm_ToLab" />
+			<OPTION type="edit" name="subject" variable="subject" label="TContentMessageForm_SubjectL" />
+			<OPTION type="radio" name="type" function="cf_messageorfile"  label="TContentMessageForm_TextButton" value="0" >
+				<OPTION type="textarea" name="msg" function="cf_messageorfile" label="TContentMessageForm_TextButton" />
+			</OPTION>
+			<OPTION type="radio" name="type" function="cf_messageorfile" label="TContentMessageForm_FileNameButton" value="1" >
+				<OPTION type="edit" name="message_file" function="cf_messageorfile" label="TContentMessageForm_FileNameButton" />
+			</OPTION>
+ 		</GROUP>
+	</SECTION>
+</FORM>

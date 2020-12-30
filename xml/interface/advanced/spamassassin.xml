@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="205" >
+
+    <!-- SPAM ASSASSIN {{{
+        revision : 23.10.2006
+    -->
+    <SECTION name="MIAS_SASheet" label="TSpamEngineForm_SASheet" helpid="764" >
+
+        <GROUP name="MIAS_SATab_General" label="TSpamEngineForm_General" datfile="rules/local.cf" dattype="spam">
+            <OPTION type="checkbox" name="SpamAssassinEnabled" variable="SpamAssassinEnabled" label="TSpamEngineForm_SpamEngineActive" datfile="spam.dat" dattype="spam2" />
+            <OPTION type="checkbox" name="use_surbl" variable="use_surbl" label="TSpamEngineForm_SAUseSURBL" />
+            <OPTION type="checkbox" name="use_spf" variable="use_spf" label="TSpamEngineForm_SAUseSPF" />
+            <OPTION type="slider" name="use_spf_level" function="use_spf_level" labels="TSpamEngineForm_SPFLevel" min="0" max="2" step="1" decimal="1" hideinput="1" llabel="TSpamEngineForm_SPFLowL" rlabel="TSpamEngineForm_SPFHighL" />
+            <OPTION type="checkbox" name="use_razor2" variable="use_razor2" label="TSpamEngineForm_SAUseRazor2" />
+            <OPTION type="checkbox" name="use_domainkeys" variable="use_domainkeys" label="TSpamEngineForm_SAUseDomainKeys" />
+            <OPTION type="label" label="TSpamEngineForm_SpamAssassinConfL" />
+            <OPTION type="button" btype="textfile" fileid="spam/rules/local.cf" blabel="TSpamEngineForm_SAConfig" />
+        </GROUP>
+
+        <GROUP name="MIAS_SATab_Reporting" label="TSpamEngineForm_SAReporting" datfile="rules/local.cf" dattype="spam">
+            <OPTION type="checkbox" name="SpamAssassinReporting" variable="SpamAssassinReporting" label="TSpamEngineForm_SpamAssassinReport" datfile="spam.dat" dattype="spam2" />
+            <OPTION type="radio" name="report_safe" variable="report_safe" value="0" label="TSpamEngineForm_SAReport0" />
+            <OPTION type="radio" name="report_safe" variable="report_safe" value="1" label="TSpamEngineForm_SAReport1" />
+            <OPTION type="radio" name="report_safe" variable="report_safe" value="2" label="TSpamEngineForm_SAReport2" />
+        </GROUP>
+
+        <GROUP name="MIAS_SATab_Reporting" label="TStatisticsForm_ServiceStatsBox" datfile="spam.dat" dattype="spam2">
+            <OPTION type="edit" name="SAstatistics" variable="SpamAssassinRulesStats" label="TSpamEngineForm_SAStatL" />
+        </GROUP>
+
+    </SECTION>
+    <!-- }}} -->
+
+   <!-- RBL }}} -->
+    <SECTION name="MIAS_RBLSheet" label="TSpamEngineForm_RBLSheet" helpid="773" >
+	   <GROUP name="MIAS_RBLSheet_tab" label="TSpamEngineForm_RBLBox">
+	     <OPTION type="checkbox" name="RBL_active" variable="use_rbl" label="TSpamEngineForm_SAUseRBL" datfile="rules/local.cf" dattype="spam" />
+	     <OPTION type="datagrid" name="rbl_list" gtype="rblgrid" labels="TSpamEngineForm_RBLSheet" >
+         	<HEAD>
+  					<SELECTOR nocheckall="1"/>
+  					<OPTION VINDEX="domain"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+  				</HEAD>
+       </OPTION>
+     </GROUP>
+    </SECTION>
+
+</FORM>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SIPService_Device" helpid="2040105" >
+	<SECTION name="SIPService_Device_Tab" label="TSIPDeviceForm" helpid="995" >
+		<GROUP name="SIPService_Device_Group" label="TSIPDeviceForm_ClientGroupBox">
+			<OPTION type="edit" variable="title" name="title" label="TSIPDeviceForm_TitleLabel" />
+			<OPTION type="edit" variable="login" name="login" label="TSIPDeviceForm_LoginL"  />
+			<OPTION type="password" variable="pass" name="pass" label="TSIPDeviceForm_PassL" />
+			<OPTION type="edit" variable="number" name="number" label="TSIPDeviceForm_UserL" />
+			<OPTION type="edit" variable="callerid" name="callerid" label="TSIPDeviceForm_CallIDL" />
+			<OPTION type="edit" variable="location" name="user_location" label="TSIPDeviceForm_LocationL" />
+			<OPTION type="edit" variable="ip" name="ip" label="TSIPDeviceForm_IPL" />
+			<OPTION type="edit" variable="note" name="note" label="TSIPDeviceForm_NoteL" />
+		
+		</GROUP>
+	</SECTION>
+</FORM>

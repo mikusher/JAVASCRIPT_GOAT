@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="205" >
+
+
+    <!-- Bayesian {{{ -->
+    <SECTION name="MIAS_BayesSheet" label="TSpamEngineForm_BayesSheet" helpid="729" >
+        <GROUP name="MIAS_BayesTab_General" label="TSpamEngineForm_General" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamBayesian" variable="SpamBayesian" label="TSpamEngineForm_SpamEngineActive" />
+            <OPTION type="button" btype="fbutton" fileid="SpamCompactDB" blabel="TSpamEngineForm_CompactButton" />
+        </GROUP>
+	<GROUP name="MIAS_Bayes_AutoLearn" label="TSpamEngineForm_AutoLearnBox" datfile="rules/local.cf" dattype="spam">
+        <!-- dodelat -->
+             
+            <OPTION type="checkbox" name="IndexGenuineAuthCheck" variable="bayes_auto_learn" label="TSpamEngineForm_AutoLearnBox"/>
+            <OPTION type="slider"  min="0" max="10" decimal="0.1" step="0.1" name="bayes_auto_learn_threshold_spam" variable="bayes_auto_learn_threshold_spam" label="TSpamEngineForm_AutoLearnSpamL"  />
+            <OPTION type="slider"   min="0" max="10" decimal="0.1" step="0.1" name="bayes_auto_learn_threshold_nonspam" variable="bayes_auto_learn_threshold_nonspam" label="TSpamEngineForm_AutoLearnNonSpamL" />
+       <!-- nefunguje: -->     <OPTION type="checkbox" datfile="spam.dat" dattype="spam2" name="IndexGenuineAuth" variable="IndexGenuineAuth" label="TSpamEngineForm_IndexGenuineAuthCheckbox" />
+        </GROUP>
+
+        <GROUP name="MIAS_BayesTab_Other" label="TSpamEngineForm_OtherSheet" datfile="spam.dat" dattype="spam2">
+            <OPTION type="textarea" name="WordStopList" variable="WordStopList" label="TSpamEngineForm_StopWordsL" />
+        </GROUP>
+    </SECTION>
+  
+</FORM>

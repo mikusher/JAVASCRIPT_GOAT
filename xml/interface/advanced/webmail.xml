@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="AV" helpid="1843" >
+	<SECTION name="AV_GeneralTab" label="TConfigForm_WMGeneralBox" helpid="1843" >
+		<GROUP name="AV_GeneralTab_Integrated" label="TConfigForm_WebOtherGeneral" dattype="webmail" datfile="config/_webmail/server.xml">
+			<!--<OPTION type="checkbox" name="disabled" variable="disabled" label="TConfigForm_WMActive" inverse="1" />-->
+			<OPTION type="edit" name="smtpserver" function="smtpserver" label="TConfigForm_WMSMTPL"/>
+			<OPTION type="label" inline="1"/><OPTION type="checkbox" name="smtp_auth" variable="smtp_auth" label="TConfigForm_WMSMTPAuth" inline="1"/>
+			<OPTION type="edit" name="imapserver" function="imapserver" label="TConfigForm_WMIMAPL"/>
+			<OPTION type="edit" name="xmppserver" function="xmppserver" label="TConfigForm_WMIMServerL"/>
+			<OPTION type="edit" name="C_Webmail_URL" variable="C_Webmail_URL" label="TConfigForm_ADWebMailL" source="API"/>
+			<!--<OPTION type="listbox" name="logs" variable="logs" label="TConfigForm_LoggingSheet" labels="TConfigForm_WMLogging" value="0|1|2" />-->
+      <OPTION type="checkbox" name="logging_type" variable="logging_type" label="TConfigForm_WMLoginEmail" default="1" />
+    </GROUP>
+
+		<GROUP name="TConfigForm_ODBC" label="TConfigForm_WMDBBox" dattype="webmail" datfile="config/_webmail/server.xml">
+			<OPTION type="edit" name="dbconn" variable="dbconn" label="TConfigForm_WMPDOL" />
+    <!--  <OPTION type="listbox" name="dbconn" variable="dbconn" label="TConfigForm_WMPDOL" labels="TConfigForm_WMPDO" value="0|1|2"/> -->
+      <OPTION type="edit" name="dbuser" variable="dbuser" label="TConfigForm_WMDBUserL"/>
+			<OPTION type="password" name="dbpass" variable="dbpass" label="TConfigForm_WMDBPassL"/>
+			<OPTION type="checkbox" name="fulltext" variable="fulltext" label="TConfigForm_WMFullText" />
+		</GROUP>
+
+	</SECTION>
+
+</FORM>

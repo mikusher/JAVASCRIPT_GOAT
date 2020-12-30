@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="AutoArchive" helpid="2096">
+	<SECTION name="AutoArchive_Section" label="TMailArchiveForm_AutoArchiveGroupBox" helpid="2097" >
+		<GROUP name="mail_Group" label="TMailArchiveForm_AutoArchiveGroupBox">
+			<OPTION type="checkbox" name="C_System_Tools_AutoArchive_Enable" variable="C_System_Tools_AutoArchive_Enable" label="TMailArchiveForm_ArchiveActive" default="0" />
+			<OPTION type="edit" name="C_System_Tools_AutoArchive_Path" variable="C_System_Tools_AutoArchive_Path" label="TMailArchiveForm_ArchiveFolderP" />
+			<OPTION type="edit" name="C_System_Tools_AutoArchive_TrailerPath" variable="C_System_Tools_AutoArchive_TrailerPath" label="TMailArchiveForm_TrailerPathL" />
+			<OPTION type="checkbox" name="C_System_Tools_AutoArchive_IMAPArchive" variable="C_System_Tools_AutoArchive_IMAPArchive" label="TMailArchiveForm_UseIMAP" default="0" >
+			<OPTION type="edit" name="C_System_Tools_AutoArchive_IMAPArchiveName" variable="C_System_Tools_AutoArchive_IMAPArchiveName" />
+			</OPTION>
+		</GROUP>
+
+		<GROUP name="options_Group" label="TMailArchiveForm_MailArchiveOptions">
+			<OPTION type="listbox" name="C_System_Tools_AutoArchive_Outgoing" variable="C_System_Tools_AutoArchive_Outgoing" label="TMailArchiveForm_ArchiveModeL" labels="TMailArchiveForm_ArchiveList" value="0|2|1" />
+			<OPTION type="radio" name="C_System_Tools_AutoArchive_Backup_Domains" variable="C_System_Tools_AutoArchive_Backup_Domains" label="TMailArchiveForm_ArchiveAll" value="0" />
+			<OPTION type="radio" name="C_System_Tools_AutoArchive_Backup_Domains" variable="C_System_Tools_AutoArchive_Backup_Domains" label="TMailArchiveForm_ArchiveDomains" value="1" />
+			  <OPTION type="datagrid" name="archive_item" gheight="150" labels="TFrameAccounts_DomainSheet" >
+  				<HEAD>
+  					<SELECTOR />
+  					<OPTION VINDEX="0"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+  				</HEAD>
+  				<SOURCE>
+  					<FILE DIALOG="archive_item" NAME="archivedomains.dat" />
+  				</SOURCE>
+  				<BUTTONS>
+  					<BUTTON LABEL="TMailArchiveForm_AddDomainButton" TYPE="add" />
+  					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+  					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+  				</BUTTONS>
+  			</OPTION>
+		</GROUP>
+
+		<GROUP name="backup_Group" label="TMailArchiveForm_MailArchiveBackupBox">
+		<OPTION type="edit" name="C_System_Tools_AutoArchive_DeleteOlder" variable="C_System_Tools_AutoArchive_DeleteOlder" label="TMailArchiveForm_DeleteArchiveL" />
+			<OPTION type="checkbox" name="C_System_Tools_AutoArchive_Backup_Active" variable="C_System_Tools_AutoArchive_Backup_Active" label="TMailArchiveForm_ArchiveBackup" />
+			<OPTION type="edit" name="C_System_Tools_AutoArchive_Backup_File" variable="C_System_Tools_AutoArchive_Backup_File" label="TBackupForm_BackupFileLabel" />
+			<OPTION type="password" name="C_System_Tools_AutoArchive_Backup_Password" variable="C_System_Tools_AutoArchive_Backup_Password" label="TBackupForm_PassL" />
+			<OPTION type="edit" name="C_System_Tools_AutoArchive_Backup_DeleteOlder" variable="C_System_Tools_AutoArchive_Backup_DeleteOlder" label="TMailArchiveForm_BackupDelLabel" />
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPIPAccess" helpid="21006" >
+	<SECTION name="IPRestriction" label="TStrings_webip" helpid="21006" >
+		<GROUP name="IPRestriction_group" label="TStrings_webip">
+			<OPTION type="edit" name="ip" variable="ip" label="TStatisticsForm_LogFilterIPL" />
+			<OPTION type="listbox" name="ipmode" variable="ipmode" label="TServiceItemForm_AccessSheet" labels="TServiceItemForm_AccessCombo" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

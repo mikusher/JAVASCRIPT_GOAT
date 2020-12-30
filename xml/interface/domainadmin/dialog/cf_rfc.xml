@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="RFC822Violation" label="TRFC822ViolationForm" helpid="1125" >
+		<GROUP name="RFC822Violation_Group" label="TRFC822ViolationForm">
+      <OPTION type="checkbox" function="cf_rfc" name="blf" label="TRFC822ViolationForm_BareLFs" />
+      <OPTION type="checkbox" function="cf_rfc" name="eof" label="TRFC822ViolationForm_EOF" />
+      <OPTION type="checkbox" function="cf_rfc" name="crlf" label="TRFC822ViolationForm_CRLFDOTCRLF" />
+      <OPTION type="checkbox" function="cf_rfc" name="oxoo" label="TRFC822ViolationForm_C0x00" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

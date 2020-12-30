@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="IM" helpid="207" >
+	<SECTION name="IM_GeneralTab" label="TConfigForm_GeneralIMSheet" helpid="957" >
+		<GROUP name="IM_GeneralTab_General" label="TConfigForm_GeneralIMSheet">
+			<!--<OPTION type="checkbox" name="C_IM_General_Disable" variable="C_IM_General_Disable" label="TConfigForm_IMActive" inline="1" default="0" inverse="1" />-->
+			<OPTION type="button" btype="xmledit" inline="1" fileid="accessmode" cfileid="C_IM" blabel="TSpamEngineForm_ModeButton" label="TConfigForm_IMAML"/>
+			<!--<OPTION type="checkbox" name="C_IM_General_Redirectunknown" variable="C_IM_General_Redirectunknown" label="TConfigForm_IMPrimaryDomain" default="0" inverse="1" />-->
+			<OPTION type="checkbox" name="C_IM_General_Anonymous" variable="C_IM_General_Anonymous" label="TConfigForm_IMUntrusted" default="0" />
+			<!--<OPTION type="checkbox" name="C_IM_General_FileTransfer" variable="C_IM_General_FileTransfer" label="TConfigForm_IMServerTransfer" default="0" />
+			--><OPTION type="checkbox" name="C_IM_General_AccountRegistration" variable="C_IM_General_AccountRegistration" label="TConfigForm_IMAccountRegister" default="0" />
+			<!--<OPTION type="checkbox" name="C_IM_General_ServerOSReport" variable="C_IM_General_ServerOSReport" label="TConfigForm_IMEnabledServerTimeVersion" default="0" />-->
+		  
+    </GROUP>
+    
+    <GROUP name="IM_GeneralTab_Other" label="TConfigForm_IMOtherBox">
+      <OPTION type="edit" name="C_IM_EmailTransportNode" variable="C_IM_EmailTransportNode" label="TConfigForm_IMEmailsL" />
+    </GROUP>
+    
+	</SECTION>
+
+
+	<SECTION name="IM_ServicesTab" label="TConfigForm_IMServicesSheet" helpid="959" >
+		<GROUP name="IM_Servicesg" label="TConfigForm_IMServicesSheet">
+			<OPTION type="datagrid" name="imservices" gtype="structured" labels="TIMServiceForm_IMServiceList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="service" size="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="name" size="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="category" size="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="type" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/imservices.dat" COMMENT="examples/imservices.dat" DIALOG="imservices" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1">
+					<OBJECT ENDTAG="CRLF" LABEL="1" LABELVAR="service" NAME="imservices" >
+						<VARIABLE>category</VARIABLE>
+						<VARIABLE>type</VARIABLE>
+						<VARIABLE>name</VARIABLE>
+						<VARIABLE>ns</VARIABLE>
+						<VARIABLE>module</VARIABLE>
+						<VARIABLE>history</VARIABLE>
+						<VARIABLE>browse</VARIABLE>
+						<VARIABLE>access</VARIABLE>
+						<VARIABLE>formdata</VARIABLE>
+						<VARIABLE>params</VARIABLE>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="IM_TrustedHostsTab" label="TConfigForm_IMHostsSheet" helpid="962" >
+		<GROUP name="IM_TrustedHostsG" label="TConfigForm_IMHostsSheet">
+			<OPTION type="datagrid" name="imhosts" labels="TIMHostForm_IMHostsList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0"  SIZE="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="1" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/imhosts.dat" COMMENT="examples/imhosts.dat" DIALOG="imhosts" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="imhosts" LENGTH="2">
+						<SEPS>=</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="IM_ArchivingTab" label="TConfigForm_ArchivingIMSheet" helpid="965" >
+		<GROUP name="IM_ArchivingTab_Archiving" label="TConfigForm_IMArchiveGroupBox">
+			<OPTION type="checkbox" name="C_IM_UserHistory" variable="C_IM_UserHistory" label="TConfigForm_IMUserHistory" />
+			<OPTION type="checkbox" name="C_IM_Archive_Enable" variable="C_IM_Archive_Enable" label="TConfigForm_MessageArchiving" />
+			<OPTION type="edit" name="C_IM_Archive_DeleteAfter" variable="C_IM_Archive_DeleteAfter" label="TConfigForm_ArchiveDelLabel" />
+		</GROUP>
+		
+		<GROUP name="IM_ArchivingTab_History" label="TConfigForm_IMPHistoryBox">
+			<OPTION type="checkbox" name="C_IM_Presence_History" variable="C_IM_Presence_History" label="TConfigForm_IMPresenceHistory" />
+			<OPTION type="edit" name="C_IM_Presence_HistoryDelete" variable="C_IM_Presence_HistoryDelete" label="TConfigForm_IMPresenceDeleteL" />
+		</GROUP>
+				
+	</SECTION>
+</FORM>

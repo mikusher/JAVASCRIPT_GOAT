@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="GLOBSETS" helpid="296">
+	<SECTION name="GLOBSETS_Accounts" label="TDomainAdminForm" helpid="333" >
+		<GROUP name="GLOBSETS_Accounts_DomAdmins" label="TConfigForm_DomainAdminBox" datfile="config/domain.dat" dattype="defaultrights" >
+			<OPTION type="checkbox" name="U" variable="U" label="TDomainAdminForm_User" />
+			<OPTION type="checkbox" name="G" variable="G" label="TDomainAdminForm_Group" />
+			<OPTION type="checkbox" name="M" variable="M" label="TDomainAdminForm_List" />
+			<OPTION type="checkbox" name="L" variable="L" label="TDomainAdminForm_ListServ" />
+			<OPTION type="checkbox" name="E" variable="E" label="TDomainAdminForm_Exec" />
+			<OPTION type="checkbox" name="N" variable="N" label="TDomainAdminForm_Notify" />
+			<OPTION type="checkbox" name="R" variable="R" label="TDomainAdminForm_Remote" />
+			<OPTION type="checkbox" name="S" variable="S" label="TDomainAdminForm_Static" />
+			<OPTION type="checkbox" name="C" variable="C" label="TDomainAdminForm_Catalog" />
+			<OPTION type="checkbox" name="V" variable="V" label="TDomainAdminForm_View" />
+			<OPTION type="checkbox" name="Q" variable="Q" label="TDomainAdminForm_Quarantine" />
+			<OPTION type="button" btype="textfile" fileid="config/domain.dat" blabel="TDomainAdminForm_EditFile" cfileid="examples/domain.dat" />
+			</GROUP>
+	</SECTION>
+</FORM>

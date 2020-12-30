@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<FORM name="CFAddScoreDialog" helpid="203030103" >
+	<SECTION name="AddScore" label="TStrings_hitscaption" helpid="203030103" >
+		<GROUP name="AddScore_Group" label="TStrings_hitscaption">
+			<OPTION type="edit" variable="addscore" name="addscore" label="TStrings_hitslabel" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Certificates" helpid="513">
+	<SECTION name="Advanced_Certificates" label="TCertificatesForm_CertificatesSheet" helpid="627" >
+		<GROUP name="Advanced_Certificates_group" label="TCertificatesForm_CertificatesSheet">
+			<OPTION type="datagrid" name="certificates" gtype="certificates" labels="TCertificatesForm_CertList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="ip" SIZE="-100" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="cert" size="-100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="cn" size="+10" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="issuer" size="+40" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="expiration" size="+30" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="subject" size="+10" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="bits" size="+10" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="certificates_server" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				<!--	<BUTTON LABEL="SPAM_EDITFILE" TYPE="editfile" /> -->
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="certificates" LENGTH="2">
+						<SEPS>=</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+			 <!-- <OPTION type="button" btype="xmledit" blabel="TCertificatesForm_CreateCertButton" fileid="createcert" /> -->
+		 </GROUP>
+	</SECTION>
+	
+	<SECTION name="CA_Certificates" label="TCertificatesForm_CASheet" helpid="632" >
+	 <GROUP name="CA_Certificates_group" label="TCertificatesForm_CASheet">
+    <OPTION type="datagrid" name="certificates_ca" labels="TCertificatesForm_CAList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+				<!--	<FILE NAME="config/cert.dat" COMMENT="examples/cert.dat" DIALOG="certificates" /> -->
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				<!--	<BUTTON LABEL="SPAM_EDITFILE" TYPE="editfile" /> -->
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="certificates_ca" LENGTH="2">
+						<SEPS>=</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+   
+	 </GROUP>
+  </SECTION>
+  
+  <SECTION name="Secure_Destinations" label="TCertificatesForm_SecuredSheet" helpid="635" >
+    <GROUP name="Secure_Destinations_group" label="TCertificatesForm_SecuredSheet">
+      
+      <OPTION type="datagrid" name="certificates_secure" labels="TCertificatesForm_SecureList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+				<!--	<FILE NAME="config/cert.dat" COMMENT="examples/cert.dat" DIALOG="certificates" /> -->
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				<!--	<BUTTON LABEL="SPAM_EDITFILE" TYPE="editfile" /> -->
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="certificates_ca" LENGTH="2">
+						<SEPS>=</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+      
+	 </GROUP>
+  </SECTION>
+  
+</FORM>

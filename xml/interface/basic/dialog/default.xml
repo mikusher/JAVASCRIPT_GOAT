@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Document" helpid="2040107" >
+	<SECTION name="WebSite_Document_Tab" label="TWebHostForm_DocumentList" helpid="2040107" >
+		<GROUP name="WebSite_Document_Group" label="TWebHostForm_DocumentList">
+			<OPTION type="edit" name="doc" variable="doc" label="TWebHostForm_DocumentList" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

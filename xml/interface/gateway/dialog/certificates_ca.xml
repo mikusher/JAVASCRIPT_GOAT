@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Certificates" helpid="2020703">
+	<SECTION name="Certificates_CA_tab" label="TCertificatesForm_CASheet" helpid="2020703" >
+		<GROUP name="Certificates_CA_group" label="TTntMenuItems_SSLTLSPanel">
+			<OPTION type="edit" name="1" variable="1" label="TIPAddressForm_IPL" />
+			<OPTION type="edit" name="2" variable="2" label="TIPAddressForm_CertL" />
+		</GROUP>
+	</SECTION>
+</FORM>

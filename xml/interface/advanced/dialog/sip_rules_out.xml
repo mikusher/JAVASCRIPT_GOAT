@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Redirect" helpid="2040105" >
+	<SECTION name="WebSite_Redirect_Tab" label="TWebHostForm_RedirectSheet" helpid="2040105" >
+		<GROUP name="WebSite_Redirect_Group" label="TWebHostForm_RedirectBox">
+			<OPTION type="edit" name="condition" variable="condition" label="TContentHeader_ConditionBox" />
+			<OPTION type="edit" name="rewrite" variable="rewrite" label="TWebHostForm_RedirectBox" />
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Retry_interval" helpid="20504" >
+	<SECTION name="Retry_interval_Section" label="TRetryIntervalForm" helpid="20504" >
+		<GROUP name="Retry_interval_Primary_Tab" label="TRetryIntervalForm_IntervalsBox">
+      <OPTION type="datagrid"  name="retry_intervals" labels="TRetryIntervalForm_IntervalList">
+        <HEAD>
+          <SELECTOR />
+          <OPTION VINDEX="0" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+        </HEAD>
+  			<BUTTONS>
+  				<BUTTON LABEL="TRetryIntervalForm_AddItem" TYPE="add" />
+  				<BUTTON LABEL="TRetryIntervalForm_EditItem" TYPE="edit" />
+  				<BUTTON LABEL="TRetryIntervalForm_DeleteItem" TYPE="delete" />
+          <BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+        </BUTTONS>
+  			<SOURCE>
+  			  <FILE DIALOG="retry_interval" NAME="interval.dat" />
+  			</SOURCE>
+  			<SYNTAX SINGLELINE="1">
+  				<OBJECT ENDTAG="" NAME="retry_intervals" LENGTH="1">
+  				</OBJECT>
+  			</SYNTAX>
+  			<DEFAULT>
+    			 <ITEM><FIELD INDEX="0">2</FIELD></ITEM>
+    			 <ITEM><FIELD INDEX="0">10</FIELD></ITEM>
+    			 <ITEM><FIELD INDEX="0">38</FIELD></ITEM>
+    			 <ITEM><FIELD INDEX="0">70</FIELD></ITEM>
+    			 <ITEM><FIELD INDEX="0">120</FIELD></ITEM>
+    			 <ITEM><FIELD INDEX="0">120</FIELD></ITEM>
+    			 <ITEM><FIELD INDEX="0">120</FIELD></ITEM>
+    			 <ITEM><FIELD INDEX="0">120</FIELD></ITEM>
+  			</DEFAULT>
+      </OPTION>
+		</GROUP>
+  </SECTION>
+</FORM>

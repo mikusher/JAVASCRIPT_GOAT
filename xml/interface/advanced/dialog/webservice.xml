@@ -1,0 +1,244 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite" helpid="20401" >
+	<SECTION name="WebSite" label="TWebHostForm_GeneralSheet" helpid="835" >
+		<GROUP name="WebSite_WebSite" label="TWebHostForm_GeneralBox">
+			<OPTION type="edit" name="name" variable="name" label="TWebHostForm_NameLabel" />
+			<OPTION type="edit" name="desc" variable="desc" label="TWebHostForm_DescL" />
+			<OPTION type="edit" name="path" variable="path" label="TWebHostForm_SourceL" />
+			<OPTION type="edit" name="IP" variable="IP" label="TWebHostForm_IPL" />
+			<OPTION type="radio" name="UseGlobal" variable="UseGlobal" label="TWebHostForm_DefaultSettings" value="1" />
+			<OPTION type="radio" name="UseGlobal" variable="UseGlobal" label="TWebHostForm_UniqueSettings" value="0" />
+		</GROUP>
+
+		<GROUP name="WebSite_W3CLogging" label="TWebHostForm_LoggingBox">
+			<OPTION type="checkbox" name="Logging" variable="Logging" label="TWebHostForm_Logging" />
+			<OPTION type="edit" name="LoggingPath" variable="LoggingPath" label="TWebHostForm_LoggingL" />
+			<OPTION type="edit" name="DELETELOGS" variable="DELETELOGS" label="TWebHostForm_DeleteOlderLabel" />
+		</GROUP>
+	</SECTION>
+
+	<SECTION name="Options" label="TWebHostForm_SecuritySheet" helpid="837" >
+		<GROUP name="Options_Security" label="TWebHostForm_SecurityBox">
+			<OPTION type="checkbox" name="NoRead" variable="NoRead" label="TWebHostForm_ReadAccess" inverse="1" />
+			<OPTION type="checkbox" name="Write" variable="Write" label="TWebHostForm_WriteAccess" />
+			<OPTION type="checkbox" name="NoScripts" variable="NoScripts" label="TWebHostForm_Scripts" inverse="1" />
+			<OPTION type="checkbox" name="Executables" variable="Executables" label="TWebHostForm_Executables" />
+			<OPTION type="checkbox" name="DirList" variable="DirList" label="TWebHostForm_DirList" />
+			<OPTION type="checkbox" name="NoWebDAV" variable="NoWebDAV" label="TWebHostForm_WebDAV" inverse="1" />
+		
+    </GROUP>
+
+		<GROUP name="Options_Options" label="TWebHostForm_OptionsBox">
+			<OPTION type="checkbox" name="NoKeepOpenHTTP" variable="NoKeepOpenHTTP" label="TWebHostForm_KeepHTTPOpen" inverse="1" />
+			<OPTION type="edit" name="MaxConnections" variable="MaxConnections" label="TWebHostForm_MaxConnL" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Access" label="TWebHostForm_AccessSheet" helpid="841" >
+		<GROUP name="Access_IPAccess" label="TWebHostForm_IPBox">
+			<OPTION type="datagrid" name="Access" gtype="webservicesub" labels="TWebHostForm_AccessList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="uri" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="ip" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="name" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="access" SHOW="webdeny" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ip-restriction" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+
+<!--
+	 <GROUP name="Access_Auth" label="TWebHostForm_AuthBox">
+			<OPTION type="radio" name="AuthMode" variable="AuthMode" label="TWebHostForm_AuthAnonymous" value="0" />
+			<OPTION type="radio" name="AuthMode" variable="AuthMode" label="TWebHostForm_AuthLogin" value="1" />
+			<OPTION type="checkbox" name="AuthAdmin" variable="AuthAdmin" label="TWebHostForm_AuthAdmin" />
+			<OPTION type="checkbox" name="AuthDomainAdmin" variable="AuthDomainAdmin" label="TWebHostForm_AuthDomAdmin" />
+			<OPTION type="checkbox" name="AuthUsers" variable="AuthUsers" label="TWebHostForm_AuthUsers" />
+			<OPTION type="datagrid" name="Users" gtype="webservicesub" labels="TWebHostForm_UsersList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="name" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="auth-users" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+-->
+	</SECTION>
+
+
+	<SECTION name="AppMapping" label="TWebHostForm_FilterSheet" helpid="843" >
+		<GROUP name="AppMapping_AppMapping" label="TWebHostForm_AppGroup">
+			<OPTION type="datagrid" name="extensions" gtype="webservicesub" labels="TWebHostForm_FiltersList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="ext" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="module" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="filter" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Redirect" label="TWebHostForm_RedirectSheet" helpid="846" >
+		<GROUP name="Redirect_Redirect" label="TWebHostForm_RedirectBox">
+			<OPTION type="datagrid" name="redirect" gtype="webservicesub" labels="TWebHostForm_RedirectList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="what" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="to" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="regex" SHOW="bool2string" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="redirect" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="HTTPHeaders" label="TWebHostForm_HTTPSheet" helpid="853" >
+		<GROUP name="HTTPHeaders_Expiration" label="TWebHostForm_ExpirationBox">
+			<OPTION type="radio" name="ExpireMode" variable="ExpirationMode" label="TWebHostForm_ExpireNone" value="0" />
+			<OPTION type="radio" name="ExpireMode" variable="ExpirationMode" label="TWebHostForm_ExpireImmediate" value="1" />
+			<OPTION type="radio" name="ExpireMode" variable="ExpirationMode" label="TWebHostForm_ExpireAfter" value="2" >
+				<OPTION type="edit" name="ExpireMins" variable="ExpirationMins" label="" />
+			</OPTION>
+		</GROUP>
+
+		<GROUP name="HTTPHeaders_CustomHeaders" label="TWebHostForm_CustomHTTPBox">
+			<OPTION type="datagrid" name="Headers" gtype="webservicesub" labels="TWebHostForm_HTTPHeaders" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="header" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="val" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="headers" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Documents" label="TWebHostForm_DocumentsSheet" helpid="856" >
+		<GROUP name="Documents_DefaultDocs" label="TWebHostForm_DocumentsBox">
+			<OPTION type="datagrid" name="Defaults" gtype="webservicesub" labels="TWebHostForm_DocumentList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="doc" SIZE="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="default" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="MIME" label="TWebHostForm_MIMESheet" helpid="859" >
+		<GROUP name="MIME_MIME" label="TWebHostForm_MIMEBox">
+			<OPTION type="datagrid" name="MIME" gtype="webservicesub" labels="TWebHostForm_MIMEList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="ext" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="mime" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="compress" SHOW="Bool2String" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="mime" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Aliases" label="TWebHostForm_DirectorySheet" helpid="849" >
+		<GROUP name="Aliases_DirAliases" label="TWebHostForm_AliasesBox">
+			<OPTION type="datagrid" name="Directories" gtype="webservicesub" labels="TWebHostForm_AliasList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="alias" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="path" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="alias" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Errors" label="TWebHostForm_ErrorSheet" helpid="862" >
+		<GROUP name="Errors_Errors" label="TWebHostForm_ErrorBox">
+			<OPTION type="datagrid" name="Errors" gtype="webservicesub" labels="TWebHostForm_ErrorList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="error" SIZE="-80" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="type" SHOW="listbox" labels="TStrings_ErrorResponseTypeL" SIZE="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="val" SIZE="+50" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="errors" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS> 
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+</FORM>

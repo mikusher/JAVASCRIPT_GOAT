@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="network" >
+	<SECTION name="network_section" label="TStrings_wa_net_section" >
+		<GROUP name="network_group" label="TStrings_wa_net_group">
+		<OPTION type="label" label="&lt;br/&gt;" />
+		  <OPTION type="label" label="TStrings_wa_net_label" />
+		  <OPTION type="label" label="&lt;br/&gt;" />
+		  <OPTION type="hidden" name="changed" variable="changed" hidden="1" />
+		  <OPTION type="info" label="TStrings_wa_net_name" variable="label" />
+		  <OPTION type="radio" name="dhcp" value="1" label="TStrings_wa_net_dhcp" variable="dhcp" />
+		  <OPTION type="radio" name="dhcp" value="0" label="TStrings_wa_net_static" variable="dhcp" />
+		  <OPTION type="edit" name="ip" variable="ip" label="TStrings_wa_net_ip" />
+		  <OPTION type="edit" name="mask" variable="mask" label="TStrings_wa_net_mask" />
+		  <OPTION type="edit" name="gateway" variable="gateway" label="TStrings_wa_net_gateway" />
+		</GROUP>
+		<GROUP>
+		  <OPTION type="radio" name="dns" value="0" label="TStrings_wa_net_dns_auto" variable="dns" />
+		  <OPTION type="radio" name="dns" value="1" label="TStrings_wa_net_dns_static" variable="dns" />
+		  
+		  <OPTION type="edit" label="TStrings_wa_net_dns_primary" name="primary_dns" variable="primary_dns" />
+		  <OPTION type="edit" label="TStrings_wa_net_dns_secondary" name="secondary_dns" variable="secondary_dns" />
+		  
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

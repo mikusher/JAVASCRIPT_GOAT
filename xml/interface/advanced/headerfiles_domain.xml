@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FORM name="headerfiles">
+<SECTION name="headerfiles_section" label="TStrings_weboption">
+  <GROUP name="headerfiles_group" label="TFrameAccounts_GroupMessageSheet">
+    <OPTION type="edit" name="d_headerfile_txt" variable="d_headerfile" label="THeaderFooterForm_HeaderL" />
+    <OPTION type="textfile" name="domain_headerfile" value="domain_header" label="TPatternsForm_ChangeButton" />
+    <OPTION type="edit" name="d_headerfile_html" variable="d_headerhtmlfile" label="THeaderFooterForm_HHTMLL" />
+    <OPTION type="textfile" name="domain_headerfile" value="domain_header_html" label="TPatternsForm_ChangeButton" />
+    <OPTION type="edit" name="d_footerfile_txt" variable="d_footerfile" label="THeaderFooterForm_FooterL" />
+    <OPTION type="textfile" name="domain_footerfile" value="domain_footer" label="TPatternsForm_ChangeButton" />
+    <OPTION type="edit" name="d_footerfile_html" variable="d_footerhtmlfile" label="THeaderFooterForm_FHTMLL" />
+    <OPTION type="textfile" name="domain_footerfile" value="domain_footer_html" label="TPatternsForm_ChangeButton" />
+    <OPTION type="label" label="THeaderFooterForm_CL"/>
+    <OPTION type="checkbox" name="local_to_local" function="D_HeaderFooterFlag" label="THeaderFooterForm_L2L" />
+    <OPTION type="checkbox" name="local_to_remote" function="D_HeaderFooterFlag" label="THeaderFooterForm_L2R" />
+  </GROUP>
+</SECTION>
+</FORM>

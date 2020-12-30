@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="Application" label="TContentPriorityForm_PriorityL" helpid="1125" >
+		<GROUP name="ApplicationGroup" label="TContentPriorityForm_PriorityL">
+			<OPTION type="listbox" variable="contain" name="contain" value="1|2|3|4|5" labels="TContentPriorityForm_PriorityList" label="TContentPriorityForm_PriorityL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

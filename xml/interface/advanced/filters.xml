@@ -1,0 +1,102 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Filters" helpid="678" >
+	<SECTION name="Filters_Content" label="TConfigForm_ContentFilterSheet" helpid="680" >
+		<GROUP name="Filters_Content_Group" label="TSpamEngineForm_General">
+			<OPTION type="checkbox" name="C_Mail_Filter_Content_Enable" variable="C_Mail_Filter_Content_Enable" label="TSpamEngineForm_SpamEngineActive" default="0" >
+			</OPTION>
+			<OPTION type="edit" name="C_Mail_Filter_MaxThreads" variable="C_Mail_Filter_MaxThreads" label="TConfigForm_FilterThreadPoolingL" default="0"/>
+	    <OPTION type="datagrid" name="contentfilters" gtype="contentfilters" height="400" labels="TContentFilterItemForm_Labels" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="Active" size="-15" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="Title" size="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/content.xml" DIALOG="contentfilters" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>	
+  	</GROUP>
+	</SECTION>
+
+
+	<!--<SECTION name="Filters_BlackWhite" label="TConfigForm_BlackWhiteSheet" helpid="2030302" >
+		<GROUP name="Filters_BlackWhite_Group" label="TConfigForm_BlackWhiteSheet">
+			<OPTION type="checkbox" name="C_Mail_Filter_BW_Enable" variable="C_Mail_Filter_BW_Enable" label="TSpamEngineForm_SpamEngineActive" default="0" />
+			<OPTION type="bwfile" value="config/filter.dat" />
+
+		</GROUP>
+	</SECTION>-->
+	    <SECTION name="Filters_Rules" label="TFrameAccounts_BWUserSheet" helpid="1125" disable="add">
+        <GROUP name="Filters_Rules_Tab" label="TFrameAccounts_BWUserSheet"> 
+          <OPTION type="checkbox" name="C_Mail_Filter_BW_Enable" variable="C_Mail_Filter_BW_Enable" label="TFrameAccounts_ListBW" />
+          <!--<OPTION type="bwfile" name="user_bw" value="account_bw" label="TFrameAccounts_BWUserSheet"/>  
+          --><OPTION type="datagrid" gtype="rules" name="g_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+                <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					      <BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+					      <BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" name="config/filter.dat" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>
+    </SECTION>
+
+
+	<SECTION name="Filters_External" label="TConfigForm_StaticFilterSheet" helpid="683" >
+		<GROUP name="Filters_External_Group" label="TConfigForm_StaticFilterSheet">
+			<OPTION type="datagrid" name="staticfilters" gtype="structured" labels="TExternalFiltersForm_FilterList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="Title" size="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="Filter" size="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/staticfilters.dat" COMMENT="examples/staticfilters.dat" DIALOG="staticfilters" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX>
+					<OBJECT NAME="staticfilters" LABELVAR="Title">
+						<VARIABLE>Title</VARIABLE>
+						<VARIABLE>Filter</VARIABLE>
+						<VARIABLE>Message</VARIABLE>
+						<VARIABLE>SMTPMessage</VARIABLE>
+						<VARIABLE>Enabled</VARIABLE>
+				  </OBJECT>
+				</SYNTAX>
+			</OPTION>			
+			
+		</GROUP>
+	</SECTION>
+</FORM>

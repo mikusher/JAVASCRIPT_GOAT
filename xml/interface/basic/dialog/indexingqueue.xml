@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Indexing_queue" helpid="20703">
+	<SECTION name="Indexing_queue_tab" label="TASQueueItemForm_Box" helpid="20703" >
+		<GROUP name="Indexing_queue_group" label="TASQueueItemForm_Box">
+			<OPTION type="edit" name="2" variable="2" label="TASQueueItemForm_AccountL" />
+			<OPTION type="account_select" domainselect="false" target="2" />
+      <OPTION type="label" label="&lt;br/&gt;"/>
+      <OPTION type="edit" name="0" variable="0" label="TASQueueItemForm_FolderL" />
+      <OPTION type="folder_select" target="0" />
+      <OPTION type="label" label="&lt;br/&gt;"/>
+			<OPTION type="listbox" name="3" variable="3" value="1|0|4|5|3|2" label="TASQueueItemForm_QueueL" labels="TASQueueItemForm_QueueList" />
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Exception" helpid="2010303">
+	<SECTION name="Exception_tab" label="TConfigForm_MaxSMTPCRL" helpid="471" >
+		<GROUP name="Exception_group" label="TConfigForm_MaxSMTPCRL">
+			<OPTION type="edit" name="1" variable="1" label="TAccountSelectForm_DomainL" />
+			<OPTION type="edit" name="2" variable="2" label="TFrameAccounts_SendToLabel" />
+		</GROUP>
+	</SECTION>
+</FORM>

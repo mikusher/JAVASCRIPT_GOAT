@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Storage" helpid="506">
+	<SECTION name="Storage_Accounts" label="TConfigForm_AccountsStorageSheet" helpid="610" >
+		<GROUP name="Storage_Accounts_Accounts" label="TConfigForm_AccountsStorageSheet">
+			<OPTION type="radio" name="C_System_Storage_Accounts_StorageMode" variable="C_System_Storage_Accounts_StorageMode" value="1" label="TConfigForm_Standard" default="1" />
+			<OPTION type="radio" name="C_System_Storage_Accounts_StorageMode" variable="C_System_Storage_Accounts_StorageMode" value="0" label="TConfigForm_Professional" default="0" />
+			<!--<OPTION type="edit" name="C_System_Storage_Accounts_ProModeCache" variable="C_System_Storage_Accounts_ProModeCache" label="TConfigForm_MemoryModeCacheL" default="10" />
+			--><OPTION type="radio" name="C_System_Storage_Accounts_StorageMode" variable="C_System_Storage_Accounts_StorageMode" value="2" label="TConfigForm_ODBC" default="0" />
+			<!--<OPTION type="checkbox" name="C_System_Storage_Accounts_ODBCPassEncrypt" variable="C_System_Storage_Accounts_ODBCPassEncrypt" label="TConfigForm_ODBCPasswordEncryption" default="0" />
+      -->
+			<OPTION type="button" btype="xmledit" inline="1" fileid="odbc_storage" blabel="TConfigForm_DBODBCSettings" width="600" height="480"/> 
+			<!--<OPTION type="button" btype="textfile" fileid="config/db.ini" blabel="TConfigForm_ODBCIni" cfileid="examples/db.ini" />
+			--><OPTION type="button" btype="fbutton" inline="1" fileid="ConvertToFS" cfileid="C_System_Storage_Accounts_StorageMode" name="ConvertToFS" blabel="TConfigForm_ConvertToMerakBut" />
+			<OPTION type="button" btype="fbutton" inline="1" fileid="ConvertToODBC" cfileid="C_System_Storage_Accounts_StorageMode" name="ConvertToODBC" blabel="TConfigForm_ConvertToODBCBut" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Storage_Directories" label="TConfigForm_DirectoriesStorageSheet" helpid="579" >
+		<GROUP name="Storage_Directories_Dirs" label="TConfigForm_DirectoriesStorageSheet">
+			<OPTION type="edit" name="C_System_Storage_Dir_MailPath" variable="C_System_Storage_Dir_MailPath" label="TConfigForm_MailPathLabe" />
+			<OPTION type="edit" name="C_System_Storage_Dir_TempPath" variable="C_System_Storage_Dir_TempPath" label="TConfigForm_TempPathLabel" />
+			<OPTION type="edit" name="C_System_Storage_Dir_LogPath" variable="C_System_Storage_Dir_LogPath" label="TConfigForm_LogPathLabel" />
+		</GROUP>
+
+		<GROUP name="Storage_Directories_MailboxPath" label="TConfigForm_MailboxPathGroupBox">
+			<OPTION type="checkbox" name="C_System_Storage_Mailbox_UseSorting" variable="C_System_Storage_Mailbox_UseSorting" label="TConfigForm_MailboxPathSorting" />
+			<OPTION type="edit" name="C_System_Storage_Mailbox_PrefixLen" variable="C_System_Storage_Mailbox_PrefixLen" label="TConfigForm_MailboxPrepL" />
+			<OPTION type="edit" name="C_System_Storage_Mailbox_GrouppedPrefix" variable="C_System_Storage_Mailbox_GrouppedPrefix" label="TConfigForm_MailboxGrouppedL" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Storage_LoadBal" label="TConfigForm_LoadBalancingSheet" helpid="616" >
+			<GROUP name="Storage_LocalSettings_Sets" label="TLoadBalanceForm_OtherBox" datfile="path.dat" dattype="path" >
+			<OPTION type="edit" name="4" variable="4" label="TLoadBalanceForm_LocalL" />
+			<OPTION type="edit" name="12" variable="15" label="TLoadBalanceForm_MasterHL" />
+			<OPTION type="edit" name="13" variable="16" label="TLoadBalanceForm_SlaveHL" />
+		<!--</GROUP>-->
+
+		<!--<GROUP name="Storage_LocalSettings_License" label="TSpecialPathForm_LicenseBox" datfile="path.dat" dattype="path" >
+			<OPTION type="edit" name="12" variable="12" label="TSpecialPathForm_LicenseFileL" />
+		</GROUP>-->
+
+		<!--<GROUP name="Storage_LocalSettings_Other" label="TAntivirusSettingForm_OtherBox">-->
+			<OPTION type="checkbox" name="C_System_Storage_LB_Slave" variable="14" label="TLoadBalanceForm_ServerMaster" inverse="1" default="0" datfile="path.dat" dattype="path" />
+			<OPTION type="checkbox" name="C_System_Storage_LB_AutoCheckConfig" variable="C_System_Storage_LB_AutoCheckConfig" label="TLoadBalanceForm_AutoCheckConfig" default="0" />
+		</GROUP>
+		<GROUP name="Storage_LoadBal_LocalPaths" label="TLoadBalanceForm_SharedPathGroupBox" datfile="path.dat" dattype="path" >
+			<OPTION type="edit" name="1" variable="1" label="TLoadBalanceForm_ConfigL" />
+			<!--<OPTION type="edit" name="2" variable="2" label="TSpecialPathForm_WebL" />-->
+			<!--<OPTION type="edit" name="3" variable="3" label="TSpecialPathForm_WebTempL" />-->
+			<OPTION type="edit" name="6" variable="6" label="TLoadBalanceForm_SpamL" />
+			<OPTION type="edit" name="7" variable="7" label="TLoadBalanceForm_CalendarL" />
+			<!--<OPTION type="edit" name="8" variable="8" label="TSpecialPathForm_ForwardL" />-->
+			<!--<OPTION type="edit" name="9" variable="9" label="TSpecialPathForm_RetryL" />-->
+		</GROUP>
+
+		<GROUP name="Storage_LoadBal_SetsFile" label="TLoadBalanceForm_FileBox" datfile="path.dat" dattype="path" >
+			<!--<OPTION type="button" btype="textfile" fileid="path.dat" blabel="TLoadBalanceForm_SystemPathsettingsButton" cfileid="examples/path.dat" />-->
+			
+			<OPTION type="edit" name="10" variable="10" label="TLoadBalanceForm_IPL" />
+			<OPTION type="edit" name="11" variable="11" label="TLoadBalanceForm_HostNameL" />
+			<OPTION type="edit" name="5" variable="5" label="TLoadBalanceForm_RemoteL" />
+		</GROUP>
+	</SECTION>
+
+
+	<!--<SECTION name="Storage_LocalSettings" label="TLoadBalanceForm_LocalSheet" helpid="2020404" >
+
+	</SECTION>-->
+</FORM>

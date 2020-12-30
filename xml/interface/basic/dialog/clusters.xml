@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TrustedHost" helpid="20703">
+	<SECTION name="TrustedHost_tab" label="TConfigForm_GlobalSettingsDomainClusters" helpid="20703" >
+		<GROUP name="TrustedHost_group" label="TConfigForm_GlobalSettingsDomainClusters">
+			<OPTION type="edit" name="1" variable="1" label="TStrings_wa_str14" />
+			<OPTION type="edit" name="2" variable="2" label="TStrings_wa_str15" />
+		</GROUP>
+	</SECTION>
+</FORM>

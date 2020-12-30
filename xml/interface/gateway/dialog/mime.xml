@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Alias" helpid="2040108" >
+	<SECTION name="WebSite_Alias_Tab" label="TWebHostForm_MIMESheet" helpid="2040108" >
+		<GROUP name="WebSite_Alias_Group" label="TWebHostForm_MIMEBox">
+			<OPTION type="edit" name="ext" variable="ext" label="TStrings_webextension" />
+			<OPTION type="edit" name="mime" variable="mime" label="TStrings_webmime" />
+			<OPTION type="checkbox" name="compress" variable="compress" label="TStrings_wa_str7" />
+ 		 </GROUP>
+	</SECTION>
+</FORM>

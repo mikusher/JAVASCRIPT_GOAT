@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TasksEvents" helpid="2020305">
+	<SECTION name="TasksEvents_section" label="TTntMenuItems_TaskSchedulePanel" helpid="593" >
+		<GROUP name="TasksEvents_tab" label="TMenuItems_TaskSchedulePanel">
+			<OPTION type="datagrid" height="570" name="taskeventgrid" gtype="taskevent" labels="TTaskScheduleForm_TaskList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="10" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="0" size="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="1" size="+50" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/taskschedule.dat" COMMENT="examples/taskschedule.dat" DIALOG="taskevent" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX>
+					<OBJECT NAME="taskevent" LENGTH="10" show="urldecode">
+						<SEPS>|SEP,SEP,SEP,SEP,SEP,SEP,SEP,SEP,</SEPS>  
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+			<OPTION type="button" btype="fbutton" fileid="" blabel="TTaskScheduleForm_CheckNow" />
+		</GROUP>
+	</SECTION>
+</FORM>

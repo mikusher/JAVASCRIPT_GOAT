@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="list" helpid="2010103" >
+
+<SECTION name="mailinglist_mailinglisttab" label="TDomainAdminForm_Group" helpid="201010301" >
+  <GROUP name="mailinglist_mailinglistgroup" label="TDomainAdminForm_Group">
+    <OPTION type="datagrid" gtype="members" name="members" labels="TUserGroupsForm_UserGroupList">
+      <HEAD>
+        <SELECTOR />
+          <OPTION VINDEX="" size="-1" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="member" size="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SOURCE>
+				  <FILE DIALOG="group_member" />
+				</SOURCE>
+    </OPTION>
+ </GROUP>
+</SECTION>
+
+</FORM>

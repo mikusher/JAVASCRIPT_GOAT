@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="IM" helpid="207" >
+	<SECTION name="IM_GeneralTab" label="TConfigForm_GeneralIMSheet" helpid="957" >
+		<GROUP name="IM_GeneralTab_General" label="TConfigForm_GeneralIMSheet">
+			<OPTION type="checkbox" name="C_IM_General_Disable" variable="C_IM_General_Disable" label="TConfigForm_IMActive" inline="1" default="0" inverse="1" />
+			<OPTION type="button" btype="xmledit" inline="1" fileid="accessmode" cfileid="C_IM" blabel="TSpamEngineForm_ModeButton" />
+			<!--<OPTION type="checkbox" name="C_IM_General_Redirectunknown" variable="C_IM_General_Redirectunknown" label="TConfigForm_IMPrimaryDomain" default="0" inverse="1" />-->
+			<OPTION type="checkbox" name="C_IM_General_Anonymous" variable="C_IM_General_Anonymous" label="TConfigForm_IMUntrusted" default="0" />
+			<!--<OPTION type="checkbox" name="C_IM_General_FileTransfer" variable="C_IM_General_FileTransfer" label="TConfigForm_IMServerTransfer" default="0" />
+			--><OPTION type="checkbox" name="C_IM_General_AccountRegistration" variable="C_IM_General_AccountRegistration" label="TConfigForm_IMAccountRegister" default="0" />
+			<!--<OPTION type="checkbox" name="C_IM_General_ServerOSReport" variable="C_IM_General_ServerOSReport" label="TConfigForm_IMEnabledServerTimeVersion" default="0" />-->
+		  
+    </GROUP>
+    
+    <GROUP name="IM_GeneralTab_Other" label="TConfigForm_IMOtherBox">
+      <OPTION type="edit" name="C_IM_EmailTransportNode" variable="C_IM_EmailTransportNode" label="TConfigForm_IMEmailsL" />
+    </GROUP>
+    
+	</SECTION>
+
+</FORM>

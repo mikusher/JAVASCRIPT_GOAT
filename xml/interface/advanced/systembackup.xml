@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SystemBackup" helpid="504">
+	<SECTION name="SystemBackupSection" label="TTntMenuItems_BackupPanel" helpid="223" >
+		<GROUP name="SystemBackup_AutoBackup" label="TBackupForm_AutoBackupBox">
+			<OPTION type="checkbox" name="C_System_Tools_AutoBackup_Enable" variable="C_System_Tools_AutoBackup_Enable" label="TSpamEngineForm_SpamEngineActive" default="0" />
+			<OPTION type="edit" name="C_System_Tools_AutoBackup_BackupTo" function="C_System_Tools_AutoBackup_BackupTo" label="TBackupForm_BackupFileLabel" />
+			<OPTION type="password" name="C_System_Tools_AutoBackup_Password" variable="C_System_Tools_AutoBackup_Password" label="TBackupForm_PassL" />
+			<OPTION type="edit" name="C_System_Tools_AutoBackup_DeleteAfter" variable="C_System_Tools_AutoBackup_DeleteAfter" label="TBackupForm_BackupDelLabel" />
+			<OPTION type="button" btype="xmledit" fileid="schedule" blabel="TBackupForm_ScheduleButton" name="C_System_Tools_AutoBackup_Sched" />
+			<OPTION type="download" btype="manualbackup" fileid="BackupConfig" blabel="TBackupForm_BackupNow" />
+			<OPTION type="upload" name="restorefile" variable="restorefile" btype="restore" fileid="RestoreConfig" blabel="TConfigForm_GWRestoreButton" />
+		</GROUP>
+
+		<GROUP name="SystemBackup_Other" label="TBackupForm_TDBBackup">
+			<OPTION type="checkbox" name="C_System_Tools_Backup_DB_AccountsEnabled" variable="C_System_Tools_Backup_DB_AccountsEnabled" label="TBackupForm_AccountsDBEnabled" inline="1"/>
+<OPTION type="button" inline="1" btype="xmledit" fileid="odbc_backup_accounts" blabel="TBackupForm_AccountsDB" />
+			<OPTION type="label"></OPTION>
+			<OPTION type="checkbox" name="C_System_Tools_Backup_DB_ASEnabled" variable="C_System_Tools_Backup_DB_ASEnabled" label="TBackupForm_AntiSpamDBEnabled" inline="1"/>
+			<OPTION type="button" inline="1" btype="xmledit" fileid="odbc_backup_as" blabel="TBackupForm_AntiSpamDB" />
+			<OPTION type="label"></OPTION>
+			<OPTION type="checkbox" inline="1" name="C_System_Tools_Backup_DB_GWEnabled" variable="C_System_Tools_Backup_DB_GWEnabled" label="TBackupForm_GroupwareDBEnabled" />
+			<OPTION type="button" inline="1" btype="xmledit" fileid="odbc_backup_gw" blabel="TBackupForm_GroupwareDB" />
+
+		</GROUP>
+
+		<GROUP name="SystemBackup_Other" label="TBackupForm_OtherBackupGroup">
+			<OPTION type="checkbox" name="C_System_Tools_IncludeMailDir" variable="C_System_Tools_IncludeMailDir" label="TBackupForm_MailBackup" default="0" />
+			<OPTION type="checkbox" name="C_System_Tools_Backup_Emails" variable="C_System_Tools_Backup_Emails" label="TBackupForm_BackupMail" default="0" />
+			<OPTION type="edit" name="C_System_Tools_Backup_SkipLarger" variable="C_System_Tools_Backup_SkipLarger" label="TBackupForm_MailLargerL" default="0" />
+			<OPTION type="edit" name="C_System_Tools_Backup_SkipOlder" variable="C_System_Tools_Backup_SkipOlder" label="TBackupForm_MailOlderL" default="0" />
+			<OPTION type="checkbox" name="C_System_Tools_Backup_GWAttach" variable="C_System_Tools_Backup_GWAttach" label="TBackupForm_BackupGroupwareAtt" />
+			<OPTION type="checkbox" name="C_System_Tools_Backup_Logs" variable="C_System_Tools_Backup_Logs" label="TBackupForm_BackupLogs" default="0" />
+			<OPTION type="edit" name="C_System_Tools_Backup_Dirs" variable="C_System_Tools_Backup_Dirs" label="TBackupForm_BackupDirsL" default="" />
+
+    </GROUP>
+
+		<!--
+    <GROUP name="SystemBackup_Manual" label="SBackup_Manual">
+			<OPTION type="download" btype="manualbackup" fileid="BackupConfig" blabel="TBackupForm_BackupNow" />
+			<OPTION type="upload" name="restorefile" btype="restore" fileid="RestoreConfig" blabel="TBackupForm_RestoreNow" />
+			<OPTION type="password" name="restore_password" label="TBackupForm_PassL" />
+		</GROUP>
+		-->
+
+	</SECTION>
+</FORM>

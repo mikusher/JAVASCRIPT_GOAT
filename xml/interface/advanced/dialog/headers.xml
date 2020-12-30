@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Header" helpid="2040106" >
+	<SECTION name="WebSite_Header_Tab" label="TStrings_webheader" helpid="2040106" >
+		<GROUP name="WebSite_Header_Group" label="TStrings_webheader">
+			<OPTION type="edit" name="header" variable="header" label="TContentEditHeader_HeaLabel" />
+			<OPTION type="edit" name="val" variable="val" label="TFrameAccounts_SendToLabel" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

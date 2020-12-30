@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="ETRNDownload" helpid="714">
+	<SECTION name="ETRNDownload_section" label="TConfigForm_ETRNATRNSheet" helpid="714" >
+		<GROUP name="ETRNDownload_tab" label="TSpamEngineForm_General">
+			<OPTION type="checkbox" name="C_Mail_ETRN_Active" variable="C_Mail_ETRN_Active" label="TSpamEngineForm_SpamEngineActive" />
+			<OPTION type="datagrid" name="etrndownload" gtype="etrndownload" labels="TETRNForm_ETRNList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="1" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="0" size="+45" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="2" SIZE="+45" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="3" size="+10" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/etrn.dat" DIALOG="etrndownload" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<!--<BUTTON LABEL="TScheduleForm" TYPE="" />-->
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="etrndownload" LENGTH="6">
+						<SEPS>;SEP;SEP%3BSEP%3ASEP;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+			<!--<OPTION type="button" btype="fbutton" variable="" blabel="TETRNForm_DownloadButton" />-->
+		</GROUP>
+	</SECTION>
+</FORM>

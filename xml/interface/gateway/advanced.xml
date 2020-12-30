@@ -1,0 +1,67 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Advanced" helpid="515">
+	<SECTION name="Advanced_Extensions" label="TConfigForm_ExtensionslOptionsSheet" helpid="639" >
+
+				<!--	<GROUP name="Advanced_Protocols_Protocols" label="TConfigForm_Services">
+			<OPTION type="edit" name="C_System_Adv_Protocols_SessionTimeOut" variable="C_System_Adv_Protocols_SessionTimeOut" label="TConfigForm_SessTime" default="300" />
+			<OPTION type="edit" name="C_System_Adv_Protocols_MaxBadCommands" variable="C_System_Adv_Protocols_MaxBadCommands" label="TConfigForm_MaxBadCommLabel" default="8" />
+			<OPTION type="edit" name="C_System_Adv_Protocols_BackLog" variable="C_System_Adv_Protocols_BackLog" label="TConfigForm_IMAPThreadLabel" default="5" />
+			<OPTION type="edit" name="C_System_Adv_Protocols_ResponseDelay" variable="C_System_Adv_Protocols_ResponseDelay" label="TConfigForm_ProtocolResponseDL" default="0" />
+		</GROUP>-->
+  	<GROUP name="Advanced_Extensions_Extensions" label="TConfigForm_ServerBoxes">
+			<OPTION type="checkbox" name="C_System_Adv_Ext_DisableSSLTLS" variable="C_System_Adv_Ext_DisableSSLTLS" label="TConfigForm_EnableSSLTLS" default="1" inverse="1" />
+			<OPTION type="checkbox" name="C_System_Adv_Ext_EnableIPv6" variable="C_System_Adv_Ext_EnableIPv6" label="TConfigForm_EnableIPv6" default="0" />
+			<OPTION type="checkbox" name="C_System_Adv_Ext_SNMPServer" variable="C_System_Adv_Ext_SNMPServer" label="TConfigForm_SNMPServer" >
+				<OPTION type="edit" name="C_System_Adv_Ext_SNMPPort" variable="C_System_Adv_Ext_SNMPPort" label="" default="161" />
+			</OPTION>
+
+			
+      <OPTION type="checkbox" name="C_System_Adv_Ext_DaytimeServer" variable="C_System_Adv_Ext_DaytimeServer" label="TConfigForm_TimeServerProt" default="0" >
+				<OPTION type="edit" name="C_System_Adv_Ext_DayTimePort" variable="C_System_Adv_Ext_DayTimePort" label="" default="13" />
+			</OPTION>
+			<OPTION type="checkbox" name="C_System_Tools_AtomicClockSync_Enable" variable="C_System_Tools_AtomicClockSync_Enable" label="TConfigForm_ClockSync" />
+      <OPTION type="checkbox" name="C_System_Adv_Ext_ChangePassServer" variable="C_System_Adv_Ext_ChangePassServer" label="TConfigForm_ChangePassProt" default="0" />
+		</GROUP>
+
+		<GROUP name="Advanced_Extensions_Special" label="TConfigForm_SpecialSystemGroupBox">
+			  <!--<OPTION type="button" btype="textfile" fileid="odbc_as" blabel="TConfigForm_DBODBCSettings" />-->
+			  <OPTION type="checkbox" name="C_System_Adv_Ext_DisableMultiCPU" variable="C_System_Adv_Ext_DisableMultiCPU" label="TConfigForm_MultiCPU" inverse="1" />
+			  <OPTION type="checkbox" name="TConfigForm_MultiODBC" variable="C_System_Storage_Accounts_ODBCMultithread" label="TConfigForm_MultithreadODBC">
+          <OPTION type="edit" name="C_System_Storage_Accounts_ODBCMaxThreads" variable="C_System_Storage_Accounts_ODBCMaxThreads" />
+		    </OPTION>
+    </GROUP>
+	</SECTION>
+	<SECTION name="Patterns_section" label="TConfigForm_PatternsSheet" helpid="534" >
+		<GROUP name="Patterns_tab" label="TConfigForm_PatternsSheet">
+			<OPTION type="datagrid" name="patterns" gtype="structured" labels="TPatternsForm_GroupList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="Name" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="Users" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/groups.dat" COMMENT="examples/groups.dat" DIALOG="patterns" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1">
+					<OBJECT NAME="patterns" LABELVAR="Name">
+						<TEXTAREA>Users</TEXTAREA>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+	
+  <!-- TRANSLATION tab -->
+	<SECTION name="Translation_section" label="TConfigForm_StringsSheet" helpid="643" >
+		<GROUP name="Translation_tab" label="TConfigForm_StringsSheet">
+			<OPTION type="button" btype="textfile" fileid="config/strings.dat" blabel="TConfigForm_StringTranslationButton" cfileid="examples/strings.dat" inline="1" width="800"/>
+		</GROUP>
+	</SECTION>  
+</FORM>

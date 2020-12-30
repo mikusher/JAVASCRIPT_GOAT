@@ -1,0 +1,67 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebService" helpid="204">
+	<SECTION name="WebService_WebService" label="TConfigForm_WebServicesSheet" helpid="833" >
+		<GROUP name="WebService_WebService_WebSites" label="TConfigForm_WebServicesSheet" >
+			<OPTION type="datagrid" name="webservice" gtype="webservice" width="900" labels="TWebServiceForm_WebHostItems" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="NAME" size="+20" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="PATH" size="+40" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" tooltip="NejakaLanguageKonstanta"/>
+					<OPTION VINDEX="DESC" size="+30" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="USEGLOBAL" size="+10" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/webserver.dat" DIALOG="webservice" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="WebService_Proxy" label="TConfigForm_ProxyServerSheet" helpid="2865">
+		<GROUP name="WebService_Proxy_General" label="TProxyForm_ProxyBox" datfile="proxy.dat" dattype="proxy" >
+			<!--<OPTION type="checkbox" name="Active" variable="Active" label="TSpamEngineForm_SpamEngineActive" />-->
+			<OPTION type="edit" name="Parent_Proxy" variable="Parent_Proxy" label="TProxyForm_ParentL" />
+		</GROUP>
+
+		<GROUP name="WebService_Proxy_Logging" label="TProxyForm_LoggingGroup" datfile="proxy.dat" dattype="proxy">
+			<OPTION type="checkbox" name="Logging" variable="Logging" label="TProxyForm_LoggingGroup" />
+			<OPTION type="listbox" name="CommonLog" variable="CommonLog" label="TProxyForm_LogFormatL" labels="TProxyForm_LogFormat" value="0|1" />
+			<OPTION type="listbox" name="DayLogging" variable="DayLogging" label="TProxyForm_LogTypeL" labels="TProxyForm_LoggingType" value="0|1" />
+			<OPTION type="edit" name="Logging_Path" variable="Logging_Path" label="TProxyForm_LogPathL" />
+			<OPTION type="edit" name="DeleteLogs" variable="DeleteLogs" label="TProxyForm_DeleteOlderLabel" />
+		</GROUP>
+
+		<GROUP name="WebService_Proxy_Authentication" label="TProxyForm_SecuritySheet" datfile="proxy.dat" dattype="proxy">
+			<OPTION type="checkbox" name="Authenticate" variable="Authenticate" label="TProxyForm_RequireAuthentication" />
+			<OPTION type="textarea" name="Users" function="Proxy_Users" label="TProxyForm_UserL" />
+		</GROUP>
+
+		<GROUP name="WebService_Proxy_Filters" label="TProxyForm_FiltersBox" datfile="proxy.dat" dattype="proxy">
+			<OPTION type="button" btype="textfile" fileid="config/proxyfilter.dat" blabel="TProxyForm_EditFilter" cfileid="examples/proxyfilter.dat" />
+			<OPTION type="button" btype="textfile" fileid="config/proxytunnelfilter.dat" blabel="TProxyForm_EditTunnel" cfileid="examples/proxytunnelfilter.dat" />
+		</GROUP>
+
+		<GROUP name="WebService_Proxy_Antivirus" label="TProxyForm_AVSheet" datfile="proxy.dat" dattype="proxy">
+			<OPTION type="checkbox" name="Antivirus" variable="Antivirus" label="TProxyForm_AVEnabled" />
+			<OPTION type="edit" name="AntivirusSize" variable="AntivirusSize" label="TProxyForm_SizeL" default="8192" />
+			<OPTION type="edit" name="AntivirusPercentage" variable="AntivirusPercentage" label="TProxyForm_PercL" default="50" />
+			<OPTION type="edit" name="AntivirusBypass" variable="AntivirusBypass" label="TProxyForm_TypesL" />
+		</GROUP>
+	</SECTION>
+	
+	<SECTION name="WebService_Other" label="TConfigForm_WebOtherSheet" helpid="1833" >
+		<GROUP name="WebService_Other" label="TTntMenuItems_ASGeneralPanel">
+			<OPTION type="edit" name="Thread_Pooling" variable="c_webservice_appmaxthreads" label="TConfigForm_WebThreadPoolingL" source="API" />
+						<!--<OPTION type="edit" name="defaultscripthost" function="defaultscripthost" label="TConfigForm_VHostL"/>-->
+		</GROUP>
+	</SECTION>
+	
+</FORM>

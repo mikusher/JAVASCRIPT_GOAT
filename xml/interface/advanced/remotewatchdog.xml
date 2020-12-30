@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="RemoteWatchdog" helpid="2020306">
+	<SECTION name="RemoteWatchdog_section" label="TConfigForm_RemoteServerSheet" helpid="589" >
+		<GROUP name="RemoteWatchdog_tab" label="TRemoteServerForm_TopGroupBox">
+			<OPTION type="checkbox" name="C_System_Tools_RemoteServer_Enable" variable="C_System_Tools_RemoteServer_Enable" label="TSpamEngineForm_SpamEngineActive" />
+			<OPTION type="edit" name="C_System_Tools_RemoteServer_Email" variable="C_System_Tools_RemoteServer_Email" label="TRemoteServerForm_ReportL" />
+			<OPTION type="edit" name="C_System_Tools_RemoteServer_MoreThan" variable="C_System_Tools_RemoteServer_MoreThan" label="TRemoteServerForm_ServerDownL" />
+			<OPTION type="checkbox" name="C_System_Tools_RemoteServer_NotifyAgain" variable="C_System_Tools_RemoteServer_NotifyAgain" label="TRemoteServerForm_NotifyAgain" />
+			<OPTION type="datagrid" name="remotewatchdog" labels="TRemoteServerForm_ServerList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="8" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="0" size="+33" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="1" size="+33" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="3" size="+33" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/remoteservers.dat" COMMENT="examples/remoteservers.dat" DIALOG="remotewatchdog" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="remotewatchdog" SHOW="urldecode" LENGTH="12">
+						<SEPS>:SEP,SEP,SEP,SEP,SEP,SEP,SEP,SEP,SEP,SEP,</SEPS>  
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+			<!--<OPTION type="button" btype="fbutton" fileid="" blabel="TRemoteServerForm_CheckNow" />-->
+			<OPTION type="button" btype="xmledit" fileid="schedule" name="C_System_Tools_RemoteServer_Schedule" blabel="TBackupForm_ScheduleButton" />
+		</GROUP>
+	</SECTION>
+</FORM>

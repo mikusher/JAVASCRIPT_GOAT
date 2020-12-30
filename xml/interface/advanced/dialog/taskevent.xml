@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TaskEvent" helpid="2020302">
+	<SECTION name="TaskEvent_tab" label="TTntMenuItems_TaskSchedulePanel" helpid="593" >
+		<GROUP name="TaskEvent_General" label="TTaskScheduleItemForm_ClientGroupBox">
+			<OPTION type="edit" name="10" function="urlencoded" label="TTaskScheduleItemForm_DescL" />
+			<OPTION type="radio" name="12" function="urlencoded" label="TTaskScheduleItemForm_ScheduleRadio" value="0" >
+				<OPTION type="button" btype="xmledit" fileid="schedule" name="taskeventschedule" function="urlencoded" blabel="TTaskScheduleItemForm_ScheduleButton" />
+			</OPTION>
+			<OPTION type="radio" name="12" function="urlencoded" label="TTaskScheduleItemForm_EventRadio" value="1" >
+				<OPTION type="listbox" name="13" function="urlencoded" labels="TTaskScheduleItemForm_EventList" values="0|1|2" />
+			</OPTION>
+		</GROUP>
+
+		<GROUP name="TaskEvent_Action" label="TTaskScheduleItemForm_ActionBox">
+			<OPTION type="edit" name="0" function="urlencoded" label="TTaskScheduleItemForm_HostLabel" />
+			<OPTION type="listbox" name="11" function="urlencoded" label="TTaskScheduleItemForm_ExecTypeL" labels="TTaskScheduleItemForm_ExecType" values="0|1|2|3" />
+			<OPTION type="edit" name="1" function="urlencoded" label="TTaskScheduleItemForm_ParamL" />
+			<OPTION type="checkbox" name="3" function="urlencoded" label="TTaskScheduleItemForm_SendEmail" />
+			<OPTION type="edit" name="4" variable="5" label="TContentMessageForm_FromLab" />
+			<OPTION type="edit" name="5" variable="6" label="TContentMessageForm_ToLab" />
+			<OPTION type="edit" name="6" function="urlencoded" label="TContentMessageForm_SubjectL" />
+			<OPTION type="radio" name="7" function="taskevents_messageorfile"  label="TContentMessageForm_TextButton" value="0" >
+				<OPTION type="textarea" name="8" function="taskevents_messageorfile" label="TContentMessageForm_TextButton" />
+			</OPTION>
+			<OPTION type="radio" name="7" function="taskevents_messageorfile" label="TContentMessageForm_FileNameButton" value="1" >
+				<OPTION type="edit" name="message_file" function="taskevents_messageorfile" label="TContentMessageForm_FileNameButton" />
+			</OPTION>
+			<OPTION type="checkbox" name="14" function="urlencoded" label="TTaskScheduleItemForm_MasterOnly" />
+		<!--	<OPTION type="label" label="TContentMessageForm_MessageTypeL" />
+			<OPTION type="radio" name="9" variable="10" value="0" label="TContentMessageForm_EmailRadio" />
+			<OPTION type="radio" name="9" variable="10" value="1" label="TContentMessageForm_IMRadio" />
+			<OPTION type="radio" name="9" variable="10" value="2" label="TContentMessageForm_EmaiLIMRadio" />
+-->
+			
+		</GROUP>
+	</SECTION>
+</FORM>

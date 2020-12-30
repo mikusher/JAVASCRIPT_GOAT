@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<FORM name="UserGroupDialog" helpid="20102">
+	<SECTION name="UserGroupDialog_tab" label="TUserGroupItemForm_GroupGroup" helpid="20102">
+		<GROUP name="UserGroupDialog_group" label="TUserGroupItemForm_GroupGroup">
+			<OPTION type="edit" name="Name" variable="Name" label="TUserGroupItemForm_NameL" />
+			<OPTION type="textarea" name="Users" variable="Users" label="TUserGroupItemForm_ItemsLabel" />
+			<!-- <OPTION type="button" btype="xmledit" variable="2" blabel="SettingsButton" /> -->
+		</GROUP>
+	</SECTION>
+</FORM>

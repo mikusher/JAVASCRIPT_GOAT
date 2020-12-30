@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CF_AV_Dialog" helpid="1125" >
+	<SECTION name="CF_AV" label="TContentAVForm" helpid="1125" >
+		<GROUP name="CF_AVGroup" label="TContentAVForm">
+      <OPTION type="checkbox" function="cf_antivirus" name="virus" label="TContentAVForm_HasVirus" />
+      <OPTION type="checkbox" function="cf_antivirus" name="pwd" label="TContentAVForm_PassProt" />
+      <OPTION type="checkbox" function="cf_antivirus" name="novirus" label="TContentAVForm_NoVirus" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

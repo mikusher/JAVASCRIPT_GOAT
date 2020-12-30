@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="ETRNATRNItem" helpid="20304">
+	<SECTION name="ETRNATRNItem_tab" label="TETRNClientForm" helpid="714" >
+		<GROUP name="ETRNATRNItem_group" label="TETRNClientForm">
+			<OPTION type="edit" name="2" variable="2" label="TETRNClientForm_DescL" />
+			<OPTION type="edit" name="1" variable="1" label="TETRNClientForm_HostnameLabel" />
+			<OPTION type="edit" name="3" variable="3" label="TETRNClientForm_ParamLabel" />
+			<OPTION type="edit" name="4" variable="4" label="TETRNClientForm_UserL" />
+			<OPTION type="password" name="5" variable="5" label="TETRNClientForm_PassL" />
+			<OPTION type="checkbox" name="6" variable="6" label="TETRNClientForm_ATRNBox" />
+		</GROUP>
+	</SECTION>
+</FORM>

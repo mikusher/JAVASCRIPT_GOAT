@@ -1,0 +1,90 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="205" >
+    <!-- GENERAL {{{ -->
+    <SECTION name="MIAS_GeneralTab" label="TSpamEngineForm_General" helpid="20501" >
+        <GROUP name="MIAS_GeneralTab_General" label="TSpamEngineForm_General">
+            <OPTION type="checkbox" name="C_AS_General_Enable" variable="C_AS_General_Enable" label="TSpamEngineForm_SpamEngineActive" default="1" source="API" />
+            <OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_AS_General" blabel="TSpamEngineForm_ModeButton" />
+            <OPTION type="button" btype="xmledit" fileid="odbc_as" blabel="TConfigForm_DBODBCSettings" />
+			  </GROUP>
+
+        <GROUP name="MIAS_GeneralTab_Updates" label="TSpamEngineForm_UpdateBox" datfile="spam.dat" dattype="spam2" >
+            <OPTION type="checkbox" name="MIAS_UpdateEnabled" variable="SpamUpdate" label="TSpamEngineForm_Enable">
+                <OPTION type="edit" name="MIAS_UpdateHour" variable="SpamUpdateTime" label="TSpamEngineForm_AtLabel" />
+            </OPTION>
+            <OPTION TYPE="daysofweek" name="MIAS_UpdateDays" variable="SpamUpdateDays"  />
+            <OPTION type="button" btype="fbutton" fileid="AntiSpamUpdate" blabel="TSpamEngineForm_UpdateButton" />
+        </GROUP>
+
+        <GROUP name="MIAS_GeneralTab_Information" label="TSpamEngineForm_InfoBox">
+            <OPTION type="edit" readonly="1" name="C_AS_Info_UpdateDate" variable="C_AS_Info_UpdateDate" label="TSpamEngineForm_LUL" />
+            <OPTION type="edit" readonly="1" name="C_AS_Info_UpdateSize" variable="C_AS_Info_UpdateSize" label="TSpamEngineForm_LUsizeL" />
+            <OPTION type="edit" readonly="1" name="C_AS_Info_UpdateVersion" variable="C_AS_Info_UpdateVersion" label="TSpamEngineForm_LUV" />
+            <OPTION type="edit" readonly="1" name="C_AS_Info_BayesWords" variable="C_AS_Info_BayesWords" label="TSpamEngineForm_BayesWordsL" />
+            <OPTION type="edit" readonly="1" name="C_AS_Info_BayesSpamMessages" variable="C_AS_Info_BayesSpamMessages" label="TSpamEngineForm_BayesMsgL" />
+            <OPTION type="edit" readonly="1" name="C_AS_Info_BayesGenuineMessages" variable="C_AS_Info_BayesGenuineMessages" label="TSpamEngineForm_BayesMsgLG" />
+            <OPTION type="edit" readonly="1" name="C_AS_Info_EngineVersion" variable="C_AS_Info_EngineVersion" label="TSpamEngineForm_SAEngineL" />
+        </GROUP>
+    </SECTION>
+    <!-- GENERAL }}} -->
+
+    <!-- ACTION {{{ -->
+    <SECTION name="MIAS_ActionTab" label="TSpamEngineForm_ActionSheet" helpid="20502" >
+        <GROUP name="MIAS_ActionTab_Action" label="TSpamEngineForm_General" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SAQuarantine" variable="SAQuarantine" label="TSpamEngineForm_SAQuarantineEnabled">
+              <OPTION type="slider" name="SAQuarantineScore" variable="SAQuarantineScore" min="0" max="10" decimal="0.1" step="0.2" />
+            </OPTION>
+            <OPTION type="checkbox" name="SAScore" variable="SAScore" label="TSpamEngineForm_SAScoreEnabled">
+                <OPTION type="slider" name="required_hits" variable="required_hits" default="3" min="0" max="10" decimal="0.1" step="0.2" datfile="rules/local.cf" dattype="spam" />
+            </OPTION>
+            <OPTION type="checkbox" name="SADelete" variable="SADelete" label="TSpamEngineForm_SADeleteEnabled">
+                <OPTION type="slider" name="SADeleteScore" variable="SADeleteScore" default="7" min="0" max="10" decimal="0.1" step="0.2" />
+            </OPTION>
+
+        </GROUP>
+
+        <GROUP name="MIAS_ActionTab_SpamFolder" label="TSpamEngineForm_SpamFolderBox" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="AddSubject" variable="AddSubject" label="TSpamEngineForm_AddToSubject">
+                <OPTION type="edit" name="AddSubjectString" variable="AddSubjectString" />
+            </OPTION>
+            <OPTION type="checkbox" name="UseSpamFolder" variable="UseSpamFolder" label="TSpamEngineForm_SpamFoldersBox" />
+            <OPTION type="checkbox" name="SpamUseIMAP" variable="SpamUseIMAP" label="TSpamEngineForm_UseIMAP">
+                <OPTION type="edit" name="SpamIMAPFolder" variable="SpamIMAPFolder" />
+            </OPTION>
+            <OPTION type="edit" name="DeleteSpamMailOlder" variable="DeleteSpamMailOlder" label="TSpamEngineForm_DeleteSpamL" />
+        </GROUP>
+    </SECTION>
+    <!-- ACTION }}} -->
+
+    <!-- OTHERS {{{ -->
+    <SECTION name="MIAS_OtherTab" label="TAntivirusSettingForm_OtherBox" helpid="20507" >
+        <GROUP name="MIAS_OtherTab_Logging" label="TSpamEngineForm_LoggingBox">
+            <OPTION type="listbox" name="C_System_Log_Services_AS" variable="C_System_Log_Services_AS" label="TSpamEngineForm_LoggingBox" labels="LOGGING_TYPES" value="0|1|2|3" />
+        
+				</GROUP>
+
+        <GROUP name="MIAS_OtherTab_OutgoingMessages" label="TSpamEngineForm_OutgoingMessagesBox" datfile="spam.dat" dattype="spam2">
+            <!-- rem chemix  <OPTION type="label" name="OutgoingRulesLabel" variable="" label="TSpamEngineForm_OutgoingLabel" /> -->
+            <OPTION type="radio" name="OutgoingRules" variable="OutgoingRules" value="0" label="TSpamEngineForm_OutgoingDefault" />
+            <OPTION type="radio" name="OutgoingRules" variable="OutgoingRules" value="2" label="TSpamEngineForm_OutgoingReject" />
+            <OPTION type="radio" name="OutgoingRules" variable="OutgoingRules" value="1" label="TSpamEngineForm_OutgoingIgnore" />
+        </GROUP>
+
+        <GROUP name="MIAS_OtherTab_Other" label="TAntivirusSettingForm_OtherBox" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamBypassNonUsers" variable="SpamBypassNonUsers" label="TSpamEngineForm_NonUser" inverse="1" />
+            <OPTION type="listbox" name="SpamRefuse" variable="SpamRefuse" label="TSpamEngineForm_RefuseML" labels="TSpamEngineForm_RefuseMessage" value="0|1|2|3" />
+	    <OPTION type="edit" name="SpamRefusePath" variable="SpamRefusePath" label="TSpamEngineForm_ArchiveRefusedL" />
+  	    <OPTION type="label" label="SELECT" style="bold" />
+        <OPTION type="account_select" target="SpamRefusePath" />
+    </GROUP>
+    
+    <GROUP name="MIAS_OtherTab_Advanced" label="TConfigForm_AdvancedMode" datfile="spam.dat" dattype="spam2">
+             <OPTION type="edit" name="SpamMaxThreads" variable="SpamMaxThreads" label="TSpamEngineForm_MaxThreadsL" />
+            <OPTION type="edit" name="IgnoreMessagesLarger" variable="IgnoreMessagesLarger" units="u_bytes" saveunit="1" label="TSpamEngineForm_MaxMsgSizeL" />
+            <OPTION type="label" name="MIASSettingsFileLabel" label="TSpamEngineForm_SettingsFileL" />
+            <OPTION type="button" btype="textfile" fileid="spam/spam.dat" blabel="TSpamEngineForm_SpamFileButton" bfileid="spam/spambypass.dat" cfileid="examples/spam.dat" />
+    </GROUP>
+    
+    </SECTION>
+    <!-- OTHERS }}} -->
+</FORM>

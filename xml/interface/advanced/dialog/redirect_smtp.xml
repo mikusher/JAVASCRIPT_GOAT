@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TRouteForm" helpid="2040105" >
+	<SECTION name="WebSite_Redirect_Tab" label="TRouteForm_RouteBox" helpid="658" >
+		<GROUP name="WebSite_Redirect_Group" label="TRouteForm_RouteBox">
+			<OPTION type="edit" name="1" variable="1" label="TRouteForm_ItemLabel" />
+			<OPTION type="edit" name="2" variable="2" label="TRouteForm_ValueLabel" />
+			<OPTION type="edit" name="4" variable="4" label="TETRNClientForm_HostnameLabel" />
+			<OPTION type="checkbox" name="3_4" function="bitvalue" lastbit="true" label="TRouteForm_MatchSender" />
+			<OPTION type="checkbox" name="3_3" function="bitvalue" default="1" label="TRouteForm_FSenderAuth" />
+			<OPTION type="checkbox" name="3_5" function="bitvalue" label="TRouteForm_LocalSender" />
+			<OPTION type="checkbox" name="3_1" function="bitvalue" label="TRouteForm_FLocal" />
+ 			<OPTION type="checkbox" name="3_2" function="bitvalue" label="TRouteForm_FSkip" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

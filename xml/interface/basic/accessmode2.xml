@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<FORM name="AccessMode" helpid="205" >
+	<SECTION name="AccessMode_Section" label="TSpamEngineForm_General" helpid="20501" >
+		<GROUP name="AccessMode_Group" label="TSpamEngineForm_General">
+			<OPTION type="listbox" name="AccessMode" variable="AccessMode" label="TSpamEngineForm_ModeButton" labels="TAccessModeForm_ModeList" value="0|3|5|9|1" default="0" source="API" />
+			<OPTION type="edit" name="AccessGroup" variable="AccessGroup" label="TAccessModeForm_GroupL" source="API" />
+			<OPTION type="account_select" append="1" target="AccessGroup" />
+    </GROUP>
+  </SECTION>
+</FORM>
+

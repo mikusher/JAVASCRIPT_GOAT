@@ -1,0 +1,129 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="sms" helpid="20201" >
+
+	<SECTION name="General_tab" label="TSMSGatewaysForm_SMSGeneral" helpid="2298" >
+	 <GROUP name="TSMSGatewaysForm_SMS_General" label="TSMSGatewaysForm_SMSGeneral">
+	   <OPTION type="checkbox" name="C_SMSService_Active" variable="C_SMSService_Active" label="TSMSGatewaysForm_SMSActive" inline="1" />
+	   <OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_SMSService"  inline="1" blabel="TSMSGatewaysForm_SMSAccessModeButton" />
+	   <OPTION type="edit" name="C_SMSService_URL" variable="C_SMSService_URL" label="TSMSGatewaysForm_SMSURLL" />
+	 </GROUP>
+	 
+	 <GROUP name="TSMSGatewaysForm_SMS_General" label="TSMSGatewaysForm_GatewayList">
+			<OPTION type="datagrid" gtype="xml" name="sms_gateways" labels="TSMSGatewaysForm_SMSGateways">
+      <HEAD>
+          <SELECTOR />
+          <OPTION VINDEX="id" size="-100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="desc" size="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="type" show="listbox" labels="TSMSGatewayForm_TypeBox"  size="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="disabled" show="bool2stringnot" size="+50" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SOURCE>
+				  <FILE DIALOG="smsgateway" name="config/smsgateway.dat" />
+				</SOURCE>
+			</OPTION>
+	 </GROUP>
+	 
+  </SECTION>
+  
+  <SECTION name="Authentication" label="TSMSGatewaysForm_AuthSheet" helpid="4048">
+    <GROUP name="TSMSGatewaysForm_SMS_General" label="TSMSGatewaysForm_SMSGeneral">
+	<OPTION type="datagrid" name="sms_auth" labels="TSMSGatewaysForm_SMSAccountList">
+      <HEAD>
+          <SELECTOR />
+          <OPTION VINDEX="0" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" SHOW="urldecode"/>
+          <OPTION VINDEX="3" size="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="4" size="-60" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="5" size="-60" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="6" show="unix2string" size="-65" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="7" size="-70" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+          <OPTION VINDEX="8" SHOW="grid_delphitime" size="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+		      <BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+		      <BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SOURCE>
+				  <FILE DIALOG="sms_auth" name="config/smsusers.dat" />
+				</SOURCE>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="members" LENGTH="11">
+						<SEPS>:SEP:SEP:SEP:SEP:SEP:SEP:SEP:SEP:SEP:SEP</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+			<!--<OPTION rows="20" cols="90" type="textarea" name="users" variable="users" datfile="smsusers.dat" dattype="smsusers" label="TSMSGatewaysForm_UserL" />-->
+		</GROUP> 
+	</SECTION>
+  
+ 	<SECTION name="Outgoing_Messages" label="TSMSGatewaysForm_SMSOutgoingSheet" helpid="4050" disable="linux">
+    <GROUP name="TSMSGatewaysForm_SMS_General" >
+			<OPTION type="datagrid" gtype="contentfilters" height="400" name="sms_outgoing_rules" labels="TContentFilterItemForm_Labels">
+      <HEAD>
+          <SELECTOR />
+					<OPTION VINDEX="Active" size="-15" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="Title" size="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+		      <BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+		      <BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SOURCE>
+				  <FILE DIALOG="rules" name="config/smsout.dat" />
+				</SOURCE>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP> 
+	</SECTION>
+
+ 	<SECTION name="Incoming_Messages" label="TSMSGatewaysForm_SMSIncomingSheet" helpid="4051" disable="linux">
+    <GROUP name="TSMSGatewaysForm_SMS_General" label="TSMSGatewaysForm_SMSDelivery">
+     <OPTION type="checkbox" name="C_SMSService_DeliverContent" variable="C_SMSService_DeliverContent" label="TSMSGatewaysForm_SMSDeliverContent" />
+      <OPTION type="checkbox" name="C_SMSService_ReplyMessage" variable="C_SMSService_ReplyMessage" label="TSMSGatewaysForm_SMSReplyMessage" />
+      <OPTION type="edit" units="u_time" name="C_SMSService_SenderReplyExpiration" variable="C_SMSService_SenderReplyExpiration" label="TSMSGatewaysForm_SMSSenderReplyExpireL" labels="TConfigForm_UndeliverableAfterUnits" />
+      <OPTION type="label" label="TSMSGatewaysForm_SMSenderReplyConflictTextL" />
+      <OPTION type="textarea" cols="40" name="C_SMSService_SenderReplyConflictText" variable="C_SMSService_SenderReplyConflictText"  />
+	<OPTION type="datagrid" gtype="contentfilters" height="400" name="sms_incoming_rules" labels="TContentFilterItemForm_Labels">
+      <HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="Active" size="-15" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="Title" size="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+      </HEAD>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+		      <BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+		      <BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SOURCE>
+				  <FILE DIALOG="rules" name="config/smsrules.dat" />
+				</SOURCE>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP> 
+	</SECTION>
+
+</FORM>

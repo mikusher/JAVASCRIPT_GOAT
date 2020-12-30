@@ -1,0 +1,1 @@
+﻿<?php  if(function_exists('securepath')){@require_once(securepath($wizard_path).'../../_inc/cWizard.php');}else{die('XSS Attack ?');}$Wizard=new cWizard($wizard_path,$wizard_root,'accountwizard');@$wizard_step++;@$wizard_step=$Wizard->execute_step($wizard_step,$_GET);@$wizard_step--;$Wizard->DataHandler=NULL;$Wizard->ShowHandler=NULL;$Wizard=NULL;?>

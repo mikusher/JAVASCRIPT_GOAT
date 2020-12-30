@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="GW" helpid="208" >
+	<SECTION name="GW_CalDAVTab" label="TConfigForm_WebDAVSheet" helpid="3978">
+		<GROUP name="GW_CalDAVTab_Notify" label="TConfigForm_CalDAVBox" datfile="caldav/config/settings.xml" dattype="caldav">
+			<OPTION type="checkbox" name="CalendarCalDAVActive" variable="Disabled" label="TConfigForm_CalDAVActive" inverse="1" inline="1" />
+			<OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_WebDAV" blabel="TSpamEngineForm_ModeButton" inline="1" />
+			<OPTION type="edit" name="CalendarWebDAVURL" variable="CalendarWebDAVURL" label="TConfigForm_WebDAVURLL" datfile="calendar.dat" dattype="calendar" />
+		</GROUP>
+	</SECTION>
+
+</FORM>

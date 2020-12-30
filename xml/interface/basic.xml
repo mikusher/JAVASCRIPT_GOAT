@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MENU>
+<PARAM ID="MMS" ICON="mms.png" LABEL="TTntMenuItems_Root" HELPID="2315" >
+	<PARAM ID="DOMAINS" ICON="management.png" HELPID="2325" label="TTntMenuItems_AccountsPanel" />
+	<PARAM ID="SYSTEM" ICON="system.png" OBJECT="services" HELPID="20201" LABEL="TTntMenuItems_System"/>
+	<PARAM ID="SMTPSERVICE" OBJECT="smtpservice" ICON="mservice.png" HELPID="203" label="TTntMenuItems_MailServer" />
+	<PARAM ID="WEBMAIL"  OBJECT="webmail" ICON="webmail.png" HELPID="206" label="TStrings_cl_webclient" />
+	<PARAM ID="ANTI-SPAM" ICON="antispam.png" HELPID="205" label="TTntMenuItems_AntiSpam" >
+		<PARAM ID="ANTI-SPAM-GENERAL" OBJECT="general" ICON="antispam_general.png" HELPID="20501" label="TTntMenuItems_ASGeneralPanel" />
+		<PARAM ID="ANTI-SPAM-ACTION" OBJECT="action" ICON="antispam_action.png" HELPID="20503" label="TTntMenuItems_ASActionPanel" />
+		<PARAM ID="ANTI-SPAM-SPAMASSASSIN" OBJECT="spamassassin" ICON="antispam_spam_assasin.png" HELPID="2050301" label="TTntMenuItems_ASSAPanel" />
+		<PARAM ID="ANTI-SPAM-LIVE" OBJECT="live" ICON="antispam_live.png" HELPID="205030201" label="TTntMenuItems_CommTouchPanel" />
+	</PARAM>
+	<PARAM ID="ANTI-VIRUS"  OBJECT="antivirus" ICON="antivirus.png" HELPID="206" label="TTntMenuItems_AntiVirusPanel"  />
+	<PARAM ID="WEBSERVICE" OBJECT="webservice" ICON="webservice.png" HELPID="204" label="TTntMenuItems_WebServicePanel" />
+	<PARAM ID="FTPSERVICE" OBJECT="ftpservice" ICON="ftpservice.png" HELPID="210" label="TTntMenuItems_FTPServicePanel" />
+	<PARAM ID="GROUPWARE" OBJECT="groupware" ICON="gw.png" HELPID="208" label="TConfigForm_GroupWareSheet"  />
+	<PARAM ID="IM" OBJECT="im" ICON="im.png" HELPID="207" label="TTntMenuItems_InstantMessagingPanel"  />
+	<PARAM ID="SMS" OBJECT="sms" ICON="smsservice.png" HELPID="2296" label="TTntMenuItems_SMSPanel"  />
+	<PARAM ID="SIP" OBJECT="sipservice" ICON="sipservice.png" HELPID="211" label="TTntMenuItems_SIPPanel" />
+	<PARAM ID="STATUS"  ICON="status.png" HELPID="209" label="TTntMenuItems_Status" >
+		<PARAM ID="MESSAGEQUEUE" ICON="messagequeue.png" FILE="messagequeue.html" HELPID="20901" label="TTntMenuItems_MessageQueuePanel"  />
+		<PARAM ID="SPAMQUEUE" ICON="status_spam_queues.png" OBJECT="spamqueue" HELPID="20908" label="TTntMenuItems_SpamQueuePanel"  />
+		<!--<PARAM ID="TRAFFIC" OBJECT="" ICON="traffic.png" HELPID="20902" label="TMenuItems_TrafficPanel" />-->
+		<PARAM ID="STATISTICS" ICON="statistics.png" FILE="stats.html" HELPID="20903" label="TTntMenuItems_CountersPanel"/>
+	</PARAM>
+	<PARAM ID="WIZARDS" ICON="wizards.png" FILE="wizards.html" HELPID="3" label="TTntMenuItems_WizardPanel"  />
+	<PARAM ID="LICENSE" ICON="license.png" FILE="license.html" HELPID="3" label="TConfigForm_LicensesItem"  />
+</PARAM>
+</MENU>

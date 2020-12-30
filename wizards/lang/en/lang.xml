@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LANGUAGES>
+   <LANGUAGE ID="accountwizard" VALUE="New User">
+      <ITEM VALUE="Next &gt;" ID="wizard_next"/>
+      <ITEM VALUE="&lt; Back" ID="wizard_prev"/>
+      <ITEM VALUE="Cancel" ID="wizard_cancel"/>
+      <ITEM VALUE="Next &gt;" ID="wizard_next"/>
+      <ITEM ID="wizard_finish" VALUE="Finish"/>
+      <ITEM ID="account_wizard" VALUE="New User"/>
+      <ITEM ID="account_select_domain" VALUE="Domain:"/>
+      <ITEM ID="step" VALUE="Step"/>
+      <ITEM ID="missing_values" VALUE="Missing or incorrect value. Please, try again."/>
+      <ITEM ID="account_exists" VALUE="Account with selected name already exists. Please, try again."/>
+      <ITEM ID="account_exists_elsewhere" VALUE="Account with selected name or password exists in other domain. Please, try again."/>
+      <ITEM ID="domain_problem" VALUE="Problem opening a domain."/>
+      <ITEM ID="account_succes" VALUE="User %s has been succesfully created."/>
+      <ITEM ID="account_fail" VALUE="User has not been created."/>
+      <ITEM ID="FORM_STEP1" VALUE="Select the domain you want to add users to"/>
+      <ITEM ID="FORM_NAME" VALUE="Domain:"/>
+      <ITEM ID="FORM_NAMEINFO" VALUE="Specify the domain name (eg. yourdomain.com)"/>
+      <ITEM ID="FORM_STEP2" VALUE="Specify information about the new user"/>
+      <ITEM ID="FORM_ACCOUNTNAME" VALUE="Username:"/>
+      <ITEM ID="FORM_ACCOUNTNAMEINFO" VALUE="New username"/>
+      <ITEM ID="FORM_ACCOUNTFULLNAME" VALUE="Full name:"/>
+      <ITEM ID="FORM_ACCOUNTFULLNAMEINFO" VALUE="Full name (eg. John Doe)"/>
+      <ITEM ID="FORM_STEP3" VALUE="Password for the new user"/>
+      <ITEM ID="FORM_ACCOUNTPASSWORD" VALUE="Password:"/>
+      <ITEM ID="FORM_ACCOUNTPASSWORDINFO" VALUE="Specify the new password"/>
+      <ITEM ID="FORM_ACCOUNTPASSWORDCONFIRM" VALUE="Confirmed password:"/>
+      <ITEM ID="FORM_ACCOUNTPASSWORDCONFIRMINFO" VALUE="Confirm the new password"/>
+      <ITEM ID="FORM_STEP4" VALUE="User settings"/>
+      <ITEM ID="FORM_PERMISSIONS" VALUE="Permissions:"/>
+      <ITEM ID="FORM_PERMISSIONSINFO" VALUE="Select the user type"/>
+      <ITEM ID="FORM_ACCOUNTTYPE" VALUE="Account type:"/>
+      <ITEM ID="FORM_ACCOUNTTYPEINFO" VALUE="Select the account type"/>
+      <ITEM ID="FORM_STEP5" VALUE="Do you really want to create the new user?"/>
+      <ITEM ID="FORM_ACCOUNTCONFIRM" VALUE="Click the Next button to create the new user."/>
+      <ITEM ID="FORM_STEP6" VALUE="The wizard has finished"/>
+      <ITEM ID="FORM_PERMISSIONSLIST" VALUE="Standard|Administrator|Domain administrator"/>
+      <ITEM VALUE="POP3|IMAP|IMAP &amp; POP3" ID="FORM_ACCOUNTTYPELIST"/>
+   </LANGUAGE>
+   <LANGUAGE ID="domainwizard" VALUE="New Domain">
+      <ITEM VALUE="Next &gt;" ID="wizard_next"/>
+      <ITEM VALUE="&lt; Back" ID="wizard_prev"/>
+      <ITEM VALUE="Cancel" ID="wizard_cancel"/>
+      <ITEM ID="wizard_finish" VALUE="Finish"/>
+      <ITEM ID="domain_wizard" VALUE="New domain"/>
+      <ITEM ID="step" VALUE="Step"/>
+      <ITEM ID="missing_values" VALUE="Missing or incorrect value. Please, try again."/>
+      <ITEM ID="domain_succes" VALUE="Domain %s has been succesfully created."/>
+      <ITEM ID="domain_fail" VALUE="Domain has not been created."/>
+      <ITEM ID="domain_exist" VALUE="Domain with this name already exists. Please, try again."/>
+      <ITEM ID="FORM_STEP1" VALUE="Specify the new domain name and its short description"/>
+      <ITEM ID="FORM_NAME" VALUE="Name:"/>
+      <ITEM ID="FORM_NAMEINFO" VALUE="Specify new domain name (eg. yourdomain.com)."/>
+      <ITEM ID="FORM_DESCRIPTION" VALUE="Description:"/>
+      <ITEM ID="FORM_DESCRIPTIONINFO" VALUE="Specify short description"/>
+      <ITEM ID="FORM_STEP2" VALUE="Specify the domain type"/>
+      <ITEM ID="FORM_DOMAINTYPE" VALUE="Domain type:"/>
+      <ITEM ID="FORM_DOMAINTYPEINFO" VALUE="Select the domain type"/>
+      <ITEM ID="FORM_DOMAINTYPEVALUE" VALUE="Domain value:"/>
+      <ITEM ID="FORM_DOMAINTYPEVALUEINFO" VALUE="Specify the domain value"/>
+      <ITEM ID="FORM_STEP3" VALUE="Specify the administrator's email address"/>
+      <ITEM ID="FORM_AEMAIL" VALUE="Email address:"/>
+      <ITEM ID="FORM_AEMAILINFO" VALUE="Specify administrator's email address"/>
+      <ITEM ID="FORM_STEP4" VALUE="Do you really want to create the new domain?"/>
+      <ITEM ID="FORM_DOMAINCONFIRM" VALUE="Click the Next button to create the new domain"/>
+      <ITEM ID="FORM_STEP5" VALUE="The wizard has finished"/>
+      <ITEM ID="FORM_DOMAINTYPELIST" VALUE="Standard|ETRN/ATRN Queue|Domain alias|Backup domain"/>
+   </LANGUAGE>
+</LANGUAGES>

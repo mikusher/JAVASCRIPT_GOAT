@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<FORM name="ExternalAV" helpid="20702">
+	<SECTION name="ExternalAV_tab" label="TExternalFilterItemForm_FilterBox" helpid="20702" >
+		<GROUP name="ExternalAV_AV" label="TIMServiceItemForm_ServiceBox" >
+			<OPTION type="edit" name="filename" variable="filename" label="TFrameAccounts_ApplicationLabel" />
+			<OPTION type="listbox" name="exectype" variable="exectype" label="TFrameAccounts_ExecTypeL" labels="TFrameAccounts_ExecType" />
+			<OPTION type="edit" name="parameters" variable="parameters" label="TFrameAccounts_ParameterLabel" />
+			<OPTION type="radio" name="deletecheck" variable="deletecheck" label="TAVExternalForm_ReturnValues" value="0" >
+			   <OPTION type="edit" name="returnvalues" variable="returnvalues" /> 
+      </OPTION>
+			<OPTION type="radio" name="deletecheck" variable="deletecheck" label="TAVExternalForm_FileDeletedBox" value="1" />
+		</GROUP>
+	</SECTION>
+</FORM>

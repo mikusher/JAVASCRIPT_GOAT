@@ -1,0 +1,67 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="ServMigr" helpid="599">
+	<SECTION name="ServMigr_General" label="TMigrateForm_ConfigTabSheet" helpid="601" >
+		<GROUP name="ServMigr_General_Group" label="TMigrateForm_MigratorGroupBox">
+			<!--<OPTION type="checkbox" name="C_System_Tools_Migration_Active" variable="C_System_Tools_Migration_Active" label="TMigrateForm_EnableMigrationBox" />-->
+			<OPTION type="edit" name="C_System_Tools_Migration_Server" variable="C_System_Tools_Migration_Server" label="TMigrateForm_SLabel" inline="1" width="250"/>
+			<OPTION type="listbox" name="C_System_Tools_Migration_MigrateService" variable="C_System_Tools_Migration_MigrateService" labels="TMigrateForm_ServiceBox" value="1|2|0" inline="1" />
+			<OPTION type="listbox" name="C_System_Tools_Migration_SSLMode" variable="C_System_Tools_Migration_SSLMode" labels="TMigrateForm_RemoteSSL" label="TMigrateForm_RemoteTLSSSLL"  />
+			<OPTION type="edit" name="C_System_Tools_Migration_InfoAccount" variable="C_System_Tools_Migration_InfoAccount" label="TMigrateForm_MLabel" />
+			<OPTION type="edit" name="C_System_Tools_Migration_LogFile" variable="C_System_Tools_Migration_LogFile" label="TMigrateForm_ML" />	
+			<OPTION type="label" name="mig_label1" label="TMigrateForm_MessageProcessingLabel" />
+			<OPTION type="radio" name="C_System_Tools_Migration_MessageProcessType" variable="C_System_Tools_Migration_MessageProcessType" value="0" label="TMigrateForm_StdRadio" />
+			<OPTION type="radio" name="C_System_Tools_Migration_MessageProcessType" variable="C_System_Tools_Migration_MessageProcessType" value="2" label="TMigrateForm_UsernameRadio" />
+			<OPTION type="radio" name="C_System_Tools_Migration_MessageProcessType" variable="C_System_Tools_Migration_MessageProcessType" value="1" label="TMigrateForm_ExtendedRadio" />
+			<OPTION type="checkbox" name="C_System_Tools_Migration_NoXEnvelopeTo" variable="C_System_Tools_Migration_NoXEnvelopeTo" label="TMigrateForm_NoXEnvelopeTo" />
+			<OPTION type="checkbox" name="C_System_Tools_Migration_NoReceived" variable="C_System_Tools_Migration_NoReceived" label="TMigrateForm_NoReceived" />
+			<OPTION type="label" />
+			<OPTION type="checkbox" name="C_System_Tools_Migration_MultiDomain" variable="C_System_Tools_Migration_MultiDomain" label="TMigrateForm_MultiDomainMigration" />
+			<OPTION type="checkbox" name="C_System_Tools_Migration_PasswordsOnly" variable="C_System_Tools_Migration_PasswordsOnly" label="TMigrateForm_PasswordsOnlyMigration" />
+			<OPTION type="edit" name="C_System_Tools_Migration_PostMigrateScript" variable="C_System_Tools_Migration_PostMigrateScript" label="TMigrateForm_PostMigrateScriptLabel" />
+			
+		</GROUP>
+    <GROUP>
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Start" blabel="TMigrateForm_StartButton" />
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Stop" blabel="TMigrateForm_StopButton" />
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Finish" blabel="TMigrateForm_FinishButton" />
+    </GROUP>
+	</SECTION>
+
+
+	<SECTION name="ServMigr_Manual" label="TMigrateForm_MigrationTabSheet" helpid="603" >
+		<GROUP name="ServMigr_Manual_Group" label="TMigrateForm_ManualBox">
+			<OPTION type="radio" name="TMigrateForm_SingleUser" value="1" label="TMigrateForm_SingleUser" />
+			<OPTION type="edit"  name="TMigrateForm_UL" label="TMigrateForm_UL" />
+			<OPTION type="password"  name="TMigrateForm_PL"  label="TMigrateForm_PL" />
+			<OPTION type="edit" name="TMigrateForm_DL"  label="TMigrateForm_DL" />
+			<OPTION type="radio" name="TMigrateForm_SingleUser" value="2" label="TMigrateForm_BulkUser" />
+			<OPTION type="upload" newline="1" fileid="Migration_MigrateMessagesAccounts" blabel="TMigrateForm_MigrateButton" name="TMigrateForm_BL" variable="TMigrateForm_BL" label="TMigrateForm_BL" />
+			<OPTION type="button" fileid="Migration_MigrateMessages" cfileid="TMigrateForm_SingleUser|TMigrateForm_UL|TMigrateForm_PL|TMigrateForm_DL|TMigrateForm_BL" blabel="TMigrateForm_MigrateMessages" />
+		</GROUP>
+    <GROUP>
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Start" blabel="TMigrateForm_StartButton" />
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Stop" blabel="TMigrateForm_StopButton" />
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Finish" blabel="TMigrateForm_FinishButton" />
+    </GROUP>
+
+	</SECTION>
+
+
+	<SECTION name="ServMigr_Stats" label="TMigrateForm_StraTabSheet" helpid="605" >
+		<GROUP name="ServMigr_Stats_Group" label="TMigrateForm_StatBox">
+			<OPTION type="info" readonly="1" name="C_System_Tools_Migration_Stat_Start" function="unix2string" label="TMigrateForm_Start" />
+			<OPTION type="info" readonly="1" name="C_System_Tools_Migration_Stat_TotalUsers" variable="C_System_Tools_Migration_Stat_TotalUsers" label="TMigrateForm_TotalMig" />
+			<OPTION type="info" readonly="1" name="C_System_Tools_Migration_Stat_Aliases" variable="C_System_Tools_Migration_Stat_Aliases" label="TMigrateForm_AliasesM" />
+			<OPTION type="info" readonly="1" name="C_System_Tools_Migration_Stat_Messages" variable="C_System_Tools_Migration_Stat_Messages" label="TMigrateForm_MessM" />
+			<OPTION type="info" readonly="1" name="C_System_Tools_Migration_Stat_Last" function="unix2string" label="TMigrateForm_Last" />
+			<OPTION type="info" readonly="1" name="C_System_Tools_Migration_Stat_Errors" variable="C_System_Tools_Migration_Stat_Errors" label="TMigrateForm_MErr" />
+		</GROUP>
+    <GROUP>
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Start" blabel="TMigrateForm_StartButton" />
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Stop" blabel="TMigrateForm_StopButton" />
+      <OPTION type="button" btype="fbutton" inline="1" fileid="Migration_Finish" blabel="TMigrateForm_FinishButton" />
+    </GROUP>
+	</SECTION>
+
+</FORM>

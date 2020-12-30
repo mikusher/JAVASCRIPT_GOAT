@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="UserGroups">
+	<SECTION name="UserGroups_section" label="TConfigForm_UserGroupsSheet" helpid="20102" >
+		<GROUP name="UserGroups_tab" label="TConfigForm_UserGroupsSheet">
+			<OPTION type="datagrid" name="usergroups" gtype="structured" labels="TUserGroupsForm_UserGroupList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="Name" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="Users" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/usergroups.dat" DIALOG="usergroups" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1">
+					<OBJECT NAME="usergroups" LABELVAR="Name">
+						<VARIABLE>Settings</VARIABLE>
+						<TEXTAREA>Users</TEXTAREA>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+</FORM>

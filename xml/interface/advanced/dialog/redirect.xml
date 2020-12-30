@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Redirect" helpid="2040105" >
+	<SECTION name="WebSite_Redirect_Tab" label="TWebHostForm_RedirectSheet" helpid="2040105" >
+		<GROUP name="WebSite_Redirect_Group" label="TWebHostForm_RedirectBox">
+			<OPTION type="edit" name="what" variable="what" label="TRouteForm_ItemLabel" />
+			<OPTION type="edit" name="to" variable="to" label="TRouteForm_ValueLabel" />
+			<OPTION type="checkbox" name="regex" variable="regex" label="TStrings_wa_str8" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

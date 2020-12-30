@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SystemBackup" helpid="504">
+	<SECTION name="SystemBackupSection" label="TTntMenuItems_BackupPanel" helpid="223" >
+		<GROUP name="SystemBackup_AutoBackup" label="TBackupForm_AutoBackupBox">
+			<OPTION type="download" btype="manualbackup" fileid="BackupConfig" blabel="TBackupForm_BackupNow"/>
+			<OPTION type="upload" name="restorefile" variable="restorefile" btype="restore" fileid="RestoreConfig" blabel="TConfigForm_GWRestoreButton" />
+		</GROUP>
+
+
+	</SECTION>
+</FORM>

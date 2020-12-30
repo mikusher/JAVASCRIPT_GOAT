@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="TimeServer" helpid="2020302">
+	<SECTION name="TimeServer_tab" label="TDayTimeServersForm_DayTimeList" helpid="2020302" >
+		<GROUP name="TimeServer_group" label="TDayTimeServersForm_DayTimeList">
+			<OPTION type="edit" name="1" variable="1" label="TDayTimeServersForm_DayTimeList" />
+		</GROUP>
+	</SECTION>
+</FORM>

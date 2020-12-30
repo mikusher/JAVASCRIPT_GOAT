@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="RulesActionDialog" helpid="1125" >
+	<SECTION name="Folder" label="TCatalogItemForm_PathBox" helpid="1125" >
+		<GROUP name="Folder" label="TCatalogItemForm_PathBox">
+			<OPTION type="edit" variable="copytofolder" name="copytofolder" label="TContentMoveToFolderForm_FolderL" />
+      <OPTION type="folder_select" target="copytofolder" />
+    </GROUP>
+	</SECTION>
+</FORM>
+

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Words" helpid="2040105" >
+	<SECTION name="Words_Tab" label="TSpamEngineForm_KeywordList" helpid="2040105" >
+		<GROUP name="Words_Group" label="TSpamEngineForm_KeywordList">
+			<OPTION type="edit" name="word" variable="word" label="TSpamEngineForm_KeywordList" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

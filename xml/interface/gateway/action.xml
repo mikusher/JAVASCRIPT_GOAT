@@ -1,0 +1,63 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="20503" >
+    <!-- ACTION {{{ -->
+    <SECTION name="MIAS_ActionTab" label="TSpamEngineForm_ActionSheet" helpid="735" >
+        <GROUP name="MIAS_ActionTab_Action" label="TSpamEngineForm_General" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SAQuarantine" variable="SAQuarantine" label="TSpamEngineForm_SAQuarantineEnabled">
+              <OPTION type="slider" name="SAQuarantineScore" variable="SAQuarantineScore" min="0" max="10" decimal="0.1" step="0.1" />
+            </OPTION>
+            <OPTION type="checkbox" name="SAScore" variable="SAScore" label="TSpamEngineForm_SAScoreEnabled">
+                <OPTION type="slider" name="required_hits" variable="required_hits" default="3" min="0" max="10" decimal="0.1" step="0.1" datfile="rules/local.cf" dattype="spam" />
+            </OPTION>
+            <OPTION type="checkbox" name="SADelete" variable="SADelete" label="TSpamEngineForm_SADeleteEnabled">
+                <OPTION type="slider" name="SADeleteScore" variable="SADeleteScore" default="7" min="0" max="10" decimal="0.1" step="0.1" />
+            </OPTION>
+
+        </GROUP>
+
+    <GROUP name="MIAS_ActionTab_Refusal" label="TSpamEngineForm_RefuseBox" datfile="spam.dat" dattype="spam2">
+      <OPTION type="listbox" name="SpamRefuse" variable="SpamRefuse" label="TSpamEngineForm_RefuseML" labels="TSpamEngineForm_RefuseMessage" value="0|1" />
+	    <OPTION type="edit" name="SpamRefusePath" variable="SpamRefusePath" label="TSpamEngineForm_ArchiveRefusedL" />
+  	  <OPTION type="account_select" target="SpamRefusePath" />
+    </GROUP>
+
+
+        <GROUP name="MIAS_ActionTab_SpamFolder" label="TSpamEngineForm_SpamFolderBox" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="AddSubject" variable="AddSubject" label="TSpamEngineForm_AddToSubject">
+                <OPTION type="edit" name="AddSubjectString" variable="AddSubjectString" />
+            </OPTION>
+            <OPTION type="listbox" name="UseSpamFolder" variable="UseSpamFolder" label="TSpamEngineForm_DefaultSpamFolderLabel" value="1|0" labels="TSpamEngineForm_DefaultSpamFolderModeCombo" />
+            
+            <OPTION type="checkbox" name="SpamUseIMAP" variable="SpamUseIMAP" label="TSpamEngineForm_UseIMAP">
+                <OPTION type="edit" name="SpamIMAPFolder" variable="SpamIMAPFolder" />
+            </OPTION>
+            <OPTION type="edit" name="DeleteSpamMailOlder" variable="DeleteSpamMailOlder" label="TSpamEngineForm_DeleteSpamL" />
+        </GROUP>
+    </SECTION>
+    <!-- ACTION }}} -->  
+    
+    <!-- REPORTS {{{  -->
+    
+    <SECTION name="MIAS_ReportsTab" label="TSpamEngineForm_ActionReportsSheet" helpid="1121" >
+              
+        <!-- todo : email customization box -->
+        <GROUP name="MIAS_CRTab_Customization" label="TSpamEngineForm_ReportsBox" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamQReports" variable="SpamQReports" label="TSpamEngineForm_QuarantineReports" />
+            <OPTION type="checkbox" name="SpamFReports" variable="SpamFReports" label="TSpamEngineForm_SpamFolderReports" />
+            <!--<OPTION type="checkbox" name="SpamReportLogs" variable="SpamReportLogs" label="TSpamEngineForm_SpamReportLogging" ></OPTION>-->
+            <OPTION type="button" btype="xmledit" fileid="schedule" blabel="TBackupForm_ScheduleButton" name="C_AS_Challenge_ReportsSchedule" />
+            
+            <OPTION type="edit" name="SpamReportMailSender" variable="SpamReportMailSender" label="TSpamEngineForm_SenderSheet" />
+            <OPTION type="edit" name="SpamReportMailFrom" variable="SpamReportMailFrom" label="TContentMessageForm_FromLab" />
+        	  <OPTION type="listbox" name="SpamQReportsMode" variable="SpamQReportsMode" label="TSpamEngineForm_QReportModeL" labels="TSpamEngineForm_QReportMode" />
+						<OPTION type="edit" name="SpamChallengeURL" variable="SpamChallengeURL" label="TSpamEngineForm_AuthorL" />
+            
+		    <OPTION type="button" btype="fbutton" inline="1" fileid="ChallengeRunNow"  blabel="TSpamEngineForm_QReportNow" />
+        <!--<OPTION type="button" btype="fbutton" inline="1" fileid="ChallengeRunNowDebug" width="640" height="480" blabel="TSpamEngineForm_QReportDebugNow" />-->
+        </GROUP>           
+        
+    </SECTION>
+    
+    <!-- REPORTS }}} -->
+    
+</FORM>

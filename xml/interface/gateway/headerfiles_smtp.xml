@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SMTPService" helpid="647" >
+
+	<SECTION name="SMTPService_Advanced" label="TConfigForm_HeaderFooterButton" helpid="250">
+		<GROUP name="SMTPService_Header_Header" label="TConfigForm_HeaderFooterSheet" datfile="config/tags.dat" dattype="tags" >
+			<OPTION type="edit" name="TextHeader" variable="TextHeader" label="THeaderFooterForm_HeaderL" />
+			<OPTION type="edit" name="HTMLHeader" variable="HTMLHeader" label="THeaderFooterForm_HHTMLL" />
+			<OPTION type="edit" name="TextFooter" variable="TextFooter" label="THeaderFooterForm_FooterL" />
+			<OPTION type="edit" name="HTMLFooter" variable="HTMLFooter" label="THeaderFooterForm_FHTMLL" />
+			<OPTION type="checkbox" name="L2L" variable="L2L" label="THeaderFooterForm_L2L" />
+			<OPTION type="checkbox" name="R2L" variable="R2L" label="THeaderFooterForm_R2L" />
+			<OPTION type="checkbox" name="L2R" variable="L2R" label="THeaderFooterForm_L2R" />
+			<OPTION type="checkbox" name="R2R" variable="R2R" label="THeaderFooterForm_R2R" />
+		</GROUP>
+	</SECTION>
+</FORM>

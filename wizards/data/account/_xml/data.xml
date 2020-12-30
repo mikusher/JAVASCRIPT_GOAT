@@ -1,0 +1,24 @@
+﻿<DATA ID="accountwizard" NAME="account_wizard" APIOBJECT="user">
+	<GROUPS>
+		<GROUP LABEL="FORM_STEP1" STEP="1">
+			<OPTION TYPE="special" NAME="domain_name" LABEL="FORM_NAME" SPECIAL="show_domain_list" REQUIRED="yes" />
+		</GROUP>
+		<GROUP LABEL="FORM_STEP2"  STEP="2">
+			<OPTION TYPE="edit" name="account_name" LABEL="FORM_ACCOUNTNAME" VARIABLE="u_alias" FUNCTION="account_name" REQUIRED="yes"  />
+			<OPTION TYPE="edit" NAME="account_fullname" LABEL="FORM_ACCOUNTFULLNAME" VARIABLE="u_name" />
+		</GROUP>
+		<GROUP LABEL="FORM_STEP3"  STEP="3">
+			<OPTION TYPE="password" NAME="account_password" LABEL="FORM_ACCOUNTPASSWORD" VARIABLE="U_Password" COMPARE="account_password_confirm" REQUIRED="yes" />
+			<OPTION TYPE="password" NAME="account_password_confirm" LABEL="FORM_ACCOUNTPASSWORDCONFIRM" REQUIRED="yes" />
+		</GROUP>
+		<GROUP LABEL="FORM_STEP4" STEP="4" >
+			<OPTION type="listbox" name="user_permissions" variable="u_permissions" label="FORM_PERMISSIONS" labels="FORM_PERMISSIONSLIST" value="0|1|2" DISABLE="domainadmin" />
+			<OPTION type="listbox" name="user_accounttype" variable="u_accounttype" label="FORM_ACCOUNTTYPE" labels="FORM_ACCOUNTTYPELIST" value="0|2|1" />
+		</GROUP>
+		<GROUP LABEL="FORM_STEP5" STEP="5" >
+			<OPTION type="special" SPECIAL="account_summarize" />
+			<OPTION type="info" label="FORM_ACCOUNTCONFIRM"/>
+		</GROUP>
+		<GROUP LABEL="FORM_STEP6" STEP="6" TYPE="FINISH" FUNCTION="account_save" />
+	</GROUPS>
+</DATA>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPSite" helpid="210">
+	<SECTION name="FTPSite" label="TFTPServiceItemForm_GeneralSheet" helpid="21001" >
+		<GROUP name="FTPSite_FTPSite" label="TFTPServiceItemForm_GeneralBox">
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_NameLabel" />
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_DescL" />
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_SourceL" />
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_IPL" />
+		</GROUP>
+
+		<GROUP name="FTPSite_W3CLogging" label="TFTPServiceItemForm_LoggingBox">
+			<OPTION type="checkbox" name="" variable="" label="TFTPServiceItemForm_Logging" />
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_LoggingL" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Users" label="TFTPServiceItemForm_UsersSheet" helpid="21002" >
+		<GROUP name="Users_Users" label="TFTPServiceItemForm_UsersBox">
+		</GROUP>
+
+	</SECTION>
+
+
+	<SECTION name="Groups" label="TFTPServiceItemForm_GroupSheet" helpid="21003" >
+		<GROUP name="Groups_Groups" label="TFTPServiceItemForm_GroupsBox">
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Options" label="TFTPServiceItemForm_SecuritySheet" helpid="21004" >
+		<GROUP name="Options_Options" label="TFTPServiceItemForm_OptionsBox">
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_MaxConnUsers" />
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_MaxSingleIPL" />
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_PassPortFL" />
+			<OPTION type="edit" name="" variable="" label="TFTPServiceItemForm_PassvPortTL" />
+			<OPTION type="checkbox" name="" variable="" label="TFTPServiceItemForm_RequireOTP" />
+		</GROUP>
+
+		<GROUP name="Options_WelcomeMsg" label="TFTPServiceItemForm_WelcomeBox">
+			<OPTION type="textarea" name="" variable="" label="" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="ServerSync" label="TFTPServiceItemForm_SyncSheet" helpid="21005" >
+		<GROUP name="ServerSync_ServerSync" label="TFTPServiceItemForm_ServerSyncBox">
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Access" label="TFTPServiceItemForm_AccessSheet" helpid="21006" >
+		<GROUP name="Access_IPAccess" label="TFTPServiceItemForm_IPBox">
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Aliases" label="TFTPServiceItemForm_DirectorySheet" helpid="21007" >
+		<GROUP name="Aliases_DirAliases" label="TFTPServiceItemForm_AliasesBox">
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="GW" helpid="208" >
+	<SECTION name="GW_GeneralTab" label="TConfigForm_GeneralGroupWareSheet" helpid="3976" >
+		<GROUP name="GW_GeneralTab_General" label="TConfigForm_GeneralGroupWareSheet" datfile="activesync/config/settings.xml" dattype="activesync">
+			<OPTION type="checkbox" name="Disabled" variable="Disabled" inline="1" label="TConfigForm_CalendaringActive" inverse="1" />
+			<OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_ActiveSync"  inline="1" blabel="TSpamEngineForm_ModeButton" />
+			<OPTION type="edit" name="C_ActiveSync_URL" variable="C_ActiveSync_URL" label="TConfigForm_EASURLL" source="API" />
+		</GROUP>
+	</SECTION>
+</FORM>

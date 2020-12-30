@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="IConnection" helpid="508">
+	<SECTION name="IConnection_Section" label="TConfigForm_InternetSheet" helpid="508" >
+
+		<GROUP name="IConnection_Extension" label="TConfigForm_HostNameGroupBox">
+			<OPTION type="edit" name="C_Mail_SMTP_General_HostName" variable="C_Mail_SMTP_General_HostName" label="TConfigForm_HostnameLabel" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_Hostname" variable="C_Accounts_Global_Domains_Hostname" label="TConfigForm_DomainHostname" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_IPAddress" variable="C_Accounts_Global_Domains_IPAddress" label="TConfigForm_DomainIP" default="0" />
+		</GROUP>
+		<GROUP name="IConnection_DNS" label="TConfigForm_DNSArea">
+			<OPTION type="edit" name="C_Mail_SMTP_General_DNSServer" variable="C_Mail_SMTP_General_DNSServer" label="TConfigForm_DNSL" />
+			<OPTION type="edit" name="C_System_Adv_Protocols_DNSTimeout" variable="C_System_Adv_Protocols_DNSTimeout" label="TConfigForm_DNSLab" default="5" />
+			<!--<OPTION type="edit" name="C_System_Adv_Protocols_DNSRetry" variable="C_System_Adv_Protocols_DNSRetry" label="TConfigForm_DNSRetryL" default="1" /> -->
+			<OPTION type="checkbox" name="C_System_Adv_Protocols_DNSCache" variable="C_System_Adv_Protocols_DNSCache" label="TConfigForm_DNSCache"  />
+			<OPTION type="edit" name="C_System_Adv_Protocols_DNSCacheLimit" variable="C_System_Adv_Protocols_DNSCacheLimit" label="TConfigForm_DNSQueryCacheL" default="128" />
+			
+			
+		</GROUP>
+	</SECTION>
+	<SECTION name="Network_section" label="TStrings_wa_networkbox" helpid="508" >
+
+		<GROUP name="Network_group" label="TStrings_wa_networkgroup">
+			<OPTION type="button" btype="xmledit" fileid="connections" blabel="TStrings_wa_manageconnections"/>
+			<OPTION type="button" btype="fbutton" fileid="reset_server" blabel="TStrings_wa_restart"/>
+		</GROUP>
+	</SECTION>
+</FORM>

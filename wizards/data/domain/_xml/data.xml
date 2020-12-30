@@ -1,0 +1,20 @@
+﻿<DATA NAME="domain_wizard" APIOBJECT="domain">
+	<GROUPS>
+		<GROUP LABEL="FORM_STEP1" STEP="1">
+			<OPTION TYPE="edit" NAME="domain_name" LABEL="FORM_NAME" FUNCTION="domain_name" REQUIRED="yes" />
+			<OPTION TYPE="edit" NAME="domain_description" LABEL="FORM_DESCRIPTION" VARIABLE="d_description" />
+		</GROUP>
+		<GROUP LABEL="FORM_STEP2"  STEP="2">
+			<OPTION TYPE="listbox" NAME="domain_type" LABEL="FORM_DOMAINTYPE" VARIABLE="d_type" LABELS="FORM_DOMAINTYPELIST" JAVASCRIPT="disable.js" JSFUNCTION="disable(this.value,'domain_typevalue_id');"  />
+			<OPTION TYPE="edit" NAME="domain_typevalue" LABEL="FORM_DOMAINTYPEVALUE" VARIABLE="d_domainvalue" DISABLED="yes" />
+		</GROUP>
+		<GROUP LABEL="FORM_STEP3"  STEP="3">
+			<OPTION type="edit" name="domain_adminemail" variable="d_adminemail" label="FORM_AEMAIL"/>
+		</GROUP>
+		<GROUP LABEL="FORM_STEP4"  STEP="4">
+			<OPTION type="special" SPECIAL="domain_summarize" />
+			<OPTION type="info" label="FORM_DOMAINCONFIRM"/>
+		</GROUP>
+		<GROUP LABEL="FORM_STEP5" STEP="5" TYPE="FINISH" FUNCTION="domain_save" />
+	</GROUPS>
+</DATA>

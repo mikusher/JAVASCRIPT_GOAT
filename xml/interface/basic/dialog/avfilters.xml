@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="AVFilters" helpid="20603">
+	<SECTION name="AVFilters_tab" label="TAntivirusSettingForm_FileList" helpid="822" >
+		<GROUP name="AVFilters_group" label="TAntivirusSettingForm_FileList">
+			<OPTION type="edit" name="1" variable="1" label="TAntivirusSettingForm_FileList" />
+		</GROUP>
+	</SECTION>
+</FORM>

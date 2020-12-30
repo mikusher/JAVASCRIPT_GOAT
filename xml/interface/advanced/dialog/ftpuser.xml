@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPUser" helpid="21002">
+	<SECTION name="User" label="TFTPUserForm_UserSheet" helpid="2100201" >
+		<GROUP name="User_User" label="TFTPUserForm_UserBox">
+			<OPTION type="edit" name="user" variable="user" label="TFTPUserForm_UserL" />
+			<OPTION type="edit" name="name" variable="name" label="TFTPUserForm_NameL" />
+			<OPTION type="listbox" name="type" variable="type" label="TFTPUserForm_TypeL" labels="TFTPUserForm_TypeEdit" value="0|1|2" />
+			<OPTION type="password" name="pass" variable="pass" label="TFTPUserForm_PassL" />
+			<OPTION type="edit" name="account" variable="account" label="TFTPUserForm_AccL" />
+			<OPTION type="edit" name="group" variable="group" label="TFTPUserForm_GroupL" />
+			<OPTION type="edit" name="PATH" variable="PATH" label="TFTPUserForm_UserPathL" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Permissions" label="TFTPUserForm_PathSheet" helpid="2100202" >
+		<GROUP name="Permissions_Group" label="TFTPUserForm_PermissionsBox">
+		  <OPTION type="datagrid" name="permissions" gtype="webservicesub" labels="TFTPUserForm_PathList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="path" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ftppermissions" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+
+	</SECTION>
+
+
+	<SECTION name="Options" label="TFTPUserForm_OptionsSheet" helpid="2100203" >
+		<GROUP name="Options_Group" label="TFTPUserForm_OptionsBox">
+			<OPTION type="edit" name="DOWNLOADSPEEDLIMIT" variable="DOWNLOADSPEEDLIMIT" label="TFTPUserForm_DownSL" />
+			<OPTION type="edit" name="UPLOADSPEEDLIMIT" variable="UPLOADSPEEDLIMIT" label="TFTPUserForm_UpSL" />
+			<OPTION type="edit" name="DOWNLOADAMOUNTLIMIT" variable="DOWNLOADAMOUNTLIMIT" label="TFTPUserForm_DownAL" />
+			<OPTION type="edit" name="UPLOADAMOUNTLIMIT" variable="UPLOADAMOUNTLIMIT" label="TFTPUserForm_UpAL" />
+			<OPTION type="edit" name="UPLOADDOWNLOADRATIO" variable="UPLOADDOWNLOADRATIO" label="TFTPUserForm_UPDRL" />
+			
+		</GROUP>
+	</SECTION>
+</FORM>

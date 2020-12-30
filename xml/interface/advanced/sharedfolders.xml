@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SharedFolders" helpid="20105">
+	<SECTION name="SharedFolders_section" label="TConfigForm_SharedFoldersSheet" helpid="20102" >
+		<GROUP name="SharedFolders_tab" label="TConfigForm_SharedFoldersSheet">
+		</GROUP>
+	</SECTION>
+</FORM>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Members" helpid="2030201">
+	<SECTION name="Members_tab" label="TMemberItemForm_MemberBox" helpid="2030201" >
+		<GROUP name="Members_group" label="TMemberItemForm_MemberBox">
+		  <OPTION type="edit" name="member" variable="member" label="TMemberItemForm_MemberBox" />
+    </GROUP>
+ 		<GROUP name="Members_select" label="SELECT">
+		  <OPTION type="account_select" target="member" />
+    </GROUP>
+ 		<GROUP name="Members_other" label="TAntivirusSettingForm_OtherBox">
+		  <OPTION type="checkbox" name="default" function="mailing_rights" label="TMemberItemForm_MRDefault" inline="1" />
+		  <OPTION type="checkbox" name="post" function="mailing_rights" label="TMemberItemForm_MRSend" inline="1" />
+		  <OPTION type="label" />
+		  <OPTION type="checkbox" name="recieve" function="mailing_rights" label="TMemberItemForm_MRRead" inline="1" />
+		  <OPTION type="checkbox" name="digest" function="mailing_rights" label="TMemberItemForm_MRDigest" inline="1" />
+		  <OPTION type="textarea" name="param" function="mail_member_param" label="TMemberItemForm_MailParams" />
+    </GROUP>
+	</SECTION>
+</FORM>
+<!--0=>"DEFAULT",1=>"RECIEVE",2=>"POST",3=>"RECIEVE POST",4=>"DIGEST",5=>"RECIEVE DIGEST",''=>'DEFAULT'
+"Default|Receive & Post|Digest receive & Post|Receive only|Digest receive only|Post only";
+  -->

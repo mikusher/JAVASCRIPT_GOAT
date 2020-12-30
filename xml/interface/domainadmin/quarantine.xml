@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="205" >
+    <!-- QUARANTINE  {{{ -->
+    <SECTION name="MIAS_CRTab" label="TSpamEngineForm_QuarantineSheet" helpid="2050401" >
+        <GROUP name="MIAS_CRTab_CR" label="TSpamEngineForm_General" datfile="spam/spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamChallenge" variable="SpamChallenge" label="TSpamEngineForm_SpamEngineActive" >
+                		  <OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_AS_General" blabel="TSpamEngineForm_ModeButton" />
+            </OPTION>
+            <OPTION type="button" btype="linkbutton" fileid="spamqueue|section_section_SpamQueue_Quarantime|MMS/STATUS/SPAMQUEUE" cfileid="object" blabel="TStatisticsForm_CRSheet" />
+        </GROUP>
+
+        <GROUP name="MIAS_QUARANTINE_Options" label="TSpamEngineForm_QuarantineOptions" datfile="spam/spam.dat" dattype="spam2">
+            <OPTION type="edit" name="SpamChallengeExpires" variable="SpamChallengeExpires" label="TSpamEngineForm_ChallengeExpiresL" />
+            <!-- TODO: correct variable -->
+            <OPTION type="listbox" name="MIAS_QUARANTINE_Options_localUserMode" variable="SpamChallengeLocalDomains" label="TSpamEngineForm_CRLocalDL" labels="TSpamEngineForm_CRLocalDomains" value="0|1|2" default="0" />
+            <OPTION type="edit" name="SpamChallengeURL" variable="SpamChallengeURL" label="TSpamEngineForm_AuthorL" />
+            <!-- rem chemix
+            <OPTION type="checkbox" name="SpamChallengeAddOutgoing" variable="SpamChallengeAddOutgoing" label="TSpamEngineForm_SpamChallengeAddOutbound" />
+            <OPTION type="checkbox" name="SpamChallengeSAPerc" variable="SpamChallengeSAPerc" label="TSpamEngineForm_ApplyCRSA" />
+            <OPTION type="edit" name="SpamChallengeSAGenuine" variable="SpamChallengeSAGenuine" label="MIAS_CRSCOREMIN" />
+            <OPTION type="edit" name="SpamChallengeSASpam" variable="SpamChallengeSASpam" label="MIAS_CRSCOREMAX" />
+            <OPTION type="checkbox" name="SpamChallengeMarked" variable="SpamChallengeMarked" label="TSpamEngineForm_ChallengeMarked" />
+            <OPTION type="checkbox" name="SpamChallengeUnMarked" variable="SpamChallengeUnMarked" label="TSpamEngineForm_ChallengeUnmarked" />
+            <OPTION type="radio" name="SpamChallengeSeparateUsers" variable="SpamChallengeSeparateUsers" value="0" label="TSpamEngineForm_CRUsers" />
+            <OPTION type="radio" name="SpamChallengeSeparateUsers" variable="SpamChallengeSeparateUsers" value="1" label="TSpamEngineForm_CRSeparateUsers" />
+            <OPTION type="listbox" name="C_AS_Challenge_ProcessingMode" variable="C_AS_Challenge_ProcessingMode" label="PM_MODE" labels="PM_MODESLIST" value="0|1|5|9" default="0" source="API" />
+            <OPTION type="checkbox" name="SpamChallengeManual" variable="SpamChallengeManual" label="TSpamEngineForm_ManualCR" />
+            -->
+        </GROUP>
+        
+  
+        <!-- todo : email customization box -->
+        <GROUP name="MIAS_CRTab_Customization" label="TSpamEngineForm_CustomizeBox" datfile="spam/spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamChallengeManual" variable="SpamChallengeManual" label="TSpamEngineForm_ActiveCR" />
+            <OPTION type="edit" name="SpamChallengeEmailFrom" variable="SpamChallengeEmailFrom" label="TSpamEngineForm_SenderSheet" />
+            <OPTION type="button" btype="textfile" fileid="spam/challenge.txt" blabel="TSpamEngineForm_ChallengeText" cfileid="examples/challenge.txt" />
+        </GROUP>
+        
+    </SECTION>
+    <!-- }}} -->   
+ </FORM>

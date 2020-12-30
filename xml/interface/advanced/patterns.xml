@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Patterns" helpid="513">
+	<SECTION name="Patterns_section" label="TConfigForm_PatternsSheet" helpid="20206" >
+		<GROUP name="Patterns_tab" label="TConfigForm_PatternsSheet">
+			<OPTION type="datagrid" name="patterns" gtype="structured" labels="TGroupsForm_GroupList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="Name" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="1" />
+					<OPTION VINDEX="Users" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/groups.dat" COMMENT="examples/groups.dat" DIALOG="patterns" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1">
+					<OBJECT NAME="patterns" LABELVAR="Name">
+						<TEXTAREA>Users</TEXTAREA>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+</FORM>

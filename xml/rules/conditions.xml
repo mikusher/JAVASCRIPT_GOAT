@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CONDITIONS>
+  <CONDITION HTYPE="0" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst0" NAME="HFrom" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="1" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst1" NAME="HTo" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="2" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst2" NAME="HSubject" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="3" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst3" NAME="HCC" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="7" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst4" NAME="HReply" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="5" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst6" NAME="HDate" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="30" LINK="TStrings_valuestring" TEXT="TStrings_conditionconst7" NAME="HPriority" dialog="cf_priority" />
+  <CONDITION HTYPE="20" TEXT="TStrings_conditionconst8" NAME="Spam" />
+  <CONDITION HTYPE="27" LINK="TStrings_hassize" TEXT="TStrings_conditionconst9" NAME="ESize" DIALOG="cf_size" />
+  <CONDITION HTYPE="6" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst10" NAME="MBody" DIALOG="cf_somewordsxml" />
+  <CONDITION HTYPE="11" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst11" NAME="HCustom" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="12" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst12" NAME="HAny" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="8" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst13" NAME="AttachName" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="14" TEXT="TStrings_conditionconst16" NAME="HaveAttach" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="10" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst18" NAME="Sender" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="9" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst19" NAME="Recipient" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="32" EXPRESSION="6" LINK="TStrings_localremote" TEXT="TStrings_conditionconst20" NAME="SRRC" DIALOG="cf_srrc" />
+  <CONDITION HTYPE="15" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst24" NAME="RIP" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="19" LINK="TStrings_containssomewords" TEXT="TStrings_conditionconst25" NAME="rDNS" DIALOG="cf_somewords" />
+  <CONDITION HTYPE="28" TEXT="TStrings_conditionconst27" NAME="RAdress" />
+  <CONDITION HTYPE="31" LINK="TStrings_valuestring" TEXT="TStrings_conditionconst28" NAME="SpamScore" dialog="cf_spamscore" />
+  <CONDITION HTYPE="23" TEXT="TStrings_conditionconst30" NAME="SMTPAuth" />
+
+  <CONDITION HTYPE="25" TEXT="TStrings_conditionconst34" NAME="All" />
+</CONDITIONS><!--
+  -->

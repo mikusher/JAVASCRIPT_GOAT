@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="IConnection" helpid="508">
+	<SECTION name="IConnection_Section" label="TConfigForm_InternetSheet" helpid="508" >
+<!--		<GROUP name="IConnection_DialUp" label="TConfigForm_OtherScheduleButton">
+			<OPTION type="edit" name="C_System_Conn_UpName" variable="C_System_Conn_UpName" label="TOtherConnForm_ConnLab" />
+			<OPTION type="edit" name="C_System_Conn_UpUsername" variable="C_System_Conn_UpUsername" label="TOtherConnForm_LoginName" />
+			<OPTION type="edit" name="C_System_Conn_UpPassword" variable="C_System_Conn_UpPassword" label="TOtherConnForm_PasLab" />
+			<OPTION type="edit" name="C_System_Conn_UpHangUpAfter" variable="C_System_Conn_UpHangUpAfter" label="TOtherConnForm_DisconnLab" />
+			<OPTION type="edit" name="C_System_Conn_DialOnDemandExceed" variable="C_System_Conn_DialOnDemandExceed" label="TOtherConnForm_MaxLabel" />
+			<OPTION type="edit" name="C_System_Conn_UpOlderthan" variable="C_System_Conn_UpOlderthan" label="TOtherConnForm_MinOlderLabel" />
+			<OPTION type="checkbox" name="C_System_Conn_DialOnDemandHeader" variable="C_System_Conn_DialOnDemandHeader" label="TOtherConnForm_MessageHeader" />
+			<OPTION type="button" btype="textfile" fileid="config/dialheader.dat" blabel="TConfigForm_FileItem" cfileid="examples/dialheader.dat" />
+		</GROUP>
+		-->
+		<GROUP name="IConnection_Extension" label="TConfigForm_HostNameGroupBox">
+			<OPTION type="edit" name="C_Mail_SMTP_General_HostName" variable="C_Mail_SMTP_General_HostName" label="TConfigForm_HostnameLabel" />
+		</GROUP>
+		<GROUP name="IConnection_DNS" label="TConfigForm_DNSArea">
+			<OPTION type="edit" name="C_Mail_SMTP_General_DNSServer" variable="C_Mail_SMTP_General_DNSServer" label="TConfigForm_DNSL" />
+			<OPTION type="edit" name="C_System_Adv_Protocols_DNSTimeout" variable="C_System_Adv_Protocols_DNSTimeout" label="TConfigForm_DNSLab" default="5" />
+			<!--<OPTION type="edit" name="C_System_Adv_Protocols_DNSRetry" variable="C_System_Adv_Protocols_DNSRetry" label="TConfigForm_DNSRetryL" default="1" /> -->
+			<OPTION type="checkbox" name="C_System_Adv_Protocols_DNSCache" variable="C_System_Adv_Protocols_DNSCache" label="TConfigForm_DNSCache"  />
+			<OPTION type="edit" name="C_System_Adv_Protocols_DNSCacheLimit" variable="C_System_Adv_Protocols_DNSCacheLimit" label="TConfigForm_DNSQueryCacheL" default="128" />
+		</GROUP>
+	</SECTION>
+	<SECTION name="IConnection_Advanced" label="TConfigForm_ConnectionAdvancedTab" helpid="5759" >
+		<GROUP name="IConnection_Group" label="TTntMenuItems_InternetConnectionPanel">
+			<OPTION type="radio" name="C_System_Conn_Type" variable="C_System_Conn_Type" value="0" label="TConfigForm_NetworkConnect" />
+			<OPTION type="radio" name="C_System_Conn_Type" variable="C_System_Conn_Type" value="2" label="TConfigForm_DialOnDemand" />
+			<OPTION type="radio" name="C_System_Conn_Type" variable="C_System_Conn_Type" value="1" label="TConfigForm_RASConnect" />
+			<!--<OPTION type="radiolist" name="C_System_Conn_Type" values="0|1|2" labels="function:C_System_Conn_Labels" />-->
+			<OPTION inline="1" type="button" btype="xmledit" fileid="dialup" name="TConfigForm_DialUpButton" blabel="TConfigForm_OtherScheduleButton" />
+			<OPTION inline="1" type="button" btype="xmledit" fileid="schedule" name="C_System_Conn_GlobalSchedule" blabel="TConfigForm_GlobalSchedule" />
+			<OPTION inline="1" type="button" btype="textfile" fileid="config/demand.dat" blabel="TConfigForm_DDemandBut" cfileid="examples/demand.dat" />
+			<OPTION inline="1" type="button" btype="fbutton" fileid="ConnectNow" blabel="TConfigForm_DialConnectNowButton" />
+		</GROUP>
+	</SECTION>
+</FORM>

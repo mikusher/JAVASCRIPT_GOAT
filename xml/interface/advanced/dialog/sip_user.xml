@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SIPService_User" helpid="2040105" >
+	<SECTION name="SIPService_User_Tab" label="TSIPExtensionForm" helpid="995" >
+		<GROUP name="SIPService_User_Group" label="TSIPExtensionForm_ClientGroupBox">
+			<OPTION type="edit" variable="number" name="number" label="TSIPExtensionForm_NumberL" />
+			<OPTION type="edit" variable="title" name="title" label="TSIPExtensionForm_TitleLabel" />
+			<OPTION type="listbox" variable="type" name="type" label="TSIPExtensionForm_TypeL" labels="TSIPExtensionForm_TypeList" />
+			<OPTION type="edit" variable="email" name="email" label="TSIPExtensionForm_EmailL" />
+			<OPTION type="edit" variable="location" name="user_location" label="TSIPExtensionForm_LocationL" />
+			<OPTION type="edit" variable="callerid" name="callerid" label="TSIPExtensionForm_CallIDL" />
+			<OPTION type="edit" variable="callforwarding" name="callforwarding" label="TSIPExtensionForm_CallForwardL" />
+			<OPTION type="edit" variable="members" name="members" label="TSIPExtensionForm_MembersL" />
+			<OPTION type="account_select" append="1" target="members" btype="xmledit" cfileid="number" fileid="group_members" blabel="TAccountSelectForm_SelectAccountButton" />
+		</GROUP>
+	</SECTION>
+</FORM>

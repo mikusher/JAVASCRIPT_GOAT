@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="GLOBSETS" helpid="296">
+
+	<SECTION name="GLOBSETS_Domains" label="TConfigForm_LimitsSheet" helpid="2483" >
+		<GROUP name="GLOBSETS_Domains_Limits" label="TConfigForm_LimitsDomainGroupBox">
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_UseDiskQuota" variable="C_Accounts_Global_Domains_UseDiskQuota" label="TConfigForm_DomainDiskQuota" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_UseDomainLimits" variable="C_Accounts_Global_Domains_UseDomainLimits" label="TConfigForm_DDomainLimits" default="0" />
+      <OPTION type="checkbox" name="C_Accounts_Global_Domains_UseUserLimits" variable="C_Accounts_Global_Domains_UseUserLimits" label="TConfigForm_DomainUserLimits" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_UseExpiration" variable="C_Accounts_Global_Domains_UseExpiration" label="TConfigForm_UseDomainExpiration" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_OverrideGlobal" variable="C_Accounts_Global_Domains_OverrideGlobal" label="TConfigForm_OverrideGlobalLimits" default="0" />
+		</GROUP>
+
+		<GROUP name="GLOBSETS_Domains_VirtDoms" label="TConfigForm_DomainOptionsGroupBox">
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_DomainKeys" variable="C_Accounts_Global_Domains_DomainKeys" label="TConfigForm_DomainKeys" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_Literals" variable="C_Accounts_Global_Domains_Literals" label="TConfigForm_DomainLiterals" default="0" />
+		</GROUP>
+
+		<GROUP name="GLOBSETS_Domains_Other" label="TAntivirusSettingForm_OtherBox">
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_Hostname" variable="C_Accounts_Global_Domains_Hostname" label="TConfigForm_DomainHostname" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_IPAddress" variable="C_Accounts_Global_Domains_IPAddress" label="TConfigForm_DomainIP" default="0" />
+			<OPTION type="checkbox" name="C_Accounts_Global_Domains_WelcomeMsgs" variable="C_Accounts_Global_Domains_WelcomeMsgs" label="TConfigForm_UseWelcomeBox" default="0" />
+			<OPTION type="edit" name="C_Accounts_Global_Domains_WarnDomainSize" variable="C_Accounts_Global_Domains_WarnDomainSize" label="TConfigForm_WarnDomainSL" default="0" />
+			<OPTION type="edit" name="C_Accounts_Global_Domains_WarnMailboxUsage" variable="C_Accounts_Global_Domains_WarnMailboxUsage" label="TConfigForm_MailboxL" default="0" />
+			<!--<OPTION type="button" btype="textfile" fileid="config/messages.dat" blabel="TConfigForm_WelcomeButton" cfileid="examples/messages.dat" />-->
+			<OPTION type="button" btype="textfile" fileid="config/diskquot.dat" blabel="TConfigForm_DiskQuotaButton" cfileid="examples/diskquot.dat" />
+			<OPTION type="button" btype="xmledit" fileid="globalsettings_DARights" blabel="TDomainAdminForm"/>
+		</GROUP>
+	</SECTION>
+
+<!-- templates -->
+
+
+<!-- subdomains -->
+<!--
+-->
+
+<!-- Domain cluster -->
+		<SECTION name="GLOBSETS_Cluster_tab" label="TConfigForm_GlobalSettingsDomainClusters" helpid="4158" >
+		<GROUP name="GLOBSETS_Cluster_group" label="">
+			<OPTION type="datagrid" name="clusters" labels="TConfigForm_DomainClusterList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="-200" SORT="0" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="1" size="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/clusters.dat"  DIALOG="clusters" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TBWForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="clusters" LENGTH="2" >
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+  <!--<SECTION name="GLOBSETS_Sharedimap" label="TConfigForm_SharedFoldersSheet" helpid="2010303" >
+		<GROUP name="GLOBSETS_Sharedimap_Group" label="TConfigForm_SharedFoldersSheet">
+			<OPTION type="datagrid" name="sharedimap" gtype="sharedfolder"  labels="TSharedFoldersForm_SharedFolders" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="2"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="0"  SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/sharedimap.dat" COMMENT="examples/sharedimap.dat" DIALOG="sharedimap" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TBWForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="sharedimap" LENGTH="3">
+						<SEPS>;SEP;SEP;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>-->
+	<!--DOMAIN CLUSTERS datagrid-->
+
+
+	<SECTION name="GLOBSETS_Console" label="TConfigForm_OtherGlobalsSheet" helpid="478" >
+		<GROUP name="GLOBSETS_Console_LDAP" label="TConfigForm_LDAPUserSyncBox">
+			<OPTION type="checkbox" name="C_GW_LDAP_Disable" variable="C_Accounts_Global_LDAP_Synchronize" label="TConfigForm_LDAPSharedAddresbook" />
+			<OPTION type="edit" name="CalendarLDAPHost" variable="C_Accounts_Global_LDAP_Host" label="TConfigForm_LDAPUserHostL" />
+			<OPTION type="edit" name="CalendarLDAPBase" variable="C_Accounts_Global_LDAP_Base" label="TConfigForm_LDAPUserBaseL" />
+			<OPTION type="edit" name="CalendarLDAPUser" variable="C_Accounts_Global_LDAP_User" label="TConfigForm_LDAPUserUserL" />
+			<OPTION type="password" name="CalendarLDAPPass" variable="C_Accounts_Global_LDAP_Pass" label="TConfigForm_LDAPUserPassL" />
+		</GROUP>
+    <GROUP name="GLOBSETS_Console_Console" label="TConfigForm_DisplayLimitsGroup">
+			<OPTION type="edit" name="C_Accounts_Global_Console_ShowAccounts" variable="C_Accounts_Global_Console_ShowAccounts" label="TConfigForm_ShowUsLab" />
+			<OPTION type="edit" name="C_Accounts_Global_Console_AccountsPosition" variable="C_Accounts_Global_Console_AccountsPosition" label="TConfigForm_PosUL" />
+			<OPTION type="listbox" name="C_Accounts_Global_Console_DomainDescription" variable="C_Accounts_Global_Console_DomainDescription" label="TConfigForm_DisplayDescL" labels="TConfigForm_ShowDomainDescription" />
+			<OPTION type="listbox" name="C_Accounts_Global_Console_AccountDescription" variable="C_Accounts_Global_Console_AccountDescription" label="TConfigForm_AccountDisplayModeL" labels="TConfigForm_AccountDisplayMode" />
+		 <!-- 	<OPTION type="edit" name="logo_path" variable="logo_path" label="LOGO_FILE" datfile="config/logo.dat" default="images/logo.gif" dattype="logopath" /> -->
+    </GROUP>
+	</SECTION>
+</FORM>

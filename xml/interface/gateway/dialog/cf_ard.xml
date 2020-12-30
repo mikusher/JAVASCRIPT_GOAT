@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="203030103" >
+	<SECTION name="AcceptRejectDelete" label="TContentActionForm_ActionBox" helpid="203030103" >
+		<GROUP name="AcceptRejectDelete_Group" label="TContentActionForm_ActionBox">
+			<OPTION type="radio" function="cfard" value="1" name="cfard" label="TContentActionForm_Reject" />
+			<OPTION type="radio" function="cfard" value="2" name="cfard" label="TContentActionForm_Accept" />
+			<OPTION type="radio" function="cfard" value="3" name="cfard" label="TContentActionForm_Delete" />
+			<OPTION type="radio" function="cfard" value="4" name="cfard" label="TContentActionForm_Spam" />
+			<OPTION type="radio" function="cfard" value="5" name="cfard" label="TContentActionForm_Quarantine" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

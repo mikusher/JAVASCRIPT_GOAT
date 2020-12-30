@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="Application" label="TContentExecutableForm" helpid="1125" >
+		<GROUP name="ApplicationGroup" label="TContentExecutableForm">
+			<OPTION type="edit" variable="contain" name="contain" label="TContentExecutableForm_ExecLabel" />
+			<OPTION type="listbox" variable="messagesize" name="messagesize" label="TContentExecutableForm_ExecTypeL" values="2|0|1|3" labels="TContentExecutableForm_ExecType" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

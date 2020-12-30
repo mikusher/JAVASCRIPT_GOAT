@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Learning_rule" helpid="20703">
+	<SECTION name="Learning_Rule_tab" label="TASQueueItemForm_Box" helpid="20703" >
+		<GROUP name="Learning_Rule_box" label="TASQueueItemForm_Box">
+			<OPTION type="edit" name="2" variable="2" label="TASQueueItemForm_AccountL" />
+			<OPTION type="account_select" domainselect="false" target="2" />
+      <OPTION type="label" label="&lt;br/&gt;"/>
+      <OPTION type="edit" name="1" variable="1" label="TASQueueItemForm_FolderL" />
+      <!--<OPTION type="folder_select" target="1" />
+      <OPTION type="label" label="&lt;br/&gt;"/>-->
+			<OPTION type="listbox" name="3" variable="3" value="5|4|1|0|2|3" label="TASQueueItemForm_QueueL" labels="TASQueueItemForm_QueueList" />
+		</GROUP>
+	</SECTION>
+</FORM>

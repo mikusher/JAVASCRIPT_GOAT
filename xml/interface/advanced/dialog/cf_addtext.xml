@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CF_FAppend" helpid="1125" >
+	<SECTION name="CF_SAppend" label="TAppendFile_AppendL" helpid="1125" >
+		<GROUP name="CF_GAppend" label="TAppendFile_AppendL">
+			<OPTION type="edit" variable="appendfile" name="appendfile" label="TAppendFile_AppendFL" />
+			<OPTION type="edit" variable="appendtext" name="appendtext" label="TAppendFile_AppendL" />
+			<OPTION type="checkbox" variable="appendrewrite" name="appendrewrite" label="TAppendFile_AppendRewrite" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SystemMonitor" helpid="2020304">
+	<SECTION name="SystemMonitor_Section" label="TTntMenuItems_MonitorPanel" helpid="540" >
+		<GROUP name="SystemMonitor_SystemMonitor" label="TTntMenuItems_MonitorPanel">
+			<OPTION type="checkbox" name="C_System_Tools_Monitor_Enable" variable="C_System_Tools_Monitor_Enable" label="TSpamEngineForm_SpamEngineActive" default="0" />
+			<OPTION type="edit" name="C_System_Tools_Monitor_ReportAddress" variable="C_System_Tools_Monitor_ReportAddress" label="TConfigForm_ReportAddLabel" />
+		</GROUP>
+
+		<GROUP name="SystemMonitor_MemSpaceMon" label="TConfigForm_MemoryBox">
+			<OPTION type="edit" name="C_System_Tools_Monitor_FreeMem" variable="C_System_Tools_Monitor_FreeMem" units="u_bytes" saveunit="1" label="TConfigForm_MemoryFreeL" default="0" />
+		</GROUP>
+
+		<GROUP name="SystemMonitor_DiskSpaceMon" label="TConfigForm_DiskSpaceMon">
+			<OPTION type="edit" name="C_System_Tools_Monitor_DiskSize" variable="C_System_Tools_Monitor_DiskSize" units="u_bytes" saveunit="2" label="TConfigForm_MinimalDiskLabel" default="0" />
+			<OPTION type="button" btype="textfile" fileid="config/diskspace.dat" label="TConfigForm_DiskSpaceDrivesL" blabel="TConfigForm_DiskSpaceButton" cfileid="examples/diskspace.dat" />
+		</GROUP>
+
+		<GROUP name="SystemMonitor_CPUMon" label="TConfigForm_CPUBox">
+			<OPTION type="edit" name="C_System_Tools_Monitor_CPUUsagePerc" function="jakubovy_procenta" label="TConfigForm_CPUUsL" default="0" />
+			<OPTION type="edit" name="C_System_Tools_Monitor_CPUUsagePeriod" variable="C_System_Tools_Monitor_CPUUsagePeriod" label="TConfigForm_CPUUsagePeriodL" default="0" />
+		</GROUP>
+	</SECTION>
+</FORM>

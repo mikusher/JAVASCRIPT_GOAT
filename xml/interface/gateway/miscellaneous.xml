@@ -1,0 +1,70 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="20502" >
+
+    <!-- conntent {{{ -->
+    <SECTION name="MIAS_ContentSheet" label="TSpamEngineForm_ContentSheet" helpid="722" >
+        <!-- rem chemix
+        <GROUP name="MIAS_BodyTab_Indexing" label="TSpamEngineForm_HashContentBox" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamHashActive" variable="SpamHashActive" label="TSpamEngineForm_SpamHash" />
+            <OPTION type="edit" name="SpamHashThreshold" variable="SpamHashThreshold" label="TSpamEngineForm_HashScoreL" />
+            <OPTION type="edit" name="SpamHashThresholdExpire" variable="SpamHashThresholdExpire" label="TSpamEngineForm_HashExpireL" />
+        </GROUP>
+            -->
+        <GROUP name="MIAS_BodyTab_Messages" label="TSpamEngineForm_ContentSheet" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamHTMLPartsOnly" variable="SpamHTMLEqual" label="TSpamEngineForm_HTMLEqual" >
+              <OPTION type="edit" name="SpamHTMLEqualScore" variable="SpamHTMLEqualScore" />
+            </OPTION>
+            <OPTION type="checkbox" name="SpamHTMLExternalURL" variable="SpamHTMLExternalURL" label="TSpamEngineForm_HTMLExternalURL" >
+              <OPTION type="edit" name="SpamHTMLExternalURLScore" variable="SpamHTMLExternalURLScore" />
+            </OPTION>
+            <OPTION type="checkbox" name="SpamHTMLNoText" variable="SpamHTMLNoText" label="TSpamEngineForm_HTMLNoText" >
+              <OPTION type="edit" name="SpamHTMLNoTextScore" variable="SpamHTMLNoTextScore" />
+            </OPTION>
+            <OPTION type="checkbox" name="SpamHTMLEmbeddedImage" variable="SpamHTMLEmbeddedImage" label="TSpamEngineForm_HTMLEmbeddedImage" >
+              <OPTION type="edit" name="SpamHTMLEmbeddedImageScore" variable="SpamHTMLEmbeddedImageScore" />
+            </OPTION>
+            <OPTION type="checkbox" name="SpamBlankMail" variable="SpamBlankMail" label="TSpamEngineForm_MessageBlank" >
+              <OPTION type="edit" name="SpamBlankMailScore" variable="SpamBlankMailScore" />
+            </OPTION>
+            <OPTION type="checkbox" name="SpamReceivedHeader" variable="SpamReceivedHeader" label="TSpamEngineForm_ReceivedHeader" >
+              <OPTION type="edit" name="SpamReceivedHeaderScore" variable="SpamReceivedHeaderScore" />
+            </OPTION>
+
+        </GROUP>
+
+    </SECTION>
+    <!-- }}} -->
+    <!-- Characters {{{
+    TODO: update variable name for scoring
+    -->
+    <SECTION name="MIAS_BodyTab_Characters" label="TSpamEngineForm_CharBox" helpid="776">
+        <GROUP datfile="spam.dat" name="MIAS_SATab_Chars" label="TSpamEngineForm_CharBox" dattype="spam2">
+            <OPTION type="edit" name="SkipIndexingForCharsets" variable="SkipIndexingForCharsets" label="TSpamEngineForm_SpecialCharL" />
+            <OPTION type="checkbox" name="CharsetSpam" variable="CharsetSpam" label="TSpamEngineForm_MarkCharsetSpam" >
+                <OPTION type="edit" name="CharsetSpam_score" variable="CharsetSpamScore" label="CharsetSpam_score" />
+            </OPTION>
+            <OPTION type="checkbox" name="MissingCharset" variable="MissingCharset" label="TSpamEngineForm_MissingCharsetBox" >
+                <OPTION type="edit" name="MissingCharset_score" variable="MissingCharsetScore" label="MissingCharset_score" />
+            </OPTION>
+        </GROUP>
+    </SECTION>
+    <!-- }}} -->
+
+    <!-- SENDER {{{ 
+        TODO: add correct variables
+    -->
+    <SECTION name="MIAS_Tab_Sender" label="TSpamEngineForm_SenderSheet" helpid="778">
+        <GROUP datfile="spam.dat" name="MIAS_SATab_Sender" label="TSpamEngineForm_SenderSheet" dattype="spam2">
+            <OPTION type="checkbox" name="SpamNoSenderDomain" variable="SpamNoSenderDomain" label="TSpamEngineForm_NoSenderDomain" >
+                <OPTION type="edit" name="SpamNoSenderDomainScore" variable="SpamNoSenderDomainScore" label="" />
+            </OPTION>
+            <OPTION type="checkbox" name="SpamHELOIP" variable="SpamHELOIP" label="TSpamEngineForm_ScoreHELOIP" >
+                <OPTION type="edit" name="SpamHELOIPScore" variable="SpamHELOIPScore" label="" />
+            </OPTION>
+            <OPTION type="checkbox" name="SpamRemoteSMTP" variable="SpamRemoteSMTP" label="TSpamEngineForm_ScoreRemoteSMTP" >
+                <OPTION type="edit" name="SpamRemoteSMTPScore" variable="SpamRemoteSMTPScore" label="" />
+            </OPTION>
+        </GROUP>
+    </SECTION>
+    <!-- }}} -->
+</FORM>

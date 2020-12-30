@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="CF_DNSBL" label="TStrings_rblcaption" helpid="1125" >
+		<GROUP name="CF_DNSBL_Group" label="TStrings_rblcaption">
+			<OPTION type="edit" name="dummystring" variable="dummystring" value="0" label="TConnectForm_HostLabel" />
+   	</GROUP>
+	</SECTION>
+</FORM>
+

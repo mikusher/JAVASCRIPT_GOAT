@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="GW" helpid="208" >
+	<!--<SECTION name="GW_GeneralTab" label="TConfigForm_GeneralGroupWareSheet" helpid="20801" >
+		<GROUP name="GW_GeneralTab_General" label="TConfigForm_GeneralGroupWareSheet" datfile="calendar.dat" dattype="calendar">
+			<OPTION type="datagrid" name="publicfolder" gtype="publicfolder" labels="TGlobalGWForm_GWAccountList" width="700" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="OWN_EMAIL"  SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="GRPTITLE" SIZE="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="GRPSHAREMODE" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="publicfolder" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TBWForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+					<OBJECT ENDTAG="" NAME="publicfolder" LENGTH="2">
+						<SEPS>;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>-->
+
+	<SECTION name="GW_LDAPTab" label="TConfigForm_LDAPPublicSheet" helpid="3974" >
+
+		<GROUP name="GW_LDAPTab_Notify" label="TConfigForm_GWLDAPBox" datfile="calendar.dat" dattype="calendar">
+			<OPTION type="checkbox" name="CalendarLDAPActive" variable="CalendarLDAPActive" label="TConfigForm_LDAPGWActive" />
+			<OPTION type="edit" name="CalendarLDAPHost" variable="CalendarLDAPHost" label="TConfigForm_LDAPUserHostL" />
+			<OPTION type="edit" name="CalendarLDAPBase" variable="CalendarLDAPBase" label="TConfigForm_LDAPUserBaseL" />
+			<OPTION type="edit" name="CalendarLDAPUser" variable="CalendarLDAPUser" label="TConfigForm_LDAPUserUserL" />
+			<OPTION type="password" name="CalendarLDAPPass" variable="CalendarLDAPPass" label="TConfigForm_LDAPUserPassL" />
+		</GROUP>
+	</SECTION>
+
+</FORM>

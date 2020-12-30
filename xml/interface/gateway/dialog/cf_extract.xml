@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="203030103" >
+	<SECTION name="ExtractAttach" label="TExtractAttach_AppendFL" helpid="203030103" >
+		<GROUP name="ExtractAttach_Group" label="TExtractAttach_AppendFL">
+			<OPTION type="edit" variable="extractto" name="extractto" label="TExtractAttach_AppendFL" />
+			<OPTION type="checkbox" function="cf_extract" name="case" label="TExtractAttach_Package" />
+			<OPTION type="checkbox" function="cf_extract" name="par1" label="TExtractAttach_Overwrite" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

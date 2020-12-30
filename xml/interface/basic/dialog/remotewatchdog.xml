@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="RemoteWatchdog" helpid="2020302">
+	<SECTION name="RemoteWatchdog_tab" label="TTntMenuItems_RemoteServerWatchdogPanel" helpid="589" >
+		<GROUP name="RemoteWatchdog_Generalgroup" label="TRemoteServerForm_TopGroupBox">
+			<OPTION type="edit" name="8" function="urlencoded" label="TRemoteServerWatchdogItemForm_DescL" />
+				<OPTION type="edit" name="3" function="urlencoded" label="TRemoteServerWatchdogItemForm_ReportItemL" />
+			<OPTION type="button" btype="xmledit" variable="7" name="remotewatchdogschedule" fileid="schedule" label="TRemoteServerWatchdogItemForm_ScheduleItem" blabel="TRemoteServerWatchdogItemForm_ScheduleItemButton" />
+		</GROUP>
+		<GROUP name="RemoteWatchdog_Servergroup" label="TFrameAccounts_POP3La">  
+      <OPTION type="edit" name="0" function="urlencoded" label="TRemoteServerWatchdogItemForm_HostLabel" />
+      <OPTION type="edit" name="1" function="urlencoded" label="TRemoteServerWatchdogItemForm_PortL" />
+			<OPTION type="edit" name="2" function="urlencoded" label="TRemoteServerWatchdogItemForm_DownItemL" />
+			<OPTION type="edit" name="4" function="urlencoded" label="TRemoteServerWatchdogItemForm_SendL" />
+			<OPTION type="edit" name="5" function="urlencoded" label="TRemoteServerWatchdogItemForm_RegExL" />
+    </GROUP>
+    <GROUP name="RemoteWatchdog_Servergroup" label="TRemoteServerWatchdogItemForm_URLL">
+			<OPTION type="edit" name="9" function="urlencoded" label="TRemoteServerWatchdogItemForm_URLL" />
+			<OPTION type="edit" name="6" function="urlencoded" label="TRemoteServerWatchdogItemForm_DownloadFileL" />
+		</GROUP>
+	</SECTION>
+</FORM>

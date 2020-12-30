@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="ODBC" helpid="20801" >
+	<SECTION name="ODBC_Section" label="TConfigForm_DBODBCSettings" helpid="613" >
+		<GROUP name="ODBC_Primary_Tab" label="TODBCForm_PrimaryConnBox" datfile="calendar.dat" dattype="calendar">
+		  <OPTION type="edit" name="0" function="odbc_gw" label="TODBCForm_NameL" />
+			<OPTION type="edit" name="3" function="odbc_gw" label="TODBCForm_ServerL" />
+			<OPTION type="edit" name="1" function="odbc_gw" label="TODBCForm_UserL" />
+			<OPTION type="password" name="2" function="odbc_gw" label="TODBCForm_PassL" />
+		</GROUP>
+
+		<GROUP name="ODBC_Backup_Tab" label="TODBCForm_BackupConnBox" datfile="calendar.dat" dattype="calendar">
+			<OPTION type="edit" name="0B" function="odbc_gw" label="TODBCForm_BNameL" />
+			<OPTION type="edit" name="3B" function="odbc_gw" label="TODBCForm_BHostL" />
+			<OPTION type="edit" name="1B" function="odbc_gw" label="TODBCForm_BUserL" />
+			<OPTION type="password" name="2B" function="odbc_gw" label="TODBCForm_BPassL" />
+		</GROUP>
+                   
+		<GROUP name="ODBC_Database_Tab" label="TConfigForm_DBODBCSettings" datfile="calendar.dat" dattype="calendar" >
+			<OPTION type="listbox" name="4" function="odbc_gw" label="TODBCForm_DBTypeL" labels="TODBCForm_DBType"  />
+			<OPTION type="listbox" name="5" function="odbc_gw" label="TODBCForm_DriverL" labels="TODBCForm_DBDriver"  />
+			
+      <OPTION type="hidden" name="service" function="odbc_gw" />
+			<OPTION type="button" btype="fbutton" inline="1" fileid="CheckDBConnection" cfileid="0|3|1|2|0B|3B|1B|2B|4|5" blabel="TODBCForm_TestButton" />
+			<OPTION type="button" btype="fbutton" inline="1" fileid="CreateTables" cfileid="0|3|1|2|0B|3B|1B|2B|4|5|service" blabel="TODBCForm_CreateTablesBut" />
+			<OPTION type="button" btype="fbutton" inline="1" fileid="DropTables" cfileid="0|3|1|2|0B|3B|1B|2B|4|5|service" blabel="TODBCForm_DropTablesBut" />
+
+		</GROUP>
+    </SECTION>
+</FORM>

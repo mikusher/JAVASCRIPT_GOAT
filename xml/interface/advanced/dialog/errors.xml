@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Error" helpid="2040110" >
+	<SECTION name="WebSite_Error_Tab" label="TStrings_weberror" helpid="2040110" >
+		<GROUP name="WebSite_Error_Group" label="TStrings_weberror">
+			<OPTION type="edit" name="error" variable="error" label="TStrings_weberror" />
+			<OPTION type="listbox" name="type" variable="type" label="TFTPSyncForm_SourceL" labels="TStrings_ErrorResponseTypeL" value="0|1|2" />
+			<OPTION type="edit" name="val" variable="val" label="TStatisticsForm_SessionFilterValueL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

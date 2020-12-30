@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="windows-1250"?>
+<FORM name="RulesDialog" helpid="1126">
+	<SECTION name="RulesConditions" label="TContentFilterItemForm_CondiLabel" helpid="1125" height="95%" >
+		  <GROUP name="RulesConditionsGroup" label="TContentFilterItemForm_HintLabel" height="90%">
+		    <OPTION type="datagrid" name="condition" gtype="rulesconditions" gheight="100%" labels="TContentFilterItemForm_CondiLabel" >
+				  <HEAD>
+				   <SELECTOR NOCHECKALL="1" />
+					 <OPTION VINDEX="description" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				  </HEAD>
+				  <SOURCE>
+					 <FILE DIALOG="ftpgroup" />
+				  </SOURCE>
+			  </OPTION>
+		  </GROUP>	
+		</SECTION>
+    <SECTION name="RulesActions" label="TContentFilterItemForm_ActionLabel" helpid="1125" height="95%">
+		  <GROUP name="RulesActionsGroup" label="TContentFilterItemForm_HintLabel" height="90%">
+  			<OPTION type="datagrid" name="action" gtype="rulesactions" gheight="100%" labels="TContentFilterItemForm_ActionLabel" >
+  				<HEAD>
+  				  <SELECTOR NOCHECKALL="1"/>
+  					<OPTION VINDEX="description" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+  				</HEAD>
+  				<SOURCE>
+  					<FILE DIALOG="ftpgroup" />
+  				</SOURCE>
+  			</OPTION>
+      </GROUP>
+		</SECTION>
+		<SECTION name="RulesEdit" label="TContentFilterItemForm_DescLabel" helpid="1125" height="95%">
+	    <GROUP name="RulesEditGroup" label="TContentFilterItemForm_DescLabel" height="70%">
+   			<OPTION type="datagrid" name="edit" gtype="rulesedit" gheight="100%" limit="50" labels="TContentFilterItemForm_DescLabel" >
+   				<HEAD>
+   				  <SELECTOR NOCHECKALL="1" />
+   					<OPTION VINDEX="description" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+   				</HEAD>
+   				<SOURCE>
+   					<FILE DIALOG="ftpgroup" />
+   				</SOURCE>
+   			</OPTION>
+   			<OPTION type="edit" name="Title" variable="title" label="TContentFilterItemForm_TitleLabel" />
+   		  <OPTION type="checkbox" name="Active" variable="active" label="TSpamEngineForm_SpamEngineActive" default="1" />
+     </GROUP>  
+	</SECTION>
+</FORM>

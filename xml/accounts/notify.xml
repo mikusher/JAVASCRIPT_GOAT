@@ -1,0 +1,80 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="notify" helpid="436" >
+
+<SECTION name="notification_notificationtab" label="TDomainAdminForm_Notify" helpid="437" >
+<GROUP name="notification_notificationgroup" label="TDomainAdminForm_Notify">
+<OPTION type="listbox" name="account_domain" function="account_domain" label="TFrameAccounts_DomainSheet" labels="function:domain_list" disable="edit"/>
+<OPTION type="edit" name="account_name" variable="u_alias" label="TFrameAccounts_AliasLabel" />
+<OPTION type="edit" name="notify_fullname" variable="u_name" label="TFrameAccounts_CatalogDesc" />
+<OPTION type="edit" name="notify_to" variable="n_notifyto" label="TFrameAccounts_SMSLabel" />
+<OPTION type="edit" name="notify_maxsize" variable="N_Size" label="TFrameAccounts_SMSMaxSizeLabel"/>
+<OPTION type="edit" name="notify_count" variable="N_Count" label="TFrameAccounts_SMSCountLabel"/>
+<!--<OPTION type="radiolist" name="notify_filterradio" variable="n_filtertype" label="TFrameAccounts_SMSFilterRadio" labels="FORM_FILTERLIST"/>
+<OPTION type="checkbox" name="notify_sendfilter" variable="n_send" label="TFrameAccounts_SMSSendBox" />-->
+</GROUP>
+</SECTION>
+
+
+<SECTION name="mailinglist_servicestab" label="TConfigForm_ServicesSheet" helpid="4294" >
+ <GROUP name="mailinglist_servicesgroup" label="TFrameAccounts_SAGroupBox">
+ 	<OPTION type="checkbox" name="list_av" variable="n_avscan" access="av_general" label="TTntMenuItems_AntiVirusPanel"/>
+	<OPTION type="checkbox" name="list_as" variable="n_as" access="as_general" label="TTntMenuItems_AntiSpam"/>
+	<OPTION type="checkbox" name="list_q" variable="n_qa" access="as_challenge" label="TStatisticsForm_CRSheet"/>
+</GROUP>
+</SECTION>
+
+<SECTION name="notification_othertab" label="TFrameAccounts_OtherCatalogGroupBox" helpid="439" >
+<GROUP name="notification_messagegroup" label="TFrameAccounts_MessageGroupBoxNotify">
+<OPTION type="checkbox" name="notify_intosubject" variable="n_intosubject" label="TFrameAccounts_SMSIntoSubject" />
+<OPTION type="label"/>
+<OPTION type="checkbox" name="notify_cto" variable="n_sendto" label="TFrameAccounts_SMSTo" inline="1" />
+<OPTION type="checkbox" name="notify_cfrom" variable="n_sendfrom" label="TFrameAccounts_SMSFrom" inline="1"/>
+<OPTION type="label"/>
+<OPTION type="checkbox" name="notify_csubject" variable="n_sendsubject" label="TFrameAccounts_SMSSubject" inline="1" />
+<OPTION type="checkbox" name="notify_datetime" variable="n_senddatetime" label="TFrameAccounts_SMSDateTime" inline="1" />
+<OPTION type="label"/>
+<OPTION type="checkbox" name="notify_cbody" variable="n_sendbody" label="TFrameAccounts_SMSBody" inline="1" />
+<OPTION type="edit" name="notify_efrom" variable="n_from" label="TFrameAccounts_SMSFrom"/>
+<OPTION type="edit" name="notify_esubject" variable="n_subject" label="TFrameAccounts_SMSSubject"/>
+<OPTION type="edit" name="notify_ebody" variable="n_body" label="TFrameAccounts_SMSBody"/>
+<OPTION type="edit" name="notify_fileedit" variable="n_file" label="TFrameAccounts_TextFileEditShowButton" disable="domainadmin"/>
+<OPTION type="textfile" name="notify_file" value="notify_file" label="TFrameAccounts_TextFileEditShowButton" />
+</GROUP>
+
+<GROUP name="notofication_optionsgroup" label="TWebHostForm_OptionsBox">
+<OPTION type="edit" name="notify_forwardto" variable="n_forwardcopy" label="TFrameAccounts_FrwardToLabel" />
+<OPTION type="listbox" name="notify_originator" value="n_sender" label="TFrameAccounts_OrigiLabel" labels="TFrameAccounts_ListServOriginator"/>
+</GROUP>
+</SECTION>
+
+
+<SECTION name="notification_BWtab" label="TFrameAccounts_BWUserSheet" helpid="1150">
+        <GROUP name="user_bwgroup" label="TFrameAccounts_BWUserSheet"> 
+          <OPTION type="checkbox" name="user_bwactive" variable="U_BlackWhiteFilter" label="TFrameAccounts_ListBW" />
+          <!--<OPTION type="bwfile" name="user_bw" value="account_bw" label="TFrameAccounts_BWUserSheet"/>  
+          !--><OPTION type="datagrid" gtype="rules" name="u_rules" labels="TRulesItemForm_Labels">
+            <HEAD>
+              <SELECTOR />
+                <OPTION VINDEX="icon" size="-20" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="active" size="-15" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+                <OPTION VINDEX="title" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+            </HEAD>
+      				<BUTTONS>
+      					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+      					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+      					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+      				</BUTTONS>
+      				<SOURCE>
+      				  <FILE DIALOG="rules" />
+      				</SOURCE>
+      				<SYNTAX SINGLELINE="1" MULTIPLE="1">
+      					<OBJECT ENDTAG="" NAME="members" LENGTH="2">
+      						<SEPS>;</SEPS>
+      					</OBJECT>
+      				</SYNTAX>
+          </OPTION>
+        </GROUP>
+</SECTION>
+
+</FORM>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MENU>
+<PARAM ID="MMS" ICON="mms.png" LABEL="TTntMenuItems_Root" HELPID="2315" >
+    <PARAM ID="MANAGEMENT" ICON="da.png" HELPID="303" LABEL="TTntMenuItems_Accounts" >
+        <PARAM ID="DOMAINS" ICON="management.png" HELPID="306" label="TTntMenuItems_AccountsPanel" />
+        <!--<PARAM ID="USERGROUPS" OBJECT="usergroups" ICON="ugroups.png" HELPID="20102" label="TMenuItems_UserGroupsPanel" />-->
+        <PARAM ID="GLOBALSETTINGS" OBJECT="globalsettings" ICON="globsets.png" HELPID="20103" label="TTntMenuItems_AccountGlobalPanel" />
+        <PARAM ID="POLICIES" OBJECT="policies" ICON="policies.png" HELPID="20104" label="TTntMenuItems_PoliciesPanel" />
+        <!--<PARAM ID="SHAREDFOLDERS" OBJECT="sharedfolders" ICON="sharedfolders.png" HELPID="20105" label="TMenuItems_SharedFoldersPanel" />-->
+    </PARAM>
+    <PARAM ID="SYSTEM" ICON="system.png" HELPID="202" LABEL="TTntMenuItems_System"  >
+        <PARAM ID="SERVICES" ICON="services.png" OBJECT="services" HELPID="516" LABEL="TTntMenuItems_ServicesPanel" />
+        <PARAM ID="ICONNECTION" OBJECT="iconnection" ICON="iconnection.png" HELPID="20205" label="TTntMenuItems_InternetConnectionPanel" />
+        <PARAM ID="LOGGING" OBJECT="logging" ICON="logging.png" HELPID="20202" label="TTntMenuItems_LoggingPanel" />
+        <PARAM ID="TOOLS" ICON="tools.png" HELPID="20203" LABEL="TTntMenuItems_Tools"  >
+            <PARAM ID="SYSTEMBACKUP" OBJECT="systembackup" ICON="sysbackup.png" HELPID="2020301" label="TTntMenuItems_BackupPanel" />
+            <!--<PARAM ID="CLOCKSYNC" OBJECT="atomclocksync" ICON="clocksync.png" HELPID="2020302" label="TMenuItems_AtomicClockPanel" />
+            --><PARAM ID="SERVWATCHDOG" OBJECT="servicewatchdog" ICON="watchdog.png" HELPID="2020303" label="TTntMenuItems_ServiceWatchdogPanel" />
+            <PARAM ID="SYSTEMON" OBJECT="systemmonitor" ICON="sysmonitor.png" HELPID="2020304" label="TTntMenuItems_MonitorPanel" />
+            <PARAM ID="TASKS" OBJECT="tasksevents" ICON="tasks.png" HELPID="2020305" label="TTntMenuItems_TaskSchedulePanel" />
+            <PARAM ID="REMOTEWATCHDOG" OBJECT="remotewatchdog" ICON="remotewatch.png" HELPID="2020306" label="TTntMenuItems_RemoteServerWatchdogPanel" />
+            <PARAM ID="TCPIIPTUNEL" OBJECT="tcpiptunnel" ICON="tcpip.png" HELPID="2020308" label="TTntMenuItems_TCPIPSSLPanel" />
+            <PARAM ID="SERVERMIGR" OBJECT="servermigration" ICON="smigration.png" HELPID="2020309" label="TTntMenuItems_MigrationPanel" />
+            <PARAM ID="DBMIGR" OBJECT="dbmigration" ICON="dmigration.png" HELPID="607" label="TTntMenuItems_DatabaseMigrationPanel" />
+        </PARAM>
+        <PARAM ID="STORAGE" OBJECT="storage" ICON="storage.png" HELPID="20204" label="TTntMenuItems_StoragePanel" />
+        <PARAM ID="CERTIFICATES" OBJECT="certificates" ICON="certificates.png" HELPID="513" label="TTntMenuItems_SSLTLSPanel" />
+
+    <PARAM ID="ADVANCED" OBJECT="advanced" ICON="advanced.png" HELPID="513" label="TTntMenuItems_AdvancedPanel" />
+    </PARAM>
+    <PARAM ID="MSERVICE" ICON="mservice.png" HELPID="203" label="TTntMenuItems_MailServer"  >
+        <PARAM ID="SMTPSERVICE" OBJECT="smtpservice" ICON="smtpservice.png" HELPID="20301" label="TTntMenuItems_SMTPServerPanel" />
+        <PARAM ID="SECURITY" OBJECT="security" ICON="security.png" HELPID="20302" label="TTntMenuItems_SecurityPanel" />
+        <PARAM ID="FILTERING" OBJECT="filters" ICON="filtering.png" HELPID="20303" label="TTntMenuItems_FilteringPanel" />
+        <PARAM ID="AUTOARCHIVE" OBJECT="autoarchive" ICON="autoarchive.png" HELPID="2020307" label="TTntMenuItems_AutoArchivePanel" />
+        <PARAM ID="ETRNDOWNLOAD" OBJECT="etrndownload" ICON="etrn.png" HELPID="20304" label="TTntMenuItems_ETRNATRNPanel" />
+
+  </PARAM>
+  <PARAM ID="WEBMAIL"  OBJECT="webmail" ICON="webmail.png" HELPID="1843" label="TStrings_cl_webclient" />
+    <PARAM ID="ANTI-SPAM" ICON="antispam.png" HELPID="205" label="TTntMenuItems_AntiSpam" >
+        <PARAM ID="ANTI-SPAM-GENERAL" OBJECT="general" ICON="antispam_general.png" HELPID="20501" label="TTntMenuItems_ASGeneralPanel" />
+        <PARAM ID="ANTI-SPAM-ACTION" OBJECT="action" ICON="antispam_action.png" HELPID="20503" label="TTntMenuItems_ASActionPanel" />
+        <PARAM ID="ANTI-SPAM-QUARANTINE" OBJECT="quarantine" ICON="antispam_quarantine.png" HELPID="2050401" label="TTntMenuItems_ASQuarantinePanel" />
+        <PARAM ID="ANTI-SPAM-SPAMASSASSIN" OBJECT="spamassassin" ICON="antispam_spam_assasin.png" HELPID="2050301" label="TTntMenuItems_ASSAPanel" />
+        <PARAM ID="ANTI-SPAM-LIVE" OBJECT="live" ICON="antispam_live.png" HELPID="2293" label="TTntMenuItems_CommTouchPanel" />
+        <PARAM ID="ANTI-SPAM-BAYESIAN" OBJECT="bayesian" ICON="bayesian.png" HELPID="205030201" label="TTntMenuItems_ASBayesPanel" />
+        <PARAM ID="ANTI-SPAM-BLACK_WHITE" OBJECT="black_white" ICON="bwlist.png" HELPID="501" label="TTntMenuItems_ASBWPanel" />
+        <PARAM ID="ANTI-SPAM-GREYLISTING" OBJECT="greylisting" ICON="antispam_graylisting.png" HELPID="2050404" label="TTntMenuItems_ASGLPanel" />
+        <PARAM ID="ANTI-SPAM-LEARNINGRULES" OBJECT="learningrules" ICON="antispam_learning_rules.png" HELPID="798" label="TTntMenuItems_ASLearnPanel" />
+        <PARAM ID="ANTI-SPAM-MISCELLANEOUS" OBJECT="miscellaneous" ICON="antispam_miscellaneous.png" HELPID="20502" label="TTntMenuItems_ASMiscPanel" />
+    </PARAM>
+
+     <PARAM ID="ANTI-VIRUS"  OBJECT="antivirus" ICON="antivirus.png" HELPID="206" label="TTntMenuItems_AntiVirusPanel" />
+    <PARAM ID="WEBSERVICE" OBJECT="webservice" ICON="webservice.png" HELPID="204" label="TTntMenuItems_WebServicePanel" />
+    <PARAM ID="FTPSERVICE" OBJECT="ftpservice" ICON="ftpservice.png" HELPID="210" label="TTntMenuItems_FTPServicePanel" />
+    <PARAM ID="GROUPWARE" ICON="gw.png" HELPID="208" label="TConfigForm_GroupWareSheet"  >
+    	<PARAM ID="GROUPWARE-GENERAL" OBJECT="groupware" ICON="gw_general.png" HELPID="208" label="TTntMenuItems_GroupWarePanel"  />
+    	<PARAM ID="GROUPWARE-PUBLIC-FOLDERS" OBJECT="groupware_public" ICON="gw_public_folders.png" HELPID="208" label="TConfigForm_GWIMAPSheet"  />
+    	<PARAM ID="GROUPWARE-ACTIVESYNC" OBJECT="groupware_activesync" ICON="gw_activesync.png" HELPID="208" label="TConfigForm_ActiveSync"  />
+    	<PARAM ID="GROUPWARE-SYNCML" OBJECT="groupware_syncml" ICON="gw_syncml.png" HELPID="208" label="TConfigForm_GWSyncMLSheet"  />
+    	<PARAM ID="GROUPWARE-WEBDAV" OBJECT="groupware_webdav" ICON="gw_webdav.png" HELPID="208" label="TConfigForm_GWWebDAVSheet"  />
+    </PARAM>
+    <!--<PARAM ID="SYNCML" OBJECT="syncml" ICON="syncml.png" HELPID="208" label="TTntMenuItems_SyncMLPanel"  />-->
+        <PARAM ID="IM" OBJECT="im" ICON="im.png" HELPID="207" label="TTntMenuItems_InstantMessagingPanel" />
+    <PARAM ID="SMS" OBJECT="sms" ICON="smsservice.png" HELPID="2296" label="TTntMenuItems_SMSPanel"  />
+
+    <PARAM ID="SIP" OBJECT="sipservice" ICON="sipservice.png" HELPID="980" label="TTntMenuItems_SIPPanel" />
+    <PARAM ID="STATUS"  ICON="status.png" HELPID="980" label="TTntMenuItems_Status" >
+        <!--<PARAM ID="SESSIONS" OBJECT="" ICON="sessions.png" FILE="sessions.html" HELPID="20904" label="TMenuItems_SessionsPanel" />-->
+        <PARAM ID="MESSAGEQUEUE" ICON="messagequeue.png" FILE="messagequeue.html" HELPID="20901" label="TTntMenuItems_MessageQueuePanel"  />
+        <PARAM ID="SPAMQUEUE" ICON="status_spam_queues.png" OBJECT="spamqueue" HELPID="20908" label="TTntMenuItems_SpamQueuePanel"  />
+        <!--<PARAM ID="CHALLENGEQUEUE" ICON="challengequeue.png" FILE="" HELPID="20908" label="TMenuItems_ChallengePanel" />-->
+        <!--<PARAM ID="TRAFFIC" OBJECT="" ICON="traffic.png" HELPID="20902" label="TMenuItems_TrafficPanel" />-->
+        <PARAM ID="LOGS" ICON="logs.png" FILE="logs.html" HELPID="20905" label="TTntMenuItems_LogsPanel"   />
+        <PARAM ID="STATISTICS" ICON="statistics.png" FILE="stats.html" HELPID="20903" label="TTntMenuItems_CountersPanel"   />
+        <!--<PARAM ID="USERSTAT" OBJECT="" ICON="userstats.png" HELPID="20906" label="TMenuItems_UserStatisticsPanel" />
+        <PARAM ID="VOLUME" OBJECT="" ICON="volume.png" HELPID="20907" label="TMenuItems_VolumePanel" />-->
+    </PARAM>
+
+    <PARAM ID="LICENSE" ICON="license.png" FILE="license.html" HELPID="3" label="TConfigForm_LicensesItem"  />
+    <PARAM ID="WIZARDS" ICON="wizards.png" FILE="wizards.html" HELPID="3" label="TTntMenuItems_WizardPanel"  />
+	<PARAM ID="ABOUT" ICON="help.png" FILE="about.html" HELPID="3" label="TStrings_wa_aboutl"  />
+</PARAM>
+</MENU>

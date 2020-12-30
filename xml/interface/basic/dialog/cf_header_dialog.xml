@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Alias" helpid="2040109" >
+	<SECTION name="WebSite_Alias_Tab" label="TX_ALIAS" helpid="2040109" >
+		<GROUP name="WebSite_Alias_Group" label="TX_ALIAS" >
+			<OPTION type="edit" name="header" variable="header" label="TExternalFiltersForm_FilterList" >
+			<OPTION type="radio" name="action" variable="action" value="1" label="CF_HeaderAddChange" >
+			<OPTION type="radio" name="action" variable="action" value="0" label="CF_HeaderRemove" >
+ 		</GROUP>
+	</SECTION>
+</FORM>

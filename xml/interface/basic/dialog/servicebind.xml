@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_Alias" helpid="2040108" >
+	<SECTION name="WebSite_Alias_Tab" label="TIPAddressForm_IPGroupBox" helpid="2040108" >
+		<GROUP name="WebSite_Alias_Group" label="TIPAddressForm_IPGroupBox">
+			<OPTION type="edit" name="2" variable="2" label="TIPAddressForm_IPL" />
+			<OPTION type="edit" name="3" variable="3" label="TIPAddressForm_PortL" />
+			<OPTION type="checkbox" name="7" variable="7" label="TIPAddressForm_SSL" />
+			<OPTION type="edit" name="4" variable="4" label="TIPAddressForm_CertL" />
+			<OPTION type="checkbox" name="5" variable="5" label="TIPAddressForm_RequirePeer" />
+			<OPTION type="edit" name="6" variable="6" label="TIPAddressForm_CAL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

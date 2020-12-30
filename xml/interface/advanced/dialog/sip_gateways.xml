@@ -1,0 +1,81 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SIPService_Rules" helpid="2040105" >
+	<SECTION name="SIPService_Gateway_General" label="TSIPGatewayForm_GeneralBox" helpid="990" >
+		<GROUP name="SIPService_Gateway_General_Group" label="TSIPGatewayForm_GeneralBox">
+			<OPTION type="checkbox" name="active" variable="active" label="TSIPGatewayForm_ActiveBox" />
+			<OPTION type="edit" name="title" variable="title" label="TSIPGatewayForm_TitleL" />
+			<OPTION type="edit" name="server" variable="server" label="TSIPGatewayForm_ServerL" />
+			<OPTION type="edit" name="proxy" variable="proxy" label="TConfigForm_ProxyServerSheet" />
+			<OPTION type="edit" name="user" variable="user" label="TSIPGatewayForm_UserL" />
+			<OPTION type="password" name="pass" variable="pass" label="TSIPGatewayForm_PassL" />
+ 		</GROUP>
+ 		
+ 		<GROUP name="SIPService_Gateways_Options_Tab" label="TFrameAccounts_UserMiscSheet">
+			<OPTION type="edit" name="expire" variable="expire" default="60" label="TSIPGatewayForm_ExpireL" />
+			<OPTION type="edit" name="maxcalls" variable="maxcalls" label="TSIPGatewayForm_MaxCallsL" />
+			<OPTION type="edit" name="contact" variable="contact" label="TSIPGatewayForm_ContactL" />
+			<OPTION type="checkbox" name="replacefrom" variable="replacefrom" label="TSIPGatewayForm_RewriteFrom" />
+ 			<OPTION type="checkbox" name="replaceto" variable="replaceto" label="TSIPGatewayForm_RewriteTo" />
+ 			<OPTION type="checkbox" name="noregister" variable="noregister" label="TSIPGatewayForm_SkipRegister" />
+ 			<OPTION type="checkbox" name="ignorertpproxy" variable="IGNORERTPPROXY" label="TSIPGatewayForm_NONAT" />
+		</GROUP>
+	</SECTION>
+	
+	<SECTION name="SIPService_Gateway_Outgoing" label="TSIPGatewayForm_OutgoingSheet" helpid="990" >
+		<GROUP name="SIPService_Gateway_Outgoing_Group" label="TSIPGatewayForm_OutBox">
+			<OPTION type="checkbox" name="bypasslocal" variable="bypasslocal" label="TSIPGatewayForm_NotBypassLocal" inverse="1" />
+			<OPTION type="datagrid" name="rules" gtype="sipsub" session="1" labels="TSIPGatewayForm_DialRules" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="condition" size="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="rewrite" size="+50" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="sip_rules_out" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+ 		</GROUP>
+ 		
+ 		<GROUP name="SIPService_Gateways_Users_Tab" label="TFrameAccounts_UserDomainGroupBox">			<OPTION type="checkbox" name="restrict" variable="restrict" label="TSIPGatewayForm_RestrictUsers" />
+  	  <OPTION type="datagrid" name="restrictedusers" gtype="sipsub" session="1" labels="TSIPGatewayForm_OutList" >
+				<HEAD>
+					<SELECTOR />
+          <OPTION VINDEX="member" size="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="gateway_member" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+    </GROUP>		
+	</SECTION>
+	
+	<SECTION name="SIPService_Gateway_Incoming" label="TSIPGatewayForm_IncomingSheet" helpid="990" >
+ 		<GROUP name="SIPService_Gateways_Incoming_Users_Tab" label="TSIPGatewayForm_InUsersBox">
+  	 <OPTION type="datagrid" name="targetusers" gtype="sipsub" session="1" labels="TSIPGatewayForm_InList" >
+				<HEAD>
+					<SELECTOR />
+          <OPTION VINDEX="member" size="+100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+        </HEAD>
+				<SOURCE>
+					<FILE DIALOG="gateway_member" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+			</OPTION>
+    </GROUP>		
+	</SECTION>
+</FORM>

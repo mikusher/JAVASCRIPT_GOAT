@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<FORM name="MIAS" helpid="205" >
+    
+    <!-- GREY LISTING {{{-->
+    
+    <SECTION name="MIAS_GreyListingTab" label="TSpamEngineForm_GLSheet" helpid="794" >
+        <GROUP name="MIAS_GreyListingTab_GL" label="TSpamEngineForm_GreyListBox" datfile="spam.dat" dattype="spam2">
+            <OPTION type="checkbox" name="SpamGLActive" variable="SpamGLActive" label="TSpamEngineForm_SpamEngineActive" />
+            <OPTION type="edit" name="SpamGLAllow" variable="SpamGLAllow" label="TSpamEngineForm_GLAllowSecs" />
+            <OPTION type="edit" name="SpamGLPending" variable="SpamGLPending" label="TSpamEngineForm_GLPendL" />
+            <OPTION type="edit" name="SpamGLAuthorized" variable="SpamGLAuthorized" label="TSpamEngineForm_GLDeleteAuthL" />
+            <OPTION type="listbox" name="SpamGLMode" variable="SpamGLMode" label="TSpamEngineForm_GLModeL" labels="TSpamEngineForm_GLMode" value="1|0|2|3"/>
+            <OPTION type="listbox" name="SpamGLOwnerMode" variable="SpamGLOwnerMode" label="TSpamEngineForm_GLOwnerL" labels="TSpamEngineForm_GLOwner" />
+            <OPTION type="edit" name="SpamGLResponse" variable="SpamGLResponse" label="TSpamEngineForm_SMTPResponseL" />
+            <OPTION type="button" btype="textfile" fileid="config/greylist.dat" label="TSpamEngineForm_GRBypassL" blabel="TConfigForm_SynchroBypass" cfileid="examples/bypass.dat" />
+            <OPTION type="button" btype="linkbutton" fileid="spamqueue|section_section_SpamQueue_GreyListing|MMS/STATUS/SPAMQUEUE" cfileid="object" blabel="TStatisticsForm_GLSheet" />
+        </GROUP>
+    </SECTION>
+
+    <!-- }}} GREY LISTING -->
+    
+</FORM>

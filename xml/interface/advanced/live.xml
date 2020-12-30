@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Live" helpid="212" >
+	<SECTION name="Live" label="TSpamEngineForm_ComTouchSheet" helpid="2293" >
+		<GROUP name="AV_GeneralTab_Integrated" label="TSpamEngineForm_CommTouchGeneral" datfile="spam.dat" dattype="spam2">
+			<OPTION type="checkbox" name="Commtouch" variable="CommTouch" label="TSpamEngineForm_CommTouch" />
+			<OPTION type="edit" name="CommtouchForce" function="CommTouchForce" label="TSpamEngineForm_LIVELabel" />
+			<OPTION type="slider" name="CommTouchHighScore" variable="CommTouchHighScore" label="TSpamEngineForm_CTHL" min="0" max="10" decimal="0.1" step="0.1" />
+      <OPTION type="slider" name="CommTouchHighestScore" variable="CommTouchHighestScore" label="TSpamEngineForm_CTTL" min="0" max="10" decimal="0.1" step="0.1" />
+      <OPTION type="slider" name="CommTouchLowScore" variable="CommTouchLowScore" label="TSpamEngineForm_CTNSL" min="-10" max="0" decimal="0.1" step="0.1" />
+    </GROUP>
+	</SECTION>
+	
+</FORM>
+

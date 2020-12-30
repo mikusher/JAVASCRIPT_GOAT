@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="1125" >
+	<SECTION name="AddFooter" label="TConfigForm_HeaderFooterSheet" helpid="1125" >
+		<GROUP name="AddFooter_Group" label="TConfigForm_HeaderFooterSheet">
+			<OPTION type="edit" name="htf" function="cf_headerfooter" label="THeaderFooterForm_HeaderL" />
+   		<OPTION type="edit" name="hhf" function="cf_headerfooter" label="THeaderFooterForm_HHTMLL" />
+   		<OPTION type="edit" name="ftf" function="cf_headerfooter" label="THeaderFooterForm_FooterL" />
+   		<OPTION type="edit" name="fhf" function="cf_headerfooter" label="THeaderFooterForm_FHTMLL" />
+   	</GROUP>
+	</SECTION>
+</FORM>
+

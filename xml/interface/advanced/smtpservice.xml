@@ -1,0 +1,113 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="SMTPService" helpid="647" >
+	<SECTION name="SMTPService_DeliveryTab" label="TConfigForm_DeliverySMTPSheet" helpid="653" >
+		<GROUP name="SMTPService_GeneralTab_General" label="TConfigForm_AntiRelayingSheet">
+			<!--<OPTION type="edit" name="C_Mail_SMTP_General_HostName" variable="C_Mail_SMTP_General_HostName" label="TConfigForm_HostnameLabel" />-->
+			<OPTION type="radio" name="C_Mail_SMTP_General_DeliveryMode" variable="C_Mail_SMTP_General_DeliveryMode" value="1" label="TConfigForm_UseDNSCheck" default="1" />
+			<OPTION type="radio" name="C_Mail_SMTP_General_DeliveryMode" variable="C_Mail_SMTP_General_DeliveryMode" value="0" label="TConfigForm_RelayCheck" default="0">
+				<OPTION type="edit" name="C_Mail_SMTP_General_RelayMailServer" variable="C_Mail_SMTP_General_RelayMailServer" />
+			</OPTION>
+			<!--<OPTION type="edit" name="C_Mail_SMTP_General_DNSServer" variable="C_Mail_SMTP_General_DNSServer" />-->
+			<!--<OPTION type="button" btype="fbutton" fileid="" blabel="TConfigForm_TestDNSButton" />  -->
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_MXReconnectFailure" variable="C_Mail_SMTP_Delivery_MXReconnectFailure" label="TConfigForm_MXReconnect" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_LimitMsgSize" variable="C_Mail_SMTP_Delivery_LimitMsgSize" label="TConfigForm_MaxMailSize" default="0">
+				<OPTION type="edit" name="C_Mail_SMTP_Delivery_MaxMsgSize" units="u_bytes" saveunit="0" />
+				<OPTION type="checkbox" name="C_Accounts_Global_Accounts_DeliveryReports" variable="C_Accounts_Global_Accounts_DeliveryReports" label="TConfigForm_DeliveryReports" />
+			</OPTION>
+		</GROUP>
+
+		<GROUP name="SMTPService_DeliveryTab_UndeliverableMessages" label="TConfigForm_Protocol">
+			<OPTION type="edit" name="C_Mail_SMTP_Delivery_UndelivAfter" variable="C_Mail_SMTP_Delivery_UndelivAfter" units="u_time" labels="TConfigForm_UndeliverableAfterUnits" saveunit="min" label="TConfigForm_UndelLabel" default="4" />
+			<OPTION type="edit" name="C_Mail_SMTP_Delivery_UndelivWarning" variable="C_Mail_SMTP_Delivery_UndelivWarning" units="u_time" labels="TConfigForm_UndeliverableAfterUnits" saveunit="min" label="TConfigForm_UndelWarningLa" default="8" />
+			<OPTION type="edit" name="C_Mail_SMTP_Delivery_DaemonAlias" variable="C_Mail_SMTP_Delivery_DaemonAlias" label="TConfigForm_RepAlL" />
+			<OPTION type="edit" name="C_Mail_SMTP_Delivery_DaemonName" variable="C_Mail_SMTP_Delivery_DaemonName" label="TConfigForm_RepNL" />
+			<OPTION type="edit" name="C_Mail_SMTP_Delivery_BadMail" variable="C_Mail_SMTP_Delivery_BadMail" label="TConfigForm_BadMailLabel" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_DoNoTruncate" variable="C_Mail_SMTP_Delivery_DoNoTruncate" label="TConfigForm_TruncatedMessage" default="0" inverse="1" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_InfoToAdmin" variable="C_Mail_SMTP_Delivery_InfoToAdmin" label="TConfigForm_UndelInfoAdmin" default="0" />
+      <OPTION type="listbox" labels="TConfigForm_BounceBackMode" name="C_Mail_SMTP_Other_BounceBackMode" variable="C_Mail_SMTP_Other_BounceBackMode" label="TConfigForm_BounceBackL" value='0|2|1' default="0" />
+			<OPTION type="button" btype="xmledit" fileid="retry_intervals" blabel="TConfigForm_RetryIntervals" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="SMTPService_Redirect" label="TConfigForm_RoutingSMTPSheet" helpid="658">
+		<GROUP name="SMTPService_DeliveryTab_UndeliverableMessages2" label="TConfigForm_RedirectSMTPSheet">
+			<OPTION type="datagrid" name="redirect" labels="TRedirectForm_RedirectList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0"  SIZE="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="1" SIZE="-150" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="3" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/redirect.dat" COMMENT="examples/redirect.dat" DIALOG="redirect_smtp" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX>
+					<OBJECT NAME="redirect" LENGTH="4">
+						<SEPS>=SEP;SEP;</SEPS>
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="SMTPService_Advanced" label="TConfigForm_AdvancedMailServiceTab" helpid="250">
+		<GROUP name="SMTPService_AdvancedTab_IMAP" label="TConfigForm_IMAPGroupBox">
+			<OPTION type="listbox" labels="TConfigForm_IMAPIndexSearch" name="C_System_Services_IMAP_IndexedSearch" variable="C_System_Services_IMAP_IndexedSearch" label="TConfigForm_FullTextLabelType" default="0" />
+			<!--<OPTION type="button" btype="xmledit" fileid="retry_intervals" blabel="TConfigForm_AutoConfigWindowsSearchButton" />-->
+		</GROUP>
+
+		<GROUP name="SMTPService_DeliveryTab_Delivery" label="TConfigForm_DeliveryMDABox">
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_UseIncomingQueue" variable="C_Mail_SMTP_Delivery_UseIncomingQueue" label="TConfigForm_UseIncomingQueue" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_MDAInternal" variable="C_Mail_SMTP_Delivery_MDAInternal" label="TConfigForm_MDAInternal" default="0" />
+			<OPTION type="edit" name="C_Mail_SMTP_Delivery_IncomingQueueSize" variable="C_Mail_SMTP_Delivery_IncomingQueueSize" label="TConfigForm_MDAMaxThreadsL" />
+		</GROUP>
+		<GROUP name="SMTPService_DeliveryTab_Delivery" label="TConfigForm_SMTPSpecialBox">
+			<OPTION type="edit" name="C_Mail_SMTP_Other_MaxHopCount" variable="C_Mail_SMTP_Other_MaxHopCount" label="TConfigForm_MaxHopLabel" default="20" />
+			<OPTION type="edit" name="C_Mail_SMTP_Other_MaxRecipients" variable="C_Mail_SMTP_Other_MaxRecipients" label="TConfigForm_MaxRecLabel" default="32768" />
+			<OPTION type="edit" name="C_Mail_SMTP_Other_MaxMTARecipients" variable="C_Mail_SMTP_Other_MaxMTARecipients" label="TConfigForm_MaxSMTPCRL" default="100" />
+			<OPTION type="button" btype="xmledit" fileid="smtpexceptions" blabel="TConfigForm_ExceptionsButton" />
+
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_UseTLSSSL" variable="C_Mail_SMTP_Delivery_UseTLSSSL"  label="TConfigForm_UseTLSSSL" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_HideIP" variable="C_Mail_SMTP_Delivery_HideIP" label="TConfigForm_HideIP" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_RDNSLookup" variable="C_Mail_SMTP_Delivery_RDNSLookup" label="TConfigForm_ReceivedRDNS" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_ReturnPath" variable="C_Mail_SMTP_Delivery_ReturnPath" label="TConfigForm_SMTPReturnPath" default="0" />
+      <OPTION type="checkbox" name="C_Mail_SMTP_Other_Dedupe" variable="C_Mail_SMTP_Other_Dedupe" label="TConfigForm_DeliverOnce" default="0" />
+
+      <!--<OPTION type="checkbox" name="C_Mail_SMTP_Other_HeaderFunctions" variable="C_Mail_SMTP_Other_HeaderFunctions" label="TConfigForm_SendReceipt" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_NoRetryQueue" variable="C_Mail_SMTP_Other_NoRetryQueue" label="TConfigForm_NoRetryQueue" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_NoBounceBack" variable="C_Mail_SMTP_Other_NoBounceBack" label="TConfigForm_NoBounceBack" default="0" /> -->
+			<!--<OPTION type="button" btype="textfile" fileid="config/strings.dat" blabel="TConfigForm_StringTranslationButton" cfileid="examples/strings.dat" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Delivery_RetrySMTP" variable="C_Mail_SMTP_Delivery_RetrySMTP" label="TConfigForm_UseSMTP" />-->
+		</GROUP>
+		<GROUP name="SMTPService_Header_Header" label="TConfigForm_HeaderFooterButton" datfile="config/tags.dat" dattype="tags" >
+			<OPTION type="checkbox" name="C_Mail_SMTP_HeaderFooter_Enable" variable="C_Mail_SMTP_HeaderFooter_Enable" label="TSpamEngineForm_SpamEngineActive" default="0" source="API" />
+			<OPTION type="button" btype="xmledit" fileid="headerfiles_smtp" blabel="TConfigForm_HeaderFooterButton"/>
+		</GROUP>
+		
+	</SECTION>
+
+<!--
+	<SECTION name="SMTPService_OtherTab" label="TAntivirusSettingForm_OtherBox" helpid="2030105">
+		<GROUP name="SMTPService_OtherTab_General" label="TAntivirusSettingForm_OtherBox">
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_SearchInLocalDomains" variable="C_Mail_SMTP_Other_SearchInLocalDomains" label="TConfigForm_SearchAlias" default="0" />
+		</GROUP>
+
+		<GROUP name="SMTPService_OtherTab_General" label="TConfigForm_AdvancedMode">
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_LocalDelivery" variable="C_Mail_SMTP_Other_LocalDelivery" label="TConfigForm_EnableLocalDel" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_ExternalDelivery" variable="C_Mail_SMTP_Other_ExternalDelivery" label="TConfigForm_ExternalDelivery" default="0" >
+				<OPTION type="button" btype="textfile" fileid="config/externalbypass.dat" blabel="TConfigForm_SynchroBypass" cfileid="examples/bypass.dat" />
+			</OPTION>
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_SMTPLFLF" variable="C_Mail_SMTP_Other_SMTPLFLF" label="TConfigForm_SMTPLFDotLF" default="0" />
+		</GROUP>
+	</SECTION>-->
+</FORM>

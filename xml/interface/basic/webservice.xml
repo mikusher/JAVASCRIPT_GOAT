@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebService" helpid="204">
+	<SECTION name="WebService_WebService" label="TTntMenuItems_WebServicePanel" helpid="833" >
+		<GROUP name="WebService_WebService_WebSites" label="TConfigForm_WebServicesSheet" >
+			<OPTION type="datagrid" name="webservice" gtype="webservice" width="900" labels="TWebServiceForm_WebHostItems" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="NAME" size="+20" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="PATH" size="+40" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="DESC" size="+30" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="USEGLOBAL" size="+10" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/webserver.dat" DIALOG="webservice" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>			
+		</GROUP>
+	</SECTION>
+	
+	<SECTION name="WebService_Other" label="TConfigForm_WebOtherSheet" helpid="1833" >
+		<GROUP name="WebService_Other" label="TTntMenuItems_ASGeneralPanel">
+			<OPTION type="edit" name="Thread_Pooling" variable="c_webservice_appmaxthreads" label="TConfigForm_WebThreadPoolingL" source="API" />
+						<!--<OPTION type="edit" name="defaultscripthost" function="defaultscripthost" label="TConfigForm_VHostL"/>-->
+		</GROUP>
+	</SECTION>
+	
+</FORM>

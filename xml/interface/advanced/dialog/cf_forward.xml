@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="1125" >
+	<SECTION name="Forward" label="TStrings_emailcaption" helpid="1125" >
+		<GROUP name="Forward_Group" label="TStrings_emailcaption">
+			<OPTION type="edit" variable="forward" name="forward" label="TStrings_emailcaption" />
+     </GROUP>
+ 		<GROUP name="Members_select" label="SELECT">
+		  <OPTION type="account_select" target="forward" />
+    </GROUP>
+	</SECTION>
+</FORM>
+

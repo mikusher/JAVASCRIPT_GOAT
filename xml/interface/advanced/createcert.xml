@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CreateCertForm" helpid="20207">
+	<SECTION name="CreateCertSection" label="TDigitalCertForm_CertGroupBox" helpid="2020703" >
+		<GROUP name="CreateCertGroup" label="TDigitalCertForm_CertGroupBox">
+			<OPTION type="edit" name="DaysL" variable="DaysL" label="TDigitalCertForm_DaysL" />
+			<OPTION type="edit" name="CountryL" variable="CountryL" label="TDigitalCertForm_CountryL" />
+			<OPTION type="edit" name="StateL" variable="StateL" label="TDigitalCertForm_StateL" />
+			<OPTION type="edit" name="LocalityL" variable="LocalityL" label="TDigitalCertForm_LocalityL" />
+			<OPTION type="edit" name="OrganziationL" variable="OrganziationL" label="TDigitalCertForm_OrganziationL" />
+			<OPTION type="edit" name="OrgUnitL" variable="OrgUnitL" label="TDigitalCertForm_OrgUnitL" />
+			<OPTION type="edit" name="CommonNameL" variable="CommonNameL" label="TDigitalCertForm_CommonNameL" />
+			<OPTION type="edit" name="EmailL" variable="EmailL" label="TDigitalCertForm_EmailL" />
+		</GROUP>
+	</SECTION>
+</FORM>

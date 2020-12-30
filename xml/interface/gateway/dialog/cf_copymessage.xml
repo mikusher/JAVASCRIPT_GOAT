@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="203030103" >
+	<SECTION name="CF_SCopyMessage" label="TStrings_emailcaption" helpid="203030103" >
+		<GROUP name="CF_GCopyMessage" label="TStrings_emailcaption">
+			<OPTION type="edit" variable="copymessageto" name="copymessageto" label="TStrings_emailcaption" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+
+

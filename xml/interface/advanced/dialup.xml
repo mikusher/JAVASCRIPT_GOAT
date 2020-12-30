@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="IConnection" helpid="20205">
+	<SECTION name="IConnection_Section" label="TTntMenuItems_InternetConnectionPanel" helpid="508" >	
+
+	<GROUP name="IConnection_DialUp" label="TConfigForm_OtherScheduleButton">
+			<OPTION type="edit" name="C_System_Conn_UpName" variable="C_System_Conn_UpName" label="TOtherConnForm_ConnLab" />
+			<OPTION type="edit" name="C_System_Conn_UpUsername" variable="C_System_Conn_UpUsername" label="TOtherConnForm_LoginName" />
+			<OPTION type="password" name="C_System_Conn_UpPassword" variable="C_System_Conn_UpPassword" label="TOtherConnForm_PasLab" />
+			<OPTION type="edit" name="C_System_Conn_UpHangUpAfter" variable="C_System_Conn_UpHangUpAfter" label="TOtherConnForm_DisconnLab" />
+			<OPTION type="edit" name="C_System_Conn_DialOnDemandExceed" variable="C_System_Conn_DialOnDemandExceed" label="TOtherConnForm_MaxLabel" />
+			<OPTION type="edit" name="C_System_Conn_UpOlderthan" variable="C_System_Conn_UpOlderthan" label="TOtherConnForm_MinOlderLabel" />
+			<OPTION type="checkbox" name="C_System_Conn_DialOnDemandHeader" variable="C_System_Conn_DialOnDemandHeader" label="TOtherConnForm_MessageHeader" />
+			<OPTION type="button" btype="textfile" fileid="config/dialheader.dat" blabel="TContentEditHeader_HeaLabel" cfileid="examples/dialheader.dat" />
+		</GROUP>
+
+	</SECTION>
+</FORM>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFActionDialog" helpid="1125" >
+	<SECTION name="MarkAsSpam" label="TContentSpamGenuineForm" helpid="1125" >
+		<GROUP name="MarkAsSpam_Group" label="TContentSpamGenuineForm">
+		  <OPTION type="label" label="TContentSpamGenuineForm_ActionLabel" />
+			<OPTION type="radio" function="cfmarkgs" value="0" name="genuinespam" label="TContentSpamGenuineForm_SpamRadio" />
+			<OPTION type="radio" function="cfmarkgs" value="1" name="genuinespam" label="TContentSpamGenuineForm_GenuineRadio" />
+ 		</GROUP>
+	</SECTION>
+</FORM>

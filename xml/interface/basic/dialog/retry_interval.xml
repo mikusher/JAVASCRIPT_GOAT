@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Retry_interval" helpid="20504" >
+	<SECTION name="Retry_interval_Section" label="TRetryIntervalForm_IntervalsBox" helpid="653" >
+		<GROUP name="Retry_interval_Primary_Tab" label="TRetryIntervalForm_IntervalsBox">
+			<OPTION type="edit" name="1" variable="1" label="TRetryIntervalForm_IntervalList" />
+		</GROUP>
+  </SECTION>
+</FORM>

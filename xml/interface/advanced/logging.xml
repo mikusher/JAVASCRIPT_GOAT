@@ -1,0 +1,60 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Logging" helpid="498">
+	<SECTION name="Logging_General" label="TConfigForm_GeneralLoggingSheet" helpid="570" >
+		<GROUP name="Logging_General_General" label="TConfigForm_GeneralLoggingSheet">
+			<!--<OPTION type="checkbox" name="C_System_Logging_General_AppendFiles" variable="C_System_Logging_General_AppendFiles" label="TConfigForm_SaveLogFiles" />-->
+		  <OPTION type="edit" name="C_System_Logging_General_DeleteOlder" variable="C_System_Logging_General_DeleteOlder" label="TConfigForm_DeleteOlderLabel" default="7" />
+			<OPTION type="checkbox" name="C_System_Logging_General_Archive" variable="C_System_Logging_General_Archive" label="TConfigForm_ArchiveLogs">
+        <OPTION type="edit" name="C_System_Logging_General_ArchiveTo" variable="C_System_Logging_General_ArchiveTo" />
+      </OPTION>
+      <OPTION type="edit" name="C_System_Logging_General_LogCache" units="u_bytes" label="TConfigForm_LoggingCacheLabel" default="0" />
+			<OPTION type="edit" name="C_System_Logging_General_LogRotation" units="u_bytes" saveunit="1" label="TConfigForm_LogRotationL" default="0" />
+	<!--<OPTION type="button" btype="linkbutton" fileid="logs|MMS/STATUS/LOGS" cfileid="file" blabel="TConfigForm_LogsButton" />-->
+    </GROUP>
+
+		<GROUP name="Logging_Syslogs" label="TConfigForm_SyslogBox">
+			<OPTION type="checkbox" name="C_System_Logging_General_SystemLogFunction" variable="C_System_Logging_General_SystemLogFunction" label="TConfigForm_OutputDebug" />
+			<OPTION type="checkbox" name="C_System_Logging_Syslog_Active" variable="C_System_Logging_Syslog_Active" label="TConfigForm_SyslogServer" >
+			   <OPTION type="edit" name="C_System_Logging_Syslog_Server" variable="C_System_Logging_Syslog_Server" label="TConfigForm_SyslogServer" />
+		  </OPTION>
+    </GROUP>
+
+		<GROUP name="Logging_General_ODBC" label="TConfigForm_DBODBCSettings">
+			<!--<OPTION type="checkbox" name="C_System_Logging_General_EnableODBCLog" variable="C_System_Logging_General_EnableODBCLog" label="TSpamEngineForm_SpamEngineActive" >
+				<OPTION type="button" btype="xmledit" fileid="odbc_logging" blabel="TConfigForm_DBODBCSettings" /> 
+			</OPTION>-->
+						<OPTION type="checkbox" name="C_Accounts_Global_Accounts_MaintenanceLog" variable="C_Accounts_Global_Accounts_MaintenanceLog" label="TConfigForm_MaintenanceLog" />
+			<OPTION type="checkbox" name="C_System_Log_MailQueue" variable="C_System_Log_MailQueue" label="TConfigForm_ProcessingLog" />
+			
+			<OPTION type="edit" name="C_System_Log_Performance" variable="C_System_Log_Performance" label="TConfigForm_PerformanceLogLabel" />
+		</GROUP>
+	</SECTION>
+	
+
+	<!--<SECTION name="Logging_Services" label="TTntMenuItems_ServicesPanel" helpid="525" >
+		<GROUP name="Logging_Services_Debug" label="TTntMenuItems_ServicesPanel">
+			<OPTION type="listbox" name="C_System_Log_Services_SMTP" variable="C_System_Log_Services_SMTP" label="TConfigForm_WatchdogSMTP" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="C_System_Log_Services_POP3" variable="C_System_Log_Services_POP3" label="TFrameAccounts_RAPOP3" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="C_System_Log_Services_IMAP" variable="C_System_Log_Services_IMAP" label="TFrameAccounts_RAIMAP" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="C_System_Log_Services_Control" variable="C_System_Log_Services_Control" label="TStrings_cl_control" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="C_System_Log_Services_FTP" variable="C_System_Log_Services_FTP" label="TStrings_cl_ftp" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="C_System_Log_Services_GW" variable="C_System_Log_Services_GW" label="TStrings_cl_calendaring" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="C_System_Log_Services_IM" variable="C_System_Log_Services_IM" label="TTntMenuItems_InstantMessagingPanel" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="C_System_Log_Services_SIP" variable="C_System_Log_Services_SIP" label="TStrings_cl_sip" labels="TStrings_wa_str0" value="0|1|2|3" />
+	    <OPTION type="listbox" name="C_System_Log_Services_LDAP" variable="C_System_Log_Services_LDAP" label="TConfigForm_LDAPGroupBox" labels="TStrings_wa_str0" value="0|1|2|3" />
+	    <OPTION type="listbox" name="C_System_Log_Services_Socks" variable="C_System_Log_Services_Socks" label="TConfigForm_SOCKSBox" labels="TStrings_wa_str0" value="0|1|2|3" />
+			<OPTION type="listbox" name="logs" variable="logs" label="TConfigForm_WebMailTabSheet" labels="TStrings_wa_str0" value="0|2|1|2" dattype="webmail" datfile="config/_webmail/server.xml"/>
+	<OPTION type="listbox" name="C_System_Log_Services_SyncPush" variable="C_System_Log_Services_SyncPush" label="TStrings_cl_syncpush" labels="TStrings_wa_str0" value="0|1|2|3" />
+      <OPTION type="listbox" name="loglevel" variable="LogLevel" label="TStrings_cl_activesync" labels="TStrings_wa_str0" value="0|2|1|2" datfile="activesync/config/settings.xml" dattype="activesync"	/>
+      <OPTION type="listbox" name="activesync" variable="LogLevel" label="TStrings_cl_syncml" labels="TStrings_wa_str0" value="0|2|1|2" datfile="syncml/config/settings.xml" dattype="syncml"	/>
+      <OPTION type="listbox" name="loglevel_caldav" variable="LogLevel" label="TStrings_cl_caldav" labels="TStrings_wa_str0" value="0|2|1|2" datfile="caldav/config/settings.xml" dattype="caldav"/>
+      <OPTION type="listbox" name="C_System_Log_Services_SMS" variable="C_System_Log_Services_SMS" label="TStrings_cl_sms" labels="TStrings_wa_str0" value="0|1|2|3" />
+      <OPTION type="listbox" name="C_System_Log_Services_AS" variable="C_System_Log_Services_AS" label="TTntMenuItems_AntiSpam" labels="TStrings_wa_str0" value="0|1|2|3" />
+      	<OPTION type="listbox" name="C_System_Log_Services_ASReports" variable="SpamReportsLogLevel" label="TStrings_cl_spamenginereports" labels="TStrings_wa_str0" value="0|2|1|2" dattype="spam2" datfile="spam.dat" />
+			<OPTION type="listbox" name="C_System_Log_Services_AV" variable="C_System_Log_Services_AV" label="TTntMenuItems_AntiVirusPanel" labels="TStrings_wa_str0" value="0|1|2|3" />
+
+		</GROUP>
+
+	</SECTION>-->
+</FORM>

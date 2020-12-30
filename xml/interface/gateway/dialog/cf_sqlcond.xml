@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="CFConditionDialog" helpid="1125" >
+	<SECTION name="Application" label="TContentPriorityForm_PriorityL" helpid="1125" >
+		<GROUP name="ApplicationGroup" label="TContentPriorityForm_PriorityL">
+			<OPTION type="edit" variable="contain" name="contain" label="TContentPriorityForm_PriorityL" /><!--<OPTION type="button" inline="1" btype="xmledit" fileid="odbc_cf" blabel="TConfigForm_DBODBCSettings" />-->
+			<OPTION type="edit" variable="dummystring" name="dummystring" label="TContentPriorityForm_PriorityL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
+

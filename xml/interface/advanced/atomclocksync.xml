@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="AtomicClockSync" helpid="2020302">
+	<SECTION name="AtomicClockSync_section" label="TConfigForm_AtomicClockSyncSheet" helpid="2020302" >
+		<GROUP name="AtomicClockSync_tab" label="TConfigForm_AtomicGroupBox">
+			<OPTION type="checkbox" name="C_System_Tools_AtomicClockSync_Enable" variable="C_System_Tools_AtomicClockSync_Enable" label="TSpamEngineForm_SpamEngineActive" />
+			<OPTION type="datagrid" name="daytimeservers" labels="TDayTimeServersForm_DayTimeList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="+200" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/daytimeservers.dat" COMMENT="examples/daytimeservers.dat" DIALOG="daytimeservers" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="UP" TYPE="up" />
+					<BUTTON LABEL="DOWN" TYPE="down" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+				<SYNTAX MULTIPLE="1" SINGLELINE="1">
+					<OBJECT ENDTAG="" NAME="daytimeservers" >
+						<VARS LENGTH="1" />
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+</FORM>

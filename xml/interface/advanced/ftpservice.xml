@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="FTPService" helpid="210" >
+	<SECTION name="FTPService_FTPService" label="TTntMenuItems_FTPServicePanel" helpid="876" >
+		<GROUP name="FTPService_FTPService_FTPSites" label="TFTPServicesForm_FTPBox" >
+		  <OPTION type="checkbox" name="C_FTPService_Active" variable="C_FTPService_Active" label="TFTPServicesForm_FTPActive" inline="true" />
+		  <OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_FTPService"  inline="1" blabel="TSpamEngineForm_ModeButton" />
+			<OPTION type="datagrid" name="ftp" gtype="FTP" width="792" labels="TFTPServicesForm_FTPItems" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="NAME" size="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="DESCRIPTION" size="-100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="PATH" size="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/ftpserver.dat" DIALOG="ftp" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+				</BUTTONS>
+			</OPTION>	
+		</GROUP>
+	</SECTION>	
+  <SECTION name="ServerSync" label="TFTPServicesForm_SyncSheet" helpid="882" >
+		<GROUP name="ServerSync_ServerSync" label="TFTPServicesForm_SyncSheet">
+		  <OPTION type="datagrid" name="sync" gtype="FTPSync" labels="TFTPServicesForm_SyncList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="description" SIZE="-200" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="source_type" SHOW="listbox" labels="TFTPSyncForm_SourceEdit" SIZE="+30" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+					<OPTION VINDEX="destination_directory" SIZE="+70" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE DIALOG="ftpsync" NAME="config/ftpserver.dat" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+          <BUTTON LABEL="TFTPServicesForm_SyncNow" TYPE="ftpsyncnow" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+</FORM>
+<!--
+
+-->

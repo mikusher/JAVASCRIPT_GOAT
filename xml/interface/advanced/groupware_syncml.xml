@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="GW" helpid="208" >
+	<SECTION name="GW_SyncMLTab" label="TConfigForm_GeneralSyncMLSheet" helpid="3977" >
+		<GROUP name="GW_SyncMLTab_General" label="TConfigForm_SyncMLBox" datfile="syncml/config/settings.xml" dattype="syncml">
+			<OPTION type="checkbox" name="disabled" variable="Disabled" label="TConfigForm_SyncMLActive" inverse="1" value="1" />
+			<OPTION type="button" btype="xmledit" fileid="accessmode" cfileid="C_SyncML" blabel="TSpamEngineForm_ModeButton" />
+      <OPTION type="listbox" name="defaultformat" variable="AuthType" label="TConfigForm_SyncMLAuthL" labels="TConfigForm_SyncMLAuth" value="0|1|2" />
+			<OPTION type="edit" name="C_SyncML_URL" variable="C_SyncML_URL" label="TConfigForm_SyncMLURLL" source="API" />
+		</GROUP>
+	</SECTION>
+</FORM>

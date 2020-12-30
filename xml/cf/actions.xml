@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ACTIONS>
+  <ACTION LINK="TStrings_messageaction" NAME="ard" TEXT="TStrings_actionconst0" DIALOG="cf_ard" />
+  <!--<ACTION LINK="CF_AMark" NAME="markgs" TEXT="CF_AMarkTEXT" DIALOG="cf_markgs" />-->
+  <ACTION TEXT="TStrings_actionconst1" NAME="stop" />
+  <ACTION LINK="TStrings_forwardtoemailaddress" NAME="forward" DIALOG="cf_forward" TEXT="TStrings_actionconst2" />
+  <ACTION LINK="TStrings_forwardtoemailaddress" NAME="copymessage" DIALOG="cf_copymessage" TEXT="TStrings_actionconst3" />
+  <ACTION NAME="movetofolder" TEXT="TStrings_actionconst4" LINK="TStrings_foldertext" DIALOG="m_folder" />
+  <ACTION NAME="copytofolder" TEXT="TStrings_actionconst5" LINK="TStrings_foldertext" DIALOG="c_folder" />
+  <ACTION NAME="encrypt" TEXT="TStrings_actionconst6" />
+  <ACTION LINK="TStrings_emailsend" NAME="respond" DIALOG="cf_respond" TEXT="TStrings_actionconst7" />
+  <ACTION LINK="TStrings_emailsend" NAME="sendmessage" DIALOG="cf_respond" TEXT="TStrings_actionconst8" />
+  <ACTION LINK="TStrings_executeapplication" TEXT="TStrings_actionconst13" NAME="execute" DIALOG="cf_execute" />
+  <ACTION LINK="TStrings_headerfooter" NAME="headerfooter" TEXT="TStrings_actionconst14" dialog="cf_headerfooter" />
+  <ACTION LINK="TStrings_messageheader" NAME="header" TEXT="TStrings_actionconst9" dialog="cf_header" />
+  <ACTION LINK="TInputFieldsForm_ValueLabel" NAME="priority" TEXT="TStrings_actionconst10" DIALOG="cf_priority2" />
+  <ACTION LINK="TContentMessageFlags_PriorityBox" NAME="flags" TEXT="TStrings_actionconst11" dialog="cf_flags" />
+  <ACTION LINK="TStrings_valuestring" NAME="score" TEXT="TStrings_actionconst12" DIALOG="cf_score" />
+  <ACTION TEXT="TStrings_actionconst15" NAME="stripall" />
+  <ACTION LINK="TStrings_pathtext" NAME="extract" TEXT="TStrings_actionconst16" DIALOG="cf_extract" />
+  <ACTION TEXT="TStrings_actionconst17" LINK="TStrings_smartattach" NAME="smartattach" DIALOG="cf_smartattach" />
+  <ACTION LINK="TStrings_sometext" NAME="append" TEXT="TStrings_actionconst18" DIALOG="cf_addtext" />
+  <ACTION LINK="TStrings_sometext" NAME="smtpresponse" TEXT="TStrings_actionconst19" DIALOG="cf_smtpresponse" />
+  <ACTION TEXT="TStrings_actionconst20" NAME="fixrfc822" />
+  <ACTION TEXT="TStrings_actionconst21" NAME="tarpitsender" />
+  <ACTION TEXT="TStrings_actionconst22" NAME="db" LINK="TStrings_valuestring" DIALOG="cf_sql"/>
+</ACTIONS>
+

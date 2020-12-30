@@ -1,0 +1,161 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="Security" helpid="665">
+	<SECTION name="Security_AntiRelay" label="TConfigForm_AntiRelayingSheet" helpid="666" >
+		<GROUP name="Security_AntiRelay_AntiRelay" label="TConfigForm_AntiRelayingSheet">
+			<!--<OPTION type="radio" name="C_Mail_Security_Relay_RelayMode" variable="C_Mail_Security_Relay_RelayMode" value="1" label="TConfigForm_ClosedRelay" />
+			<OPTION type="radio" name="C_Mail_Security_Relay_RelayMode" variable="C_Mail_Security_Relay_RelayMode" value="0" label="TConfigForm_OpenRelay" />-->
+      <OPTION type="checkbox" name="C_Mail_Security_Relay_POPSMTP" variable="C_Mail_Security_Relay_POPSMTP" label="TConfigForm_POP3SMTPRelay" >
+				<OPTION type="edit" name="C_Mail_Security_Relay_POPSMTPInt" variable="C_Mail_Security_Relay_POPSMTPInt" label="" />
+			</OPTION>
+			<OPTION type="checkbox" name="C_Mail_Security_Relay_RejectLocalUnauth" variable="C_Mail_Security_Relay_RejectLocalUnauth" label="TConfigForm_RejectLocalUnauthorized" default="0" >
+				<OPTION type="button" btype="textfile" blabel="TConfigForm_SynchroBypass" fileid="config/rejectlocalbypass.dat" cfileid="examples/bypass.dat" />
+			</OPTION>
+		</GROUP>
+
+		<GROUP name="Security_AntiRelay_RelayIPs" label="TConfigForm_IPRelayGroup">
+			<OPTION type="datagrid" name="relay" gtype="relaygrid" labels="TIPRelayForm_IPList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="+100" SORT="0" DYNAM="0" SORTDIR="0" DEFAULTSORT="0" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/relay.dat" COMMENT="examples/relay.dat" DIALOG="relay" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TPatternsForm_ChangeButton" TYPE="edit" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TBWForm_EditFile" TYPE="editfile" />
+					<BUTTON LABEL="TStrings_buttonup" TYPE="up" />
+					<BUTTON LABEL="TStrings_buttondown" TYPE="down" />
+				</BUTTONS>
+				<SYNTAX>
+					<OBJECT NAME="relay" LENGTH="1">
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Security_Protection" label="TConfigForm_DNSArea" helpid="670" >
+		<GROUP name="Security_Protection_DNS" label="TConfigForm_DNSProtectionGroupBox">
+			<OPTION type="checkbox" name="C_Mail_Security_Protection_DNSBL" variable="C_Mail_Security_Protection_DNSBL" label="TConfigForm_RBL" default="0" >
+			<!--<OPTION type="button" btype="textfile" blabel="TConfigForm_RBLButton" fileid="config/rbl.dat" bfileid="config/rblbypass.dat" cfileid="examples/rbl.dat" />
+			-->
+      		<OPTION type="button" btype="textfile" blabel="TConfigForm_SynchroBypass" fileid="config/rblbypass.dat" />
+		  </OPTION>
+      <OPTION type="checkbox" name="C_Mail_Security_Protection_CloseDNSBLConn" variable="C_Mail_Security_Protection_CloseDNSBLConn" label="TConfigForm_CloseRBLConn" default="0" />
+			<OPTION type="datagrid" gheight="200" name="dnsbl_grid" labels="TDNSBLHostForm_DNSList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="0" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="1" />
+				</HEAD>
+				<SOURCE>
+					<FILE NAME="config/rbl.dat" DIALOG="host" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_AddItemNext" TYPE="add" />
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+				</BUTTONS>
+					<SYNTAX>
+					<OBJECT NAME="host" LENGTH="1">
+					</OBJECT>
+				</SYNTAX>
+			</OPTION>
+      <OPTION type="checkbox" name="C_Mail_Security_Protection_RejectrDNS" variable="C_Mail_Security_Protection_RejectrDNS" label="TConfigForm_RejectrDNS" default="0" >
+				<OPTION type="button" btype="textfile" blabel="TConfigForm_SynchroBypass" fileid="config/rdnsbypass.dat" cfileid="examples/rdnsbypass.dat" />
+			</OPTION>
+			<OPTION type="checkbox" name="C_Mail_Security_Protection_RejectMX" variable="C_Mail_Security_Protection_RejectMX" label="TConfigForm_RejectMX" default="0" >
+				<OPTION type="button" btype="textfile" blabel="TConfigForm_SynchroBypass" fileid="config/mxbypass.dat" cfileid="examples/mxbypass.dat" />
+			</OPTION>
+		</GROUP>
+
+	<!--	<GROUP name="Security_Protection_Other" label="TAntivirusSettingForm_OtherBox">
+			<OPTION type="checkbox" name="C_Mail_Security_Protection_LocalDomain" variable="C_Mail_Security_Protection_LocalDomain" label="TConfigForm_FromLocalDomain" default="0" />
+			<OPTION type="edit" name="C_Mail_Security_Protection_SMTPWait" variable="C_Mail_Security_Protection_SMTPWait" label="TConfigForm_SMTPWaitL" default="0" />
+			<OPTION type="button" btype="textfile" blabel="TConfigForm_SynchroBypass" fileid="config/smtpwaitbypass.dat" cfileid="examples/smtpwaitbypass.dat" />
+			--><!--<OPTION type="checkbox" name="C_Mail_Security_Protection_DomainIPShield" variable="C_Mail_Security_Protection_DomainIPShield" label="TConfigForm_DomainIPShielding" default="0" >
+				<OPTION type="button" btype="textfile" blabel="TConfigForm_DomainIPShieldButton" fileid="config/domainshield.dat" cfileid="examples/domainshield.dat" />
+			</OPTION>--><!--
+			<OPTION type="checkbox" name="C_Mail_Security_Protection_HELOEHLO" variable="C_Mail_Security_Protection_HELOEHLO" label="TConfigForm_GreetingRequired" default="0" />
+			<OPTION type="button" btype="textfile" fileid="config/heloehlo.dat" blabel="TConfigForm_UseHELOEHLOFilter" bfileid="config/heloehlobypass.dat" cfileid="examples/heloehlo.dat" />
+		</GROUP>-->
+
+		<GROUP name="Security_Protection_SPF" label="TConfigForm_SPFBox">
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_SPFSRS" variable="C_Mail_SMTP_Other_SPFSRS" label="TConfigForm_SRS" default="0" />
+			<OPTION type="checkbox" name="C_Mail_SMTP_Other_SPFSRSNDRVerify" label="TConfigForm_SRSNDR" variable="C_Mail_SMTP_Other_SPFSRSNDRVerify" />
+			<OPTION type="edit" name="C_Mail_SMTP_Other_SPFSRSKey" variable="C_Mail_SMTP_Other_SPFSRSKey" label="TConfigForm_SRSKeyL" default="0" />
+		</GROUP>
+	</SECTION>
+
+
+	<SECTION name="Security_Tarpitting" label="TConfigForm_TarpittingSheet" helpid="358" >
+		<GROUP name="Security_Tarpitting_Tarpitting" label="TConfigForm_TarpittingSheet">
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_EnableSMTP" variable="C_Mail_Security_Tarpit_EnableSMTP" label="TConfigForm_TarpittingActive" default="0" inline="1"/>
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_EnableIMAPPOP3" variable="C_Mail_Security_Tarpit_EnableIMAPPOP3" label="TConfigForm_POPTarpittingActive" default="0" inline="1" />
+				<OPTION type="button" btype="textfile" fileid="config/tarpitbypass.dat" blabel="TConfigForm_SynchroBypass" cfileid="examples/tarpitbypass.dat" inline="1" />
+				<OPTION type="checkbox" name="C_Mail_Security_Tarpit_BlockIP" variable="C_Mail_Security_Tarpit_BlockIP" label="TConfigForm_BlockIP" default="0" >
+				<OPTION type="edit" name="C_Mail_Security_Tarpit_BlockIPValue" variable="C_Mail_Security_Tarpit_BlockIPValue" label="" />
+			</OPTION>
+				<OPTION type="checkbox" name="C_Mail_Security_Tarpit_Login" variable="C_Mail_Security_Tarpit_Login" label="TConfigForm_TarpitLogin" default="0" >
+					<OPTION type="edit" name="C_Mail_Security_Tarpit_LoginCount" variable="C_Mail_Security_Tarpit_LoginCount" label="" />
+				</OPTION>
+			</GROUP>
+			<GROUP>
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_Recipient" variable="C_Mail_Security_Tarpit_Recipient" label="TConfigForm_RecipientTarpit" default="0" >
+				<OPTION type="edit" name="C_Mail_Security_Tarpit_RecipientCount" variable="C_Mail_Security_Tarpit_RecipientCount" label="" />
+			</OPTION>
+		  <OPTION type="checkbox" name="C_Mail_Security_Tarpit_RelayTarpit" variable="C_Mail_Security_Tarpit_RelayTarpit" label="TConfigForm_RelayTarpit" default="0" >
+		  	<OPTION type="edit" name="C_Mail_Security_Tarpit_RelayTarpitCount" variable="C_Mail_Security_Tarpit_RelayTarpitCount" label="" />
+		  </OPTION>
+			
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_RSET" variable="C_Mail_Security_Tarpit_RSET" label="TConfigForm_TarpitRSET" default="0" >
+				<OPTION type="edit" name="C_Mail_Security_Tarpit_RSETCount" variable="C_Mail_Security_Tarpit_RSETCount" label="" />
+			</OPTION>
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_Spam" variable="C_Mail_Security_Tarpit_Spam" label="TConfigForm_TarpitSpam" default="0" >
+				<OPTION type="edit" name="C_Mail_Security_Tarpit_SpamScore" function="score" label="" />
+			</OPTION>
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_DNSBL" variable="C_Mail_Security_Tarpit_DNSBL" label="TConfigForm_TarpitDNSBL" default="0" />
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_Msg_Enabled" variable="C_Mail_Security_Tarpit_Msg_Enabled" label="TConfigForm_TarpitMaxSize" default="0" >
+				<OPTION type="edit" name="C_Mail_Security_Tarpit_Msg_Value" units="u_bytes" saveunit="1" variable="C_Mail_Security_Tarpit_Msg_Value" label="" />
+			</OPTION>
+			
+    </GROUP>
+
+		<GROUP name="Security_Tarpitting_Action" label="TConfigForm_TarpitActionBox">
+			<OPTION type="edit" name="C_Mail_Security_Tarpit_Period" variable="C_Mail_Security_Tarpit_Period" label="TConfigForm_PeriodTarLabel" />
+			<OPTION type="checkbox" name="C_Mail_DoNot_Tarpit_IPs" variable="C_Mail_DoNot_Tarpit_IPs" label="TConfigForm_TarpitBlockIP" inverse="1" />
+		  <OPTION type="checkbox" name="C_Mail_Security_Tarpit_CloseConnection" variable="C_Mail_Security_Tarpit_CloseConnection" label="TConfigForm_CloseSessionTarpit" />
+			<OPTION type="checkbox" name="C_Mail_Security_Tarpit_CrossSession" variable="C_Mail_Security_Tarpit_CrossSession" label="TConfigForm_CrossTarpit" />
+			<OPTION type="button" btype="linkbutton" fileid="spamqueue|section_section_SpamQueue_IntrusionPrevention|MMS/STATUS/SPAMQUEUE" cfileid="object" blabel="TConfigForm_TarpittingSheet" />
+		</GROUP>
+<!--
+		<GROUP name="Security_Tarpitting_MsgSize" label="TConfigForm_MessageSizeTarpit">
+
+    </GROUP>
+
+		<GROUP name="Security_Tarpitting_Other" label="TAntivirusSettingForm_OtherBox">
+
+		</GROUP>
+
+		<GROUP name="Security_Tarpitting_RelayIPs" label="TConfigForm_TarpittedIPsBox">
+			<OPTION type="datagrid" name="tarpit" gtype="tarpit" labels="TTarpitForm_TarpitList" >
+				<HEAD>
+					<SELECTOR />
+					<OPTION VINDEX="ip" SIZE="100" SORT="1" DYNAM="1" SORTDIR="0" DEFAULTSORT="0" />-->
+					<!--<OPTION VINDEX="1" SIZE="+100" SORT="1" DYNAM="0" SORTDIR="0" DEFAULTSORT="1" />-->
+				<!--</HEAD>
+				<SOURCE>
+					<FILE COMMENT="examples/tarpit.dat" />
+				</SOURCE>
+				<BUTTONS>
+					<BUTTON LABEL="TConfigForm_DeleteItem" TYPE="delete" />
+					<BUTTON LABEL="TConfigForm_RemoveAllButton" TYPE="removeall" />
+				</BUTTONS>
+			</OPTION>
+		</GROUP>-->
+	</SECTION>
+
+</FORM>

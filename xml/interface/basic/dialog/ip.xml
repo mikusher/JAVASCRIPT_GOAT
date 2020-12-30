@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+
+<FORM name="WebSite_IP" helpid="2040103" >
+	<SECTION name="WebSite_IP_Tab" label="TStrings_webip" helpid="1010" >
+		<GROUP name="WebSite_IP_Group" label="TStrings_webip">
+			<OPTION type="edit" name="ip" variable="ip" label="TStatisticsForm_SessionFilterIPL" />
+ 		</GROUP>
+	</SECTION>
+</FORM>
